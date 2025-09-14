@@ -1,8 +1,8 @@
 {
-  "commitMessage": "vault backup: {{date}}",
+  "commitMessage": "Backup del vault in data",
   "autoCommitMessage": "vault backup: {{date}}",
   "commitMessageScript": "",
-  "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
+  "commitDateFormat": "DD/MM/YYYY alle HH:mm:ss",
   "autoSaveInterval": 0,
   "autoPushInterval": 0,
   "autoPullInterval": 0,

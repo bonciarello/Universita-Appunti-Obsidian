@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "50b5dd9de7998964",
+        "id": "b99986efd29ecaf5",
         "type": "tabs",
         "children": [
           {
-            "id": "75ec3cbbd302889d",
+            "id": "3a2727a6e4099a96",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -178,8 +174,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "0d601fc4807b271b",
+  "active": "3a2727a6e4099a96",
   "lastOpenFiles": [
+    "Homepage.md",
+    "Economia.md",
     "test/README.md",
     "test",
     "Benvenuto.md",

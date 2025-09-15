@@ -8,13 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3a2727a6e4099a96",
+            "id": "657dd77d637776b3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cyber Offence and Defence/Cyber Offence and Defence.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nuova scheda"
+              "title": "Cyber Offence and Defence"
             }
           }
         ]
@@ -136,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Senza nome.canvas",
+                "file": "Cyber Offence and Defence/Cyber Offence and Defence.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Senza nome"
+              "title": "Struttura di Cyber Offence and Defence"
             }
           },
           {
@@ -174,10 +178,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "9219eb39769c9826",
+  "active": "0d601fc4807b271b",
   "lastOpenFiles": [
-    "Cyber Offence and Defence",
+    "Cyber Offence and Defence/Cyber Offence and Defence.md",
+    "Cross-site scripting.md",
     "Homepage.md",
+    "Cyber Offence and Defence/Indice.md",
+    "Indice.md",
+    "Cyber Offence and Defence",
     "Economia.md",
     "test/README.md",
     "test",

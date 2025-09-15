@@ -6,8 +6,4 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Economia]]
 - [[Lingua Inglese]]
 ## 🎓 Magistrale
-- [[Machine Learning]]
-- [[Sicurezza Informatica]]
-- [[Sistemi Distribuiti]]
-- [[Big Data Analytics]]
-- [[Progettazione del Software Avanzata]]
+- [[Cyber Offence and Defence]]

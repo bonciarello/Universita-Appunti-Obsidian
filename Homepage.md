@@ -7,3 +7,5 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Lingua Inglese]]
 ## 🎓 Magistrale
 - [[Cyber Offence and Defence]]
+## 📜 Certificazioni
+- [[AWS CLF-002 Cloud Practitioner Essentials]]

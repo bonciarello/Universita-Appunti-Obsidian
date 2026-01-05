@@ -1,0 +1,12 @@
+## Introduzione ad AWS
+AWS offre una vasta gamma di servizi come soluzioni semplici (tra cui servizi di elaborazione, archiviazione e sicurezza di rete) oppure soluzioni più complesse (tra cui servizi di intelligenza artificiale e domotica).
+Uno dei servizi offerti è quello di Amazon EC2, detto anche Amazon Elastic Compute Cloud: questo servizio rappresenta la parte server nel modello di elaborazione di cloud di base cioè il modello client-server. Nel modello client-server, un client può essere un browser web o un’applicazione desktop con cui una persona interagisce per effettuare richieste ai server, i quali possono essere dei servizi come, appunto, Amazon EC2.
+Nel caso dei servizi AWS, si paga solo per ciò che è necessario: si paga solo per le transazioni che vengono realmente effettuate e non si paga nulla in anticipo.
+
+## Cloud Computing
+Il cloud computing è la distribuzione di risorse IT on-demand tramite Internet, dove con distribuzione on-demand si indica che AWS ha le risorse necessarie quando ne hai bisogno. I tre modelli di distribuzione del cloud computing sono:
+*   **distribuzione basata su cloud**: è possibile eseguire tutte le parti dell'applicazione nel cloud, eseguire la migrazione delle applicazioni esistenti nel cloud e progettare e creare nuove applicazioni nel cloud;
+*   **distribuzione on-premises**: è possibile distribuire risorse utilizzando strumenti di virtualizzazione e gestione delle risorse ed aumentare l'utilizzo delle risorse usando le tecnologie di virtualizzazione e gestione delle applicazioni;
+*   **distribuzione ibrida**: è possibile connettere le risorse basate sul cloud all'infrastruttura on-premises e integrare le risorse basate sul cloud con le applicazioni IT legacy.
+
+Il cloud computing consente alle aziende di ridurre i costi, passando da grandi investimenti iniziali a spese variabili basate solo sulle risorse effettivamente utilizzate. Elimina la necessità di gestire e mantenere data center, offrendo al contempo scalabilità immediata e flessibilità: le risorse possono crescere o ridursi in base alla domanda. Inoltre, grazie alle economie di scala dei provider, i costi sono più bassi, mentre la velocità di attivazione delle risorse favorisce sperimentazione e innovazione rapida. Infine, la presenza globale dei servizi cloud permette di distribuire applicazioni in tutto il mondo con prestazioni elevate e bassa latenza.

@@ -11,10 +11,14 @@
             "id": "97dc36fc0680dabc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista grafo"
+              "type": "markdown",
+              "state": {
+                "file": "Cyber Offence and Defence/Vulnerabilità della logica aziendale.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vulnerabilità della logica aziendale"
             }
           }
         ]
@@ -176,6 +180,15 @@
   },
   "active": "97dc36fc0680dabc",
   "lastOpenFiles": [
+    "Cyber Offence and Defence/Vulnerabilità dell’autenticazione.md",
+    "Cyber Offence and Defence/SQL injection (SQLi).md",
+    "Cyber Offence and Defence/Fuga di informazioni.md",
+    "AWS CLF-002 Cloud Practitioner Essentials/AWS CLF-002 Cloud Practitioner Essentials.md",
+    "Cyber Offence and Defence/Vulnerabilità della logica aziendale.md",
+    "SQL injection (SQLi).md",
+    "Vulnerabilità dell’autenticazione.md",
+    "Vulnerabilità della logica aziendale.md",
+    "Fuga di informazioni.md",
     "AWS CLF-002 Cloud Practitioner Essentials/Soluzioni Well-Architected.md",
     "AWS CLF-002 Cloud Practitioner Essentials/Sicurezza.md",
     "AWS CLF-002 Cloud Practitioner Essentials/Reti.md",
@@ -188,20 +201,11 @@
     "AWS CLF-002 Cloud Practitioner Essentials/Database.md",
     "AWS CLF-002 Cloud Practitioner Essentials/Archiviazione e Database.md",
     "AWS CLF-002 Cloud Practitioner Essentials/Calcolo nel Cloud.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/AWS CLF-002 Cloud Practitioner Essentials.md",
     "AWS CLF-002 Cloud Practitioner Essentials/capitolo_12.md",
     "AWS CLF-002 Cloud Practitioner Essentials/capitolo_11.md",
     "AWS CLF-002 Cloud Practitioner Essentials/capitolo_10.md",
     "AWS CLF-002 Cloud Practitioner Essentials/capitolo_09.md",
     "AWS CLF-002 Cloud Practitioner Essentials/capitolo_08.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_07.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_06.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_05.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_04.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_03.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_02.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_01.md",
-    "capitolo_12.md",
     "AWS CLF-002 Cloud Practitioner Essentials",
     "Cyber Offence and Defence",
     "test",

@@ -2,7 +2,7 @@ L'SQL injection (SQLi) è una vulnerabilità della sicurezza web che consente a 
 
 In alcune situazioni, un aggressore può intensificare un attacco di SQLi per compromettere il server sottostante o altre infrastrutture back-end. Può anche consentire loro di eseguire attacchi denial-of-service.
 
-Nell’immagine di esempio, oltre alla categoria scelta, unirà la tabella users prendendo username e password (quindi rubando dati a cui non potrebbe accedere).
+Nell’immagine di esempio, oltre alla categoria scelta, unirà la tabella `users` prendendo username e password (quindi rubando dati a cui non potrebbe accedere).
 
 **SQLi è in declino:** basti guardare la OWASP Top Ten per affermare che la priorità di questa tipologia di attacco è diminuita dal 2017 al 2021.
 
@@ -368,8 +368,8 @@ Ciò consente di determinare la verità della condizione iniettata in base al te
 
 Le tecniche per attivare un ritardo temporale sono specifiche del tipo di database utilizzato. Ad esempio, su Microsoft SQL Server, è possibile utilizzare quanto segue per testare una condizione e attivare un ritardo a seconda che l'espressione sia vera:
 
-*   `'; IF (1=2) WAITFOR DELAY '0:0:10'--` non innesca un ritardo, perché la condizione 1=2 è falsa;
-*   `'; IF (1=1) WAITFOR DELAY '0:0:10'--` innesca un ritardo di 10 secondi, perché la condizione 1=1 è vera.
+*   `'; IF (1=2) WAITFOR DELAY '0:0:10'--` non innesca un ritardo, perché la condizione `1=2` è falsa;
+*   `'; IF (1=1) WAITFOR DELAY '0:0:10'--` innesca un ritardo di 10 secondi, perché la condizione `1=1` è vera.
 
 Utilizzando questa tecnica, possiamo recuperare i dati testando un carattere alla volta:
 

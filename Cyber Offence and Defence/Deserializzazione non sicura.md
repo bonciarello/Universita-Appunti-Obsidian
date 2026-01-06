@@ -30,7 +30,7 @@ Identificare la deserializzazione non sicura è relativamente semplice, indipend
 
 Durante l'audit, dovresti esaminare tutti i dati passati al sito web e cercare di identificare qualsiasi cosa che assomigli a dati serializzati. I dati serializzati possono essere identificati relativamente facilmente se si conosce il formato utilizzato dai diversi linguaggi.
 
-PHP utilizza un formato stringa per lo più leggibile dall'uomo, con lettere che rappresentano il tipo di dati e numeri che rappresentano la lunghezza di ogni voce. Ad esempio, considera un oggetto User con gli attributi:
+PHP utilizza un formato stringa per lo più leggibile dall'uomo, con lettere che rappresentano il tipo di dati e numeri che rappresentano la lunghezza di ogni voce. Ad esempio, considera un oggetto `User` con gli attributi:
 
 `$user->name = "carlos";`
 `$user->isLoggedIn = true;`
@@ -40,14 +40,14 @@ Quando serializzato, questo oggetto potrebbe apparire simile a questo:
 `O:4:"User":2:{s:4:"name":s:6:"carlos"; s:10:"isLoggedIn":b:1;}`
 
 Questo può essere interpretato come segue:
-- **O:4:"User":** un oggetto con il nome di classe di 4 caratteri User;
-- **2:** l'oggetto ha 2 attributi;
-- **s:4:"name":** la chiave del primo attributo è la stringa di 4 caratteri name;
-- **s:6:"carlos":** il valore del primo attributo è la stringa di 6 caratteri carlos;
-- **s:10:"isLoggedIn":** la chiave del secondo attributo è la stringa di 10 caratteri isLoggedIn;
-- **b:1:** il valore del secondo attributo è il valore booleano true.
+- `O:4:"User"`: un oggetto con il nome di classe di 4 caratteri "User";
+- `2`: l'oggetto ha 2 attributi;
+- `s:4:"name"`: la chiave del primo attributo è la stringa di 4 caratteri "name";
+- `s:6:"carlos"`: il valore del primo attributo è la stringa di 6 caratteri "carlos";
+- `s:10:"isLoggedIn"`: la chiave del secondo attributo è la stringa di 10 caratteri "isLoggedIn";
+- `b:1`: il valore del secondo attributo è il valore booleano true.
 
-I metodi nativi per la serializzazione PHP sono serialize() e unserialize(). Se hai accesso al codice sorgente, dovresti iniziare cercando unserialize() in qualsiasi punto del codice e indagando ulteriormente.
+I metodi nativi per la serializzazione PHP sono `serialize()` e `unserialize()`. Se hai accesso al codice sorgente, dovresti iniziare cercando `unserialize()` in qualsiasi punto del codice e indagando ulteriormente.
 ## Sfruttamento delle vulnerabilità di deserializzazione non sicura
 ### Manipolazione di oggetti serializzati
 Sfruttare alcune vulnerabilità di deserializzazione può essere semplice come modificare un attributo in un oggetto serializzato. Man mano che lo stato dell'oggetto viene reso persistente, puoi studiare i dati serializzati per identify e modificare valori di attributo interessanti. Puoi quindi passare l'oggetto dannoso nel sito web tramite il suo processo di deserializzazione. Questo è il passaggio iniziale per un exploit di deserializzazione di base.
@@ -56,11 +56,11 @@ In generale, ci sono due approcci che puoi adottare quando manipoli oggetti seri
 
 **Modifica degli attributi degli oggetti** Quando si manomettono i dati, finché l'aggressore conserva un oggetto serializzato valido, il processo di deserializzazione creerà un oggetto lato server con i valori degli attributi modificati.
 
-Come semplice esempio, considera un sito web che utilizza un oggetto User serializzato per archiviare i dati sulla sessione di un utente in un cookie. Se un aggressore individuasse questo oggetto serializzato in una richiesta HTTP, potrebbe decodificarlo per trovare il seguente flusso di byte:
+Come semplice esempio, considera un sito web che utilizza un oggetto `User` serializzato per archiviare i dati sulla sessione di un utente in un cookie. Se un aggressore individuasse questo oggetto serializzato in una richiesta HTTP, potrebbe decodificarlo per trovare il seguente flusso di byte:
 
 `O:4:"User":2:{s:8:"username";s:6:"carlos";s:7:"isAdmin";b:0;}`
 
-L'attributo isAdmin è un ovvio punto di interesse. Un aggressore potrebbe semplicemente modificare il valore booleano dell'attributo in 1 (vero), ricodificare l'oggetto e sovrascrivere il proprio cookie corrente con questo valore modificato. In isolamento, questo non ha alcun effetto. Tuttavia, supponiamo che il sito web utilizzi questo cookie per verificare se l'utente corrente ha accesso a determinate funzionalità amministrative:
+L'attributo `isAdmin` è un ovvio punto di interesse. Un aggressore potrebbe semplicemente modificare il valore booleano dell'attributo in 1 (vero), ricodificare l'oggetto e sovrascrivere il proprio cookie corrente con questo valore modificato. In isolamento, questo non ha alcun effetto. Tuttavia, supponiamo che il sito web utilizzi questo cookie per verificare se l'utente corrente ha accesso a determinate funzionalità amministrative:
 
 ```php
 $user = unserialize($_COOKIE);
@@ -69,13 +69,13 @@ if ($user->isAdmin === true) {
 }
 ```
 
-Questo codice vulnerabile istanzia un oggetto User in base ai dati del cookie, incluso l'attributo isAdmin modificato dall'attaccante. In nessun momento viene verificata l'autenticità dell'oggetto serializzato. Questi dati vengono quindi passati nell'istruzione condizionale e, in questo caso, consentirebbero una facile escalation dei privilegi.
+Questo codice vulnerabile istanzia un oggetto `User` in base ai dati del cookie, incluso l'attributo `isAdmin` modificato dall'attaccante. In nessun momento viene verificata l'autenticità dell'oggetto serializzato. Questi dati vengono quindi passati nell'istruzione condizionale e, in questo caso, consentirebbero una facile escalation dei privilegi.
 
 Questo semplice scenario non è comune in natura. Tuttavia, la modifica di un valore di attributo, in questo modo, dimostra il primo passo verso l'accesso all'enorme quantità di superficie di attacco esposta dalla deserializzazione non sicura.
 
-**Modifica dei tipi di dati** La logica basata su PHP è particolarmente vulnerabile a questo tipo di manipolazione a causa del comportamento del suo operatore di confronto approssimativo (\==) quando si confrontano tipi di dati diversi. Ad esempio, se si esegue un confronto approssimativo tra un intero e una stringa, PHP tenterà di convertire la stringa in un intero, il che significa che 5 == "5" viene valutato come vero.
+**Modifica dei tipi di dati** La logica basata su PHP è particolarmente vulnerabile a questo tipo di manipolazione a causa del comportamento del suo operatore di confronto approssimativo (`==`) quando si confrontano tipi di dati diversi. Ad esempio, se si esegue un confronto approssimativo tra un intero e una stringa, PHP tenterà di convertire la stringa in un intero, il che significa che `5 == "5"` viene valutato come vero.
 
-Insolitamente, questo funziona anche per qualsiasi stringa alfanumerica che inizia con un numero. In questo caso, PHP convertirà effettivamente l'intera stringa in un valore intero in base al numero iniziale. Il resto della stringa viene ignorato completamente. Pertanto, 5 == "5 di qualcosa" è in pratica trattato come 5 == 5.
+Insolitamente, questo funziona anche per qualsiasi stringa alfanumerica che inizia con un numero. In questo caso, PHP convertirà effettivamente l'intera stringa in un valore intero in base al numero iniziale. Il resto della stringa viene ignorato completamente. Pertanto, `5 == "5 di qualcosa"` è in pratica trattato come `5 == 5`.
 
 Questo diventa ancora più strano quando si confronta una stringa con l'intero 0:
 
@@ -92,13 +92,13 @@ if ($login['password'] == $password) {
 }
 ```
 
-Supponiamo che un aggressore abbia modificato l'attributo password in modo che contenesse l'intero 0 anziché la stringa prevista. Finché la password memorizzata non inizia con un numero, la condizione restituirà sempre true, abilitando un bypass di autenticazione. Nota che ciò è possibile solo perché la deserializzazione preserva il tipo di dati. Se il codice recuperasse la password direttamente dalla richiesta, lo 0 verrebbe convertito in una stringa e la condizione verrebbe valutata come false.
+Supponiamo che un aggressore abbia modificato l'attributo password in modo che contenesse l'intero `0` anziché la stringa prevista. Finché la password memorizzata non inizia con un numero, la condizione restituirà sempre true, abilitando un bypass di autenticazione. Nota che ciò è possibile solo perché la deserializzazione preserva il tipo di dati. Se il codice recuperasse la password direttamente dalla richiesta, lo `0` verrebbe convertito in una stringa e la condizione verrebbe valutata come false.
 
 Tieni presente che quando modifichi i tipi di dati in qualsiasi formato di oggetto serializzato, è importante ricordare di aggiornare anche le etichette di tipo e gli indicatori di lunghezza nei dati serializzati. In caso contrario, l'oggetto serializzato verrà danneggiato e non verrà deserializzato.
 ### Utilizzo delle funzionalità dell'applicazione
 Oltre a controllare semplicemente i valori degli attributi, la funzionalità di un sito web potrebbe anche eseguire operazioni pericolose sui dati di un oggetto deserializzato. In questo caso, puoi utilizzare la deserializzazione non sicura per passare dati inaspettati e sfruttare la funzionalità correlata per causare danni.
 
-Ad esempio, come parte della funzionalità "Delete user" di un sito web, l'immagine del profilo dell'utente viene eliminata accedendo al percorso del file nell'attributo $user->image_location. Se questo $user è stato creato da un oggetto serializzato, un aggressore potrebbe sfruttarlo passando un oggetto modificato con image_location impostato su un percorso di file arbitrario. L'eliminazione del proprio account utente eliminerebbe quindi anche questo file arbitrario.
+Ad esempio, come parte della funzionalità "Delete user" di un sito web, l'immagine del profilo dell'utente viene eliminata accedendo al percorso del file nell'attributo `$user->image_location`. Se questo `$user` è stato creato da un oggetto serializzato, un aggressore potrebbe sfruttarlo passando un oggetto modificato con `image_location` impostato su un percorso di file arbitrario. L'eliminazione del proprio account utente eliminerebbe quindi anche questo file arbitrario.
 ### Magic methods
 I magic methods sono metodi speciali che vengono invocati automaticamente al verificarsi di determinati eventi, senza bisogno di richiamarli esplicitamente. Questi metodi, comuni nella programmazione orientata agli oggetti, sono spesso identificati da doppie underscore nel nome (ad esempio, `__construct()` in PHP o `__init__()` in Python).
 
@@ -122,9 +122,9 @@ L’individuazione manuale delle gadget chain può essere complessa e quasi impo
 
 **Lavorare con gadget chain pre-costruite** Identificare manualmente le gadget chain può essere un processo piuttosto arduo, ed è quasi impossibile senza l'accesso al codice sorgente. Fortunatamente, ci sono alcune opzioni per lavorare con gadget chain pre-costruite che puoi provare prima.
 
-Ci sono diversi strumenti disponibili che forniscono una gamma di catene pre-scoperte che sono state sfruttate con successo su altri siti web. Anche se non hai accesso al codice sorgente, puoi usare questi strumenti sia per identificare che per sfruttare vulnerabilità di deserializzazione non sicure con relativamente poco sforzo. Questo approccio è reso possibile dall'uso diffuso di librerie che contengono gadget chain sfruttabili. Ad esempio, se una gadget chain nella libreria Apache Commons Collections di Java può essere sfruttata su un sito web, qualsiasi altro sito web che implementa questa libreria potrebbe essere sfruttabile usando la stessa catena.
+Ci sono diversi strumenti disponibili che forniscono una gamma di catene pre-scoperte che sono state sfruttate con successo su altri siti web. Anche se non hai accesso al codice sorgente, puoi usare questi strumenti sia per identificare che per sfruttare vulnerabilità di deserializzazione non sicure con relativamente poco sforzo. Questo approccio è reso possibile dall'uso diffuso di librerie che contengono gadget chain sfruttabili. Ad esempio, se una gadget chain nella libreria **Apache Commons Collections** di Java può essere sfruttata su un sito web, qualsiasi altro sito web che implementa questa libreria potrebbe essere sfruttabile usando la stessa catena.
 
-La maggior parte dei linguaggi che soffrono frequentemente di vulnerabilità di deserializzazione non sicura hanno strumenti proof-of-concept equivalenti. Ad esempio, per i siti basati su PHP puoi usare PHP Generic Gadget Chains (PHPGGC).
+La maggior parte dei linguaggi che soffrono frequentemente di vulnerabilità di deserializzazione non sicura hanno strumenti proof-of-concept equivalenti. Ad esempio, per i siti basati su PHP puoi usare **PHP Generic Gadget Chains (PHPGGC)**.
 
 **Nota:** è importante notare che la vulnerabilità è la deserializzazione di dati controllabili dall'utente, non la mera presenza di una gadget chain nel codice del sito web o in una qualsiasi delle sue librerie. La gadget chain è solo un mezzo per manipolare il flusso di dati dannosi una volta che sono stati iniettati. Ciò si applica anche a varie vulnerabilità di corruzione della memoria che si basano sulla deserializzazione di dati non attendibili. In altre parole, un sito web potrebbe comunque essere vulnerabile anche se in qualche modo riuscisse a collegare ogni possibile gadget chain.
 ## Come prevenire le vulnerabilità di deserializzazione non sicure

@@ -12,7 +12,7 @@ Questo non è vulnerabile agli SSTI perché il nome dell'utente viene sempliceme
 
 `$output = $twig->render("Dear " . $_GET['name']);`
 
-In questo esempio, invece di un valore statico passato al modello, parte del modello stesso viene generata dinamicamente utilizzando il parametro GET name. Poiché la sintassi del modello viene valutata lato server, questo consente potenzialmente a un aggressore di posizionare un payload di SSTI all'interno del parametro name come segue:
+In questo esempio, invece di un valore statico passato al modello, parte del modello stesso viene generata dinamicamente utilizzando il parametro GET `name`. Poiché la sintassi del modello viene valutata lato server, questo consente potenzialmente a un aggressore di posizionare un payload di SSTI all'interno del parametro name come segue:
 
 `http://vulnerable-website.com/?name={{bad-stuff-here}}`
 
@@ -83,7 +83,7 @@ Quando exploit noti non funzionano, crea un attacco personalizzato analizzando i
 ## Come prevenire le vulnerabilità di SSTI
 Il modo migliore per prevenire la SSTI è non consentire agli utenti di modificare o inviare nuovi template. Tuttavia, a volte ciò è inevitabile a causa di requisiti aziendali.
 
-Uno dei modi più semplici per evitare di introdurre vulnerabilità di SSTI è utilizzare sempre un template engine "senza logica", come Mustache, a meno che non sia assolutamente necessario. Separare il più possibile la logica dalla presentazione può ridurre notevolmente l'esposizione agli attacchi basati su template più pericolosi.
+Uno dei modi più semplici per evitare di introdurre vulnerabilità di SSTI è utilizzare sempre un template engine "senza logica", come **Mustache**, a meno che non sia assolutamente necessario. Separare il più possibile la logica dalla presentazione può ridurre notevolmente l'esposizione agli attacchi basati su template più pericolosi.
 
 Un'altra misura è quella di eseguire il codice degli utenti solo in un ambiente sandbox in cui i moduli e le funzioni potenzialmente pericolosi sono stati completamente rimossi. Sfortunatamente, il sandboxing del codice non attendibile è intrinsecamente difficile e soggetto a bypass.
 

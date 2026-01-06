@@ -10,7 +10,7 @@ Questi difetti sono spesso il risultato di una mancata previsione di stati insol
 ## Esempi di vulnerabilità della logica
 
 ### 1. Fiducia eccessiva nei controlli lato client
-Gli sviluppatori assumono che gli utenti interagiranno solo tramite l'interfaccia fornita. Un aggressore può intercettare e modificare i dati (es. tramite Burp Suite) dopo la convalida del browser ma prima che raggiungano il server.
+Gli sviluppatori assumono che gli utenti interagiranno solo tramite l'interfaccia fornita. Un aggressore può intercettare e modificare i dati (es. tramite **Burp Suite**) dopo la convalida del browser ma prima che raggiungano il server.
 
 ### 2. Mancata gestione di input non convenzionali
 L'applicazione non prevede valori fuori dai limiti normali.
@@ -19,7 +19,7 @@ L'applicazione non prevede valori fuori dai limiti normali.
 
 ### 3. Difetti specifici del dominio
 Legati allo scopo specifico del sito.
-*   **Esempio (Shopping):** Applicare uno sconto per ordini superiori a $1000 e poi rimuovere articoli dal carrello mantenendo lo sconto attivo.
+*   **Esempio (Shopping):** Applicare uno sconto per ordini superiori a `$1000` e poi rimuovere articoli dal carrello mantenendo lo sconto attivo.
 *   **Esempio (Social):** Trovare un modo logico per forzare un gran numero di utenti a seguirti.
 
 ### 4. Fornitura di un oracolo di crittografia

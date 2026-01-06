@@ -15,7 +15,7 @@ Gli utenti forniscono credenziali (nome utente e password) che il sistema confro
 ### Strategie di attacco e contromisure:
 *   **Attacchi al dizionario offline:** Uso di elenchi di password comuni confrontati con hash rubati. *Contromisura:* impedire l'accesso ai file delle password.
 *   **Attacchi specifici all'account:** Phishing o ingegneria sociale mirata. *Contromisura:* blocco dell'account dopo 5 tentativi falliti.
-*   **Attacchi alle password più diffuse:** Tentativi di usare password deboli (es. "123456") su molti account. *Contromisura:* inibire l'uso di password comuni.
+*   **Attacchi alle password più diffuse:** Tentativi di usare password deboli (es. `"123456"`) su molti account. *Contromisura:* inibire l'uso di password comuni.
 *   **Workstation hijacking:** Accesso fisico a una sessione già aperta. *Contromisura:* invalidare le sessioni dopo un periodo di inattività.
 
 ## Password con hash e salt
@@ -37,7 +37,7 @@ Insieme di procedure che utilizzano stringhe uniche (token) invece delle sole pa
     *   Messaggi di errore.
     *   Tempi di risposta (es. il server impiega più tempo se l'utente esiste perché deve controllare la password).
 *   **Protezione brute-force difettosa:** Blocchi IP che possono essere aggirati ruotando l'IP o blocchi account che possono essere sfruttati per l'enumerazione.
-*   **Credential stuffing:** Uso di coppie username:password rubate da altri siti.
+*   **Credential stuffing:** Uso di coppie `username:password` rubate da altri siti.
 
 ## Autenticazione multifattoriale (2FA)
 Aggiunge un livello di sicurezza richiedendo un secondo fattore.

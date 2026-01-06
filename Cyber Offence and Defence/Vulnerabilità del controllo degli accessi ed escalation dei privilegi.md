@@ -26,7 +26,7 @@ Se un utente può ottenere l'accesso a funzionalità a cui non è autorizzato ad
 Ad esempio, un sito web potrebbe ospitare funzionalità sensibili al seguente URL:
 `https://insecure-website.com/admin`
 
-Questo potrebbe essere accessibile a qualsiasi utente, non solo agli utenti amministrativi che hanno un collegamento alla funzionalità nella loro interfaccia utente. In alcuni casi, l'URL amministrativo potrebbe essere divulgato in altre posizioni, come il file robots.txt:
+Questo potrebbe essere accessibile a qualsiasi utente, non solo agli utenti amministrativi che hanno un collegamento alla funzionalità nella loro interfaccia utente. In alcuni casi, l'URL amministrativo potrebbe essere divulgato in altre posizioni, come il file `robots.txt`:
 `https://insecure-website.com/robots.txt`
 
 Anche se l'URL non è reso pubblico, un aggressore potrebbe riuscire a utilizzare un elenco di parole per forzare la posizione della funzionalità sensibile (APPRENTICE: Unprotected admin functionality).
@@ -68,9 +68,9 @@ Questo approccio non è sicuro perché un utente può modificare il valore e acc
 
 `DENY: POST, /admin/deleteUser, managers`
 
-Questa regola nega l'accesso al metodo POST sull'URL /admin/deleteUser, per gli utenti nel gruppo manager. In questa situazione possono verificarsi vari problemi, che portano a bypass del controllo di accesso.
+Questa regola nega l'accesso al metodo POST sull'URL `/admin/deleteUser`, per gli utenti nel gruppo manager. In questa situazione possono verificarsi vari problemi, che portano a bypass del controllo di accesso.
 
-Alcuni framework applicativi supportano vari header HTTP non standard che possono essere utilizzati per sovrascrivere l'URL nella richiesta originale, come X-Original-URL e X-Rewrite-URL. Se un sito web utilizza rigorosi controlli front-end per limitare l'accesso in base all'URL, ma l'applicazione consente che l'URL venga sovrascritto tramite un header di richiesta, potrebbe essere possibile bypassare i controlli di accesso utilizzando una richiesta come la seguente:
+Alcuni framework applicativi supportano vari header HTTP non standard che possono essere utilizzati per sovrascrivere l'URL nella richiesta originale, come `X-Original-URL` e `X-Rewrite-URL`. Se un sito web utilizza rigorosi controlli front-end per limitare l'accesso in base all'URL, ma l'applicazione consente che l'URL venga sovrascritto tramite un header di richiesta, potrebbe essere possibile bypassare i controlli di accesso utilizzando una richiesta come la seguente:
 
 ```http
 POST / HTTP/1.1
@@ -86,7 +86,7 @@ Gli attacchi di horizontal privilege escalation possono utilizzare metodi di exp
 
 `https://insecure-website.com/myaccount?id=123`
 
-Se un aggressore modificasse il valore del parametro id in quello di un altro utente, potrebbe ottenere l'accesso alla pagina account di un altro utente e ai dati e alle funzioni associati.
+Se un aggressore modificasse il valore del parametro `id` in quello di un altro utente, potrebbe ottenere l'accesso alla pagina account di un altro utente e ai dati e alle funzioni associati.
 
 In alcune applicazioni, il parametro exploitable non ha un valore prevedibile. Ad esempio, invece di un numero incrementale, un'applicazione potrebbe utilizzare identificatori univoci globali (GUID) per identificare gli utenti. Ciò potrebbe impedire a un aggressore di indovinare o prevedere l'identificativo di un altro utente. Tuttavia, i GUID appartenenti ad altri utenti potrebbero essere divulgati altrove nell'applicazione in cui gli utenti sono referenziati, come messaggi utente o recensioni.
 
@@ -107,7 +107,7 @@ Esistono molti esempi di vulnerabilità del controllo degli accessi in cui i val
 **Vulnerabilità IDOR con riferimento diretto agli oggetti del database** Considera un sito web che utilizza il seguente URL per accedere alla pagina dell'account del cliente, recuperando le informazioni dal database back-end:
 `https://insecure-website.com/customer_account?customer_number=132355`
 
-Qui, il numero del cliente viene utilizzato direttamente come indice di record nelle query eseguite sul database back-end. Se non sono presenti altri controlli, un aggressore può semplicemente modificare il valore customer_number, aggirando i controlli di accesso per visualizzare i record di altri clienti. Questo è un esempio di vulnerabilità IDOR che porta all'escalation dei privilegi orizzontali.
+Qui, il numero del cliente viene utilizzato direttamente come indice di record nelle query eseguite sul database back-end. Se non sono presenti altri controlli, un aggressore può semplicemente modificare il valore `customer_number`, aggirando i controlli di accesso per visualizzare i record di altri clienti. Questo è un esempio di vulnerabilità IDOR che porta all'escalation dei privilegi orizzontali.
 
 Un aggressore potrebbe essere in grado di eseguire l'horizontal e vertical privilege escalation modificando l'utente in uno con privilegi aggiuntivi aggirando i controlli di accesso. Altre possibilità includono lo sfruttamento della perdita di password o la modifica dei parametri una volta che l'aggressore è atterrato nella pagina degli account dell'utente, ad esempio.
 
@@ -129,7 +129,7 @@ A volte, un sito web implementerà rigorosi controlli di accesso su alcuni di qu
 ### Controllo degli accessi basato su Referer
 Alcuni siti web basano i controlli degli accessi sull'intestazione Referer inviata nella richiesta HTTP. L'intestazione Referer può essere aggiunta alle richieste dai browser per indicare quale pagina ha avviato una richiesta.
 
-Ad esempio, un'applicazione impone in modo robusto il controllo degli accessi sulla pagina amministrativa principale in /admin, ma per le sottopagine come /admin/deleteUser ispeziona solo l'intestazione Referer. Se l'intestazione Referer contiene l'URL principale /admin, la richiesta è consentita.
+Ad esempio, un'applicazione impone in modo robusto il controllo degli accessi sulla pagina amministrativa principale in `/admin`, ma per le sottopagine come `/admin/deleteUser` ispeziona solo l'intestazione Referer. Se l'intestazione Referer contiene l'URL principale `/admin`, la richiesta è consentita.
 
 In questo caso, l'intestazione Referer può essere completamente controllata da un aggressore. Ciò significa che possono falsificare richieste dirette a sottopagine sensibili fornendo l'intestazione Referer richiesta e ottenere un accesso non autorizzato (PRACTITIONER: Referer-based access control).
 ### Controllo degli accessi basato sulla posizione

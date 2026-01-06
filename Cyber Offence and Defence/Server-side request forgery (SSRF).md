@@ -8,7 +8,7 @@ Un exploit SSRF che causa connessioni a sistemi di terze parti esterne potrebbe 
 ## Attacchi SSRF comuni
 Gli attacchi SSRF spesso sfruttano le relazioni di fiducia per intensificare un attacco dall'applicazione vulnerabile ed eseguire azioni non autorizzate. Queste relazioni di fiducia potrebbero esistere in relazione al server o in relazione ad altri sistemi back-end all'interno della stessa organizzazione.
 ### Attacchi SSRF contro il server
-In un attacco SSRF contro il server, l'aggressore fa sì che l'applicazione effettui una richiesta HTTP al server che ospita l'applicazione, tramite la sua interfaccia di rete loopback. Ciò comporta in genere la fornitura di un URL con un nome host come 127.0.0.1 (un indirizzo IP riservato che punta all'adattatore loopback) o localhost (un nome comunemente utilizzato per lo stesso adattatore).
+In un attacco SSRF contro il server, l'aggressore fa sì che l'applicazione effettui una richiesta HTTP al server che ospita l'applicazione, tramite la sua interfaccia di rete loopback. Ciò comporta in genere la fornitura di un URL con un nome host come `127.0.0.1` (un indirizzo IP riservato che punta all'adattatore loopback) o `localhost` (un nome comunemente utilizzato per lo stesso adattatore).
 
 Ad esempio, immagina un'applicazione di shopping che consente all'utente di visualizzare se un articolo è disponibile in magazzino in un particolare negozio. Per fornire le informazioni sulle scorte, l'applicazione deve interrogare varie API REST back-end. Lo fa passando l'URL all'endpoint API back-end pertinente tramite una richiesta HTTP front-end. Quando un utente visualizza lo stato delle scorte di un articolo, il suo browser effettua la seguente richiesta:
 
@@ -32,9 +32,9 @@ Content-Length: 118
 stockApi=http://localhost/admin
 ```
 
-Il server recupera il contenuto dell'URL /admin e lo restituisce all'utente.
+Il server recupera il contenuto dell'URL `/admin` e lo restituisce all'utente.
 
-Un aggressore può visitare l'URL /admin, ma la funzionalità amministrativa è normalmente accessibile solo agli utenti autenticati. Ciò significa che un aggressore non vedrà nulla di interessante. Tuttavia, se la richiesta all'URL /admin proviene dalla macchina locale, i normali controlli di accesso vengono ignorati. L'applicazione concede l'accesso completo alla funzionalità amministrativa, perché la richiesta sembra provenire da una posizione attendibile.
+Un aggressore può visitare l'URL `/admin`, ma la funzionalità amministrativa è normalmente accessibile solo agli utenti autenticati. Ciò significa che un aggressore non vedrà nulla di interessante. Tuttavia, se la richiesta all'URL `/admin` proviene dalla macchina locale, i normali controlli di accesso vengono ignorati. L'applicazione concede l'accesso completo alla funzionalità amministrativa, perché la richiesta sembra provenire da una posizione attendibile.
 
 Perché le applicazioni si comportano in questo modo e si fidano implicitamente delle richieste che provengono dalla macchina locale? Questo può verificarsi per vari motivi:
 - il controllo di accesso potrebbe essere implementato in un componente diverso che si trova di fronte al server dell'applicazione. Quando viene effettuata una connessione al server, il controllo viene ignorato;
@@ -45,7 +45,7 @@ Questo tipo di relazioni di fiducia, in cui le richieste provenienti dalla macch
 ### Attacchi SSRF contro altri sistemi back-end
 In alcuni casi, il server applicativo è in grado di interagire con sistemi back-end che non sono direttamente raggiungibili dagli utenti. Questi sistemi hanno spesso indirizzi IP privati non instradabili. I sistemi back-end sono normalmente protetti dalla topologia di rete; quindi, hanno spesso un blocco di sicurezza più debole. In molti casi, i sistemi back-end interni contengono funzionalità sensibili a cui chiunque sia in grado di interagire con i sistemi può accedere senza autenticazione.
 
-Nell'esempio precedente, immagina che ci sia un'interfaccia amministrativa all'URL back-end https://192.168.0.68/admin. Un aggressore può inviare la seguente richiesta per sfruttare la vulnerabilità SSRF e accedere all'interfaccia amministrativa:
+Nell'esempio precedente, immagina che ci sia un'interfaccia amministrativa all'URL back-end `https://192.168.0.68/admin`. Un aggressore può inviare la seguente richiesta per sfruttare la vulnerabilità SSRF e accedere all'interfaccia amministrativa:
 
 ```http
 POST /product/stock HTTP/1.0
@@ -61,17 +61,17 @@ Le vulnerabilità blind SSRF si verificano quando un'applicazione può essere in
 ## Aggirare le difese SSRF comuni (prevenzione)
 È comune vedere applicazioni contenenti comportamenti SSRF insieme a difese volte a prevenire lo sfruttamento dannoso. Spesso, queste difese possono essere aggirate.
 ### SSRF con filtri di input basati su blacklist
-Alcune applicazioni bloccano l'input contenente nomi host come 127.0.0.1 e localhost, o URL sensibili come /admin. In questa situazione, puoi spesso aggirare il filtro usando le seguenti tecniche:
-- usa una rappresentazione IP alternativa di 127.0.0.1, come 2130706433, 017700000001 o 127.1;
-- registra il tuo nome di dominio che si risolve in 127.0.0.1. Puoi usare spoofed.burpcollaborator.net a questo scopo;
+Alcune applicazioni bloccano l'input contenente nomi host come `127.0.0.1` e `localhost`, o URL sensibili come `/admin`. In questa situazione, puoi spesso aggirare il filtro usando le seguenti tecniche:
+- usa una rappresentazione IP alternativa di `127.0.0.1`, come `2130706433`, `017700000001` o `127.1`;
+- registra il tuo nome di dominio che si risolve in `127.0.0.1`. Puoi usare `spoofed.burpcollaborator.net` a questo scopo;
 - offusca le stringhe bloccate usando la codifica URL o la variazione di maiuscole/minuscole;
-- fornisci un URL che controlli, che reindirizza all'URL di destinazione. Prova a usare diversi codici di reindirizzamento, così come diversi protocolli per l'URL di destinazione. Ad esempio, è stato dimostrato che il passaggio da un URL http: a https: durante il reindirizzamento aggira alcuni filtri anti-SSRF.
+- fornisci un URL che controlli, che reindirizza all'URL di destinazione. Prova a usare diversi codici di reindirizzamento, così come diversi protocolli per l'URL di destinazione. Ad esempio, è stato dimostrato che il passaggio da un URL `http:` a `https:` durante il reindirizzamento aggira alcuni filtri anti-SSRF.
 ### SSRF con filtri di input basati su whitelist
 Alcune applicazioni consentono solo input corrispondenti, una whitelist di valori consentiti. Il filtro può cercare una corrispondenza all'inizio dell'input o contenuta al suo interno. Potresti riuscire a bypassare questo filtro sfruttando le incongruenze nell'analisi URL.
 
 La specifica URL contiene una serie di funzionalità che probabilmente verranno trascurate quando gli URL implementano l'analisi e la convalida ad hoc utilizzando questo metodo:
-- puoi incorporare le credenziali in un URL prima del nome host, utilizzando il carattere @. Ad esempio: `https://expected-host:fakepassword@evil-host`
-- puoi utilizzare il carattere # per indicare un frammento URL. Ad esempio: `https://evil-host#expected-host`
+- puoi incorporare le credenziali in un URL prima del nome host, utilizzando il carattere `@`. Ad esempio: `https://expected-host:fakepassword@evil-host`
+- puoi utilizzare il carattere `#` per indicare un frammento URL. Ad esempio: `https://evil-host#expected-host`
 - puoi sfruttare la gerarchia di denominazione DNS per inserire l'input richiesto in un nome DNS completamente qualificato che controlli. Ad esempio: `https://expected-host.evil-host`
 - puoi codificare i caratteri URL per confondere il codice di analisi URL. Ciò è particolarmente utile se il codice che implementa il filtro gestisce i caratteri codificati in URL in modo diverso rispetto al codice che esegue la richiesta HTTP back-end. Puoi anche provare a codificare due volte i caratteri; alcuni server decodificano in modo ricorsivo l'input ricevuto tramite URL, il che può portare a ulteriori discrepanze.
 - puoi usare combinazioni di queste tecniche insieme.
@@ -94,7 +94,7 @@ Content-Length: 118
 stockApi=http://weliketoshop.net/product/nextProduct?currentProductId=6&path=http://192.168.0.68/admin
 ```
 
-Questo exploit SSRF funziona perché l'applicazione convalida prima che l'URL stockAPI fornito si trovi su un dominio consentito, il che è vero. L'applicazione quindi richiede l'URL fornito, che attiva il reindirizzamento aperto. Segue il reindirizzamento e invia una richiesta all'URL interno scelto dall'aggressore.
+Questo exploit SSRF funziona perché l'applicazione convalida prima che l'URL `stockAPI` fornito si trovi su un dominio consentito, il che è vero. L'applicazione quindi richiede l'URL fornito, che attiva il reindirizzamento aperto. Segue il reindirizzamento e invia una richiesta all'URL interno scelto dall'aggressore.
 ## Trovare la superficie di attacco nascosta per le vulnerabilità SSRF
 Molte vulnerabilità di falsificazione delle richieste lato server sono facili da trovare, perché il normale traffico dell'applicazione coinvolge parametri di richiesta contenenti URL completi. Altri esempi di SSRF sono più difficili da individuare.
 ### URL parziali nelle richieste

@@ -57,11 +57,11 @@ Gli script sono spesso creati in modo da eseguire alcuni o tutti i seguenti comp
 
 Le tecniche di frame busting sono spesso specifiche del browser e della piattaforma e, grazie alla flessibilità dell'HTML, possono solitamente essere aggirate dagli aggressori. Poiché i frame buster sono JavaScript, le impostazioni di sicurezza del browser potrebbero impedirne il funzionamento o addirittura il browser potrebbe non supportare JavaScript.
 
-Una soluzione alternativa efficace per gli aggressori contro i frame buster è quella di utilizzare l'attributo sandbox iframe HTML5. Quando questo è impostato con i valori allow-forms o allow-scripts e il valore allow-top-navigation è omesso, lo script frame buster può essere neutralizzato poiché l'iframe non può controllare se è o meno la finestra superiore:
+Una soluzione alternativa efficace per gli aggressori contro i frame buster è quella di utilizzare l'attributo `sandbox` iframe HTML5. Quando questo è impostato con i valori `allow-forms` o `allow-scripts` e il valore `allow-top-navigation` è omesso, lo script frame buster può essere neutralizzato poiché l'iframe non può controllare se è o meno la finestra superiore:
 
 `<iframe id="victim_website" src="https://victim-website.com" sandbox="allow-forms"></iframe>`
 
-Sia i valori allow-forms che allow-scripts consentono le azioni specificate all'interno dell'iframe, ma la navigazione di livello superiore è disabilitata. Ciò inibisce i comportamenti di frame busting consentendo al contempo la funzionalità all'interno del sito di destinazione.
+Sia i valori `allow-forms` che `allow-scripts` consentono le azioni specificate all'interno dell'iframe, ma la navigazione di livello superiore è disabilitata. Ciò inibisce i comportamenti di frame busting consentendo al contempo la funzionalità all'interno del sito di destinazione.
 ### Combinazione di clickjacking con un attacco DOM XSS
 La vera potenza del clickjacking si rivela quando viene utilizzato come vettore per un altro attacco come un attacco DOM XSS. L'implementazione di questo attacco combinato è relativamente semplice, supponendo che l'aggressore abbia prima identificato l'exploit XSS. L'exploit XSS viene quindi combinato con l'URL di destinazione dell'iframe in modo che l'utente clicchi sul pulsante o sul collegamento e di conseguenza esegua l'attacco DOM XSS.
 ### Clickjacking multifase
@@ -69,13 +69,13 @@ La manipolazione degli input di un sito web di destinazione da parte di un aggre
 ## Come prevenire gli attacchi di clickjacking
 Il clickjacking è un comportamento lato browser e il suo successo o meno dipende dalla funzionalità del browser e dalla conformità agli standard web prevalenti e alle best practice. La protezione lato server contro il clickjacking è fornita definendo e comunicando vincoli sull'uso di componenti come gli iframe. Tuttavia, l'implementazione della protezione dipende dalla conformità del browser e dall'applicazione di questi vincoli. Due meccanismi per la protezione dal clickjacking lato server sono X-Frame-Options e Content Security Policy.
 ### X-Frame-Options
-X-Frame-Options è un header che fornisce al proprietario del sito web il controllo sull'uso di iframe o oggetti in modo che l'inclusione di una pagina web all'interno di un frame possa essere vietata con la direttiva deny:
+X-Frame-Options è un header che fornisce al proprietario del sito web il controllo sull'uso di iframe o oggetti in modo che l'inclusione di una pagina web all'interno di un frame possa essere vietata con la direttiva `deny`:
 `X-Frame-Options: deny`
 
-In alternativa, il framing può essere limitato alla stessa origine del sito web utilizzando la direttiva sameorigin:
+In alternativa, il framing può essere limitato alla stessa origine del sito web utilizzando la direttiva `sameorigin`:
 `X-Frame-Options: sameorigin`
 
-Oppure a un sito web denominato utilizzando la direttiva allow-from:
+Oppure a un sito web denominato utilizzando la direttiva `allow-from`:
 `X-Frame-Options: allow-from https://normal-website.com`
 
 X-Frame-Options non è implementato in modo coerente nei browser: tuttavia, se applicato correttamente insieme alla Content Security Policy come parte di una strategia di difesa multilivello, può fornire una protezione efficace contro gli attacchi di clickjacking.
@@ -85,7 +85,7 @@ Content Security Policy (CSP) è un meccanismo di rilevamento e prevenzione che 
 
 dove policy è una stringa di direttive di policy separate da punto e virgola. CSP fornisce al browser client informazioni sulle fonti consentite di risorse web che il browser può applicare al rilevamento e all'intercettazione di comportamenti dannosi.
 
-La protezione consigliata contro il clickjacking è quella di incorporare la direttiva frame-ancestors nella Content Security Policy dell'applicazione. La direttiva frame-ancestors 'none' ha un comportamento simile alla direttiva X-Frame-Options deny. La direttiva frame-ancestors 'self' è ampiamente equivalente alla direttiva X-Frame-Options sameorigin. Il seguente CSP inserisce i frame nella whitelist solo per lo stesso dominio:
+La protezione consigliata contro il clickjacking è quella di incorporare la direttiva `frame-ancestors` nella Content Security Policy dell'applicazione. La direttiva `frame-ancestors 'none'` ha un comportamento simile alla direttiva X-Frame-Options deny. La direttiva `frame-ancestors 'self'` è ampiamente equivalente alla direttiva X-Frame-Options sameorigin. Il seguente CSP inserisce i frame nella whitelist solo per lo stesso dominio:
 `Content-Security-Policy: frame-ancestors 'self';`
 
 In alternativa, il framing può essere limitato a siti denominati:

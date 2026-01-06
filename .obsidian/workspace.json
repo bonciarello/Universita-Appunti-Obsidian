@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4aa0d5a2098a9e72",
+        "id": "b8dd10d777307cc1",
         "type": "tabs",
         "children": [
           {
-            "id": "97dc36fc0680dabc",
+            "id": "08692261eb660097",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber Offence and Defence/Vulnerabilità della logica aziendale.md",
+                "file": "Cyber Offence and Defence/Attacco JWT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vulnerabilità della logica aziendale"
+              "title": "Attacco JWT"
             }
           }
         ]
@@ -178,34 +178,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "97dc36fc0680dabc",
+  "active": "08692261eb660097",
   "lastOpenFiles": [
-    "Cyber Offence and Defence/Vulnerabilità dell’autenticazione.md",
-    "Cyber Offence and Defence/SQL injection (SQLi).md",
-    "Cyber Offence and Defence/Fuga di informazioni.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/AWS CLF-002 Cloud Practitioner Essentials.md",
+    "Cyber Offence and Defence/Autenticazione OAuth.md",
+    "Cyber Offence and Defence/Deserializzazione non sicura.md",
+    "Cyber Offence and Defence/Server-side template injection (SSTI).md",
+    "Cyber Offence and Defence/Clickjacking.md",
+    "Cyber Offence and Defence/Attacco JWT.md",
+    "Cyber Offence and Defence/Cross-origin resource sharing (CORS).md",
+    "Cyber Offence and Defence/MServer-sidetemplateinjection(SSTI).md",
+    "Cyber Offence and Defence/MAttacco JWT.md",
+    "Cyber Offence and Defence/MAutenticazione OAuth.md",
+    "Cyber Offence and Defence/MServer-side template injection (SSTI).md",
+    "Cyber Offence and Defence/MDeserializzazione non sicura.md",
+    "Cyber Offence and Defence/16 Clickjacking.md",
+    "Cyber Offence and Defence/Cross-site request forgery (CSRF).md",
+    "Cyber Offence and Defence/Cross-site scripting.md",
+    "Cyber Offence and Defence/XML external entity (XXE) injection.md",
+    "Cyber Offence and Defence/Falsificazione della richiesta lato server (SSRF).md",
+    "Cyber Offence and Defence/Vulnerabilità del controllo degli accessi ed escalation dei privilegi.md",
+    "Cyber Offence and Defence/Vulnerabilità di caricamento file.md",
+    "Cyber Offence and Defence/Path Traversal.md",
+    "Cyber Offence and Defence/Command Injection.md",
     "Cyber Offence and Defence/Vulnerabilità della logica aziendale.md",
-    "SQL injection (SQLi).md",
-    "Vulnerabilità dell’autenticazione.md",
-    "Vulnerabilità della logica aziendale.md",
-    "Fuga di informazioni.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Soluzioni Well-Architected.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Sicurezza.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Reti.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Prezzi e Supporto.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Monitoraggio, Conformità e Governance nel Cloud AWS.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Migrazione al Cloud AWS.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Introduzione ad Amazon Web Services.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Infrastruttura Globale e Affidabilità.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/IA-Machine Learning e Analisi dei Dati.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Database.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Archiviazione e Database.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/Calcolo nel Cloud.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_12.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_11.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_10.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_09.md",
-    "AWS CLF-002 Cloud Practitioner Essentials/capitolo_08.md",
+    "Cyber Offence and Defence/20 Attacco JWT.md",
+    "Cyber Offence and Defence/17 Deserializzazione non sicura.md",
+    "Cyber Offence and Defence/18 Server-side template injection (SSTI).md",
+    "Cyber Offence and Defence/19 Autenticazione OAuth.md",
+    "Cyber Offence and Defence/Vulnerabilità dell’autenticazione.md",
     "AWS CLF-002 Cloud Practitioner Essentials",
     "Cyber Offence and Defence",
     "test",

@@ -22,7 +22,7 @@ Gli **obiettivi** del corso sono:
 - capacità di applicare tecniche di base di attacchi informatici.
 ## Indice
 - [[SQL Injection (SQLi)]]
-- [[Vulnerabilità dell'autenticazione]]
+- [[Vulnerabilità dell’autenticazione]]
 - [[Vulnerabilità della logica aziendale]]
 - [[Fuga di informazioni]]
 - [[Path Traversal]]
@@ -30,7 +30,7 @@ Gli **obiettivi** del corso sono:
 - [[Vulnerabilità di caricamento file]]
 - [[Vulnerabilità del controllo degli accessi ed escalation dei privilegi]]
 - [[Server-side request forgery (SSRF)]]
-- [[XML external entity (XML) injection]]
+- [[XML external entity (XXE) injection]]
 - [[Cross-site scripting (XSS)]]
 - [[Cross-site request forgery (CSRF)]]
 - [[Cross-origin resource sharing (CORS)]]

@@ -50,5 +50,4 @@ Gli **obiettivi** del corso sono:
 - [[Gestione dello staff]]
 - [[JUnit]]
 - [[Maven]]
-- [[LABORATORIO - Git]]
 - [[Jira Software]]

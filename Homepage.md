@@ -7,6 +7,8 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Lingua Inglese]]
 - [[Web Computing]]
 - [[Ingegneria del Software]]
+- [[Algoritmi Paralleli e Sistemi Distribuiti]]
+- [[Basi di Dati]]
 ## 🎓 Magistrale
 - [[Cyber Offence and Defence]]
 ## 📜 Certificazioni

@@ -5,6 +5,8 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Informatica]]
 - [[Economia]]
 - [[Lingua Inglese]]
+- [[Web Computing]]
+- [[Ingegneria del Software]]
 ## 🎓 Magistrale
 - [[Cyber Offence and Defence]]
 ## 📜 Certificazioni

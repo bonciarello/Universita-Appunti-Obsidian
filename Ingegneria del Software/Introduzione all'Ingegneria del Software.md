@@ -36,8 +36,7 @@ Gli ingegneri di sistema sono coinvolti nelle specifiche del sistema, nella prog
 
 ## Che cos'è un modello del processo software?
 
-È una rappresentazione semplificata di un processo software, presentata da una prospettiva specifica.
-Esempi di prospettive di processo sono:
+È una rappresentazione semplificata di un processo software, presentata da una prospettiva specifica. Esempi di prospettive di processo sono:
 
 - *Prospettiva del flusso di lavoro*, sequenza di attività;
 - *Prospettiva del flusso di dati*, flusso di informazioni;
@@ -67,8 +66,7 @@ Sono approcci strutturati allo sviluppo del software come per esempio:
 
 ## Che cos'è CASE (Computer-Aided Software Engineering)
 
-Sono sistemi software destinati a fornire supporto automatizzato per le attività dei processi software.
-I sistemi CASE sono spesso utilizzati per il supporto del metodo come per esempio:
+Sono sistemi software destinati a fornire supporto automatizzato per le attività dei processi software. I sistemi CASE sono spesso utilizzati per il supporto del metodo come per esempio:
 
 - **Upper-CASE**, strumenti a supporto delle prime attività di processo dei requisiti e della progettazione;
 - **Lower-CASE**, strumenti per supportare attività successive come programmazione, debug e test.
@@ -101,8 +99,7 @@ Abbiamo vari problemi legati alla responsabilità professionale come:
 
 ## Codice Etico ACM/IEEE
 
-Le società professionali negli Stati Uniti hanno collaborato per produrre un codice di pratica etica.
-Questo codice contiene otto principi relativi al comportamento e alle decisioni e riguarda professionisti, educatori, manager, supervisori e responsabili politici, nonché tirocinanti e studenti della professione.
+Le società professionali negli Stati Uniti hanno collaborato per produrre un codice di pratica etica. Questo codice contiene otto principi relativi al comportamento e alle decisioni e riguarda professionisti, educatori, manager, supervisori e responsabili politici, nonché tirocinanti e studenti della professione.
 
 ## Dilemmi etici
 

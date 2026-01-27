@@ -174,11 +174,7 @@ I requisiti di sistema possono essere definiti o illustrati utilizzando modelli 
 
 ## Specifiche del linguaggio strutturato
 
-La libertà dell'autore dei requisiti è limitata da un modello predefinito per i requisiti.
-**Tutti i requisiti sono scritti in modo standard.**
-La terminologia utilizzata nella descrizione può essere limitata.
-Il *vantaggio* è che si mantiene al massimo l'espressività.
-Il *limite* è che un certo grado di uniformità è imposto alla specifica.
+La libertà dell'autore dei requisiti è limitata da un modello predefinito per i requisiti. **Tutti i requisiti sono scritti in modo standard.** La terminologia utilizzata nella descrizione può essere limitata. Il *vantaggio* è che si mantiene al massimo l'espressività. Il *limite* è che un certo grado di uniformità è imposto alla specifica.
 
 Abbiamo vari tipi di specifiche:
 
@@ -450,8 +446,7 @@ Definisce una struttura generica per un documento dei requisiti che deve essere 
 
 ## Metodi formali
 
-**È basato sulla rappresentazione matematica e sull'analisi del software.**
-I metodi formali non sono stati ampiamente utilizzati perché:
+**È basato sulla rappresentazione matematica e sull'analisi del software.** I metodi formali non sono stati ampiamente utilizzati perché:
 
 - altre tecniche di ingegneria del software hanno avuto successo;
 - cambiamenti di mercato;

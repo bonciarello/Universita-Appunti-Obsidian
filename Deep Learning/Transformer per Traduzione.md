@@ -1,5 +1,3 @@
-# Capitolo 23: Laboratorio - Transformer per Traduzione
-
 Costruiremo un modello Transformer completo per tradurre dal Portoghese all'Inglese. Keras fornisce `MultiHeadAttention`, ma dobbiamo assemblare noi l'architettura Encoder-Decoder.
 
 ## 1. Positional Encoding

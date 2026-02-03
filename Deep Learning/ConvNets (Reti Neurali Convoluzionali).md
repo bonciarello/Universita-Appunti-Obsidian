@@ -1,5 +1,3 @@
-# Capitolo 8: ConvNets (Reti Neurali Convoluzionali)
-
 Le **ConvNets** (o CNN) sono un tipo di architettura di rete neurale progettata specificamente per elaborare dati che hanno una struttura a griglia, come immagini (griglia 2D di pixel) o serie temporali (griglia 1D).
 Sono state fondamentali per la rivoluzione del Deep Learning nella Computer Vision, alimentando applicazioni come il riconoscimento facciale, le auto a guida autonoma e la diagnostica medica.
 

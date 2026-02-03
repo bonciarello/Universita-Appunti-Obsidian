@@ -1,5 +1,3 @@
-# Capitolo 6: Overfitting e Regolarizzazione
-
 La questione fondamentale nell'apprendimento automatico è la tensione tra **ottimizzazione** e **generalizzazione**.
 *   L'**ottimizzazione** è il processo di adattamento di un modello per ottenere le migliori prestazioni possibili sui dati di addestramento (il learning vero e proprio).
 *   La **generalizzazione** si riferisce alla capacità del modello addestrato di performare bene su dati mai visti prima.

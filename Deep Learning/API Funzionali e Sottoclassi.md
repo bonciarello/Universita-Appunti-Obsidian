@@ -1,5 +1,3 @@
-# Capitolo 11: API Funzionali e Sottoclassi
-
 Fino ad ora abbiamo utilizzato quasi esclusivamente il modello `Sequential` di Keras. Sebbene sia semplice e potente, il modello sequenziale fa un'assunzione forte: che la rete sia una pila lineare di strati, dove ogni strato ha esattamente **un tensore di input** e **un tensore di output**.
 
 Tuttavia, molte architetture avanzate di Deep Learning non rispettano questa topologia lineare. In questo capitolo esploreremo due modi più flessibili per costruire modelli in Keras: l'**API Funzionale** e il **Model Subclassing**.

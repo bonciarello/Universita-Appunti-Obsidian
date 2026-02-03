@@ -1,5 +1,3 @@
-# Capitolo 18: Laboratorio - Reti Neurali Ricorrenti e Classificazione del Testo
-
 Le Reti Neurali Ricorrenti (RNN) sono l'architettura d'elezione per elaborare dati sequenziali come il testo. A differenza delle immagini (dove i pixel vicini sono correlati spazialmente), nel testo le parole hanno significato solo nel contesto della frase che le precede (e le segue).
 
 ## Tipologie di Architetture RNN

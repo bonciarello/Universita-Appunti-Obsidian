@@ -1,5 +1,3 @@
-# Capitolo 7: Laboratorio - Convalida K-Fold e TensorFlow
-
 ## Convalida K-Fold (Approfondimento)
 
 Nei capitoli precedenti, per valutare i nostri modelli, abbiamo diviso i dati in un set di addestramento e un set di validazione.

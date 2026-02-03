@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3882f5466eba9a81",
+        "id": "9efa33fc243418e1",
         "type": "tabs",
         "children": [
           {
-            "id": "9fbe44a50104da27",
+            "id": "cebcbf1c12ac537e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Homepage.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Homepage"
+              "title": "Nuova scheda"
             }
           }
         ]
@@ -178,34 +174,34 @@
       "command-palette:Apri riquadro comandi": false
     }
   },
-  "active": "9fbe44a50104da27",
+  "active": "cebcbf1c12ac537e",
   "lastOpenFiles": [
-    "Deep Learning/Deep Learning.md",
-    "Deep Learning/Capitolo_19.md",
-    "Deep Learning/Graph Neural Network (GNN).md",
-    "Deep Learning/Laboratorio - Transformer per Traduzione.md",
-    "Deep Learning/Livelli di Attenzione.md",
-    "Deep Learning/Trasformatori ed Explainability.md",
-    "Deep Learning/Laboratorio - Classificazione Testo Avanzata (IMDb).md",
-    "Deep Learning/Seq2Seq (Sequence-to-Sequence).md",
-    "Deep Learning/Laboratorio - RNN e Classificazione Testo.md",
-    "Deep Learning/Laboratorio - Ottimizzazione VAE.md",
-    "Deep Learning/Laboratorio - Implementazione Autocodificatore.md",
-    "Deep Learning/GAN (Generative Adversarial Networks).md",
-    "Deep Learning/Autocodificatori (Autoencoders).md",
-    "Deep Learning/Time Series e Reti Ricorrenti (RNN).md",
-    "Deep Learning/Ottimizzazione degli Iperparametri.md",
-    "Deep Learning/API Funzionali e Sottoclassi.md",
-    "Deep Learning/ConvNet Pre-addestrate (Transfer Learning).md",
-    "Deep Learning/Laboratorio - Classificazione Immagini (Fiori).md",
-    "Deep Learning/ConvNets (Reti Neurali Convoluzionali).md",
-    "Deep Learning/Laboratorio - K-Fold e TensorFlow.md",
-    "Deep Learning/Overfitting e Regolarizzazione.md",
-    "Deep Learning/Regressione.md",
-    "Deep Learning/Laboratorio - Creare Rete Neurale da Zero.md",
-    "Deep Learning/Classificazione con Keras.md",
+    "Deep Learning/Transformer per Traduzione.md",
     "Deep Learning/Introduzione alle Reti Neurali (NN).md",
-    "Deep Learning/Introduzione.md",
+    "Deep Learning/RNN e Classificazione Testo.md",
+    "Deep Learning/Ottimizzazione VAE.md",
+    "Deep Learning/K-Fold e TensorFlow.md",
+    "Deep Learning/Implementazione Autocodificatore.md",
+    "Deep Learning/Creare Rete Neurale da Zero.md",
+    "Deep Learning/Classificazione Testo Avanzata (IMDb).md",
+    "Deep Learning/Classificazione Immagini (Fiori).md",
+    "Deep Learning/Trasformatori ed Explainability.md",
+    "Deep Learning/Time Series e Reti Ricorrenti (RNN).md",
+    "Deep Learning/Seq2Seq (Sequence-to-Sequence).md",
+    "Deep Learning/Regressione.md",
+    "Deep Learning/Overfitting e Regolarizzazione.md",
+    "Deep Learning/Ottimizzazione degli Iperparametri.md",
+    "Deep Learning/Livelli di Attenzione.md",
+    "Deep Learning/Introduzione al Deep Learning.md",
+    "Deep Learning/Graph Neural Network (GNN).md",
+    "Deep Learning/GAN (Generative Adversarial Networks).md",
+    "Deep Learning/Deep Learning.md",
+    "Deep Learning/ConvNets (Reti Neurali Convoluzionali).md",
+    "Deep Learning/ConvNet Pre-addestrate (Transfer Learning).md",
+    "Deep Learning/Classificazione con Keras.md",
+    "Deep Learning/Autocodificatori (Autoencoders).md",
+    "Deep Learning/API Funzionali e Sottoclassi.md",
+    "Homepage.md",
     "Deep Learning/clean_md_advanced.py",
     "Deep Learning/pdf_to_md_batch.py",
     "Deep Learning/test_extraction.py",

@@ -33,7 +33,7 @@ Gli **obiettivi** del corso sono:
 ## Indice
 
 ### Introduzione
-- [[Introduzione]]
+- [[Introduzione al Deep Learning]]
 - [[Introduzione a Sistemi Operativi (SO)]]
 
 ### Gestione dei Processi e Concorrenza

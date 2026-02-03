@@ -1,5 +1,3 @@
-# Capitolo 3: Classificazione con Keras
-
 ## Framework Keras
 **Keras** è un framework di deep learning per Python che consente una sperimentazione rapida.
 *   Esegue codice su CPU o GPU.

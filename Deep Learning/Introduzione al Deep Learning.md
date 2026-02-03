@@ -1,5 +1,3 @@
-# Capitolo 1: Introduzione
-
 Negli ultimi anni, l'**Intelligenza Artificiale (AI)** è stata oggetto di un intenso clamore mediatico. L'**Apprendimento Automatico (Machine Learning)**, l'**Apprendimento Profondo (Deep Learning)** e l'intelligenza artificiale compaiono in innumerevoli articoli, spesso al di fuori delle pubblicazioni orientate alla tecnologia.
 
 Prima dobbiamo definire chiaramente di cosa parliamo quando ci riferiamo all'intelligenza artificiale. Cosa sono l'intelligenza artificiale, il machine learning e il deep learning? Come si relazionano tra loro?

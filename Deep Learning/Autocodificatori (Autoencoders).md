@@ -1,5 +1,3 @@
-# Capitolo 14: Autocodificatori (Autoencoders)
-
 Un **Autocodificatore** è una rete neurale non supervisionata addestrata a produrre in output ($r$) una copia esatta del suo input ($x$).
 L'obiettivo, paradossalmente, non è copiare perfettamente l'input (sarebbe inutile, come la funzione identità), ma costringere la rete a imparare una rappresentazione **compressa** e **significativa** dei dati nel processo.
 

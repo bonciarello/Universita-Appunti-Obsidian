@@ -1,5 +1,3 @@
-# Capitolo 12: Ottimizzazione degli Iperparametri
-
 Nel Machine Learning, ci sono due tipi di parametri:
 1.  **Parametri (Weights):** I pesi e bias della rete, appresi automaticamente durante il training (backpropagation).
 2.  **Iperparametri:** Le variabili che decidiamo *noi* prima del training e che controllano la struttura della rete e l'algoritmo di apprendimento.

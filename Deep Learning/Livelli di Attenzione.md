@@ -1,5 +1,3 @@
-# Capitolo 22: Livelli di Attenzione
-
 L'Attenzione può essere descritta come un sistema di recupero informazioni "fuzzy" (sfocato).
 Immaginiamo di avere un database di coppie (Chiave, Valore). Arriva una Query.
 *   In un database classico, cerchiamo la Chiave esatta e restituiamo il Valore.

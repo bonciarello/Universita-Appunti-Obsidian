@@ -1,5 +1,3 @@
-# Capitolo 15: GAN (Generative Adversarial Networks)
-
 Le **GAN** (Goodfellow et al., 2014) rappresentano un approccio radicalmente diverso alla modellazione generativa. Invece di modellare esplicitamente una distribuzione di probabilità (come i VAE), le GAN imparano a generare dati attraverso un **gioco competitivo** tra due reti neurali.
 
 ## 1. I Giocatori

@@ -1,5 +1,3 @@
-# Capitolo 13: Time Series e Reti Ricorrenti (RNN)
-
 Le reti neurali viste finora (Dense, ConvNets) sono **Feedforward**: non hanno memoria. Elaborano ogni input indipendentemente dagli altri. Se mostriamo loro una scena di un film, non capiscono cosa è successo nella scena precedente.
 Le **Reti Neurali Ricorrenti (RNN)** affrontano questo limite: sono reti con un "loop", progettate per elaborare sequenze (testo, audio, serie temporali finanziarie, video).
 

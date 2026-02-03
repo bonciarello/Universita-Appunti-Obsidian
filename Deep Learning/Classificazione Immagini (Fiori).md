@@ -1,5 +1,3 @@
-# Capitolo 9: Laboratorio - Classificazione Immagini (Fiori)
-
 In questo laboratorio metteremo in pratica la teoria delle ConvNets costruendo un classificatore per riconoscere specie di fiori. Utilizzeremo un dataset contenente 3670 foto a colori divise in 5 classi: *daisy* (margherita), *dandelion* (dente di leone), *roses* (rose), *sunflowers* (girasoli), *tulips* (tulipani).
 
 Affronteremo i problemi tipici della Computer Vision reale: caricamento dati da disco, pre-processing, e overfitting su dataset piccoli.

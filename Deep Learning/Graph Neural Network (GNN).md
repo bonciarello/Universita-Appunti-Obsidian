@@ -1,5 +1,3 @@
-# Capitolo 24: Graph Neural Network (GNN)
-
 Molti dati nel mondo reale non hanno una struttura a griglia (immagini) o a sequenza (testo), ma una struttura a **Grafo**:
 *   **Social Network:** Utenti (nodi) e amicizie (archi).
 *   **Chimica:** Atomi (nodi) e legami chimici (archi).

@@ -1,5 +1,3 @@
-# Capitolo 17: Laboratorio - Ottimizzazione VAE
-
 Il **Variational Autoencoder (VAE)** è un modello generativo potente. A differenza degli autoencoder classici, che imparano una mappatura deterministica (punto $A \to$ punto $B$), i VAE imparano una mappatura probabilistica: input $\to$ **distribuzione normale**.
 
 ## Concetti Chiave dell'Ottimizzazione VAE

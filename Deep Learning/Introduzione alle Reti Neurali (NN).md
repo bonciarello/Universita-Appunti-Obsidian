@@ -1,5 +1,3 @@
-# Capitolo 2: Introduzione alle Reti Neurali (NN)
-
 ## Definizione
 
 Nella definizione più generale, le **Reti Neurali (NN)**, spesso chiamate semplicemente reti neurali artificiali, sono modelli matematici e computazionali ispirati al funzionamento dei neuroni nel cervello umano.

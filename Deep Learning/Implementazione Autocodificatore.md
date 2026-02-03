@@ -1,5 +1,3 @@
-# Capitolo 16: Laboratorio - Implementazione Autocodificatore
-
 In questo laboratorio implementeremo diversi tipi di Autoencoder utilizzando il dataset **Fashion MNIST**, che contiene 60.000 immagini in scala di grigi (28x28 pixel) di 10 categorie di abbigliamento (t-shirt, pantaloni, scarpe, ecc.).
 
 ## 1. Preparazione dei Dati

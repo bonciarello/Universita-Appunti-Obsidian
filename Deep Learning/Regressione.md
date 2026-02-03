@@ -1,5 +1,3 @@
-# Capitolo 5: Regressione
-
 Un problema di regressione consiste nel prevedere un valore continuo (es. temperatura, prezzo) anziché un'etichetta discreta.
 
 ## Esempio: Predizione Prezzo Case (Boston Housing)

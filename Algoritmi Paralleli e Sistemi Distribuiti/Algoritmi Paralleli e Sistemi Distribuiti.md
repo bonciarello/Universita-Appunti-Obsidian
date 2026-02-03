@@ -25,7 +25,7 @@ Gli **obiettivi** del corso sono:
 - fornire esperienza pratica attraverso attività di laboratorio e progetti.
 
 ## Indice
-- [[Introduzione]]
+- [[Introduzione al Deep Learning]]
 - [[Dal calcolo sequenziale al calcolo parallelo]]
 - [[Introduzione al Calcolo Parallelo]]
 - [[Modelli e Architetture]]

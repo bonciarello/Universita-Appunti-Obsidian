@@ -1,5 +1,3 @@
-# Capitolo 21: Trasformatori ed Explainability
-
 Il paper **"Attention is All You Need"** (Google Brain, 2017) ha segnato un punto di svolta nel Deep Learning. Ha introdotto l'architettura **Transformer**, che ha rapidamente reso obsolete le RNN per la maggior parte dei compiti di NLP (Natural Language Processing).
 
 ## 1. I Limiti delle RNN

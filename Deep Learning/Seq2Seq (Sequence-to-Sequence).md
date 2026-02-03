@@ -1,5 +1,3 @@
-# Capitolo 19: Seq2Seq (Sequence-to-Sequence)
-
 Il modello **Seq2Seq** (o Encoder-Decoder) è l'architettura che ha reso possibile la moderna traduzione automatica (Google Translate pre-2016), i chatbot e il riassunto automatico di testi.
 L'obiettivo è mappare una sequenza di input $X$ (di lunghezza $N$) in una sequenza di output $Y$ (di lunghezza $M$), dove $N$ può essere diverso da $M$.
 

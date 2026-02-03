@@ -1,5 +1,3 @@
-# Capitolo 4: Laboratorio - Creare Rete Neurale da Zero
-
 ## Costruzione di una Rete Neurale (Feedforward)
 
 Implementiamo una semplice rete neurale feedforward con uno strato nascosto utilizzando Python e NumPy.

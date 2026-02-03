@@ -1,5 +1,3 @@
-# Capitolo 10: ConvNet Pre-addestrate (Transfer Learning)
-
 Le reti neurali convoluzionali profonde (Deep ConvNets) richiedono enormi quantità di dati e risorse computazionali per essere addestrate da zero. Fortunatamente, nel Deep Learning è comune riutilizzare modelli già addestrati su dataset molto grandi: questa pratica si chiama **Transfer Learning** (Apprendimento per Trasferimento).
 
 L'idea è semplice: un modello addestrato su un dataset vasto e generico (come **ImageNet**, che contiene 1.4 milioni di immagini divise in 1000 classi) ha imparato una gerarchia di caratteristiche visive (bordi, texture, forme, occhi, ruote...) che sono utili per *qualsiasi* problema di visione artificiale, non solo per classificare le 1000 classi originali.

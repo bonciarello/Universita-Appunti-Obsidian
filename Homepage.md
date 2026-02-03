@@ -8,6 +8,7 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Ingegneria del Software]]
 - [[Sistemi Operativi]]
 - [[Reti/Reti|Reti]]
+- [[Virtual Reality]]
 ## 🎓 Magistrale
 - [[Cyber Offence and Defence]]
 ## 📜 Certificazioni

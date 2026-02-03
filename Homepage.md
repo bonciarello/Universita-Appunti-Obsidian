@@ -10,6 +10,10 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Reti/Reti|Reti]]
 - [[Virtual Reality]]
 ## 🎓 Magistrale
+- [[AGILE (Research and Development Methodologies)]]
+- [[Secure Software Design]]
+- [[Machine Learning]]
+- [[Deep Learning]]
 - [[Cyber Offence and Defence]]
 ## 📜 Certificazioni
 - [[AWS CLF-002 Cloud Practitioner Essentials]]

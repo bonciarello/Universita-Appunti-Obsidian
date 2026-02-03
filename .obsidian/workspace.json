@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reti/Reti.md",
+                "file": "Virtual Reality/WanderingAI, sistemi prefabbricati e SceneController.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Reti"
+              "title": "WanderingAI, sistemi prefabbricati e SceneController"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 384.5
+    "width": 384.5,
+    "collapsed": true
   },
   "right": {
     "id": "4224ed069c25a723",
@@ -140,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reti/Reti.md",
+                "file": "Homepage.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Struttura di Reti"
+              "title": "Struttura di Homepage"
             }
           },
           {
@@ -180,21 +181,32 @@
   },
   "active": "186385e143fce44e",
   "lastOpenFiles": [
-    "Reti/Quality of Service (QoS).md",
-    "Reti/LIVELLO TRASPORTO - TCP, UDP e ICMP.md",
-    "Reti/Progetto GNS3.md",
-    "Reti/LIVELLO RETE - Subnetting e Routing.md",
-    "Reti/LIVELLO RETE - Firewall e IPTables.md",
-    "Reti/LIVELLO RETE - DHCP, NAT e Port Forwarding.md",
-    "Reti/LIVELLO FISICO - Frequency Division Multiplexing e fibra ottica.md",
-    "Reti/LIVELLO DATALINK - Datagrammi, livello 2 e CSMA-CD.md",
-    "Reti/LIVELLO APPLICATIVO - SMTP (Simple Mail Transfer Protocol) e DNS (Domain Name System).md",
-    "Reti/LIVELLO APPLICATIVO - HTTP (Hypertext Transfer Protocol) e LTS (Transport Layer Security).md",
-    "Reti/ISO-OSI.md",
-    "Reti/Introduzione a Reti.md",
-    "Homepage.md",
-    "Reti/Reti.md",
-    "Sistemi Operativi/File System.md",
+    "Virtual Reality/Virtual Reality (VR) e videogiochi.md",
+    "Virtual Reality/Virtual Reality.md",
+    "Virtual Reality/Unity3D.md",
+    "Virtual Reality/Unity Navigation System e Terrain Engine.md",
+    "Virtual Reality/Terza persona, salti e caduta.md",
+    "Virtual Reality/Progettazione di un gioco.md",
+    "Virtual Reality/Posizionamento e interazione con l'interfaccia utente.md",
+    "Virtual Reality/Porte interattive e cambiamento di stato di un GameObject.md",
+    "Virtual Reality/Palle di fuoco, sparare un proiettile, OnTriggerEnter() e mirino specifico.md",
+    "Virtual Reality/Luci, ombre e fotocamere nelle scene.md",
+    "Virtual Reality/Interfaccia grafica e componenti visuali.md",
+    "Virtual Reality/Introduzione.md",
+    "Virtual Reality/Inizializzazione di un progetto Unity3D e MouseLook.md",
+    "Virtual Reality/Industria dei videogiochi e motori grafici.md",
+    "Virtual Reality/Gestione dell'inventario.md",
+    "Virtual Reality/Gestione dell'audio.md",
+    "Virtual Reality/FPSInput, RayShooter e ReactiveTarget.md",
+    "Virtual Reality/Creazione di un gioco 2D.md",
+    "Virtual Reality/Colliders, Rigidbodies e Joints.md",
+    "Virtual Reality/Caricamento immagini da Internet e invio di dati su un server web.md",
+    "Virtual Reality/Broadcasting (trasmissione) e invio messaggi dal gioco 3D all'interfaccia 2D.md",
+    "Virtual Reality/Auto Layout, FPS counter e barra della salute.md",
+    "Virtual Reality/Art Assets, modelli 3D, texture e Skybox.md",
+    "Virtual Reality/Approfondimento su Skybox e UnityWebRequest.md",
+    "Virtual Reality/Animazioni.md",
+    "AWS CLF-002 Cloud Practitioner Essentials/Prezzi e Supporto.md",
     "Reti/img/SMTP1.png",
     "Reti/img/SMTP3.png",
     "Reti/img/SMTP2.png",
@@ -215,17 +227,6 @@
     "Reti/source/sezioni/sezione15.tex",
     "Reti/source/sezioni/sezione14.tex",
     "Reti/source/sezioni/sezione13.tex",
-    "Sistemi Operativi/Gestione dei processi e multi-threading.md",
-    "Sistemi Operativi/Introduzione a Sistemi Operativi (SO).md",
-    "Sistemi Operativi/Introduzione a Perl.md",
-    "Sistemi Operativi/Shell Linux.md",
-    "Sistemi Operativi/Sistemi Operativi.md",
-    "Sistemi Operativi/Introduzione a Python.md",
-    "Sistemi Operativi/Introduzione.md",
-    "Sistemi Operativi/LABORATORIO - introduzione a Perl.md",
-    "Sistemi Operativi/Gestione della memoria.md",
-    "Sistemi Operativi/LABORATORIO - Shell Linux.md",
-    "Sistemi Operativi/LABORATORIO - introduzione a Python.md",
     "Senza nome.canvas"
   ]
 }

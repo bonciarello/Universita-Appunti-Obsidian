@@ -13,7 +13,10 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[AGILE (Research and Development Methodologies)]]
 - [[Secure Software Design]]
 - [[Machine Learning]]
+- [[Network Security/Network Security|Network Security]]
 - [[Deep Learning]]
 - [[Cyber Offence and Defence]]
+- [[Metodi e Strumenti per la Sicurezza]]
+- [[Business Game]]
 ## 📜 Certificazioni
 - [[AWS CLF-002 Cloud Practitioner Essentials]]

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Business Game/Opportunità e imprenditorialità.md",
-                "mode": "source",
+                "file": "AWS CLF-002 Cloud Practitioner Essentials/Soluzioni Well-Architected.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Opportunità e imprenditorialità"
+              "title": "Soluzioni Well-Architected"
             }
           }
         ]
@@ -180,6 +180,10 @@
   },
   "active": "cebcbf1c12ac537e",
   "lastOpenFiles": [
+    "AWS CLF-002 Cloud Practitioner Essentials/AWS CLF-002 Cloud Practitioner Essentials.md",
+    "Homepage.md",
+    "AWS CLF-002 Cloud Practitioner Essentials/Soluzioni Well-Architected.md",
+    "Business Game/Opportunità e imprenditorialità.md",
     "Business Game/Financial Statements (Documenti Finanziari).md",
     "Business Game/CASE STUDY: Business Model (EcoWash).md",
     "Business Game/Visione e modello di business.md",
@@ -195,7 +199,6 @@
     "Business Game/Financial Plan.md",
     "Business Game/Piano marketing e organizzativo.md",
     "Business Game/Strategie competitive ed innovative.md",
-    "Business Game/Opportunità e imprenditorialità.md",
     "Business Game/Capitolo_13.md",
     "Business Game/Capitolo_12.md",
     "Business Game/Capitolo_11.md",
@@ -204,9 +207,6 @@
     "Business Game/Capitolo_08.md",
     "Business Game/Capitolo_07.md",
     "Business Game/Capitolo_06.md",
-    "Business Game/Capitolo_05.md",
-    "Business Game/Capitolo_04.md",
-    "Business Game/Capitolo_03.md",
     "Business Game/convert_to_md.py",
     "Business Game/Capitolo_13.pdf",
     "Business Game/Capitolo_12.pdf",

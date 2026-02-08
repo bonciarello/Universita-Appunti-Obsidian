@@ -40,7 +40,7 @@ Gli **obiettivi** del corso sono:
 - [[Gestione dei processi e multi-threading]]
 
 ### Gestione della Memoria e File System
-- [[Gestione della memoria]]
+- [[Sistemi Operativi/Gestione della memoria]]
 - [[File System]]
 
 ### Laboratorio e Programmazione di Sistema

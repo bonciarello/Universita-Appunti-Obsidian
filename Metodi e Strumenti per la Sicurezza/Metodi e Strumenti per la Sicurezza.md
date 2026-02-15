@@ -29,7 +29,7 @@ Gli **obiettivi** del corso sono:
 - [[Sandboxing]]
 - [[Network Security]]
 - [[Web Security]]
-- [[Sicurezza delle comunicazioni: HTTPS]]
+- [[Sicurezza delle comunicazioni - HTTPS]]
 - [[OWASP Top-10]]
 - [[User Authentication]]
 - [[Classificazione dei meccanismi di autenticazione]]

@@ -1,6 +1,10 @@
-Un trigger è un oggetto di database archiviato che viene eseguito automaticamente in risposta a un evento di modifica dei dati su una tabella.
+---
+aliases: [triggers]
+tags: [basi-di-dati]
+---
+Un trigger è un oggetto di [[Database|database]] archiviato che viene eseguito automaticamente in risposta a un evento di modifica dei dati su una tabella.
 
-Gli eventi di modifica dei dati includono inserimento, aggiornamento ed eliminazione causati dalle istruzioni di inserimento, aggiornamento ed eliminazione.
+Gli [[Eventi|eventi]] di modifica dei dati includono inserimento, aggiornamento ed eliminazione causati dalle istruzioni di inserimento, aggiornamento ed eliminazione.
 
 MariaDB ha archiviato i trigger come oggetti denominati nel dizionario dei dati. Un trigger è sempre associato a una tabella.
 
@@ -23,7 +27,7 @@ Quando combini l'ora di attivazione e l'evento, puoi avere fino a sei attivazion
 - *after	update*
 - *before delete*
 - *after	delete*
-A partire da MariaDB 10.2.3, è possibile definire più trigger per lo stesso tempo di trigger (*before* e *after*) ed eventi di trigger (*insert*, *update*, *delete*).
+A partire da MariaDB 10.2.3, è possibile definire più trigger per lo stesso tempo di trigger (*before* e *after*) ed [[Eventi|eventi]] di trigger (*insert*, *update*, *delete*).
 
 ![[trigger1.PNG]]
 
@@ -41,11 +45,11 @@ La tabella seguente mostra le principali differenze tra trigger e stored procedu
 ## Gestire i trigger in MariaDB
 
 - **Crea un trigger:** crea un nuovo trigger utilizzando l'istruzione *create trigger*.
-- **Elimina trigger:** rimuove un trigger dal database utilizzando l'istruzione *drop trigger*.
+- **Elimina trigger:** rimuove un trigger dal [[Database|database]] utilizzando l'istruzione *drop trigger*.
 
 ### CREATE TRIGGER statement
 
-L'istruzione create trigger consente di creare un nuovo trigger in un database. Quanto segue illustra la sintassi di base dell'istruzione create trigger:
+L'istruzione create trigger consente di creare un nuovo trigger in un [[Database|database]]. Quanto segue illustra la sintassi di base dell'istruzione create trigger:
 
 ```sql
 create trigger trigger_name
@@ -55,9 +59,9 @@ trigger_body;
 ```
 In questa sintassi:
 
-- In primo luogo, specificare il nome del trigger che si desidera creare dopo le parole chiave *create trigger*. Il nome del trigger deve essere distinto all'interno di un database;
+- In primo luogo, specificare il nome del trigger che si desidera creare dopo le parole chiave *create trigger*. Il nome del trigger deve essere distinto all'interno di un [[Database|database]];
 - In secondo luogo, specificare l'ora dell'azione in cui viene richiamato il trigger. Il tempo di azione può essere *before* o *after* la modifica di una riga;
-- Terzo, specificare un evento che attiva il trigger. MariaDB supporta *insert*, *update* e *delete* degli eventi;
+- Terzo, specificare un evento che attiva il trigger. MariaDB supporta *insert*, *update* e *delete* degli [[Eventi|eventi]];
 - Quarto, indicare il nome della tabella a cui appartiene il trigger dopo la parola chiave *on*;
 - Infine, specificare una o più istruzioni da eseguire quando viene richiamato il trigger.
 
@@ -73,7 +77,7 @@ Questa tabella mostra la disponibilità dei modificatori *old* e *new* in ciascu
 
 ### DROP TRIGGER statement
 
-L'istruzione *drop trigger* elimina un trigger da un database. Quanto segue mostra la sintassi dell'istruzione *drop trigger*:
+L'istruzione *drop trigger* elimina un trigger da un [[Database|database]]. Quanto segue mostra la sintassi dell'istruzione *drop trigger*:
 
 ```sql
 drop trigger [if exists] trigger_name;

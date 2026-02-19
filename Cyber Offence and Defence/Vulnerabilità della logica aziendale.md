@@ -1,3 +1,7 @@
+---
+aliases: [VLA, Vulnerabilità logica aziendale]
+tags: [cyber-offence-and-defence]
+---
 Le vulnerabilità della logica aziendale sono difetti nella progettazione e nell'implementazione di un'applicazione che consentono a un aggressore di suscitare comportamenti indesiderati manipolando funzionalità legittime.
 
 Questi difetti sono spesso il risultato di una mancata previsione di stati insoliti dell'applicazione. Sono anche noti come **"difetti logici"**.

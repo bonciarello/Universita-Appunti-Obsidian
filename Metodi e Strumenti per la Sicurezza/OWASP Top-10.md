@@ -1,4 +1,8 @@
-L'**OWASP** (Open Web Application Security Project) è un'organizzazione fondamentale per la web security che stila periodicamente la classifica dei 10 rischi più critici per le applicazioni industriali.
+---
+aliases: [owasp top-10]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
+L'**OWASP** (Open Web Application Security Project) è un'organizzazione fondamentale per la [[Web Security|web security]] che stila periodicamente la classifica dei 10 rischi più critici per le applicazioni industriali.
 
 ## 1. Classifica 2021 (Principali Rischi)
 
@@ -9,14 +13,14 @@ Si verifica quando non vengono verificati i permessi di accesso alle risorse.
 
 ### A02:2021 – Cryptographic Failures
 Precedentemente noto come Sensitive Data Exposure.
-*   **Scenari:** Crittografia automatica del database che però decifra i dati subito dopo il recupero, permettendo a una SQLi di leggere i dati in chiaro. Mancanza di TLS o uso di algoritmi di cifratura obsoleti.
+*   **Scenari:** Crittografia automatica del [[Database|database]] che però decifra i dati subito dopo il recupero, permettendo a una SQLi di leggere i dati in chiaro. Mancanza di TLS o uso di algoritmi di cifratura obsoleti.
 
 ### A03:2021 – Injection
 Include SQL, NoSQL, OS e LDAP injection.
 *   **Vettori:** Qualsiasi sorgente di dati non fidata (parametri URL, input form, header) che viene interpretata come comando o query.
 
 ### A04:2021 – Insecure Design
-Si concentra sui difetti di architettura. Un'implementazione perfetta non può risolvere un progetto intrinsecamente insicuro.
+Si concentra sui difetti di [[Architettura|architettura]]. Un'implementazione perfetta non può risolvere un progetto intrinsecamente insicuro.
 *   **Scenario:** Un sistema di prenotazione cinema che permette di bloccare centinaia di posti senza deposito, causando perdite finanziarie (Business Logic flaw).
 
 ### A05:2021 – Security Misconfiguration
@@ -25,7 +29,7 @@ Errori di configurazione comuni.
 
 ### A08:2021 – Software and Data Integrity Failures
 Relativo al codice e all'infrastruttura che non proteggono l'integrità.
-*   **Scenari:** Aggiornamenti firmware non firmati. **Deserializzazione non sicura** (es. inviare oggetti Java serializzati tra client e server; un attaccante può usare strumenti come *Java Serial Killer* per eseguire codice remoto).
+*   **Scenari:** Aggiornamenti firmware non firmati. **[[Deserializzazione non sicura]]** (es. inviare oggetti Java serializzati tra client e server; un attaccante può usare strumenti come *Java Serial Killer* per eseguire codice remoto).
 
 ### A10:2021 – Server Side Request Forgery (SSRF)
 La gravità aumenta con l'uso dei servizi cloud.

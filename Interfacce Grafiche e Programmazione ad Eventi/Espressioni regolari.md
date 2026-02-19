@@ -1,3 +1,7 @@
+---
+aliases: [ER]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Un'espressione regolare è una stringa di testo che può essere utilizzata per trovare dei pattern all'interno di un'altra stringa.
 
 La classe di riferimento per le espressioni regolari in Java è la classe **Pattern** che si trova nel package *java.util.regex.Pattern*.

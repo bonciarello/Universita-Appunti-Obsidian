@@ -1,3 +1,7 @@
+---
+aliases: [Sicurezza delle reti]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
 Nella **Network Security** l'attaccante opera a livello di rete: può intercettare, modificare, iniettare pacchetti e controllare le proprie macchine. Molti problemi derivano da errori di progettazione nei protocolli originali (pensati in un'epoca in cui Internet era un ambiente "amichevole").
 
 ## 1. Attacchi ai protocolli (TCP/IP)
@@ -52,6 +56,6 @@ Macchine "esca" con vulnerabilità simulate per attirare attaccanti, studiarne l
 *   **High interaction:** Sistemi reali completi (molto rischiosi ma ricchi di informazioni).
 
 ## 4. VPN (Virtual Private Network)
-Utilizzano cifratura (es. **IPsec**) per creare connessioni sicure su reti pubbliche. IPsec può operare in:
+Utilizzano cifratura (es. **[[IPSec|IPsec]]**) per creare connessioni sicure su [[Reti|reti]] pubbliche. [[IPSec|IPsec]] può operare in:
 *   **Transport Mode:** Cifra solo il payload.
 *   **Tunnel Mode:** Cifra l'intero pacchetto IP (ideale per gateway-to-gateway).

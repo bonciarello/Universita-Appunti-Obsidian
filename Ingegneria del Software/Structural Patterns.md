@@ -1,3 +1,7 @@
+---
+aliases: [SP]
+tags: [ingegneria-del-software]
+---
 Abbiamo 7 pattern:
 
 - **Adapter** (AD, Adattatore)
@@ -168,7 +172,7 @@ L'**intento** è fornire un'interfaccia unificata a un insieme di interfacce in 
 
 ### Motivazione
 
-**La strutturazione di un sistema in sottosistemi aiuta a ridurre la complessità.**
+**La strutturazione di un sistema in sottosistemi aiuta a [[Ridurre la complessità|ridurre la complessità]].**
 Un obiettivo di progettazione comune è ridurre al minimo la comunicazione e le dipendenze tra i sottosistemi e introdurre un oggetto di facciata che fornisca un'unica interfaccia semplificata a un sottosistema.
 
 ![[FAmotivazione.png]]
@@ -291,7 +295,7 @@ L'**intento** è disaccoppiare un'astrazione dalla sua implementazione in modo c
 
 Quando un'astrazione può avere una delle diverse implementazioni possibili, il modo normale per adattarle è utilizzare l'ereditarietà: una classe astratta definisce l'interfaccia per l'astrazione, le sottoclassi concrete lo implementano in modi diversi e non è abbastanza flessibile.
 
-**Consideriamo l'implementazione di un'astrazione Window portatile in un toolkit dell'interfaccia utente:** richiediamo che possa supportare sia il sistema *X Window* che il *Presentation Manager (PM)* di IBM. Questo può essere risolto usando l'**ereditarietà** e la **composizione dell'oggetto**.
+**Consideriamo l'implementazione di un'astrazione Window portatile in un toolkit dell'[[Interfaccia utente|interfaccia utente]]:** richiediamo che possa supportare sia il sistema *X Window* che il *Presentation Manager (PM)* di IBM. Questo può essere risolto usando l'**ereditarietà** e la **composizione dell'oggetto**.
 
 Se usiamo l'**ereditarietà** definiamo una classe astratta *Window* e le sottoclassi *XWindow* e *PMWindow*.
 
@@ -554,7 +558,7 @@ Abbiamo vari tipi di implementazione:
 3. **Massimizzare l'interfaccia del componente:** 
     - *per rendere i clienti ignari delle specifiche classi *Leaf* o *Composite* che stanno utilizzando:* la classe *Component* dovrebbe definire quante più operazioni comuni possibili. La classe *Component* di solito fornisce implementazioni predefinite per queste operazioni e le sottoclassi *Leaf* e *Composite* le sovrascriveranno;
     - *tuttavia, questo obiettivo a volte entrerà in conflitto con il principio della progettazione della gerarchia di classi che dice che una classe dovrebbe definire solo operazioni significative per le sue sottoclassi*.
-4. **Dichiarazione delle operazioni di gestione del figlio:** la classe *Composite* (la radice della gerarchia) implementa le operazioni Aggiungi e Rimuovi ma è corretto? Sicurezza o trasparenza?
+4. **Dichiarazione delle operazioni di gestione del figlio:** la classe *Composite* (la radice della gerarchia) implementa le operazioni Aggiungi e Rimuovi ma è corretto? [[Sicurezza]] o trasparenza?
 5. **Ordinamento dei figli:** molti disegni specificano un ordinamento sui figli di *Composite* (ad es. analizzare alberi). Il pattern **Iterator** può guidarti in questo;
 6. **Memorizzazione nella cache per migliorare le prestazioni:** *se hai bisogno di attraversare o cercare frequentemente le composizioni, la classe *Composite* può memorizzare nella cache l'attraversamento o cercare informazioni sui suoi figli.* Il *Composite* può memorizzare nella cache i risultati effettivi o solo le informazioni che gli consentono di cortocircuitare l'attraversamento o la ricerca;
 
@@ -657,7 +661,7 @@ L'**intento** è associare responsabilità aggiuntive a un oggetto in modo dinam
 
 ### Motivazione
 
-**A volte vogliamo aggiungere responsabilità a singoli oggetti, non a un'intera classe:** un toolkit dell'interfaccia utente grafica dovrebbe consentire di aggiungere proprietà come bordi o comportamenti come lo scorrimento a qualsiasi componente dell'interfaccia utente.
+**A volte vogliamo aggiungere responsabilità a singoli oggetti, non a un'intera classe:** un toolkit dell'[[Interfaccia utente|interfaccia utente]] grafica dovrebbe consentire di aggiungere proprietà come bordi o comportamenti come lo scorrimento a qualsiasi componente dell'[[Interfaccia utente|interfaccia utente]].
 
 **Un modo per aggiungere responsabilità è con l'ereditarietà:** ereditare un bordo da un'altra classe mette un bordo attorno a ogni istanza di sottoclasse.
 Questo è *inflessibile*: la scelta del bordo è statica e un cliente non può controllare come e quando decorare il componente con un bordo.

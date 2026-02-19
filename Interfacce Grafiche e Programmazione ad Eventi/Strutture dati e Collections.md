@@ -1,3 +1,7 @@
+---
+aliases: [Strutture dati Collections, SDC]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Strutture dati in Java
 
 Quando parliamo di strutture dati in Java, parliamo di **Collections**.

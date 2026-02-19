@@ -1,3 +1,7 @@
+---
+aliases: [Asserziono, Asserzione]
+tags: [basi-di-dati]
+---
 Le asserzioni sono costrutti SQL attraverso i quali è possibile (dichiarativamente) specificare *vincoli di integrità* su una base di dati. Un vincolo è una condizione logica che i dati devono soddisfare affinchè la BD si trovi in uno stato consistente. Le asserzioni fanno parte dello schema della BD.
 
 La struttura di una *assertion* è la seguente:

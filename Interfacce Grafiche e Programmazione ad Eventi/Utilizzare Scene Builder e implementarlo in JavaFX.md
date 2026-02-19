@@ -1,3 +1,7 @@
+---
+aliases: [USBIJ, Utilizzare Scene Builder implementarlo JavaFX]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Per quanto riguarda la parte grafica, si sviluppa tutto su Scene Builder, in maniera *drag and drop*, tutti i vari controlli grafici sono gestiti come i livelli su Photoshop. Dopo aver sviluppato l'interfaccia grafica, si esporta l'interfaccia grafica come file *.fxml* e, per utilizzarlo su Eclipse, si inserisce nel package *application* di *src/main/resources*. Adesso si passa alla parte logica, si sviluppa tutto in *src/main/java*, package *application*.
 
 Per quanto riguarda il file *Main.java*:
@@ -44,7 +48,7 @@ public class ChatFrame extends Application {
 
 Per eseguire il programma, bisogna eseguire il *Main.java*: se eseguiamo *ChatFrame.java* non parte!
 
-Per quanto riguarda il file *ChatFrameController.java*, si genere su JavaFX Scene Builder tramite *View → Show Sample Controller Skeleton*. Otterremo un file del genere:
+Per quanto riguarda il file *ChatFrameController.java*, si genere su [[JavaFX]] Scene Builder tramite *View → Show Sample Controller Skeleton*. Otterremo un file del genere:
 
 ```java
 package application;

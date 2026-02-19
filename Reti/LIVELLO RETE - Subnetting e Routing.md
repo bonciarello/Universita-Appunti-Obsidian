@@ -1,3 +1,7 @@
+---
+aliases: [LIVELLO RETE - Subnetting Routing, LRSR]
+tags: [reti]
+---
 Il compito del livello rete è la trasmissione logica di pacchetti tra due host arbitrari che in generale non sono direttamente connessi (ovvero non hanno un collegamento diretto tra di loro). In sostanza, si occupa dell'indirizzamento e instradamento di datagrammi verso la giusta destinazione attraverso il percorso di rete più appropriato. I segmenti TCP del layer superiori vengono, eventualmente, frammentati in tanti datagrammi IP alla partenza. Il *router* è l'oggetto principale di questo layer. 
 
 Questo layer viene definito **best effort** cioè non garantisce che i dati vengano consegnati però fa di tutto affinché ciò avvenga. Le due operazioni principali sono:
@@ -70,4 +74,4 @@ I seguenti indirizzi sono alcuni indirizzi speciali:
 - *indirizzo di gateway* permette ad una rete locale di comunicare con l'esterno. Generalmente è rappresentato o dal primo o dall'ultimo indirizzo host disponibile.
 
 ## Indirizzamento
-*Ma come fa un ISP ad avere degli indirizzi?* Con il protocollo **ICANN (Internet Corporation for Assigned Names and Numbers)** con cui alloca gli indirizzi, gestisce i DNS top level, risolve le dispute, assegna i domini e, tramite il servizio WHOIS, consente di accedere al database delle subnet assegnate.
+*Ma come fa un ISP ad avere degli indirizzi?* Con il protocollo **ICANN (Internet Corporation for Assigned Names and Numbers)** con cui alloca gli indirizzi, gestisce i DNS top level, risolve le dispute, assegna i domini e, tramite il servizio WHOIS, consente di accedere al [[Database|database]] delle subnet assegnate.

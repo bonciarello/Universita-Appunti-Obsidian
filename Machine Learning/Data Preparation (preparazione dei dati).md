@@ -1,4 +1,8 @@
-Questa fase della metodologia CRISP-DM è suddivisa in ulteriori fasi:
+---
+aliases: [preparazione dei dati, Data Preparation]
+tags: [machine-learning]
+---
+Questa fase della [[Metodologia CRISP-DM|metodologia CRISP-DM]] è suddivisa in ulteriori fasi:
 - **data cleaning:** compila i valori mancanti, identifica e rimuovi il rumore, correggi le incoerenze;
 - **data integration:** unire i dati da più fonti;
 - **data transformation:** normalizzazione;

@@ -1,3 +1,7 @@
+---
+aliases: [DEI]
+tags: [algoritmi-e-strutture-dati]
+---
 Consiste nel risolvere uin problema mediante un'accorta suddivisione di esso in più sotto-problemi.
 
 Più precisamente, si risolvono ricorsivamente i *k* sotto-problemi individuati e si utilizzano le loro soluzioni per determinare quella del problema originale.

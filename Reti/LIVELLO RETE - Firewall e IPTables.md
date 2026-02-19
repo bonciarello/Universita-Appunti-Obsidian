@@ -1,6 +1,10 @@
+---
+aliases: [LIVELLO RETE - Firewall IPTables, LRFI]
+tags: [reti]
+---
 Il firewall è un device di filtraggio del traffico da e per un certo perimetro ed in particolare rende accessibili dall'esterno solo i servizi che vogliamo esporre, impedisce agli utenti della rete di usare determinate applicazioni, protegge dagli attacchi *Dos* e *DDos*, evita che i server interni provochino attacchi a terzi e fornisce un effetto cuscinetto nel caso si perda controllo di un server (evita effetti domino).
 
-Se qualcuna entra all'interno di un dominio di collisione, anche con i firewall, tutti i dati possono essere falsificati, tutto si può sniffare e spoofare e abbiamo problemi di confidenzialità e autenticità: infatti, non vi difendono dai cavalli di troia e non garantiscono l’autenticità e sicurezza della trasmissione e non vi difendono da attacchi di ingegneria sociale e attacchi “fisici” alla rete. Antivurus come *Avast* spiano il traffico che gira intorno al firewall. In fondo, anche il firewall spia il traffico a fin di bene.
+Se qualcuna entra all'interno di un dominio di collisione, anche con i firewall, tutti i dati possono essere falsificati, tutto si può sniffare e spoofare e abbiamo problemi di confidenzialità e autenticità: infatti, non vi difendono dai cavalli di troia e non garantiscono l’autenticità e [[Sicurezza|sicurezza]] della trasmissione e non vi difendono da attacchi di ingegneria sociale e attacchi “fisici” alla rete. Antivurus come *Avast* spiano il traffico che gira intorno al firewall. In fondo, anche il firewall spia il traffico a fin di bene.
 
 Esistono diverse categorie di firewall:
 - **Personal Firewall:** permette di salvaguardare un solo host;

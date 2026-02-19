@@ -1,4 +1,8 @@
-La falsificazione delle richieste lato server (SSRF, Server-side request forgery) è una vulnerabilità della sicurezza web che consente a un aggressore di indurre l'applicazione lato server a inviare richieste a una posizione non desiderata.
+---
+aliases: [SSRF, Server-side request forgery]
+tags: [cyber-offence-and-defence]
+---
+La falsificazione delle richieste lato server (SSRF, Server-side request forgery) è una vulnerabilità della [[Sicurezza|sicurezza]] web che consente a un aggressore di indurre l'applicazione lato server a inviare richieste a una posizione non desiderata.
 
 In un tipico attacco SSRF, l'aggressore potrebbe far sì che il server stabilisca una connessione a servizi interni all'interno dell'infrastruttura dell'organizzazione. In altri casi, potrebbe essere in grado di forzare il server a connettersi a sistemi esterni arbitrari. Ciò potrebbe far trapelare dati sensibili, come le credenziali di autorizzazione.
 ### Qual è l'impatto degli attacchi SSRF?
@@ -43,7 +47,7 @@ Perché le applicazioni si comportano in questo modo e si fidano implicitamente 
 
 Questo tipo di relazioni di fiducia, in cui le richieste provenienti dalla macchina locale vengono gestite in modo diverso rispetto alle richieste ordinarie, spesso rendono SSRF una vulnerabilità critica.
 ### Attacchi SSRF contro altri sistemi back-end
-In alcuni casi, il server applicativo è in grado di interagire con sistemi back-end che non sono direttamente raggiungibili dagli utenti. Questi sistemi hanno spesso indirizzi IP privati non instradabili. I sistemi back-end sono normalmente protetti dalla topologia di rete; quindi, hanno spesso un blocco di sicurezza più debole. In molti casi, i sistemi back-end interni contengono funzionalità sensibili a cui chiunque sia in grado di interagire con i sistemi può accedere senza autenticazione.
+In alcuni casi, il server applicativo è in grado di interagire con sistemi back-end che non sono direttamente raggiungibili dagli utenti. Questi sistemi hanno spesso indirizzi IP privati non instradabili. I sistemi back-end sono normalmente protetti dalla topologia di rete; quindi, hanno spesso un blocco di [[Sicurezza|sicurezza]] più debole. In molti casi, i sistemi back-end interni contengono funzionalità sensibili a cui chiunque sia in grado di interagire con i sistemi può accedere senza autenticazione.
 
 Nell'esempio precedente, immagina che ci sia un'interfaccia amministrativa all'URL back-end `https://192.168.0.68/admin`. Un aggressore può inviare la seguente richiesta per sfruttare la vulnerabilità SSRF e accedere all'interfaccia amministrativa:
 

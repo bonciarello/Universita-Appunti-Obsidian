@@ -1,4 +1,8 @@
-Un problema di base nei grafi è visitare tutti i nodi raggiungibili da un dato nodo *v*, cioè determinare tutti i nodi *w* per cui esiste un cammino da *v* a *w*.
+---
+aliases: [Grafo]
+tags: [algoritmi-e-strutture-dati]
+---
+Un problema di base nei [[Grafi|grafi]] è visitare tutti i nodi raggiungibili da un dato nodo *v*, cioè determinare tutti i nodi *w* per cui esiste un cammino da *v* a *w*.
 
 Ci sono due modalità fondamentali:
 

@@ -1,13 +1,17 @@
+---
+aliases: [Rete neurale, Rete, Introduzione alle Reti Neurali, NN, Neural Networks]
+tags: [deep-learning]
+---
 ## Definizione
 
-Nella definizione più generale, le **Reti Neurali (NN)**, spesso chiamate semplicemente reti neurali artificiali, sono modelli matematici e computazionali ispirati al funzionamento dei neuroni nel cervello umano.
+Nella definizione più generale, le **[[Reti]] Neurali (NN)**, spesso chiamate semplicemente [[Reti|reti]] neurali artificiali, sono modelli matematici e computazionali ispirati al funzionamento dei neuroni nel cervello umano.
 
 Nella definizione specifica, le NN sono un insieme di unità interconnesse, chiamate **neuroni artificiali** o nodi, organizzate in strati o livelli.
 *   Questi neuroni elaborano informazioni attraverso operazioni matematiche su dati di input.
 *   Trasmettono l'output ai neuroni successivi attraverso **pesi sinaptici**.
 *   Gli strati intermedi, noti come **strati nascosti**, consentono alla rete di apprendere rappresentazioni complesse.
 
-Le reti neurali apprendono dai dati mediante l'addestramento, regolando i pesi delle connessioni sinaptiche per minimizzare l'errore tra l'output previsto e quello desiderato.
+Le [[Reti|reti]] neurali apprendono dai dati mediante l'addestramento, regolando i pesi delle connessioni sinaptiche per minimizzare l'errore tra l'output previsto e quello desiderato.
 
 ## Modelli Storici
 
@@ -26,17 +30,17 @@ Un algoritmo di apprendimento automatico basato sulla struttura del neurone. L'o
 ### Funzioni di Attivazione
 Introducono la non linearità nella rete, permettendo di apprendere modelli complessi.
 *   **Sigmoid:** Curva a "S", mappa l'input tra 0 e 1. Usata per classificazione binaria.
-*   **ReLU (Rectified Linear Unit):** $f(x) = \max(0, x)$. Restituisce l'input se positivo, 0 altrimenti. Molto usata nel Deep Learning per la sua semplicità e gestione del gradiente.
+*   **ReLU (Rectified Linear Unit):** $f(x) = \max(0, x)$. Restituisce l'input se positivo, 0 altrimenti. Molto usata nel [[Deep Learning]] per la sua semplicità e gestione del gradiente.
 *   **Tanh (Tangente iperbolica):** Mappa l'input tra -1 e 1.
 
 ### Struttura della Rete (Feedforward)
-Nelle reti **Feedforward**, l'informazione fluisce in una sola direzione (input $\to$ hidden $\to$ output) senza cicli.
+Nelle [[Reti|reti]] **Feedforward**, l'informazione fluisce in una sola direzione (input $\to$ hidden $\to$ output) senza cicli.
 Ogni neurone in uno strato $k$ è connesso ai neuroni dello strato successivo.
 
 ### Funzione di Perdita (Loss Function)
 Misura l'errore tra l'output prodotto dalla rete e quello desiderato. L'obiettivo dell'addestramento è minimizzare questa funzione.
 
-**Per la Regressione:**
+**Per la [[Regressione]]:**
 1.  **MAE (Mean Absolute Error):** Media degli errori assoluti.
 2.  **MSE (Mean Squared Error):** Media degli errori al quadrato (penalizza i grandi errori, differenziabile).
 3.  **SAE (Smooth Absolute Error):** Ibrido tra MAE e MSE.
@@ -55,5 +59,5 @@ dove $\eta$ è il **tasso di apprendimento (learning rate)**.
 ### Inizializzazione dei Pesi
 L'inizializzazione è cruciale. Se i pesi partono tutti da zero, i neuroni apprenderanno le stesse caratteristiche (simmetria).
 *   **Inizializzazione Semplice (Casuale):** Rompe la simmetria, ma può causare la scomparsa/esplosione del gradiente.
-*   **Inizializzazione di He:** Ottimizzata per reti con attivazione ReLU. Imposta la varianza per mantenere il flusso del segnale stabile.
+*   **Inizializzazione di He:** Ottimizzata per [[Reti|reti]] con attivazione ReLU. Imposta la varianza per mantenere il flusso del segnale stabile.
 *   **Inizializzazione di Xavier (Glorot):** Ottimizzata per Sigmoid/Tanh, bilancia la varianza di input e output.

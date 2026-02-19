@@ -1,8 +1,12 @@
+---
+aliases: [Modello dominio, MD]
+tags: [ingegneria-del-software]
+---
 Il passo essenziale dell'analisi orientata agli oggetti è la decomposizione di un dominio in concetti o oggetti significativi.
 
 Un **modello di dominio** è una rappresentazione *visuale* di classi concettuali o di oggetti del mondo reale di un dominio [MO95, Fowler96]. I modelli di dominio sono stati chiamati anche **modelli concettuali, modelli degli oggetti di dominio** e **modelli degli oggetti di analisi**.
 
-> **Definizione:** in UP, il termine "modello di dominio" indica una rappresentazione di classi concettuali del mondo reale, non di oggetti software. Il termine *non* indica un insieme di diagrammi che descrivono classi software, lo strato del dominio di un'architettura software o oggetti software con responsabilità.
+> **Definizione:** in UP, il termine "modello di dominio" indica una rappresentazione di classi concettuali del mondo reale, non di oggetti software. Il termine *non* indica un insieme di diagrammi che descrivono classi software, lo strato del dominio di un'[[Architettura|architettura]] software o oggetti software con responsabilità.
 
 UP definisce il modello di dominio come uno degli elaborati che si possono creare nella disciplina di modellazione del business. Più precisamente, il modello di dominio di UP è una specializzazione del **modello degli oggetti di business (BOM)** di UP che "è incentrato sulla spiegazione di "cose" e prodotti importanti per un dominio di business" [RUP]. Ciò significa che un modello di dominio è incentrato su un solo dominio, come per esempio tutto ciò che riguarda il POS. Il BOM più ampio (poichè può portare a un'eccessiva modellazione preliminare) è un modello multi-dominio esteso, speso molto ampio e difficile da creare, che riguarda l'intero business e tutti i relativi sottodomini.
 
@@ -49,9 +53,9 @@ Pertanto, il salto rappresentazionale tra il modo in cui le parti interessate co
 - **Elementi/righe di transazioni:** le transazioni spesso sono composte da righe per gli articoli correlati, quindi queste vanno considerate subito dopo le transazioni (ad es. *SalesLineItem*);
 - **Prodotto o servizio correlato a una transazione o a una riga di transazione per articolo:** le transazioni sono per qualcosa (un prodotto o un servizio). Vanno considerate subito dopo (ad es. *Item Flight, Seat, Meal*);
 - **Dove viene registrata la transazione?** Importante (ad es. *Register, Ledger, FlightManifest*);
-- **Ruoli di persone o organizzazioni correlati alle transazioni; attori nei casi d'uso:** normalmente dobbiamo sapere quali sono le parti coinvolte in una transazione (ad es. *Cashier, Customer, Store MonopolyPlayer Passenger, Airline*);
+- **Ruoli di persone o organizzazioni correlati alle transazioni; attori nei [[Casi d'uso|casi d'uso]]:** normalmente dobbiamo sapere quali sono le parti coinvolte in una transazione (ad es. *Cashier, Customer, Store MonopolyPlayer Passenger, Airline*);
 - **Luogo della transazione; luogo del servizio** (ad es. *Store Airport, Plane, Seat*);
-- **Eventi significativi, spesso con un'ora o un luogo che è necessario ricordare** (ad es. *Sale, Payment MonopolyGame Flight*);
+- **[[Eventi]] significativi, spesso con un'ora o un luogo che è necessario ricordare** (ad es. *Sale, Payment MonopolyGame Flight*);
 - **Oggetti fisici:** questo è particolarmente importante quando si crea software per il controllo di dispositivi, oppure simulazioni (ad es. *Item, Register Board, Piece, Die Airplane*);
 - **Descrizioni di oggetti** (ad es. *ProductDescription, FlightDescription*);
 - **Cataloghi:** le descrizioni sono spesso contenute in un catalogo (ad es. *ProductCatalog, FlightCatalog*);
@@ -64,7 +68,7 @@ Pertanto, il salto rappresentazionale tra il modo in cui le parti interessate co
 
 > **Linea guida:** occorre prestare particolare attenzione con questo metodo; una corrispondenza meccanica da nome a classe non è possibile, poichè le parole nel linguaggio naturale sono ambigue.
 
-Nondimeno, l'analisi linguistica è un'altra fonte di ispirazione. I casi d'uso in formato dettagliato sono un'ottima descrizione a cui ispirarsi per questa analisi. Per esempio, si può riutilizzare lo scenario corrente del caso d'uso *Process Sale*.
+Nondimeno, l'analisi linguistica è un'altra fonte di ispirazione. I [[Casi d'uso|casi d'uso]] in formato dettagliato sono un'ottima descrizione a cui ispirarsi per questa analisi. Per esempio, si può riutilizzare lo scenario corrente del caso d'uso *Process Sale*.
 
 > **Scenario principale di successo (o Flusso di base):** 
 > 1. Il Cliente arriva alla cassa POS con gli articoli e/o i servizi da acquistare;

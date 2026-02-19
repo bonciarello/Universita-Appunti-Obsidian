@@ -1,4 +1,8 @@
-La **ricerca scientifica** è un'attività condotta da *scienziati*, *ricercatori* o *altri studiosi* avente lo scopo, **partendo da una domanda**, di scoprire, interpretare e revisionare fatti, eventi, per poi trascriverli **fornendo una risposta**.
+---
+aliases: [RSP, Ricerca scientifica Papers]
+tags: [agile-research-and-development-methodologies]
+---
+La **ricerca scientifica** è un'attività condotta da *scienziati*, *ricercatori* o *altri studiosi* avente lo scopo, **partendo da una domanda**, di scoprire, interpretare e revisionare fatti, [[Eventi|eventi]], per poi trascriverli **fornendo una risposta**.
 
 Si tratta della metodologia usata per accrescere la conoscenza all'interno della scienza ed è ritenuta uno dei fattori chiave per la crescita e lo sviluppo della società nel medio-lungo periodo in virtù della sua potenziale capacità di fornire innovazione attraverso l'applicazione tecnologica e organizzata delle scoperte scientifiche, favorendo così il progresso della società noto come progresso tecnico e scientifico.
 

@@ -1,3 +1,7 @@
+---
+aliases: [Gestione concorrenza, GC]
+tags: [basi-di-dati]
+---
 ## Esecuzione concorrente di transazioni
 
 Un DBMS è un sistema che supporta l’esecuzione di più transazioni che operano su dati condivisi - sistema multiutente.

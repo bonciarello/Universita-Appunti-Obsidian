@@ -1,4 +1,8 @@
-Con questo laboratorio, pensiamo alla comprensione del whiteboxing, all'utilizzo di immagini 2D in Unity3D, alla creazione di uno Skybox, alla lavorazione con modelli 3D personalizzati e all'utilizzo di sistemi di particelle per creare effetti visivi.
+---
+aliases: ["Art Assets, modelli 3D, texture Skybox", AMTS]
+tags: [virtual-reality]
+---
+Con questo laboratorio, pensiamo alla comprensione del whiteboxing, all'utilizzo di immagini 2D in [[Unity3D]], alla creazione di uno Skybox, alla lavorazione con modelli 3D personalizzati e all'utilizzo di sistemi di particelle per creare effetti visivi.
 
 ## Art Assets
 Questo corso è incentrato sulla programmazione di giochi in Unity, ma è importante per capire come lavorare e migliorare la grafica. Gli elementi visivi in un gioco sono chiamati **Art Assets**. Una risorsa artistica può essere: immagine 2D, modello 3D (oggetti mesh), materiale, animazione, sistema di particelle (Particle Systems).
@@ -32,10 +36,10 @@ Le **texture** sono immagini bitmap. Un materiale può contenere riferimenti a t
 ### Modelli 3D
 Un **modello** è un oggetto virtuale 3D. L'*oggetto mesh* si riferisce strettamente alla geometria dell'oggetto 3D. Il *modello* spesso include altri attributi dell'oggetto. *I termini sono spesso usati in modo intercambiabile.*
 
-### Animazioni
+### [[Animazioni]]
 Un'**animazione** è un pacchetto di informazioni che definisce il movimento dell'oggetto associato.
 Questi movimenti possono essere definiti indipendentemente dall'oggetto stesso.
-*Le animazioni possono essere incluse direttamente nel modello 3D.*
+*Le [[Animazioni|animazioni]] possono essere incluse direttamente nel modello 3D.*
 
 ### Sistema di particelle
 Un **sistema di particelle** è un meccanismo per creare e controllare un gran numero di oggetti in movimento. Un sistema di particelle simula e rende molte piccole immagini o Mesh, chiamate particelle, per produrre un effetto visivo, come fuoco o fumo.
@@ -53,7 +57,7 @@ La nostra scena ora è uno schizzo! Il prossimo passo è applicare le texture pe
 ![](img/sezione9/textureScene.png)
 
 ### Formati di file 2D
-Unity3D supporta l'uso di molti formati di file diversi: PNG, JPG, GIF, BMP, TGA, TIFF, PICT, PSD. Alcuni di questi supportano il canale alfa, utilizzato per memorizzare le informazioni sulla trasparenza in un'immagine. Un altro aspetto fondamentale è la compressione dell'immagine: la **compressione lossless** preserva la qualità dell'immagine mentre la **compressione con perdita** riduce la qualità dell'immagine e le dimensioni del file.
+[[Unity3D]] supporta l'uso di molti formati di file diversi: PNG, JPG, GIF, BMP, TGA, TIFF, PICT, PSD. Alcuni di questi supportano il canale alfa, utilizzato per memorizzare le informazioni sulla trasparenza in un'immagine. Un altro aspetto fondamentale è la compressione dell'immagine: la **compressione lossless** preserva la qualità dell'immagine mentre la **compressione con perdita** riduce la qualità dell'immagine e le dimensioni del file.
 
 ### Livelli di texture
 Le immagini utilizzate per i livelli di texture sono solitamente **affiancabile (ripetibile)**: un'immagine è "affiancabile" quando i bordi opposti combaciano quando è affiancata. In questo modo l'immagine può essere ripetuta e può coprire l'intera superficie. 
@@ -114,7 +118,7 @@ Ora puoi trascinare queste immagini negli slot delle texture del materiale skybo
 ## Oggetti e modelli 3D
 
 ### Formati di file
-Ora importeremo una mesh 3D di un semplice oggetto 3D. Proprio come con le immagini 2D, in Unity3D sono disponibili diversi formati di file da importare: FBX, OBJ, 3DS e molti altri. L'opzione consigliata, quando disponibile, è il formato FBX, che potrebbe contenere *Mesh* e *Animation*.
+Ora importeremo una mesh 3D di un semplice oggetto 3D. Proprio come con le immagini 2D, in [[Unity3D]] sono disponibili diversi formati di file da importare: FBX, OBJ, 3DS e molti altri. L'opzione consigliata, quando disponibile, è il formato FBX, che potrebbe contenere *Mesh* e *Animation*.
 
 ### Impostazioni di importazione
 Trascina il file FBX dal computer nella vista *Project* (o fai clic con il pulsante destro del mouse su *Project*, quindi scegli *Import New Asset*). Il modello 3D ora è pronto per essere inserito nella scena.

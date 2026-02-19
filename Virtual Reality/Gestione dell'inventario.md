@@ -1,3 +1,7 @@
+---
+aliases: [gestione dell'inventario]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo alla raccolta degli oggetti intorno al livello e alla gestione dell'inventario.
 
 ## Collezionare oggetti
@@ -35,7 +39,7 @@ Ora che abbiamo programmato le funzionalità di raccolta degli oggetti, abbiamo 
 Il codice che scriveremo sarà simile alle **architetture MVC** alla base di molte applicazioni web.
 Il loro vantaggio consiste nel disaccoppiare la memorizzazione dei dati dagli oggetti visualizzati sullo schermo.
 
-Non tutti i giochi hanno le stesse esigenze di gestione dei dati, quindi non avrebbe senso per Unity imporre una regola secondo cui ogni gioco deve utilizzare un modello di progettazione anziché un altro: ad esempio, un gioco di ruolo avrà esigenze di gestione dei dati molto elevate , quindi probabilmente vorrai implementare qualcosa come un'architettura MVC. Un puzzle game, tuttavia, ha pochi dati da gestire, quindi costruire una complessa struttura disaccoppiata di gestori di dati sarebbe eccessivo.
+Non tutti i giochi hanno le stesse esigenze di gestione dei dati, quindi non avrebbe senso per Unity imporre una regola secondo cui ogni gioco deve utilizzare un modello di progettazione anziché un altro: ad esempio, un gioco di ruolo avrà esigenze di gestione dei dati molto elevate , quindi probabilmente vorrai implementare qualcosa come un'[[Architettura|architettura]] MVC. Un puzzle game, tuttavia, ha pochi dati da gestire, quindi costruire una complessa struttura disaccoppiata di gestori di dati sarebbe eccessivo.
 L'idea generale qui è quella di suddividere tutta la gestione dei dati in moduli separati che gestiscono ciascuno la propria area di responsabilità.
 
 Creeremo moduli separati per mantenere lo stato del giocatore in *PlayerManager* e mantenere l'elenco dell'inventario in *InventoryManager*.
@@ -45,7 +49,7 @@ Ci sarà un manager di livello superiore (di manager) che terrà traccia di tutt
 
 ![](img/sezione21/gestioneInventario1.png)
 
-L'architettura del codice è costituita da moduli invisibili che esistono in background, Unity richiede ancora che gli script siano collegati agli oggetti nella scena per eseguire quel codice, quindi creeremo un *GameObject* vuoto a cui collegare questi gestori di dati.
+L'[[Architettura|architettura]] del codice è costituita da moduli invisibili che esistono in background, Unity richiede ancora che gli script siano collegati agli oggetti nella scena per eseguire quel codice, quindi creeremo un *GameObject* vuoto a cui collegare questi gestori di dati.
 
 ## Script del *Game Managers*
 Crea un nuovo script chiamato *IGameManager*: nota che non eredita nemmeno da *MonoBehaviour*; un'interfaccia non fa nulla da sola ed **esiste solo per imporre una struttura ad altre classi**. Questa interfaccia dichiara una proprietà (una variabile che ha una funzione *getter*) e un metodo; entrambi devono essere implementati in qualsiasi classe che implementa questa interfaccia.
@@ -283,8 +287,8 @@ Premi play e vedrai il messaggio della console con multipli dello stesso element
 
 ![](img/sezione21/messaggiConsole2.png)
 
-## Interfaccia utente dell'inventario
-La raccolta di oggetti nel tuo inventario può essere utilizzata in più modi all'interno del gioco, ma generalmente viene utilizzata per creare un'interfaccia utente dell'inventario in modo che i giocatori possano vedere i loro oggetti raccolti. Ora vedremo come utilizzare gli oggetti raccolti.
+## [[Interfaccia utente]] dell'inventario
+La raccolta di oggetti nel tuo inventario può essere utilizzata in più modi all'interno del gioco, ma generalmente viene utilizzata per creare un'[[Interfaccia utente|interfaccia utente]] dell'inventario in modo che i giocatori possano vedere i loro oggetti raccolti. Ora vedremo come utilizzare gli oggetti raccolti.
 
 Per utilizzare gli articoli è necessario **aggiungere alcuni metodi a *InventoryManager***. Ora l'elenco degli elementi è privato e per visualizzare l'elenco sono necessari metodi pubblici per l'accesso ai dati. Definiamo *GetItemList()* e *GetItemCount()*:
 - *GetItemList()* restituisce un elenco di elementi nell'inventario, creando un elenco dalle chiavi nel *Dictionary*;

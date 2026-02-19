@@ -1,3 +1,7 @@
+---
+aliases: [Metodi d'insieme, Metodo, AdaBoost e foreste casuali]
+tags: [machine-learning]
+---
 # Metodi d'insieme (AdaBoost e foreste casuali)
 
 ## Classificatori d'insieme
@@ -82,7 +86,7 @@ dove:
 - $h = -1$ se $x$ è classificato in modo errato.
 
 ## Foreste casuali (Random Forest)
-Una **foresta casuale (RF)** è un **insieme $K$ di alberi decisionali**. Gli alberi decisionali sono sensibili a entrambi:
+Una **foresta casuale (RF)** è un **insieme $K$ di [[Alberi decisionali|alberi decisionali]]**. Gli [[Alberi decisionali|alberi decisionali]] sono sensibili a entrambi:
 - i dati specifici su cui vengono addestrati (se i dati di addestramento vengono modificati, l'albero decisionale risultante può essere molto diverso);
 - la selezione degli attributi di scissione.
 
@@ -104,7 +108,7 @@ Abbiamo due approcci:
 - **secondo approccio:** l'attributo di suddivisione di un classificatore di base viene selezionato casualmente tra il primo $n$ attributo in base a una metrica (IG, ecc.). $n$ viene mantenuto costante durante la crescita della foresta.
 
 ## Conclusione
-I modelli sono esperti che si completano a vicenda. Ogni modello è esperto di istanze classificate erroneamente dal precedente nel caso di AdaBoost. Gli insiemi in generale migliorano le prestazioni. Buono per classificatori instabili, cioè classificatori di base sensibili a perturbazioni minori del set di addestramento (ad esempio, d-tree, classificatori basati su regole, reti neurali).
+I modelli sono esperti che si completano a vicenda. Ogni modello è esperto di istanze classificate erroneamente dal precedente nel caso di AdaBoost. Gli insiemi in generale migliorano le prestazioni. Buono per classificatori instabili, cioè classificatori di base sensibili a perturbazioni minori del set di addestramento (ad esempio, d-tree, [[Classificatori basati su regole|classificatori basati su regole]], [[Reti|reti]] neurali).
 
 Il termine **ensemble (insiemi)** è solitamente riservato a metodi che generano più classificatori utilizzando lo stesso studente di base.
 

@@ -1,7 +1,11 @@
-Con questo laboratorio, penseremo al posizionamento degli elementi dell'interfaccia utente utilizzando i punti di ancoraggio e all'aggiunta di interattività all'interfaccia utente.
+---
+aliases: [UI, User Interface, Interfacce utente]
+tags: [virtual-reality]
+---
+Con questo laboratorio, penseremo al posizionamento degli elementi dell'[[Interfaccia utente|interfaccia utente]] utilizzando i punti di ancoraggio e all'aggiunta di interattività all'[[Interfaccia utente|interfaccia utente]].
 
-## La nostra interfaccia utente pianificata
-L'oggetto *Canvas* definisce un'area da visualizzare come interfaccia utente, ma richiede comunque *Sprite* da visualizzare. Se fai riferimento all'interfaccia utente pianificata, c'è un'immagine del "nemico" nell'angolo in alto a sinistra, il testo che mostra il punteggio accanto a quello e un pulsante a forma di ingranaggio nell'angolo in alto a destra.
+## La nostra [[Interfaccia utente|interfaccia utente]] pianificata
+L'oggetto *Canvas* definisce un'area da visualizzare come [[Interfaccia utente|interfaccia utente]], ma richiede comunque *Sprite* da visualizzare. Se fai riferimento all'[[Interfaccia utente|interfaccia utente]] pianificata, c'è un'immagine del "nemico" nell'angolo in alto a sinistra, il testo che mostra il punteggio accanto a quello e un pulsante a forma di ingranaggio nell'angolo in alto a destra.
 
 ![](img/sezione15/plannedUI.png)
 
@@ -11,9 +15,9 @@ L'oggetto *Canvas* definisce un'area da visualizzare come interfaccia utente, ma
 4. pulsante chiudi, chiude la finestra pop-up;
 5. controlli di input, input di testo per il nome, slider per la velocità;
 
-## Posizionamento degli elementi dell'interfaccia utente
+## Posizionamento degli elementi dell'[[Interfaccia utente|interfaccia utente]]
 
-Iniziamo a posizionare i nostri elementi dell'interfaccia utente! Crea un'*Image UI*, un *Button* e un *Text*. Quindi scegli una posizione per l'oggetto dell'interfaccia utente nella *Canvas*.
+Iniziamo a posizionare i nostri elementi dell'[[Interfaccia utente|interfaccia utente]]! Crea un'*Image UI*, un *Button* e un *Text*. Quindi scegli una posizione per l'oggetto dell'[[Interfaccia utente|interfaccia utente]] nella *Canvas*.
 
 Attacca gli *Sprite* alla proprietà *Source Image* dell'immagine del nemico e al pulsante dell'ingranaggio: cura l'aspetto sia dell'immagine del nemico che del pulsante dell'ingranaggio utilizzando la proprietà "imposta dimensione nativa".
 
@@ -22,26 +26,26 @@ Posiziona una *Text UI* per *ScoreText* e un'altra per *ScoreLabel*: aggiungi al
 ![](img/sezione15/ourHUD.PNG)
 
 ## Controllo della posizione
-Tutti gli oggetti dell'interfaccia utente hanno un *anchor*, visualizzata nell'editor come una X di destinazione. Un *anchor (ancora)* è un modo flessibile per posizionare gli oggetti nell'interfaccia utente.
+Tutti gli oggetti dell'[[Interfaccia utente|interfaccia utente]] hanno un *anchor*, visualizzata nell'editor come una X di destinazione. Un *anchor (ancora)* è un modo flessibile per posizionare gli oggetti nell'[[Interfaccia utente|interfaccia utente]].
 
 L'*anchor* di un oggetto è il punto in cui un oggetto si attacca alla tela. Determina rispetto a cosa viene misurata la posizione di quell'oggetto. Ad esempio, la posizione dell'immagine X è 50 pixel... ma 50 pixel da cosa?
 
 Lo scopo di un'*anchor* è che mentre l'oggetto rimane in posizione rispetto al punto di ancoraggio, l'*anchor* si sposta rispetto al *Canvas*.
 
-Per impostazione predefinita, gli elementi dell'interfaccia utente hanno il loro ancoraggio impostato su *Center*, ma vuoi impostare l'ancora su *Top Left* a sinistra per questa immagine e *Top Right* per il pulsante a forma di ingranaggio.
+Per impostazione predefinita, gli elementi dell'[[Interfaccia utente|interfaccia utente]] hanno il loro ancoraggio impostato su *Center*, ma vuoi impostare l'ancora su *Top Left* a sinistra per questa immagine e *Top Right* per il pulsante a forma di ingranaggio.
 
 ![](img/sezione15/controllingPosition1.png)
 
-Grazie agli *anchor*, gli oggetti dell'interfaccia utente rimarranno nei loro angoli mentre la tela cambia dimensione.
+Grazie agli *anchor*, gli oggetti dell'[[Interfaccia utente|interfaccia utente]] rimarranno nei loro angoli mentre la tela cambia dimensione.
 
 ![](img/sezione15/controllingPosition2.png)
 
 ## Interattività di programmazione
 Tutta la configurazione visiva è completata, quindi è il momento di programmare l'interattività.
 
-Prima di poter interagire con l'interfaccia utente, è necessario disporre di un cursore del mouse. Se ricordi, questo gioco ha regolato le impostazioni del cursore nel metodo *Start()* del codice *RayShooter*.
+Prima di poter interagire con l'[[Interfaccia utente|interfaccia utente]], è necessario disporre di un cursore del mouse. Se ricordi, questo gioco ha regolato le impostazioni del cursore nel metodo *Start()* del codice *RayShooter*.
 
-Queste impostazioni bloccano e nascondono il cursore del mouse, un comportamento che funziona per i controlli in un gioco FPS ma che interferisce con l'interfaccia utente. Puoi commentare quelle righe da *RayShooter.cs* in modo da poter fare clic sull'HUD.
+Queste impostazioni bloccano e nascondono il cursore del mouse, un comportamento che funziona per i controlli in un gioco FPS ma che interferisce con l'[[Interfaccia utente|interfaccia utente]]. Puoi commentare quelle righe da *RayShooter.cs* in modo da poter fare clic sull'HUD.
 
 Puoi anche assicurarti di non sparare mentre interagisci con la GUI usando *IsPointerOverGameObject()*, una funzione *EventSystems*, nello script *Rayshooter.cs*:
 
@@ -58,11 +62,11 @@ void Update() {
 Ora puoi giocare e fare clic sul pulsante, anche se non fa ancora nulla. Puoi guardare la colorazione del pulsante cambiare mentre fai clic con il mouse. Questo comportamento del clic è una tinta predefinita che può essere modificata per ciascun pulsante, ma per ora l'impostazione predefinita sembra a posto. Potresti accelerare il comportamento di dissolvenza predefinito: ade Duration è un'impostazione nel componente del pulsante, quindi prova a ridurlo a 0,01 per vedere come cambia il pulsante.
 
 ## UIController
-L'interazione dell'interfaccia utente è programmata con una serie standard di passaggi uguali per tutti gli elementi dell'interfaccia utente:
-- crea un oggetto dell'interfaccia utente nella scena (il pulsante creato nelle diapositive precedenti);
-- scrivere uno script da chiamare quando si utilizza l'interfaccia utente;
+L'interazione dell'[[Interfaccia utente|interfaccia utente]] è programmata con una serie standard di passaggi uguali per tutti gli elementi dell'[[Interfaccia utente|interfaccia utente]]:
+- crea un oggetto dell'[[Interfaccia utente|interfaccia utente]] nella scena (il pulsante creato nelle diapositive precedenti);
+- scrivere uno script da chiamare quando si utilizza l'[[Interfaccia utente|interfaccia utente]];
 - allega lo script a un oggetto nella scena;
-- collegare gli elementi dell'interfaccia utente (come i pulsanti) all'oggetto con quello script.
+- collegare gli elementi dell'[[Interfaccia utente|interfaccia utente]] (come i pulsanti) all'oggetto con quello script.
 
 Per seguire questi passaggi, dobbiamo prima creare un oggetto controller da collegare al pulsante. Crea uno script chiamato *UIController* e trascinalo sull'oggetto controller nella scena inserendo questo codice:
 ```csharp
@@ -93,7 +97,7 @@ Ogni voce definisce una singola funzione che viene chiamata quando si fa clic su
 
 ![](img/sezione15/UIcontroller1.png)
 
-1. pannello degli eventi *OnClick* vicino alla parte inferiore delle *Impostazioni*;
+1. pannello degli [[Eventi|eventi]] *OnClick* vicino alla parte inferiore delle *Impostazioni*;
 2. trascina un oggetto nella scena nello slot dell'oggetto, quindi scegli una funzione nel menu;
 3. premere il pulsante *+* per aggiungere una voce nel pannello.
 
@@ -164,7 +168,7 @@ public void OnSpeedValue(float speed) {
 ```
 
 ## Pulsante *Chiudi*
-Scegli *GameObject -> UI -> Pulsante*, posiziona il nuovo pulsante nell'angolo in alto a destra del popup, trascina lo *Sprite* "chiudi" sulla proprietà *Source Image* di questo elemento dell'interfaccia utente, quindi fai clic su *Set Native Size* per ridimensionare correttamente l'immagine.
+Scegli *GameObject -> UI -> Pulsante*, posiziona il nuovo pulsante nell'angolo in alto a destra del popup, trascina lo *Sprite* "chiudi" sulla proprietà *Source Image* di questo elemento dell'[[Interfaccia utente|interfaccia utente]], quindi fai clic su *Set Native Size* per ridimensionare correttamente l'immagine.
 
 A differenza del pulsante precedente, in realtà vogliamo l'etichetta del testo, quindi seleziona il testo e digita *Chiudi* nel campo di testo e imposta *Colore* su bianco.
 
@@ -178,8 +182,8 @@ La finestra pop-up è stata aggiunta all'HUD. La finestra è attualmente vuota, 
 - imposta il testo su *Speed* in modo che possa essere un'etichetta per il dispositivo di scorrimento;
 - impostare il *Slider Max Value* su 2, anziché su 1.
 
-## Imposta il pannello degli eventi
-Partendo dal campo di input, nelle impostazioni vedrai un pannello *End Edit*; gli eventi elencati qui vengono attivati quando l'utente finisce di digitare. Aggiungi una voce a questo pannello, trascina il pop-up nello slot dell'oggetto e scegli *OnSubmitName()* nell'elenco delle funzioni: assicurati di selezionare la funzione nella sezione superiore del pannello *End Edit*, *Dynamic String*, e non nella sezione inferiore, *Static Parameters*.
+## Imposta il pannello degli [[Eventi|eventi]]
+Partendo dal campo di input, nelle impostazioni vedrai un pannello *End Edit*; gli [[Eventi|eventi]] elencati qui vengono attivati quando l'utente finisce di digitare. Aggiungi una voce a questo pannello, trascina il pop-up nello slot dell'oggetto e scegli *OnSubmitName()* nell'elenco delle funzioni: assicurati di selezionare la funzione nella sezione superiore del pannello *End Edit*, *Dynamic String*, e non nella sezione inferiore, *Static Parameters*.
 
 Segui questi stessi passaggi per il dispositivo di scorrimento. Fare clic su *+* per aggiungere una voce, trascinare nel menu a comparsa delle impostazioni e scegliere *OnSpeedValue()* nell'elenco delle funzioni di valore dinamico.
 
@@ -187,5 +191,5 @@ Segui questi stessi passaggi per il dispositivo di scorrimento. Fare clic su *+*
 
 Il nostro mirino ora è sempre in primo piano: dobbiamo risolvere questo problema utilizzando le nostre nuove conoscenze. Creiamo un nuovo mirino aggiungendolo al canvas:
 - possiamo usare la stessa immagine ma dobbiamo importarla come *Sprite*;
-- quindi aggiungi al centro del canvas una nuova interfaccia utente immagine;
+- quindi aggiungi al centro del canvas una nuova [[Interfaccia utente|interfaccia utente]] immagine;
 - rimuovere l'*OnGUI()* in cui disegniamo il nostro mirino nello script *RayShooter*.

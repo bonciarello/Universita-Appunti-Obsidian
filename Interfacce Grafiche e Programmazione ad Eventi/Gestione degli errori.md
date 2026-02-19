@@ -1,3 +1,7 @@
+---
+aliases: [GE, Gestione errori]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Durante la fase di sviluppo del codice è normale avere errori software.
 
 ```java

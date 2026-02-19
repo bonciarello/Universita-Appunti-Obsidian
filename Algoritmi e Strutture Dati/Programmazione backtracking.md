@@ -1,3 +1,7 @@
+---
+aliases: [PB]
+tags: [algoritmi-e-strutture-dati]
+---
 La tecnica di backtracking estende la ricerca esaustiva nella risoluzione di problemi di ricerca attraverso l'introduzione di alcuni controlli per verificare il più presto possibile se una soluzione in via di costruzione soddisfi o meno le condizioni di ammissibilità in modo da ridurre lo spazio di ricerca.
 
 Il problema tipico di ricerca risolto con il backtracking consiste nell'assegnare un valore, preso da un dominio V, a ciascuno degli elementi di un vettore soluzione X in modo tale che siano rispettati alcuni vincoli.

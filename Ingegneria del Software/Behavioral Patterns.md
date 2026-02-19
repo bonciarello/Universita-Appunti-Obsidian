@@ -1,3 +1,7 @@
+---
+aliases: [BP]
+tags: [ingegneria-del-software]
+---
 Abbiamo 11 pattern:
 
 - **Template Method** (TM)
@@ -251,7 +255,7 @@ L'**intento** è definire un oggetto che incapsula il modo in cui interagiscono 
 
 *Il design orientato agli oggetti incoraggia la distribuzione del comportamento tra gli oggetti:* la distribuzione può comportare molte connessioni tra gli oggetti (fino a quando ogni oggetto conosce l'altro) e può essere difficile modificare il comportamento del sistema in modo significativo.
 
-**Considerare l'implementazione di finestre di dialogo in un'interfaccia utente grafica:** ad es. una finestra di dialogo che presenta una raccolta di widget come pulsanti, menu e campi di immissione. Spesso ci sono dipendenze tra i widget nella finestra di dialogo. Diverse finestre di dialogo avranno diverse dipendenze tra i widget.
+**Considerare l'implementazione di finestre di dialogo in un'[[Interfaccia utente|interfaccia utente]] grafica:** ad es. una finestra di dialogo che presenta una raccolta di widget come pulsanti, menu e campi di immissione. Spesso ci sono dipendenze tra i widget nella finestra di dialogo. Diverse finestre di dialogo avranno diverse dipendenze tra i widget.
 
 *Evita questi problemi incapsulando il comportamento collettivo in un oggetto mediatore separato* responsabile del controllo e del coordinamento delle interazioni di un gruppo di oggetti. Gli oggetti conoscono solo il mediatore, riducendo così il numero di interconnessioni.
 
@@ -570,9 +574,9 @@ L'**intento** è definire una dipendenza uno-a-molti tra gli oggetti in modo che
 
 Dato un insieme di classi cooperanti c'è la necessità di mantenere la coerenza: non vuoi rendere le classi strettamente accoppiate poichè riduce la loro riutilizzabilità.
 
-**Consideriamo toolkit dell'interfaccia utente grafica in cui:**
+**Consideriamo toolkit dell'[[Interfaccia utente|interfaccia utente]] grafica in cui:**
 
-- separare gli aspetti di presentazione dell'interfaccia utente dai dati dell'applicazione sottostante;
+- separare gli aspetti di presentazione dell'[[Interfaccia utente|interfaccia utente]] dai dati dell'applicazione sottostante;
 - le classi che definiscono i dati e le presentazioni dell'applicazione possono essere riutilizzate indipendentemente.
 
 ![[OBesempio.png]]
@@ -629,7 +633,7 @@ Abbiamo un accoppiamento astratto tra *Subject* e *Observer*: un soggetto conosc
 - *Evitare protocolli di aggiornamento specifici dell'osservatore:* abbiamo due modelli di aggiornamento: 
     - **modello push:** il soggetto invia agli osservatori informazioni dettagliate sul cambiamento, che lo vogliano o meno. Presuppone che i soggetti sappiano qualcosa sui loro osservatori. Potrebbe rendere gli osservatori meno riutilizzabili;
     - **modello pull:** il soggetto non invia altro che la minima notifica, e gli osservatori chiedono esplicitamente i dettagli in seguito. Sottolinea l'ignoranza del soggetto nei confronti dei suoi osservatori, mentre il modello push. Può essere inefficiente, perché le classi *Observer* devono accertare cosa è cambiato senza l'aiuto del *Subject*.
-- *Specificare in modo esplicito le modifiche di interesse:* migliorare l'efficienza degli aggiornamenti registrando gli osservatori solo per specifici eventi di interesse (il soggetto informa solo gli osservatori che abbiano manifestato interesse a tale evento.). 
+- *Specificare in modo esplicito le modifiche di interesse:* migliorare l'efficienza degli aggiornamenti registrando gli osservatori solo per specifici [[Eventi|eventi]] di interesse (il soggetto informa solo gli osservatori che abbiano manifestato interesse a tale evento.). 
 ```cpp
 void Subject::Attach(Observer*, Aspect& interest);
 void Observer::Update(Subject*, Aspect& interest);
@@ -1339,7 +1343,7 @@ L'**intento** è incapsulare una richiesta come oggetto, consentendo così di pa
 
 ### Motivazione
 
-**Considera un'interfaccia utente, i toolkit includono oggetti come pulsanti e menu che eseguono una richiesta in risposta all'input dell'utente.** Il pattern *Command* consente agli oggetti del toolkit di effettuare richieste di oggetti dell'applicazione non specificati trasformando la richiesta stessa in un oggetto. Questo oggetto può essere archiviato e passato in giro come altri oggetti.
+**Considera un'[[Interfaccia utente|interfaccia utente]], i toolkit includono oggetti come pulsanti e menu che eseguono una richiesta in risposta all'input dell'utente.** Il pattern *Command* consente agli oggetti del toolkit di effettuare richieste di oggetti dell'applicazione non specificati trasformando la richiesta stessa in un oggetto. Questo oggetto può essere archiviato e passato in giro come altri oggetti.
 
 ![[CMDmotivazione1.png]]
 
@@ -1602,7 +1606,7 @@ void PricingVisitor::VisitChassis(Chassis* e) {
 - **Disaccoppiamento di mittenti e destinatari** con: 
     - *CMD:* un oggetto separato consente al mittente di lavorare con diversi ricevitori;
     - *OB:* soggetti disaccoppiati dagli osservatori da un'interfaccia per la segnalazione di cambiamenti nei soggetti e un legame mittente-ricevitore più flessibile rispetto a CMD, con più ricevitori che variano durante il tempo di esecuzione;
-    - *ME:* gli oggetti si riferiscono l'un l'altro indirettamente tramite un ME e meno sottoclassi tramite comunicazione centralizzata, sicurezza di tipo più debole;
+    - *ME:* gli oggetti si riferiscono l'un l'altro indirettamente tramite un ME e meno sottoclassi tramite comunicazione centralizzata, [[Sicurezza|sicurezza]] di tipo più debole;
     - *CoR:* richiesta di disaccoppiamento facendola passare lungo una catena di potenziali destinatari ed è buono se mittente e destinatario fanno già parte della struttura del sistema.
 - **Combinazioni di modelli comuni:** 
     - il CdR utilizza la TM;

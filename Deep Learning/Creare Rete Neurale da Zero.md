@@ -1,3 +1,7 @@
+---
+aliases: [Creare Rete Neurale Zero, CRNZ]
+tags: [deep-learning]
+---
 ## Costruzione di una Rete Neurale (Feedforward)
 
 Implementiamo una semplice rete neurale feedforward con uno strato nascosto utilizzando Python e NumPy.

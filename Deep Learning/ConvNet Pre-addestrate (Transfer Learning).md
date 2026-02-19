@@ -1,4 +1,8 @@
-Le reti neurali convoluzionali profonde (Deep ConvNets) richiedono enormi quantità di dati e risorse computazionali per essere addestrate da zero. Fortunatamente, nel Deep Learning è comune riutilizzare modelli già addestrati su dataset molto grandi: questa pratica si chiama **Transfer Learning** (Apprendimento per Trasferimento).
+---
+aliases: [ConvNet Pre-addestrate, Transfer Learning]
+tags: [deep-learning]
+---
+Le [[Reti|reti]] neurali convoluzionali profonde (Deep ConvNets) richiedono enormi quantità di dati e risorse computazionali per essere addestrate da zero. Fortunatamente, nel [[Deep Learning]] è comune riutilizzare modelli già addestrati su dataset molto grandi: questa pratica si chiama **Transfer Learning** (Apprendimento per Trasferimento).
 
 L'idea è semplice: un modello addestrato su un dataset vasto e generico (come **ImageNet**, che contiene 1.4 milioni di immagini divise in 1000 classi) ha imparato una gerarchia di caratteristiche visive (bordi, texture, forme, occhi, ruote...) che sono utili per *qualsiasi* problema di visione artificiale, non solo per classificare le 1000 classi originali.
 Possiamo prendere queste "conoscenze visive" e trasferirle al nostro problema specifico (es. distinguere cani da gatti, o tipi di cellule al microscopio), anche se abbiamo pochi dati.
@@ -6,7 +10,7 @@ Possiamo prendere queste "conoscenze visive" e trasferirle al nostro problema sp
 ## Modelli Famosi
 Keras include molti modelli pre-addestrati pronti all'uso (`keras.applications`):
 *   **VGG-16 / VGG-19:** Architetture classiche, molto lineari e facili da capire, ma pesanti.
-*   **ResNet:** Introduce le connessioni residue ("skip connections") per permettere l'addestramento di reti molto profonde (50, 101, 152 strati).
+*   **ResNet:** Introduce le connessioni residue ("skip connections") per permettere l'addestramento di [[Reti|reti]] molto profonde (50, 101, 152 strati).
 *   **Inception:** Usa moduli complessi che applicano filtri di diverse dimensioni in parallelo.
 *   **MobileNet:** Ottimizzata per dispositivi mobili (bassa latenza, pochi parametri).
 

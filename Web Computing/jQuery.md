@@ -1,7 +1,11 @@
-**jQuery** è una libreria JavaScript veloce e concisa che semplifica l'attraversamento del DOM, la gestione degli eventi, l'animazione e le interazioni Ajax. Il suo motto è: *"Write less, do more"*.
+---
+aliases: [jquery]
+tags: [web-computing]
+---
+**jQuery** è una libreria [[JavaScript]] veloce e concisa che semplifica l'attraversamento del DOM, la gestione degli [[Eventi|eventi]], l'animazione e le interazioni [[Ajax]]. Il suo motto è: *"Write less, do more"*.
 
 > [!NOTE] Nota Storica
-> Oggi molte funzioni di jQuery sono integrate nativamente in JavaScript (ES6+), ma jQuery rimane fondamentale per lavorare su codice legacy e per la sua semplicità sintattica.
+> Oggi molte funzioni di jQuery sono integrate nativamente in [[JavaScript]] (ES6+), ma jQuery rimane fondamentale per lavorare su codice legacy e per la sua semplicità sintattica.
 ## Inizializzazione
 Per usare jQuery, includi lo script e assicurati che il DOM sia pronto prima di eseguire il codice.
 ```javascript
@@ -68,7 +72,7 @@ $("p").css({
     "background-color": "#f0f0f0"
 });
 ```
-## Gestione Eventi
+## Gestione [[Eventi]]
 Sintassi semplificata rispetto a `addEventListener`.
 ```javascript
 // Click
@@ -87,7 +91,7 @@ $(document).on("click", ".dynamic-btn", function() {
     console.log("Funziona anche su elementi creati dopo il caricamento pagina");
 });
 ```
-## Effetti e Animazioni
+## Effetti e [[Animazioni]]
 jQuery include effetti visivi pronti all'uso.
 *   `show()` / `hide()` / `toggle()`: Mostra/Nasconde (cambia `display`).
 *   `fadeIn()` / `fadeOut()`: Dissolvenza.
@@ -99,7 +103,7 @@ $("#box").animate({
     opacity: 0.5
 }, 1000); // Durata 1 secondo
 ```
-## AJAX con jQuery
+## [[Ajax|AJAX]] con jQuery
 Semplifica enormemente le chiamate asincrone rispetto al vecchio `XMLHttpRequest`.
 ### Metodo `$.ajax()` (Generico)
 ```javascript
@@ -119,7 +123,7 @@ $.ajax({
 *   `$.get(url, callback)`
 *   `$.post(url, data, callback)`
 *   `$.getJSON(url, callback)`
-*   `$("#div").load("pagina.html")`: Carica HTML remoto dentro un elemento.
+*   `$("#div").load("pagina.html")`: Carica [[HTML]] remoto dentro un elemento.
 ## Estensioni (Plugin)
 jQuery è estendibile tramite plugin. Per crearne uno:
 ```javascript

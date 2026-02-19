@@ -1,3 +1,7 @@
+---
+aliases: [input-output]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Stream
 
 Uno stream è una connessione associabile ad una sorgente (**input stream**) e a una destinazione (**output stream**).

@@ -1,3 +1,7 @@
+---
+aliases: [OR, Overfitting Regolarizzazione]
+tags: [deep-learning]
+---
 La questione fondamentale nell'apprendimento automatico è la tensione tra **ottimizzazione** e **generalizzazione**.
 *   L'**ottimizzazione** è il processo di adattamento di un modello per ottenere le migliori prestazioni possibili sui dati di addestramento (il learning vero e proprio).
 *   La **generalizzazione** si riferisce alla capacità del modello addestrato di performare bene su dati mai visti prima.
@@ -9,7 +13,7 @@ Per impedire a un modello di apprendere pattern fuorvianti, la soluzione miglior
 
 ## 1. Ridurre la Capacità della Rete
 Il modo più semplice per prevenire l'overfitting è ridurre la dimensione del modello, ovvero il numero di parametri apprendibili (numero di strati e numero di unità per strato).
-In deep learning, il numero di parametri è spesso chiamato "capacità" del modello. Intuitivamente:
+In [[Deep Learning|deep learning]], il numero di parametri è spesso chiamato "capacità" del modello. Intuitivamente:
 *   Un modello con **troppi parametri** ha una "capacità di memoria" elevata: può imparare facilmente una mappatura perfetta tipo dizionario tra input e output, senza alcuna capacità di generalizzazione.
 *   Un modello con **pochi parametri** sarà costretto a imparare rappresentazioni compresse che catturano gli aspetti più significativi dei dati.
 
@@ -38,7 +42,7 @@ Confrontando le curve di perdita (loss) di validazione, vedremmo che il modello 
 ## 2. Regolarizzazione dei Pesi (Weight Regularization)
 Il principio del "Rasoio di Occam" suggerisce che, tra due spiegazioni per un fenomeno, la più semplice è solitamente quella corretta. Questo si applica anche ai modelli neurali: un modello semplice è meno propenso all'overfitting di uno complesso.
 
-Un "modello semplice" in questo contesto è un modello in cui la distribuzione dei valori dei pesi ha un'entropia bassa (o che ha meno parametri).
+Un "modello semplice" in questo contesto è un modello in cui la distribuzione dei valori dei pesi ha un'[[Entropia|entropia]] bassa (o che ha meno parametri).
 La **regolarizzazione dei pesi** consiste nel forzare i pesi della rete ad assumere solo valori piccoli, aggiungendo alla funzione di perdita un costo associato alla grandezza dei pesi stessi.
 
 Esistono due tipi principali:

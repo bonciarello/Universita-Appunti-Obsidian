@@ -1,3 +1,7 @@
+---
+aliases: [PG, Progettazione gioco]
+tags: [virtual-reality]
+---
 La **progettazione** è un processo complesso nella fase di pre-produzione di qualsiasi sviluppo **applicativo**.
 
 La **progettazione di un gioco (game design)** coinvolge tutti i membri del team, non è solo la storia del gioco e viene utilizzato per definire le interazioni tra i giocatori e il gioco (*gameplay*). Il **GDD (Game Design Document)** descrive *influenze esterne* (tipologia gioco), *meccanismi*, *storia*, *personaggi*, *progettazione dei livelli* (level design), *gameplay*, *interfaccia*, *suoni* e *musica*.

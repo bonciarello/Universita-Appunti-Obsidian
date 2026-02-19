@@ -1,4 +1,8 @@
-Nel corso degli anni, diversi problemi ed esigenze sono sorti durante l'utilizzo delle reti:
+---
+aliases: [VPN, Virtual Private Network]
+tags: [network-security]
+---
+Nel corso degli anni, diversi problemi ed esigenze sono sorti durante l'utilizzo delle [[Reti|reti]]:
 *   I domini di collisione non sono sicuri;
 *   I dipendenti hanno spesso bisogno di un accesso remoto alle risorse della rete aziendale: il traffico Internet è molto più vulnerabile alle intercettazioni rispetto a quello che circola in una rete aziendale interna (si pensi al Wi-Fi di un albergo);
 *   Potrebbe essere necessario che più uffici remoti abbiano accesso alle stesse risorse;
@@ -9,17 +13,17 @@ La soluzione sarebbe quella di simulare un dominio di collisione utilizzando com
 Una **VPN (Virtual Private Network)** consente di simulare un dominio di collisione (LAN) utilizzando un collegamento virtuale che opera al di sotto del collegamento fisico (tunneling). In questo modo, la stazione connessa alla VPN riceverebbe un indirizzo della sottorete assegnata alla VPN.
 
 Gli obiettivi principali di questa tecnologia sono:
-*   Mantenere l'anonimato aggiungendo così un livello di sicurezza e privacy;
+*   Mantenere l'anonimato aggiungendo così un livello di [[Sicurezza|sicurezza]] e privacy;
 *   **Exploiting Geographic proxying:** ovvero la possibilità di collegarsi ad indirizzi IP nazionali e di usufruire di tutti i vantaggi di questi ultimi;
 *   Consentire alle aziende di creare canali sicuri per condividere le proprie risorse aziendali.
 
-> **Commentato [CP14]:** Exploiting Geographic Proxying è una tecnica usata per ingannare sistemi di sicurezza basati sulla localizzazione geografica.
+> **Commentato [CP14]:** Exploiting Geographic Proxying è una tecnica usata per ingannare sistemi di [[Sicurezza|sicurezza]] basati sulla localizzazione geografica.
 
 ## 1. Tipologie di VPN
 Esistono diversi tipi di VPN:
-*   **VPN per Roadwarriors:** questo tipo di VPN è utilizzato da utenti mobili (road warriors) che si connettono da diverse posizioni remote, come lavoratori in viaggio o da casa. Un uso tipico è consentire a singoli utenti di accedere alla rete aziendale da qualsiasi luogo, garantendo sicurezza e privacy;
-*   **VPN LAN-2-LAN:** questo tipo di VPN collega due o più reti locali (LAN) situate in posizioni diverse, creando un tunnel sicuro tra di esse. Un uso tipico è collegare uffici o sedi aziendali dislocate geograficamente in una rete aziendale unificata;
-*   **VPN Many-To-Many:** questo tipo di VPN connette molte reti o nodi a molte altre reti o nodi, formando una rete complessa e interconnessa. Un uso tipico è in scenari in cui diverse reti aziendali o partner commerciali devono comunicare tra loro in modo sicuro e coordinato.
+*   **VPN per Roadwarriors:** questo tipo di VPN è utilizzato da utenti mobili (road warriors) che si connettono da diverse posizioni remote, come lavoratori in viaggio o da casa. Un uso tipico è consentire a singoli utenti di accedere alla rete aziendale da qualsiasi luogo, garantendo [[Sicurezza|sicurezza]] e privacy;
+*   **VPN LAN-2-LAN:** questo tipo di VPN collega due o più [[Reti|reti]] locali (LAN) situate in posizioni diverse, creando un tunnel sicuro tra di esse. Un uso tipico è collegare uffici o sedi aziendali dislocate geograficamente in una rete aziendale unificata;
+*   **VPN Many-To-Many:** questo tipo di VPN connette molte [[Reti|reti]] o nodi a molte altre [[Reti|reti]] o nodi, formando una rete complessa e interconnessa. Un uso tipico è in scenari in cui diverse [[Reti|reti]] aziendali o partner commerciali devono comunicare tra loro in modo sicuro e coordinato.
 
 ## 2. Funzionamento Tecnico
 Cosa succede quando entriamo in una VPN?
@@ -57,7 +61,7 @@ Una connessione VPN può essere impostata in due modi diversi:
 *   **Split tunnel:** quando connetti la tua stazione alla VPN, il gateway viene impostato in base alla stazione che deve raggiungere il pacchetto. Per accedere ad alcune risorse, il gateway predefinito è il server VPN, per altri è il normale gateway predefinito. In questo modo non puoi proteggere completamente la tua rete aziendale ma limiti l'accesso e l'utilizzo della banda.
 
 ## 4. Secure VPN
-Recentemente, le VPN stanno diventando sempre più utilizzate ed è richiesto un certo grado di sicurezza. Di conseguenza, nasce **Secure VPN** e sono caratterizzati da:
+Recentemente, le VPN stanno diventando sempre più utilizzate ed è richiesto un certo grado di [[Sicurezza|sicurezza]]. Di conseguenza, nasce **Secure VPN** e sono caratterizzati da:
 *   Meccanismi di autenticazione per gli endpoint del tunnel (durante la configurazione del tunnel);
 *   Crittografia del traffico di transito: il traffico è crittografato e questo crea un "tunnel" tra due host;
 *   La crittografia deve essere forte e può essere reimpostata nel tempo;
@@ -71,8 +75,8 @@ I protocolli utilizzati per implementare Secure VPN:
 *   **SSH Tunneling:** ha numerosissimi tunneling facilities. Sfruttando TCP, purtroppo, soffre di alcune instabilità;
 *   **SSL/TLS VPN:** l’autenticità delle comunicazioni viene preservata grazie all’uso di certificati digitali. Richiede, purtroppo, la necessità di installare particolari software;
 *   **PPTP/SSTP (with MPPE):** serve per il point to point tunneling basato su MPPE. La crittografia e l’autenticazione sono molto deboli. Viene usato ancora oggi per compatibilità;
-*   **IPsec;**
-*   **IPSec + L2TP + IKEv2:** è la tecnologia più all’avanguardia. IPSec viene usato per la crittografia e la firma digitale. L2TP serve per il tunneling delle informazioni del layer 2, mentre IKEv2 serve per lo scambio delle chiavi e per l’autenticazione.
+*   **[[IPSec|IPsec]];**
+*   **[[IPSec]] + L2TP + IKEv2:** è la tecnologia più all’avanguardia. [[IPSec]] viene usato per la crittografia e la firma digitale. L2TP serve per il tunneling delle informazioni del layer 2, mentre IKEv2 serve per lo scambio delle chiavi e per l’autenticazione.
 
 ### Problemi
 Purtroppo, le tecnologie VPN non sono compatibili con natting e TCP.

@@ -1,3 +1,7 @@
+---
+aliases: [openmp]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 In base alle direttive del compilatore, può utilizzare il codice seriale. Definito da un gruppo di società di hardware/software. L'API Fortran è stata rilasciata il 28 ottobre 1997. L'API C/C++ è stata rilasciata nel 1998. Dal rilascio di OpenMP 4, è supportata anche la GPGPU! Portatile / multipiattaforma, include Unix e Windows NT. Disponibile in C/C++ e Fortran. Può essere molto facile e semplice da usare. Consente un approccio incrementale al parallelismo (cioè la capacità di "convertire" un programma sequenziale in parallelo, "a poco a poco").
 
 ## Perché OpenMP?

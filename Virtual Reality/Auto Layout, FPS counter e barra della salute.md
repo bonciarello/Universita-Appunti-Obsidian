@@ -1,3 +1,7 @@
+---
+aliases: [AFCBS, "Auto Layout, FPS counter barra salute"]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo all'introduzione della componente Auto Layout, alla creazione di FPS counter e alla creazione di una health bar (barra della vita).
 
 ## Auto Layout
@@ -34,7 +38,7 @@ Le opzioni aprono nuove possibilità su come organizzare i figli della griglia; 
 - **Constraint:** se si desidera limitare il numero di righe o colonne, la griglia mostrerà che è possibile impostare questa proprietà su *Fixed Row Count* o *Fixed Column Count*, che aprirà un'ulteriore proprietà *Constraint Count* per fornire il numero vincolato. L'impostazione predefinita è flessibile, che è sostanzialmente non vincolato.
 
 ## Opzioni di layout
-Il comportamento predefinito dei componenti del *gruppo di layout* è buono per la maggior parte delle situazioni, ma per altre si desidera aggiungere un livello di controllo più fine. Per queste situazioni, Unity ha fornito diverse sostituzioni del layout per limitare l'uso dei controlli all'interno di un gruppo o come elemento autonomo dell'interfaccia utente:
+Il comportamento predefinito dei componenti del *gruppo di layout* è buono per la maggior parte delle situazioni, ma per altre si desidera aggiungere un livello di controllo più fine. Per queste situazioni, Unity ha fornito diverse sostituzioni del layout per limitare l'uso dei controlli all'interno di un gruppo o come elemento autonomo dell'[[Interfaccia utente|interfaccia utente]]:
 - **Layout Controllers:** *Content Size Fitter* e *Aspect Ratio Fitter*;
 - **Scroll Rects**;
 - **Masks**.
@@ -96,7 +100,7 @@ Se aggiungi un componente *Masks* al *GameObject* del *ScrollRectArea* (e un com
 ## FPS counter
 L'esempio di testo più semplice utilizzato nella maggior parte dei giochi è un contatore FPS, quindi creiamo uno script per quello. Inizia creando un nuovo script *C#* nel tuo progetto chiamato *FPSCounter*.
 
-Abbiamo bisogno di un componente *Text* collegato al *GameObject*, per questo utilizziamo l'attributo *RequireComponent*, aggiungiamo anche il namespace *UnityEngine.UI* che contiene tutte le funzionalità dell'interfaccia utente:
+Abbiamo bisogno di un componente *Text* collegato al *GameObject*, per questo utilizziamo l'attributo *RequireComponent*, aggiungiamo anche il namespace *UnityEngine.UI* che contiene tutte le funzionalità dell'[[Interfaccia utente|interfaccia utente]]:
 ```csharp
 using UnityEngine;
 using UnityEngine.UI;
@@ -189,7 +193,7 @@ public class FPSCounter : MonoBehaviour {
 ```
 
 ## Barra della salute
-Andremo a vedere come si crea l'oggetto dell'interfaccia utente della barra della salute:
+Andremo a vedere come si crea l'oggetto dell'[[Interfaccia utente|interfaccia utente]] della barra della salute:
 - aggiungi un nuovo *Slider* alla scena;
 - espandere il controllo *Slider* nella gerarchia ed eliminare l'*Handle Slide Area*;
 - selezionare lo *Slider* e fare clic sulla proprietà *Handle Rect*. Se dice "Missing Rect Transform", premi *Elimina* (per cancellare la proprietà poiché non abbiamo handle);

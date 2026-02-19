@@ -1,9 +1,13 @@
-Le **JSP** (*Java Server Pages*) sono una tecnologia lato server che permette di creare pagine web dinamiche mischiando codice HTML statico con frammenti di codice Java.
+---
+aliases: [jsp]
+tags: [web-computing]
+---
+Le **JSP** (*Java Server Pages*) sono una tecnologia lato server che permette di creare pagine web dinamiche mischiando codice [[HTML]] statico con frammenti di codice Java.
 
 > [!NOTE] Relazione con le Servlet
 > In realtà, le JSP sono un'astrazione delle Servlet. Al primo caricamento, il Web Container trasforma automaticamente il file `.jsp` in una classe Java (`Servlet`), la compila e la esegue.
 ## Sintassi e Tag Speciali
-Esistono diversi tipi di tag per inserire logica Java in una pagina HTML.
+Esistono diversi tipi di tag per inserire logica Java in una pagina [[HTML]].
 ### Scriptlet: `<% ... %>`
 Contiene blocchi di codice Java generico (loop, condizioni).
 ```jsp

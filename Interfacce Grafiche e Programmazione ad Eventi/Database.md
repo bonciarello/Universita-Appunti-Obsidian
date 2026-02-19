@@ -1,3 +1,7 @@
+---
+aliases: [DB, Databasa, Basi di Dati, DBMS]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## JDBC
 
 È l'acronimo di **Java Database Connectivity** ed è un API che permette di accedere a tutti i database relazionali allo stesso modo.
@@ -19,12 +23,12 @@ Le *classi da ricordare*, nonché più importanti, sono:
 
 ## Installazione di SQLite
 
-- Scaricare il driver JDBC da *https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.34.0/sqlite-jdbc-3.34.0.jar* ;
+- Scaricare il driver JDBC da *https://repo1.[[Maven|maven]].org/maven2/org/xerial/sqlite-jdbc/3.34.0/sqlite-jdbc-3.34.0.jar* ;
 - Creare una cartella lib all'interno del vostro progetto (allo stesso livello di src);
 - Copiare il file jar scaricato all'interno della cartella lib;
 - Da Eclipse, cliccare con il tasto destro sul nome del progetto, scegliere *Properties*, poi *Java Build Path*, poi *Libraries*, poi *Add Jars...*, poi selezionare il progetto, cartella *lib* e infine il file *jar*.
 
-Si può anche usare maven inserendo la dipendenza nel POM (*https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc*).
+Si può anche usare [[Maven|maven]] inserendo la dipendenza nel POM (*https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc*).
 
 ## Gestione del database
 

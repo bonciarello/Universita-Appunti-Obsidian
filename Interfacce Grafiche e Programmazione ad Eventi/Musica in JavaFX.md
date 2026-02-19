@@ -1,3 +1,7 @@
+---
+aliases: [Musica JavaFX, MJ]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src/main/java* package *application* andremo ad elencare i file di seguito, mentre nella cartella *src/main/resources* package *application* troveremo la musica in formato *.wav*.
 
 Per quanto riguarda il file *Main.java*:

@@ -1,3 +1,7 @@
+---
+aliases: [EC, Ereditarietà composizione]
+tags: [programmazione-ad-oggetti]
+---
 ### Composizione ("Ha un...")
 Quando una classe contiene istanze di altre classi come attributi. Ad esempio, un `Supermercato` _ha una_ lista di prodotti .
 ### Ereditarietà ("È un...")

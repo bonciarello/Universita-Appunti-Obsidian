@@ -1,10 +1,14 @@
-**SQL (Structured Query Language)** è un linguaggio standardizzato per database basati sul modello relazionale (RDBMS), progettato per le seguenti operazioni:
+---
+aliases: [Linguaggio interrogazione SQL, LIS]
+tags: [basi-di-dati]
+---
+**SQL (Structured Query Language)** è un linguaggio standardizzato per [[Database|database]] basati sul modello relazionale (RDBMS), progettato per le seguenti operazioni:
 
-- creare e modificare schemi di database *(DDL = Data Definition Language)*;
+- creare e modificare schemi di [[Database|database]] *(DDL = Data Definition Language)*;
 - inserire, modificare e gestire dati memorizzati *(DML = Data Manipulation Language)*;
 - interrogare i dati memorizzati *(DQL = Data Query Language)*;
 - creare e gestire strumenti di controllo e accesso ai dati *(DCL = Data Control Language)*.
-A dispetto del nome, non si tratta perciò di un semplice linguaggio di interrogazione: alcuni suoi sottoinsiemi, infatti, permettono di creare, gestire e amministrare database.
+A dispetto del nome, non si tratta perciò di un semplice linguaggio di interrogazione: alcuni suoi sottoinsiemi, infatti, permettono di creare, gestire e amministrare [[Database|database]].
 
 ## Costrutto di base
 
@@ -394,7 +398,7 @@ WHERE eta > ANY (SELECT eta
 
 ## Funzioni di aggregazione
 
-Sono funzioni non rappresentabili in Algebra Relazionale, quindi rendono SQL più espressivo dell’AR. Sono: *COUNT*, *SUM*, *MIN*, *MAX*, *AVG*.
+Sono funzioni non rappresentabili in [[Algebra relazionale|Algebra Relazionale]], quindi rendono SQL più espressivo dell’AR. Sono: *COUNT*, *SUM*, *MIN*, *MAX*, *AVG*.
 
 ### Funzione COUNT
 

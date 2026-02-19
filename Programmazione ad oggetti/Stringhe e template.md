@@ -1,3 +1,7 @@
+---
+aliases: [ST, Stringhe template]
+tags: [programmazione-ad-oggetti]
+---
 ### Stringhe (`std::string`)
 La classe `string` semplifica la gestione del testo rispetto agli array di char del C.
 - **Concatenazione:** `test += "casa";`.

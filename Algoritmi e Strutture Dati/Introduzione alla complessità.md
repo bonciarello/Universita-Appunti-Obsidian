@@ -1,3 +1,7 @@
+---
+aliases: [IC, Introduzione complessità]
+tags: [algoritmi-e-strutture-dati]
+---
 ## Complessità computazionale
 
 Un aspetto importante che non può essere trascurato nella progettazione di un algoritmo è la caratterizzazione dell'efficienza con la quale l'algoritmo stesso viene eseguito su un elaboratore.
@@ -35,7 +39,7 @@ In generale, uno stesso problema può essere risolto in più modi diversi, cioè
 
 Queste sono utili per trovare un modo per esprimere quantitativamente il numero di operazioni necessarie per eseguire un algoritmo.
 
-## Esempi di calcolo della complessità
+## Esempi di [[Calcolo della complessità|calcolo della complessità]]
 
 ```cpp
 i = 1; // assegnamento esterno: 1

@@ -1,5 +1,9 @@
+---
+aliases: [BC]
+tags: [network-security]
+---
 ## 1. Introduzione ai Cifrari a Blocchi
-Un **cifrario a blocchi** prende un blocco di testo di lunghezza fissa di $b$ bit e una chiave come input e produce un blocco di $b$ bit di testo cifrato. Se la quantità di testo in chiaro da crittografare è maggiore di $b$ bit, è comunque possibile utilizzare la cifratura a blocchi suddividendo il testo in chiaro in blocchi di $b$ bit. Quando più blocchi di testo in chiaro vengono crittografati utilizzando la stessa chiave, sorgono una serie di problemi di sicurezza.
+Un **cifrario a blocchi** prende un blocco di testo di lunghezza fissa di $b$ bit e una chiave come input e produce un blocco di $b$ bit di testo cifrato. Se la quantità di testo in chiaro da crittografare è maggiore di $b$ bit, è comunque possibile utilizzare la cifratura a blocchi suddividendo il testo in chiaro in blocchi di $b$ bit. Quando più blocchi di testo in chiaro vengono crittografati utilizzando la stessa chiave, sorgono una serie di problemi di [[Sicurezza|sicurezza]].
 
 Per applicare un cifrario a blocchi in una varietà di applicazioni, il NIST ha definito cinque **modalità di funzionamento**: è una tecnica per migliorare l'effetto di un algoritmo crittografico o adattare l'algoritmo per un'applicazione. Le cinque modalità hanno lo scopo di coprire un'ampia varietà di applicazioni di crittografia per le quali potrebbe essere utilizzato un cifrario a blocchi. Queste modalità sono destinate all'uso con qualsiasi cifrario a blocchi simmetrico, inclusi triple DES e AES.
 
@@ -11,7 +15,7 @@ Questa modalità deve essere utilizzata solo per proteggere i messaggi più brev
 La caratteristica più significativa di ECB è che se lo stesso blocco di $b$ bit di testo in chiaro compare più di una volta nel messaggio, produce sempre lo stesso testo cifrato. Per messaggi lunghi, questa modalità potrebbe non essere sicura. Se il messaggio fosse altamente strutturato, potrebbe essere possibile sfruttare queste regolarità. Ad esempio, se è noto che il messaggio inizia sempre con determinati campi predefiniti, allora l’attaccante potrebbe avere un numero di coppie note di testo in chiaro e testo cifrato con cui lavorare.
 
 ## 3. Cipher Block Chaining (CBC)
-Possiamo superare i problemi di sicurezza dell'ECB utilizzando la modalità **CBC (Cipher Block Chaining)** in cui vogliamo crittografare lo stesso testo in chiaro con la stessa chiave ma ottenere un output diverso. Nella modalità CBC, l'input dell'algoritmo di crittografia è il risultato dell'XOR tra il blocco di testo in chiaro corrente e il blocco di testo cifrato precedente; viene utilizzata la stessa chiave per ogni blocco.
+Possiamo superare i problemi di [[Sicurezza|sicurezza]] dell'ECB utilizzando la modalità **CBC (Cipher Block Chaining)** in cui vogliamo crittografare lo stesso testo in chiaro con la stessa chiave ma ottenere un output diverso. Nella modalità CBC, l'input dell'algoritmo di crittografia è il risultato dell'XOR tra il blocco di testo in chiaro corrente e il blocco di testo cifrato precedente; viene utilizzata la stessa chiave per ogni blocco.
 
 *   **Decrittazione:** ogni blocco di cifratura viene fatto passare attraverso l'algoritmo di decrittazione. Il risultato è sottoposto a XOR con il blocco di testo cifrato precedente per produrre il blocco di testo in chiaro.
 
@@ -31,7 +35,7 @@ La modalità OFB richiede un vettore di inizializzazione (IV): nel caso di OFB, 
 OFB ha la struttura di un tipico cifrario a flusso e quel flusso di bit viene sottoposto a XOR con i bit di testo in chiaro. Il flusso generato che viene sottoposto a XOR con il testo in chiaro è esso stesso indipendente dal testo in chiaro. Immaginiamo di utilizzare OFB per criptare un file e, dopo un po' di tempo, vogliamo decriptare solo una piccola parte di questo file: per raggiungere questo obiettivo dobbiamo criptare tutti i byte precedenti e poi possiamo arrivare allo specifico pezzo che vogliamo.
 
 ## 6. Counter (CTR)
-La modalità **Counter (CTR)** viene utilizzato con le applicazioni per la sicurezza di rete ATM (modalità di trasferimento asincrono) e IPSec.
+La modalità **Counter (CTR)** viene utilizzato con le applicazioni per la [[Sicurezza|sicurezza]] di rete ATM (modalità di trasferimento asincrono) e [[IPSec]].
 
 Il funzionamento è che viene utilizzato un contatore pari alla dimensione del blocco di testo in chiaro. L'unico requisito è che il valore del contatore deve essere diverso per ogni blocco di testo in chiaro crittografato. In genere, il contatore viene inizializzato su un valore e quindi incrementato di 1 per ogni blocco successivo.
 

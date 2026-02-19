@@ -1,3 +1,7 @@
+---
+aliases: [UI, User Interface, Interfacce utente]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Librerie Swing, che fanno parte di un insieme di librerie chiamate Java Foundation Classes (JFC), sono state introdotte come evoluzione delle librerie Abstract Window Toolkit (AWT).
 La differenza tra Swing e AWT è nel modo in cui i componenti sono stati progettati e come si comportano in un ambiente nativo di esecuzione:
 - **Componenti AWT:** hanno un aspetto legato alla piattaforma su cui girano. Sono chiamati controlli pesanti (heavyweight), perché sono totalmente dipendenti dal sistema grafico su cui vengono eseguiti. Allo stesso tempo sono componenti veloci.

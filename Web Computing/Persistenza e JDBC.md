@@ -1,4 +1,8 @@
-La **persistenza** è la capacità di un'applicazione di salvare i dati in modo che sopravvivano alla chiusura del programma. Nelle Java Web App, questo avviene solitamente tramite database relazionali (RDBMS) e la libreria **JDBC**.
+---
+aliases: [Persistenza JDBC, PJ]
+tags: [web-computing]
+---
+La **persistenza** è la capacità di un'applicazione di salvare i dati in modo che sopravvivano alla chiusura del programma. Nelle Java Web App, questo avviene solitamente tramite [[Database|database]] relazionali (RDBMS) e la libreria **JDBC**.
 ## Il Conflitto di Impedenza (Impedance Mismatch)
 Esiste una differenza strutturale tra il mondo degli oggetti (Java) e quello delle relazioni (SQL):
 *   **Struttura:** Java usa oggetti e riferimenti; SQL usa tabelle e chiavi esterne.
@@ -14,8 +18,8 @@ Si separa la logica di accesso ai dati dal resto dell'app.
 *   **DAO:** Interfacce e classi che implementano le operazioni **CRUD** (Create, Retrieve, Update, Delete).
 ### 3. ORM (Object-Relational Mapping)
 Framework come **Hibernate** o **JPA** che automatizzano la conversione tra oggetti e tabelle.
-## JDBC (Java Database Connectivity)
-JDBC è l'API standard di Java per interagire con i database.
+## JDBC (Java [[Database]] Connectivity)
+JDBC è l'API standard di Java per interagire con i [[Database|database]].
 ### Esempio di CRUD (Retrieve)
 ```java
 public Studente findByPrimaryKey(String matricola) {
@@ -43,7 +47,7 @@ Per evitare di caricare migliaia di record inutilmente (es. caricare tutti gli s
 *   **Pattern Proxy:** Si restituisce un "finto" oggetto (Proxy) che interroga il DB solo quando viene chiamato il metodo `getStudenti()`.
 ### Chiavi Surrogate e IdBroker
 Invece di usare chiavi naturali (come il Codice Fiscale), si preferiscono chiavi numeriche generate dal sistema (**chiavi surrogate**).
-*   **IdBroker:** Una classe o procedura che garantisce la generazione di ID univoci (es. tramite `SEQUENCE` in PostgreSQL o `AUTO_INCREMENT` in MySQL).
+*   **IdBroker:** Una classe o procedura che garantisce la generazione di ID univoci (es. tramite `SEQUENCE` in PostgreSQL o `AUTO_INCREMENT` in [[MySQL]]).
 ### Aggiornamenti in Cascata
 Quando si salva un oggetto complesso (es. un `Gruppo` con una lista di `Studenti`), il DAO deve preoccuparsi di salvare ricorsivamente tutti i figli che non sono ancora presenti nel DB.
 ```java

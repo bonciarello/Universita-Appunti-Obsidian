@@ -1,3 +1,7 @@
+---
+aliases: [kerberos]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
 Nato a metà anni '80, **Kerberos** è un protocollo progettato per l'autenticazione distribuita in rete, permettendo a utenti, applicazioni e computer di autenticarsi a vicenda senza inviare password in chiaro.
 
 ## 1. Modello di Fiducia

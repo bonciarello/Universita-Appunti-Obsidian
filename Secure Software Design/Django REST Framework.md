@@ -1,7 +1,11 @@
+---
+aliases: [DRF]
+tags: [secure-software-design]
+---
 **Django** è un framework maturo per lo sviluppo web (dal 2005) che si è rivelato solido (presenta molti strumenti, librerie, framework REST). Ci concentriamo sulle API REST (back-end).
 
 ## Perchè REST API?
-I siti web monolitici dovrebbero rimanere nel passato perchè il *back-end* è basato su modelli di database, URL e viste e il *front-end* è basato su modelli di HTML, CSS e JavaScript.
+I siti web monolitici dovrebbero rimanere nel passato perchè il *back-end* è basato su modelli di [[Database|database]], URL e [[Viste|viste]] e il *front-end* è basato su modelli di [[HTML]], CSS e [[JavaScript]].
 
 I siti web moderni dovrebbero separare *back-end* e *front-end*: utilizziamo Django per *back-end* e solo per operazioni sui dati ed utilizziamo più *front-end* su browser, Android, iOS.
 
@@ -13,7 +17,7 @@ I siti web moderni dovrebbero separare *back-end* e *front-end*: utilizziamo Dja
 Gli endpoint sono URL che espongono e ricevono dati (in JSON o XML).
 
 ## REST
-**REST** è un architettura per la creazione di API su HTTP ed è di tipo *stateless* (ogni richiesta dovrebbe essere indipendente dalle richieste precedenti). Si basa sui verbi HTTP (GET, POST, PUT, DELETE, ...). Rappresenta i dati in JSON o XML.
+**REST** è un [[Architettura|architettura]] per la creazione di API su HTTP ed è di tipo *stateless* (ogni richiesta dovrebbe essere indipendente dalle richieste precedenti). Si basa sui verbi HTTP (GET, POST, PUT, DELETE, ...). Rappresenta i dati in JSON o XML.
 
 ## Anatomia dei progetti Django
 
@@ -21,7 +25,7 @@ Gli endpoint sono URL che espongono e ricevono dati (in JSON o XML).
 
 - *settings.py* contiene la configurazione del progetto;
 - *urls.py* conterrà tutti i percorsi del progetto;
-- i *template* conterranno tutte le pagine HTML del progetto;
+- i *template* conterranno tutte le pagine [[HTML]] del progetto;
 - *manage.py* è uno script per lo sviluppatore per eseguire vari comandi Django. Lo useremo, ma di solito non abbiamo bisogno di modificarlo;
 - *WSGI* è uno standard per i server Web Python. ASGI è uno standard per i server asincroni.
 
@@ -38,11 +42,11 @@ Django cercherà i modelli qui:
 Per le API REST non ne abbiamo davvero bisogno. Possiamo rimuovere i modelli se lo desideriamo e mantieniamo i file statici per il sito di amministrazione.
 
 ## Avvio del progetto
-Possiamo avviare tramite il pulsante *Run* il nostro progetto ma se siamo al primo avvio bisogna anche migrare prima il database tramite il comando in console:
+Possiamo avviare tramite il pulsante *Run* il nostro progetto ma se siamo al primo avvio bisogna anche migrare prima il [[Database|database]] tramite il comando in console:
 ```bash
 ./manage.py migrate
 ```
-Questo comando, nel dettaglio, si occupa di creare o aggiornare il database. Se invece di avviare tramite il pulsante *Run* vogliamo avviare il progetto tramite comando in console, dobbiamo scrivere:
+Questo comando, nel dettaglio, si occupa di creare o aggiornare il [[Database|database]]. Se invece di avviare tramite il pulsante *Run* vogliamo avviare il progetto tramite comando in console, dobbiamo scrivere:
 ```bash
 ./manage.py runserver
 ```
@@ -70,10 +74,10 @@ In questo modo andremo ad aggiungere un modulo con le seguenti componenti:
 
 ![](img/sezione12/modules_app.png)
 
-- cartella *migrations*: memorizza i file di migrazione per aggiornare il database;
+- cartella *migrations*: memorizza i file di migrazione per aggiornare il [[Database|database]];
 - *admin.py*: aggiungi contenuto al sito di amministrazione;
 - *apps.py*: configurazione specifica dell'app;
-- *models.py*: modello di database, test e visualizzazioni.
+- *models.py*: modello di [[Database|database]], test e visualizzazioni.
 
 ## Definizione del file *models.py*
 Vogliamo una tabella ***Post*** con cinque campi: *autore*, *titolo*, *corpo*, *create_at*, *update_at*. Django fornisce un modello utente (noto anche come tabella): usa *get_user _model()* per evitare problemi.
@@ -128,7 +132,7 @@ I seguenti passi servono a far funzionare l'autenticazione basata su token:
 - il client memorizza il token (ad esempio, una variabile d'ambiente del frontend se utilizzata come chiave API, come quelle delle API di Google Maps);
 - il client invia il token con ogni richiesta.
 
-Per impostazione predefinita, Django genera un token per ogni utente e lo memorizza nel database. Approcci più sofisticati si basano su *JWT* e *OAuth2* e non necessitano di memorizzare nulla.
+Per impostazione predefinita, Django genera un token per ogni utente e lo memorizza nel [[Database|database]]. Approcci più sofisticati si basano su *JWT* e *OAuth2* e non necessitano di memorizzare nulla.
 
 Per impostare questo tipo d'autenticazione in Django, andremo ad installare, nel file *settings.py*, il plugin *rest_framework. authtoken* per il progetto. Bisogna anche installare *dj-rest-auth* per impostare **login**, **logout** e **reset endpoint** e *django-allauth* per impostare il **registration endpoints**.
 
@@ -158,7 +162,7 @@ Solo l'amministratore è autorizzato. Il criterio predefinito deve essere restri
 
 ![](img/sezione12/views_authorization1.png)
 
-Specifica autorizzazioni diverse per le viste: in questo caso tutti possono leggere i post, ma solo gli utenti autenticati possono modificarli. Limitiamo la modifica agli autori:
+Specifica autorizzazioni diverse per le [[Viste|viste]]: in questo caso tutti possono leggere i post, ma solo gli utenti autenticati possono modificarli. Limitiamo la modifica agli autori:
 
 ![](img/sezione12/views_authorization2.png)
 
@@ -198,7 +202,7 @@ Aggiungi *pytest.ini* nella radice del progetto e punta a *settings.py* (a meno 
 
 ![](img/sezione12/pytest_first_test.png)
 
-- *db* è una **fixtures**, un oggetto che possiamo utilizzare nei nostri test, in questo caso per accedere al database temporaneo utilizzato dai test;
+- *db* è una **fixtures**, un oggetto che possiamo utilizzare nei nostri test, in questo caso per accedere al [[Database|database]] temporaneo utilizzato dai test;
 - **_mixer_** crea oggetti dai nostri modelli, con valori casuali per i campi non forniti;
 - chiama **_full_clean_** su un oggetto del nostro modello per convalidarlo;
 - Django fornisce molti validatori comuni con la sintassi *validators=[]* tra le proprietà dell'oggetto. All'interno delle parentesi quadre, possiamo inserire dei metodi che fungono da validatore;

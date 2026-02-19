@@ -1,3 +1,7 @@
+---
+aliases: [RR, "FPSInput, RayShooter ReactiveTarget"]
+tags: [virtual-reality]
+---
 Con questo laboratorio, pensiamo all'implementazione dell'input da tastiera per completare i controlli FPS con gli script MouseLook e FPSInput con cui prendere la mira e sparare e il rilevamento e risposta ai colpi.
 
 ## Muovere un oggetto
@@ -20,7 +24,7 @@ public class Spin : MonoBehaviour {
 
 Il *Player* deve muoversi in risposta all'input della tastiera: quindi, creiamo un nuovo script C# chiamato *FPSInput* e colleghiamolo all'oggetto *Player*. Per il momento, impostiamo il componente *MouseLook* solo sulla rotazione orizzontale.
 
-**I controlli della tastiera e del mouse sono suddivisi in script separati, un sistema di componenti, come quello di Unity3D, tende ad essere più flessibile quando le funzionalità sono suddivise in diversi componenti più piccoli.** Il codice dovrebbe essere il seguente:
+**I controlli della tastiera e del mouse sono suddivisi in script separati, un sistema di componenti, come quello di [[Unity3D]], tende ad essere più flessibile quando le funzionalità sono suddivise in diversi componenti più piccoli.** Il codice dovrebbe essere il seguente:
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
@@ -61,7 +65,7 @@ Abbiamo introdotto diversi nuovi concetti:
 
 ### Rispondere all'input del tasto
 I valori di *GetAxis()* vengono moltiplicati per la velocità per determinare la quantità di movimento:
-- "Horizontal" e "Vertical" sono astrazioni per le impostazioni di input in Unity3D: 
+- "Horizontal" e "Vertical" sono astrazioni per le impostazioni di input in [[Unity3D]]: 
     - le lettere A/D e sinistra/destra sono mappate su Horizontal;
     - le lettere W/S e su/giù sono mappate su Vertical;
 - i valori di movimento vengono applicati alle coordinate X e Z.
@@ -290,8 +294,8 @@ Le **coroutine** sono un modo specifico di Unity per gestire le attività che ve
 *SphereIndicator()* crea una sfera in un punto specifico, si ferma per l'istruzione *yield* e quindi distrugge la sfera dopo il ripristino della coroutine. La restituzione di *WaitForSeconds(1)* fa sì che la coroutine si metta in pausa per un secondo.
 
 ### *OnGUI()*
-Unity offre diversi modi per gestire l'interfaccia utente: un sistema di interfaccia utente di base (IMGUI) e un sistema di interfaccia utente avanzato (Unity UI).
-Useremo l'interfaccia utente di base per visualizzare un punto al centro dello schermo. 
+Unity offre diversi modi per gestire l'[[Interfaccia utente|interfaccia utente]]: un sistema di [[Interfaccia utente|interfaccia utente]] di base (IMGUI) e un sistema di [[Interfaccia utente|interfaccia utente]] avanzato (Unity UI).
+Useremo l'[[Interfaccia utente|interfaccia utente]] di base per visualizzare un punto al centro dello schermo. 
 
 Come *Start()* e *Update()*, *MonoBehaviour* risponde automaticamente a un metodo *OnGUI()*: quella funzione esegue ogni fotogramma subito dopo il rendering della scena 3D e tutto viene disegnato durante *OnGUI()* che appare sopra la scena 3D.
 

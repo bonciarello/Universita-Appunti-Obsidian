@@ -1,3 +1,7 @@
+---
+aliases: [clickjacking]
+tags: [cyber-offence-and-defence]
+---
 Il clickjacking è un attacco basato sull'interfaccia in cui un utente viene ingannato e indotto a cliccare su contenuti utilizzabili su un sito web nascosto cliccando su altri contenuti in un sito web malevolo.
 
 Facciamo un esempio: un utente web accede a un sito web malevolo (forse un collegamento fornito da un'e-mail) e clicca su un pulsante per vincere un premio. Senza saperlo, è stato ingannato da un aggressore che ha premuto un pulsante nascosto alternativo e questo ha portato al pagamento di un account su un altro sito.
@@ -47,7 +51,7 @@ La protezione dal clickjacking del browser potrebbe applicare il rilevamento del
 Alcuni siti web che richiedono il completamento e l'invio di un modulo consentono la precompilazione degli input del modulo utilizzando parametri GET prima dell'invio. Altri siti web potrebbero richiedere testo prima dell'invio del modulo. Poiché i valori GET fanno parte dell'URL, l'URL di destinazione può essere modificato per incorporare i valori scelti dall'attaccante e il pulsante "invia" trasparente viene sovrapposto al sito esca come nell'esempio di base del clickjacking.
 ### Script di frame busting
 Gli attacchi di clickjacking sono possibili ogni volta che i siti web possono essere inquadrati. Pertanto, le tecniche preventive si basano sulla limitazione della capacità di inquadramento per i siti web.
-Una comune protezione lato client attuata tramite il browser web è quella di utilizzare script di frame busting o frame breaking. Questi possono essere implementati tramite componenti aggiuntivi o estensioni JavaScript proprietari del browser come NoScript.
+Una comune protezione lato client attuata tramite il browser web è quella di utilizzare script di frame busting o frame breaking. Questi possono essere implementati tramite componenti aggiuntivi o estensioni [[JavaScript]] proprietari del browser come NoScript.
 
 Gli script sono spesso creati in modo da eseguire alcuni o tutti i seguenti comportamenti:
 - controllare e imporre che la finestra dell'applicazione corrente sia la finestra principale o superiore;
@@ -55,7 +59,7 @@ Gli script sono spesso creati in modo da eseguire alcuni o tutti i seguenti comp
 - impedire di fare clic su frame invisibili;
 - intercettare e segnalare potenziali attacchi di clickjacking all'utente.
 
-Le tecniche di frame busting sono spesso specifiche del browser e della piattaforma e, grazie alla flessibilità dell'HTML, possono solitamente essere aggirate dagli aggressori. Poiché i frame buster sono JavaScript, le impostazioni di sicurezza del browser potrebbero impedirne il funzionamento o addirittura il browser potrebbe non supportare JavaScript.
+Le tecniche di frame busting sono spesso specifiche del browser e della piattaforma e, grazie alla flessibilità dell'[[HTML]], possono solitamente essere aggirate dagli aggressori. Poiché i frame buster sono [[JavaScript]], le impostazioni di [[Sicurezza|sicurezza]] del browser potrebbero impedirne il funzionamento o addirittura il browser potrebbe non supportare [[JavaScript]].
 
 Una soluzione alternativa efficace per gli aggressori contro i frame buster è quella di utilizzare l'attributo `sandbox` iframe HTML5. Quando questo è impostato con i valori `allow-forms` o `allow-scripts` e il valore `allow-top-navigation` è omesso, lo script frame buster può essere neutralizzato poiché l'iframe non può controllare se è o meno la finestra superiore:
 

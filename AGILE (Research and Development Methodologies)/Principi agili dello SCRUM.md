@@ -1,3 +1,7 @@
+---
+aliases: [Principi agili SCRUM, PAS]
+tags: [agile-research-and-development-methodologies]
+---
 ## Plan-driven development
 *Il **plan-driven development** cerca di pianificare e anticipare in anticipo tutte le funzionalità che un utente potrebbe desiderare e di determinare il modo migliore per realizzarle.*
 
@@ -21,7 +25,7 @@ SCRUM si adatta a problemi che presentano un'incertezza tale da rendere rendere 
 ### Variabilità e incertezza
 SCRUM sfrutta la variabilità e l'incertezza incertezza nello sviluppo del prodotto per creare soluzioni innovative. Abbiamo quattro principi:
 - *accogliere la variabilità utile:* una certa variabilità è necessaria per produrre un prodotto ogni volta un prodotto diverso;
-- *impiegare uno sviluppo iterativo e incrementale sviluppo:* SCRUM si basa su uno sviluppo iterativo e incrementale. Con iterativo si intende utilizzare più passaggi per migliorare in modo da convergere su una buona soluzione. Con incrementale si intende imparare come ogni pezzo deve sopravvivere nell'ambiente e imparare dall'esperienza. SCRUM sfrutta i vantaggi dello sviluppo iterativo e di quello incrementale, annullando gli svantaggi del loro utilizzo individuale. SCRUM utilizza entrambe le idee in una serie adattativa di iterazioni temporali chiamate "sprint";
+- *impiegare uno sviluppo iterativo e incrementale sviluppo:* SCRUM si basa su uno sviluppo iterativo e incrementale. Con iterativo si intende utilizzare più passaggi per migliorare in modo da convergere su una buona soluzione. Con incrementale si intende imparare come ogni pezzo deve sopravvivere nell'ambiente e imparare dall'esperienza. SCRUM sfrutta i vantaggi dello sviluppo iterativo e di quello incrementale, annullando gli svantaggi del loro utilizzo individuale. SCRUM utilizza entrambe le idee in una serie adattativa di iterazioni temporali chiamate "[[Sprint|sprint]]";
 - *sfruttare la variabilità attraverso adattamento all'ispezione e trasparenza:* SCRUM accetta il fatto che è necessario un certo livello di variabilità per costruire qualcosa di nuovo e presuppone che la creazione del prodotto sia complessa.
 - *ridurre tutte le forme di incertezza contemporaneamente:* seguendo un approccio olistico SCRUM, bisogna ridurre simultaneamente tutte le incertezze e sondare ed esplorare il nostro ambiente per identificare e conoscere le incognite sconosciute.
 
@@ -36,7 +40,7 @@ Bilanciare costantemente il desiderio di previsione con la necessità di adattam
 ### Validated Learning
 Organizzare il lavoro per creare rapidamente un **apprendimento convalidato** cioè ottenere conoscenze che confermino o confutino un'ipotesi che abbiamo fatto. I principi agili relativi a questo argomento sono:
 - *convalidare velocemente le ipotesi importanti:* non lasciare che le ipotesi importanti rimangano a lungo senza essere convalidate e fare un'ipotesi fondamentalmente sbagliata, ma è probabile che si abbia la possibilità di rimediare;
-- *sfruttare più cicli di apprendimento simultanei:* in SCRUM l'apprendimento costante è una chiave di successo per identificare e sfruttare diversi cicli di feedback e scrum quotidiani, sprint review ma anche pair programming e test-driven development.;
+- *sfruttare più cicli di apprendimento simultanei:* in SCRUM l'apprendimento costante è una chiave di successo per identificare e sfruttare diversi cicli di feedback e scrum quotidiani, [[Sprint|sprint]] review ma anche pair programming e test-driven development.;
 - *organizzare il flusso di lavoro per un rapido feedback:* in SCRUM si arriva al feedback il più rapidamente possibile. Le attività che generano feedback si svolgono in stretta prossimità del lavoro originale.
 
 ### Work in progress (WIP)
@@ -56,7 +60,7 @@ Misurare i progressi in base a ciò che viene consegnato e convalidato, non in b
 ### Performance
 Caratteristiche specifiche legate alle prestazioni quando si utilizza SCRUM:
 - *andare veloci, ma senza fretta:* la velocità estrema viola il principio del ritmo sostenibile. Le persone dovrebbero essere in grado di lavorare a un ritmo che possono sostenere per un periodo di tempo prolungato. La fretta arriverà probabilmente a scapito della qualità;
-- *costruire con qualità:* in SCRUM la qualità è mantenuta e verificata ad ogni sprint. Ogni incremento viene completato ad un alto livello di fiducia e può essere messo in produzione o spedito ai clienti. I test tardivi per attaccare la qualità sono sostanzialmente ridotti;
+- *costruire con qualità:* in SCRUM la qualità è mantenuta e verificata ad ogni [[Sprint|sprint]]. Ogni incremento viene completato ad un alto livello di fiducia e può essere messo in produzione o spedito ai clienti. I test tardivi per attaccare la qualità sono sostanzialmente ridotti;
 - *impiegare una cerimonia minimamente sufficiente:* si cerca di mantenere una forma informale, riducendo eventuali formalità facoltative e non necessarie (cerimonia significa formalità in questo contesto).
 
 ## Conclusioni

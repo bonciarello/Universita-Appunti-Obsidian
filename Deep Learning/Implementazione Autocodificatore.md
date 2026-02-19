@@ -1,3 +1,7 @@
+---
+aliases: [IA]
+tags: [deep-learning]
+---
 In questo laboratorio implementeremo diversi tipi di Autoencoder utilizzando il dataset **Fashion MNIST**, che contiene 60.000 immagini in scala di grigi (28x28 pixel) di 10 categorie di abbigliamento (t-shirt, pantaloni, scarpe, ecc.).
 
 ## 1. Preparazione dei Dati
@@ -61,7 +65,7 @@ autoencoder.fit(x_train_flat, x_train_flat,
 ```
 
 ## 3. Autocodificatore Convoluzionale (Denoising)
-Le reti dense perdono l'informazione spaziale (struttura 2D). Per le immagini, le **Convolutional Neural Networks (CNN)** sono molto più potenti.
+Le [[Reti|reti]] dense perdono l'informazione spaziale (struttura 2D). Per le immagini, le **Convolutional Neural Networks (CNN)** sono molto più potenti.
 Implementeremo un **Denoising Autoencoder**:
 1.  Corrompiamo le immagini con rumore.
 2.  Chiediamo alla rete di ricostruire l'immagine *pulita*.
@@ -79,7 +83,7 @@ x_train_noisy = tf.clip_by_value(x_train_noisy, clip_value_min=0., clip_value_ma
 x_test_noisy = tf.clip_by_value(x_test_noisy, clip_value_min=0., clip_value_max=1.)
 ```
 
-### Architettura Convoluzionale
+### [[Architettura]] Convoluzionale
 Per il Decoder, dobbiamo aumentare le dimensioni spaziali (Upsampling). Usiamo `UpSampling2D` (ripete righe/colonne) o `Conv2DTranspose` (convoluzione inversa apprendibile).
 
 ```python

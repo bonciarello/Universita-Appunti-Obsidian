@@ -1,3 +1,7 @@
+---
+aliases: [MDR, Modello dati relazionale]
+tags: [basi-di-dati]
+---
 Il modello relazione è un modello logico dei dati, direttamente supportato dai DBMS commerciali.
 Si basa su un unico costrutto chiamato *relazione* (tabella).
 Nella progettazione di una BD, lo *schema relazionale* si ottiene per trasformazione dello schema concettuale ER.

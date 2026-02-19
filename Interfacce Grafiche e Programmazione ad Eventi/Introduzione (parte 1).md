@@ -1,3 +1,7 @@
+---
+aliases: [Introduzione, parte 1]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Programmare in Java
 Cosa serve?
 - Java Development Kite (JDK), a lezione utilizzeremo la open JDK versione 15

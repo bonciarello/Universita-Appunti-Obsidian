@@ -1,4 +1,8 @@
-Nell'ingegneria del software tradizionale:
+---
+aliases: [Continuous Delivery Trunk-based development, CDD]
+tags: [agile-research-and-development-methodologies]
+---
+Nell'[[Ingegneria del Software|ingegneria del software]] tradizionale:
 - l'integrazione dei sottosistemi software viene ritardata verso la fine del ciclo di sviluppo;
 - **il sistema non garantisce il funzionamento delle versioni "intermedie"** (con versione intendiamo la distribuzione di un'unità distribuibile di software);
 - le versioni sono il punto in cui "la gomma incontra la strada" e sorgono problemi: gli utenti iniziano a utilizzare il sistema, scoprono bug, comportamenti non previsti, funzionalità mancanti;
@@ -52,7 +56,7 @@ L'ultimo passaggio consiste nel fornire gli script di distribuzione per lo schel
 
 Anche se sembra facile, implementare tutti questi elementi ed essere sicuri che interagiscano correttamente potrebbe richiedere giorni o settimane a seconda anche dello scheletro ambulante utilizzato per far crescere la pipeline.
 
-Considera anche che queste fasi sono un esempio minimo e potrebbero essere aggiunti altri tipi di "gate" per le versioni candidate: test manuale, test di sicurezza, test delle prestazioni e altri test non funzionali.
+Considera anche che queste fasi sono un esempio minimo e potrebbero essere aggiunti altri tipi di "gate" per le versioni candidate: test manuale, test di [[Sicurezza|sicurezza]], test delle prestazioni e altri test non funzionali.
 
 ## Implementazione di una pipeline di distribuzione
 

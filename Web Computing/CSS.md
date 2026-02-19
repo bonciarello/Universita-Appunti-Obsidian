@@ -1,4 +1,8 @@
-I **CSS** (*Cascading Style Sheets*) servono a separare il **contenuto** (HTML) dalla **presentazione** (stile grafico).
+---
+aliases: [css]
+tags: [web-computing]
+---
+I **CSS** (*Cascading Style Sheets*) servono a separare il **contenuto** ([[HTML]]) dalla **presentazione** (stile grafico).
 Vantaggi principali:
 *   **Riutilizzabilità:** Lo stesso stile può essere applicato a molte pagine.
 *   **Manutenibilità:** Basta modificare un solo file `.css` per cambiare il design di tutto il sito.
@@ -24,12 +28,12 @@ Esistono tre modi, in ordine di preferenza:
         body { background-color: #f0f0f0; }
     </style>
     ```
-3.  **Inline (Sconsigliato):** Direttamente nel tag HTML.
+3.  **Inline (Sconsigliato):** Direttamente nel tag [[HTML]].
     ```html
     <p style="color: red;">Testo rosso</p>
     ```
 ## Selettori
-Servono a indicare *quali* elementi HTML modificare.
+Servono a indicare *quali* elementi [[HTML]] modificare.
 
 | Tipo | Sintassi | Esempio | Descrizione |
 | :--- | :--- | :--- | :--- |
@@ -47,7 +51,7 @@ a:visited { color: gray; }  /* Link già visitato */
 input:focus { border: 1px solid blue; } /* Quando l'utente clicca nel campo */
 ```
 ## Box Model
-Ogni elemento HTML è considerato una scatola rettangolare composta da 4 strati (dall'interno all'esterno):
+Ogni elemento [[HTML]] è considerato una scatola rettangolare composta da 4 strati (dall'interno all'esterno):
 1.  **Content:** Il contenuto vero e proprio (testo, immagine).
 2.  **Padding:** Spazio *interno* tra contenuto e bordo. Prende il colore di sfondo.
 3.  **Border:** Il bordo che circonda il padding.

@@ -1,4 +1,8 @@
-Affrontiamo nuovamente il problema della bisaccia 0-1, per il quale abbiamo visto precedentemente che la tecnica golosa fornisce solo una soluzione approssimata. Mostriamo ora come sia possibile ottenere una soluzione esatta utilizzando la tecnica della programmazione dinamica.
+---
+aliases: [PBPD, Problema bisaccia 0-1 programmazione dinamica]
+tags: [algoritmi-e-strutture-dati]
+---
+Affrontiamo nuovamente il problema della bisaccia 0-1, per il quale abbiamo visto precedentemente che la tecnica golosa fornisce solo una soluzione approssimata. Mostriamo ora come sia possibile ottenere una soluzione esatta utilizzando la tecnica della [[Programmazione dinamica|programmazione dinamica]].
 
 Abbiamo n oggetti, ciascuno con valore vᵢ e costo cᵢ, e abbiamo una disponibilità massima C per coprire i costi. Dobbiamo:
 

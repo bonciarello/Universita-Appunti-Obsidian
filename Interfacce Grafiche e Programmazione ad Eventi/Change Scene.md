@@ -1,3 +1,7 @@
+---
+aliases: [CS]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ![](changeScene.png)
 
 Per quanto riguarda il file *Main.java*:

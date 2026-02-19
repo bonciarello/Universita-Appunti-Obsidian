@@ -1,3 +1,7 @@
+---
+aliases: [Pacman Swing, PS]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Per quanto riguarda il file *Main.java*:
 
 ```java

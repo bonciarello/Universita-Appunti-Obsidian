@@ -1,3 +1,7 @@
+---
+aliases: ["Rappresentazione dell'informazione, aritmetica binaria logica", RABL]
+tags: [fondamenti-di-informatica]
+---
 ## Rappresentazione dell'Informazione
 L'idea fondamentale alla base della rappresentazione dell'informazione è il **BIT** (Binary Digit) .
 

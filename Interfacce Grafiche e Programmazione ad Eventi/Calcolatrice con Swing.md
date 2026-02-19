@@ -1,3 +1,7 @@
+---
+aliases: [CS, Calcolatrice Swing]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Come realizzare una calcolatrice come la seguente?
 
 ![](Calcolatrice.png)

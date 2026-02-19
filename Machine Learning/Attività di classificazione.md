@@ -1,3 +1,7 @@
+---
+aliases: [Classe]
+tags: [machine-learning]
+---
 Dato un insieme di record in cui ogni record è costituito da un insieme di attributi, uno degli attributi è la classe.
 **L'obiettivo dell'a*ttività di classificazione* è trovare un modello per l'attributo di classe in funzione dei valori di altri attributi.**
 Ad esempio, analizzare i dati sul cancro al seno per prevedere quale dei tre trattamenti specifici dovrebbe ricevere una paziente (le etichette di classe sono "trattamento A", "trattamento B" o "trattamento C").
@@ -11,7 +15,7 @@ Ci sono due fasi:
 ![](img/sezione16/classificationWorks2.png)
 
 ## Induzione dell'albero decisionale
-È l'apprendimento degli alberi decisionali dai record di formazione etichettati in classe. Un albero decisionale è una struttura ad albero in cui:
+È l'apprendimento degli [[Alberi decisionali|alberi decisionali]] dai record di formazione etichettati in classe. Un albero decisionale è una struttura ad albero in cui:
 - ogni nodo interno denota un test su un attributo;
 - ogni ramo rappresenta un risultato del test;
 - ogni nodo foglia contiene un'etichetta di classe.
@@ -32,7 +36,7 @@ Sia $T$ un training set e $A$ un attributo su cui vogliamo partizionare le tuple
 
 > $Gain(A) = E(T) - E_A (T)$
 
-dove $E(T)$ è l'entropia di $T$ prima della divisione ed $E_A(T)$ è l'entropia di $T$ dopo la divisione su $A$. L'attributo $A$ con il maggior guadagno di informazioni (*Gain(A)*) viene scelto come attributo di suddivisione.
+dove $E(T)$ è l'[[Entropia|entropia]] di $T$ prima della divisione ed $E_A(T)$ è l'[[Entropia|entropia]] di $T$ dopo la divisione su $A$. L'attributo $A$ con il maggior guadagno di informazioni (*Gain(A)*) viene scelto come attributo di suddivisione.
 
 Facciamo un esempio partendo dal seguente training set:
 ![](img/sezione16/IGexample1.png)

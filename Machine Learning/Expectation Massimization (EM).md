@@ -1,3 +1,7 @@
+---
+aliases: [Expectation Massimization, EM]
+tags: [machine-learning]
+---
 Abbiamo un insieme di dati da *raggruppare in dei cluster secondo la loro similarità*, distribuiti secondo un modello probabilistico. Non si conoscono i parametri, l'obiettivo è proprio quello di stimarli secondo il **Maximum Likelihood Principle**.
 
 ## Algoritmo EM

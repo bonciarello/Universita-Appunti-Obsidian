@@ -1,3 +1,7 @@
+---
+aliases: [Albero]
+tags: [algoritmi-e-strutture-dati]
+---
 ```cpp
 template <class T>
 class AlberoB {
@@ -57,7 +61,7 @@ bool bilanciato(Albero<T> A, int& prof) {
 }
 ```
 
-## Visita di alberi binari
+## Visita di [[Alberi binari|alberi binari]]
 
 Possiamo individuare quattro tipi di algoritmi di visita:
 
@@ -82,7 +86,7 @@ void visitaDFS(AlberoB A) {
 }
 ```
 
-Attraverso le viste possiamo risolvere la maggior parte dei problemi degli alberi.
+Attraverso le [[Viste|viste]] possiamo risolvere la maggior parte dei problemi degli alberi.
 
 ## Albero binario di ricerca
 

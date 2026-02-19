@@ -1,20 +1,24 @@
-## Reti di interconnessione per computer paralleli
+---
+aliases: [Rete]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
+## [[Reti]] di interconnessione per computer paralleli
 
-**Le reti di interconnessione trasportano i dati tra il processore e la memoria.** Le interconnessioni sono realizzate tramite **switch** e **link** (fili, fibra). Le interconnessioni sono classificate come **statiche** o **dinamiche**:
+**Le [[Reti|reti]] di interconnessione trasportano i dati tra il processore e la memoria.** Le interconnessioni sono realizzate tramite **switch** e **link** (fili, fibra). Le interconnessioni sono classificate come **statiche** o **dinamiche**:
 
-- Le **reti statiche** sono costituite da comunicazioni punto a punto tra i nodi e sono denominate reti dirette;
-- Le **reti dinamiche** vengono implementate utilizzando interruttori e collegamenti di comunicazione. Sono anche chiamate reti **indirette**.
+- Le **[[Reti|reti]] statiche** sono costituite da comunicazioni punto a punto tra i nodi e sono denominate [[Reti|reti]] dirette;
+- Le **[[Reti|reti]] dinamiche** vengono implementate utilizzando interruttori e collegamenti di comunicazione. Sono anche chiamate [[Reti|reti]] **indirette**.
 
 ![[staticheEdinamiche.png]]
 
-## Metricle per la valutazione delle reti
+## Metricle per la valutazione delle [[Reti|reti]]
 
 - **Diametro:** distanza massima tra 2 nodi (**meglio diametri piccoli**)
-- **Connettività:** numero minimo di archi che devono essere rimossi per dividere la rete in 2 reti disconnesse (**migliore connettività alta**)
+- **Connettività:** numero minimo di archi che devono essere rimossi per dividere la rete in 2 [[Reti|reti]] disconnesse (**migliore connettività alta**)
 - **Larghezza di banda di bisezione:** applicato a una rete di archi pesati, dove i pesi indicano la quantità di dati che possono essere trasferiti. Volume minimo di comunicazioni consentito tra 2 metà di una rete (**meglio alto**)
 - **Costo:** numero di collegamenti della rete (**meglio piccolo**)
 
-## Reti dinamiche
+## [[Reti]] dinamiche
 
 ### Topologie di rete: bus (buses)
 
@@ -32,15 +36,15 @@ Una rete crossbar utilizza una **griglia *p*b*** di interruttori per collegare *
 
 Il costo di una barra trasversale di processori p cresce all'aumentare di $O(p^2)$. Quindi, è generalmente **difficile** ottenere una **buona scalabilità** in termini di costo per valori elevati di p. *Esempi* di macchine che utilizzano barre trasversali sono Sun Ultra HPC 10000 e Fujitsu VPP500.
 
-### Topologie di rete: reti multistadio
+### Topologie di rete: [[Reti|reti]] multistadio
 
-Le **barre trasversali (crossbars)** hanno eccellenti prestazioni di scalabilità ma scarsa scalabilità dei costi. I **bus (buses)** hanno un'eccellente scalabilità dei costi ma una ridotta scalabilità delle prestazioni. **Le reti multistadio cercano un equilibrio tra i due.**
+Le **barre trasversali (crossbars)** hanno eccellenti prestazioni di scalabilità ma scarsa scalabilità dei costi. I **bus (buses)** hanno un'eccellente scalabilità dei costi ma una ridotta scalabilità delle prestazioni. **Le [[Reti|reti]] multistadio cercano un equilibrio tra i due.**
 
 ![[reteMultistadio.png]]
 
-### Topologie di rete: reti multistadio Omega
+### Topologie di rete: [[Reti|reti]] multistadio Omega
 
-Una delle reti multistadio più conosciute è la rete **OMEGA**. Questa rete è costituita da *log p* passi, dove p è il numero di ingressi/uscite. In ogni fase, l'ingresso *i* è collegato all'uscita *j* se (**left_rotation**):
+Una delle [[Reti|reti]] multistadio più conosciute è la rete **OMEGA**. Questa rete è costituita da *log p* passi, dove p è il numero di ingressi/uscite. In ogni fase, l'ingresso *i* è collegato all'uscita *j* se (**left_rotation**):
 
 > $j = 2i$ se $0 \le i \le p/2 - 1$
 >
@@ -60,7 +64,7 @@ Una rete Omega completa con un perfetto shuffle.
 
 Una rete omega ha *p/2*log p* nodi di commutazione e il costo di una rete di questo tipo cresce al crescere di *(p*log p)*.
 
-### Topologie di rete: reti multistadio Omega - Routing
+### Topologie di rete: [[Reti|reti]] multistadio Omega - Routing
 
 Sia *s* la rappresentazione binaria del nodo di origine ed *d* il nodo di destinazione. I dati attraversano il collegamento al primo nodo dello switch. Se i bit più significativi di *s* e *d* sono gli stessi, i dati vengono instradati dallo switch in modalità **pass-through** o saranno in modalità **crossover**. Questo processo viene ripetuto per ciascuna delle fasi di commutazione del *log p* (prendendo in considerazione il successivo bit più significativo). Nota che questo non è un interruttore non bloccante (cioè, non va bene!).
 
@@ -68,15 +72,15 @@ Sia *s* la rappresentazione binaria del nodo di origine ed *d* il nodo di destin
 
 Un esempio di blocco nella rete omega: uno dei messaggi (da 010 a 111 o da 110 a 100) è bloccato al collegamento AB.
 
-## Reti statiche
+## [[Reti]] statiche
 
-### Topologie di rete: reti completamente interconnesse
+### Topologie di rete: [[Reti|reti]] completamente interconnesse
 
-**Ogni** processore è collegato a ogni altro processore. Il numero di collegamenti nella rete scala come $O(p^2)$. Sebbene la scalabilità delle prestazioni sia molto buona, la **complessità hardware** non è fattibile per valori **elevati** di *p*. In questo senso, queste reti sono la **controparte statica** della traversa.
+**Ogni** processore è collegato a ogni altro processore. Il numero di collegamenti nella rete scala come $O(p^2)$. Sebbene la scalabilità delle prestazioni sia molto buona, la **complessità hardware** non è fattibile per valori **elevati** di *p*. In questo senso, queste [[Reti|reti]] sono la **controparte statica** della traversa.
 
-### Topologie di rete: reti a stella
+### Topologie di rete: [[Reti|reti]] a stella
 
-Ogni nodo è connesso a un nodo "centrale" comune. La distanza tra due nodi qualsiasi è $O(1)$. Tuttavia, il nodo centrale può diventare un **collo di bottiglia**. In questo senso, le reti a stella sono **controparti statiche** delle reti bus.
+Ogni nodo è connesso a un nodo "centrale" comune. La distanza tra due nodi qualsiasi è $O(1)$. Tuttavia, il nodo centrale può diventare un **collo di bottiglia**. In questo senso, le [[Reti|reti]] a stella sono **controparti statiche** delle [[Reti|reti]] bus.
 
 ### Topologie di rete: array lineari, mesh e mesh k-d
 
@@ -94,19 +98,19 @@ In un **array lineare**, ogni nodo ha due vicini, uno a sinistra e uno a destra.
 2. Ogni nodo ha esattamente *log p* vicini
 3. La **distanza** tra due nodi è data dal **numero di posizioni di bit** in cui differiscono i due nodi (es. 0110 e 0101 sono distanti 2 nodi)
 
-### Topologie di rete: reti ad albero
+### Topologie di rete: [[Reti|reti]] ad albero
 
 ![[reteAlbero.png]]
 
-Reti ad albero binario completi: (a) una rete ad albero statico; e (b) una rete dinamica libera.
+[[Reti]] ad albero binario completi: (a) una rete ad albero statico; e (b) una rete dinamica libera.
 
 La **distanza** tra due nodi qualsiasi non è superiore a *2*log p*. I **collegamenti** che sono verso l'alto richiedono più comunicazioni di quelli situati nella parte inferiore dell'albero. Per questo motivo, una variante chiamata **fat-tree**. Gli alberi possono essere disposti in 2D **senza intersezioni**. *Questa è una proprietà molto importante*.
 
-## Valutazione delle reti di interconnessione statica
+## Valutazione delle [[Reti|reti]] di interconnessione statica
 
 ![[valutazioneStatica.png]]
 
-## Valutazione delle reti di interconnessione dinamica
+## Valutazione delle [[Reti|reti]] di interconnessione dinamica
 
 ![[valutazioneDinamica.png]]
 
@@ -196,7 +200,7 @@ Sebbene i meccanismi di base per i costi siano validi per questo tipo di macchin
 - **Deterministico:** determina un percorso unico;
 - **Adattivo:** utilizza le informazioni riguardanti lo stato della rete
 
-## Meccanismi di instradamento per reti di comunicazione
+## Meccanismi di instradamento per [[Reti|reti]] di comunicazione
 
 *Come si calcola il percorso fisico di un messaggio dal processore di origine a quello di destinazione?*
 

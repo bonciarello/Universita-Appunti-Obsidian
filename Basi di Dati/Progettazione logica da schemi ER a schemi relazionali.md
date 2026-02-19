@@ -1,5 +1,9 @@
+---
+aliases: [PLSESR, Progettazione logica schemi ER schemi relazionali]
+tags: [basi-di-dati]
+---
 Lo schema concettuale ER viene trasformato in uno schema relazionale equivalente.
-Si tratta di rappresentare attraverso l’unico costrutto del modello dei dati relazionale i vari costrutti del modello ER.
+Si tratta di rappresentare attraverso l’unico costrutto del [[Modello dei dati relazionale|modello dei dati relazionale]] i vari costrutti del modello ER.
 La trasformazione si basa su semplici regole di “sintattiche”.
 
 ## Associazioni n:m (molti-a-molti)

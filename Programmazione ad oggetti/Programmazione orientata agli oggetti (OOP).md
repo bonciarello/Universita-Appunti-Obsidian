@@ -1,3 +1,7 @@
+---
+aliases: [Oggetto, Programmazione orientata agli oggetti, OOP]
+tags: [programmazione-ad-oggetti]
+---
 ### Concetti Fondamentali
 La OOP è un paradigma basato sul concetto di **Oggetto**, che racchiude:
 - **Attributi (Dati):** Caratteristiche dell'oggetto (es. cilindrata, colore).

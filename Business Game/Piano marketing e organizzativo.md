@@ -1,3 +1,7 @@
+---
+aliases: [Piano marketing organizzativo, PMO]
+tags: [business-game]
+---
 ## 1. Piano Marketing
 Documento strategico che delinea obiettivi, strategie e tattiche.
 Il **Marketing** è il processo di identificazione e soddisfazione dei bisogni dei clienti.

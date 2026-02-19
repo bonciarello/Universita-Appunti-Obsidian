@@ -1,3 +1,7 @@
+---
+aliases: [Autoencoders, Autocodificatori]
+tags: [deep-learning]
+---
 Un **Autocodificatore** è una rete neurale non supervisionata addestrata a produrre in output ($r$) una copia esatta del suo input ($x$).
 L'obiettivo, paradossalmente, non è copiare perfettamente l'input (sarebbe inutile, come la funzione identità), ma costringere la rete a imparare una rappresentazione **compressa** e **significativa** dei dati nel processo.
 
@@ -34,7 +38,7 @@ La rete non può più limitarsi a copiare l'input. Deve imparare la struttura in
 ## 4. Autocodificatori Variazionali (VAE)
 Gli autoencoder classici mappano ogni input in un singolo punto fisso dello spazio latente. Questo spazio è spesso discontinuo: se prendiamo un punto a metà strada tra il codice di un "1" e il codice di un "7", il decoder potrebbe produrre spazzatura. Non sono buoni per generare nuovi dati.
 
-I **VAE** (Kingma & Welling, 2013) combinano deep learning e inferenza statistica.
+I **VAE** (Kingma & Welling, 2013) combinano [[Deep Learning|deep learning]] e inferenza statistica.
 Invece di imparare un codice fisso $z$, l'encoder impara i parametri di una **distribuzione di probabilità** (una Gaussiana):
 *   **Media ($\mu$):** Dove si trova il codice.
 *   **Varianza ($\sigma^2$):** L'area di incertezza attorno al codice.

@@ -1,3 +1,7 @@
+---
+aliases: [RR, Ripasso ricorsione]
+tags: [algoritmi-e-strutture-dati]
+---
 Noi faremo un uso massiccio della ricorsione durante il corso. Quando andiamo a richiamare una funzione, dovreste sapere che in memoria viene generato il record di attivazione della funzione che contiene un elemento per ogni parametro e per ogni elemento locale, oltre a contenere una porzione speciale per la variabile di ritorno.
 
 ![[ img/sezione3/ricorsione.PNG]]

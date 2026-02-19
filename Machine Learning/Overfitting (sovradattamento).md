@@ -1,3 +1,7 @@
+---
+aliases: [sovradattamento, Overfitting]
+tags: [machine-learning]
+---
 ## Modello overfitting
 Sfortunatamente, i training set del mondo reale sono generalmente influenzati dalla presenza di errori (rumore) o non sono statisticamente rappresentativi, quindi potrebbero non essere buone rappresentazioni dei dati complessivi.
 

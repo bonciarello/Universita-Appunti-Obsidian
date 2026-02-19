@@ -1,3 +1,7 @@
+---
+aliases: [Smart Home, CASE STUDY - Private Equity]
+tags: [business-game]
+---
 **Smart Home** (componenti domotici) ha successo ma necessita di **1.2 milioni di dollari** per espandersi (impianti, marketing).
 Investitore interessato: **Johnson Venture Corporation**.
 

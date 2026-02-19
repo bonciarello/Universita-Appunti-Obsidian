@@ -1,3 +1,7 @@
+---
+aliases: [Processo]
+tags: [agile-research-and-development-methodologies]
+---
 *Cosa rende possibile la ricerca?* I soldi. *Dove possiamo trovare i soldi?* Dal governo (a diverso livello, nazionale o internazionale). Propongono una domanda e tu scrivi una proposta: gli può piacere e alla fine ti danno dei soldi. Nel mezzo, ci saranno delle verifiche e alla fine una grande revisione finale del progetto.
 
 Con la **proposta di progetto** descrivi cosa vuoi fare, un piano su cosa vuoi fare e devi convincere chi ti dà i soldi che vali. Ci sono campi specifici con una lunghezza specifica da compilare: stato dell'arte, progetto complessivo e tabella con tutti i costi (calcolo stimato in base al numero di mesi per persona e stipendio per persona).

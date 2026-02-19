@@ -1,3 +1,7 @@
+---
+aliases: [MS, Musica Swing]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src/sound* andremo ad elencare i file di seguito, mentre nella cartella *src/resources* troveremo la musica in formato *.wav*.
 
 Per quanto riguarda il file *Main.java*:

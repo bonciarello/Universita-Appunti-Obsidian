@@ -1,3 +1,7 @@
+---
+aliases: [Fonte capitale, FC]
+tags: [business-game]
+---
 Una **fonte di capitale** è un mezzo per ottenere finanziamenti (investitori, prestiti, azioni, utili reinvestiti).
 
 ## 1. Tipologie Principali
@@ -8,7 +12,7 @@ Una **fonte di capitale** è un mezzo per ottenere finanziamenti (investitori, p
 
 ### A. Seed Stage (Seme)
 Fase iniziale: completamento team, piano, accordi.
-*   **Bootstrap:** Autofinanziamento con fondi personali.
+*   **[[Bootstrap]]:** Autofinanziamento con fondi personali.
 *   **FFF (Family, Friends and Fools):** Fondi da conoscenti.
 *   **Crowdfunding:** Raccolta di piccole somme da molte persone (la "folla").
 *   **Business Angels:** Investitori privati che forniscono capitale e *mentorship* (esperienza).

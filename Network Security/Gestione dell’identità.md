@@ -1,3 +1,7 @@
+---
+aliases: [gestione dell’identità]
+tags: [network-security]
+---
 L’autenticazione tramite credenziali si compone di più fasi:
 1.  Memorizzazione lato client;
 2.  Inserimento;
@@ -17,8 +21,8 @@ In questa fase, le credenziali (nome utente e password) possono essere salvate i
 *   **Mental storage:** pratica di memorizzare le password nella propria mente;
 *   **Paper storage:** pratica di memorizzare le password su supporti fisici, come carta o fogli scritti;
 *   **Digital storage:** pratica di memorizzare le password in forma digitale, utilizzando appositi strumenti o applicazioni per la gestione delle password:
-    *   **Local password managers:** non così bene perché di solito sono sotto attacco. LPM deve ancora fare affidamento sulla memoria umana perché si sblocca il database solo se l'utente inserisce la chiave corretta per aprirlo;
-    *   **USB password managers:** possono essere utilizzati insieme agli LPM per evitare la possibilità che il database interno di LPM possa essere rubato e compromesso. Il database viene memorizzato nella penna USB e viene inserito nella porta solo quando è necessario.
+    *   **Local password managers:** non così bene perché di solito sono sotto attacco. LPM deve ancora fare affidamento sulla memoria umana perché si sblocca il [[Database|database]] solo se l'utente inserisce la chiave corretta per aprirlo;
+    *   **USB password managers:** possono essere utilizzati insieme agli LPM per evitare la possibilità che il [[Database|database]] interno di LPM possa essere rubato e compromesso. Il [[Database|database]] viene memorizzato nella penna USB e viene inserito nella porta solo quando è necessario.
 
 ### Inserimento
 In questa fase, l’utente inserisce le proprie credenziali (nome utente e password) nell’interfaccia di autenticazione dell’applicazione o del sito web. Fornisce al sistema le informazioni necessarie per identificare e autenticare l’utente. Lo stage di inserimento è forse una delle fasi più delicate. Si può essere soggetti a:
@@ -41,13 +45,13 @@ Ci sono alcune linee guida nella creazione di una password:
 È una buona pratica quella di memorizzare server-side un “**salt**” (nonce) in maniera tale da generare l’hash della password utilizzando come materiale randomico quest’ultimo. L’utilizzo di un salt permette di mitigare anche attacchi di tipo **RainbowTable**.
 
 ### Validazione
-In questa fase, il server di autenticazione riceve le credenziali e le confronta con quelle memorizzate nel proprio database per verificare l’identità dell’utente. Lo scopo è determinare se le credenziali fornite corrispondono a un account valido, consentendo o negando l’accesso. Usare direttamente le funzioni hash per autenticare e archiviare le password è una soluzione semplice ma debole come usare le funzioni hash senza salt, quindi è da evitare.
+In questa fase, il server di autenticazione riceve le credenziali e le confronta con quelle memorizzate nel proprio [[Database|database]] per verificare l’identità dell’utente. Lo scopo è determinare se le credenziali fornite corrispondono a un account valido, consentendo o negando l’accesso. Usare direttamente le funzioni hash per autenticare e archiviare le password è una soluzione semplice ma debole come usare le funzioni hash senza salt, quindi è da evitare.
 
 ## 2. Protocollo SRP (Secure Remote Protocol)
 Un protocollo che merita una menzione è **SRP (Secure Remote Protocol)**. Il protocollo SRP rappresenta il protocollo più all’avanguardia per l’autenticazione e per la memorizzazione delle credenziali che permette al server di autenticare un client senza che questo trasmetta in chiaro la password sulla rete. Il suo funzionamento è il seguente:
 
 1.  Carol invia il suo username a Steve;
-2.  A questo punto Steve fetcha il proprio database e cerca il salt e il verifier associato a quell’account. Il salt viene inviato a Carol la quale computerà la chiave privata sfruttando l’informazione appena inviata e la sua password reale;
+2.  A questo punto Steve fetcha il proprio [[Database|database]] e cerca il salt e il verifier associato a quell’account. Il salt viene inviato a Carol la quale computerà la chiave privata sfruttando l’informazione appena inviata e la sua password reale;
 3.  A questo punto Carol genera la sua chiave effimera A attraverso un numero a (con $1 < a < n$) e la invia a Steve;
 4.  Steve effettua lo stesso procedimento generando anche egli una chiave effimera B che invia prontamente a Carol;
 5.  Sfruttando le proprietà dell’algebra modulare sia Carol che Steve potranno generare il valore condiviso S con i dati a loro disposizione;
@@ -99,5 +103,5 @@ I punti positivi sono:
 *   L'autorizzazione e l'autenticazione sono separate dal resto.
 
 I punti negativi sono:
-*   IDP è il centro dell'infrastruttura: qualsiasi servizio tu voglia utilizzare, l'IDP viene chiamato dai server o da te; quindi, l'IDP deve gestire migliaia e migliaia di richieste di autenticazione al secondo e le prestazioni possono essere un problema, anche un problema di sicurezza. Se un utente malintenzionato rompe l'IDP, ha accesso al mondo degli account utente, indipendentemente dal servizio, ha tutte le informazioni possibili.
+*   IDP è il centro dell'infrastruttura: qualsiasi servizio tu voglia utilizzare, l'IDP viene chiamato dai server o da te; quindi, l'IDP deve gestire migliaia e migliaia di richieste di autenticazione al secondo e le prestazioni possono essere un problema, anche un problema di [[Sicurezza|sicurezza]]. Se un utente malintenzionato rompe l'IDP, ha accesso al mondo degli account utente, indipendentemente dal servizio, ha tutte le informazioni possibili.
 *   Se l'IDP è inattivo, anche gli altri servizi sono inattivi, indipendentemente dal fatto che funzionino ancora all'interno. Tutti i token di autenticazione diventano non validi e non possono essere rinnovati.

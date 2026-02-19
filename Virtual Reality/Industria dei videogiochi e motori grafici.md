@@ -1,3 +1,7 @@
+---
+aliases: [Grafo]
+tags: [virtual-reality]
+---
 ## Industria dei videogiochi
 L'**industria dei videogiochi** è il settore economico coinvolto nello sviluppo, marketing e vendita di videogiochi e relativi prodotti hardware (come i dispositivi VR).
 *Nel 2020 si è speso di più per il software che per l'hardware.*
@@ -22,5 +26,5 @@ Ogni motore grafico contiene le seguenti funzionalità:
 - **intelligenza artificiale** per la ricerca di percorsi e gli avversari del computer;
 - motore del **terreno** per supportare la creazione del terreno.
 
-I motori di gioco sono strumenti di sviluppo software progettati per ridurre i **costi**, la **complessità** e il **time-to-market** richiesti nello sviluppo di videogiochi.
-I motori grafici più popolari sono **Unity3D** e **Unreal Engime**: conviene il primo perchè *gratis*, *semplice da usare* e *ben documentato*.
+I motori di gioco sono strumenti di [[Sviluppo software|sviluppo software]] progettati per ridurre i **costi**, la **complessità** e il **time-to-market** richiesti nello sviluppo di videogiochi.
+I motori grafici più popolari sono **[[Unity3D]]** e **Unreal Engime**: conviene il primo perchè *gratis*, *semplice da usare* e *ben documentato*.

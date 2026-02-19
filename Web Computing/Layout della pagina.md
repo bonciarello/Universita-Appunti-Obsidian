@@ -1,3 +1,7 @@
+---
+aliases: [Layout pagina, LP]
+tags: [web-computing]
+---
 Il layout è l'arte di disporre gli elementi sulla pagina. Storicamente si usavano le tabelle (anni '90), poi i `float` (anni 2000), e oggi si usano **Flexbox** e **CSS Grid**.
 ## Centrare il Contenuto
 Per evitare che il sito si "spalmi" su schermi enormi (es. monitor 4K), rendendo il testo illeggibile, si usa un contenitore centrale.
@@ -24,7 +28,7 @@ Le dimensioni sono in **percentuale** (`%`).
 Le dimensioni sono in `em` o `rem`.
 *   Il layout scala in base alla dimensione del font impostata dall'utente.
 ### 4. Responsive (Moderno)
-Combina layout fluidi con **Media Queries** (`@media`) per cambiare struttura a determinati "punti di rottura" (breakpoints). È quello che fa Bootstrap.
+Combina layout fluidi con **Media Queries** (`@media`) per cambiare struttura a determinati "punti di rottura" (breakpoints). È quello che fa [[Bootstrap]].
 ## Layout a Colonne (Tecniche)
 ### Metodo Vecchio: Float
 Si usava `float: left` per allineare i div. Richiede calcoli precisi delle percentuali e l'uso di `clear` per ripristinare il flusso.

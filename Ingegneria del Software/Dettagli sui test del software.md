@@ -1,3 +1,7 @@
+---
+aliases: [DTS, Dettagli test software]
+tags: [ingegneria-del-software]
+---
 ## Processi di test
 
 Abbiamo due tipi di test che devono testare tutto il sistema:
@@ -69,9 +73,9 @@ Le linee guida per i test sono suggerimenti per il team di test per aiutarli a s
 - Forza la generazione di output non validi;
 - Forza i risultati del calcolo a essere troppo grandi o troppo piccoli.
 
-## Casi d'uso
+## [[Casi d'uso]]
 
-**I casi d'uso possono essere una base per derivare i test per un sistema:** aiutano a identificare le operazioni da testare e aiutano a progettare i casi di test richiesti.
+**I [[Casi d'uso|casi d'uso]] possono essere una base per derivare i test per un sistema:** aiutano a identificare le operazioni da testare e aiutano a progettare i casi di test richiesti.
 
 Da un diagramma di sequenza associato si possono identificare gli ingressi e le uscite da creare per le prove.
 
@@ -135,7 +139,7 @@ Le istruzioni con condizioni sono quindi nodi nel grafo di flusso.
 
 ## Automazione dei test
 
-**Il test è una fase di processo costosa.** I banchi di prova forniscono una gamma di strumenti per ridurre il tempo richiesto e i costi totali di prova. Sistemi come Junit supportano l'esecuzione automatica dei test.
+**Il test è una fase di processo costosa.** I banchi di prova forniscono una gamma di strumenti per ridurre il tempo richiesto e i costi totali di prova. Sistemi come [[JUnit|Junit]] supportano l'esecuzione automatica dei test.
 
 **La maggior parte degli ambienti di test sono sistemi aperti perché le esigenze di test sono specifiche dell'organizzazione.**
 

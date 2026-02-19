@@ -1,3 +1,7 @@
+---
+aliases: [SPS, "WanderingAI, sistemi prefabbricati SceneController"]
+tags: [virtual-reality]
+---
 Con questo laboratorio, pensiamo all'implementazione dei personaggi che vagano coinvolgendo l'IA di base e pensiamo ai nuovi oggetti che vengono generati istanziando prefabbricati. In sintesi, creeremo uno spawn point di entità.
 
 ## Conoscenze di base della IA in Unity (WanderingAI)

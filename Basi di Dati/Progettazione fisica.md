@@ -1,3 +1,7 @@
+---
+aliases: [PF]
+tags: [basi-di-dati]
+---
 Una base di dati è generalmente molto più grande della capacità della memoria centrale, per cui il DBMS deve frequentemente accedere alla memoria secondaria durante l’esecuzione delle interrogazioni e degli aggiornamenti. Siccome il tempo medio di accesso alla memoria secondaria è migliaia di volte maggiore del tempo medio di accesso alla memoria principale, accessi ripetuti al disco diventano il collo di bottiglia dell’intero processo. Per tale motivo, la progettazione fisica si pone l’obiettivo di individuare una configurazione di indici tali da **minimizzare il numero di accessi alla memoria secondaria** (disco).
 
 ## Nozioni introduttive
@@ -270,7 +274,7 @@ Nella seguente figura è rappresentata la ricerca del valore 9 tramite B+-tree.
 
 ## Operatore di Join
 
-Un altro operatore fondamentale dell’algebra relazionale è il join. Ricordiamo che si tratta di un operatore commutativo, cioè, $ R \bowtie S \equiv S \bowtie R $.
+Un altro operatore fondamentale dell’[[Algebra relazionale|algebra relazionale]] è il join. Ricordiamo che si tratta di un operatore commutativo, cioè, $ R \bowtie S \equiv S \bowtie R $.
 
 Esistono vari algoritmi per implementare il join, fra cui il Nested Loop, l’index Join, l’Hash Join e il SortMerge. Di seguito riportiamo una descrizione dei primi due metodi.
 
@@ -408,7 +412,7 @@ La valutazione della query avviene secondo un approccio bottom up (dalle foglie 
     - stima del carico applicativo del sistema informatico.
     - ristrutturazione dello schema E-R in uno schema E-R semplificato orientato al modello relazionale;
     - traduzione dello schema E-R ristrutturato in schema relazionale.
-    - definizione dello schema della base di dati sul DBMS relazionale open-source MySQL mediante SQL-DDL;
+    - definizione dello schema della base di dati sul DBMS relazionale open-source [[MySQL]] mediante SQL-DDL;
     - popolamento della base di dati;
     - realizzazione delle interrogazioni per operare sui dati.
 
@@ -418,11 +422,11 @@ La valutazione della query avviene secondo un approccio bottom up (dalle foglie 
     - modello relazionale;
     - *DDL:* SQL-standard.
     - modello relazionale + strutture fisiche;
-    - *DDL:* SQL supportato dal DBMS scelto (MySql)
+    - *DDL:* SQL supportato dal DBMS scelto ([[MySQL|MySql]])
 
 ## SQL
 
-Originariamente acronimo di *"Structured Query Language"*, ora nome proprio. È uno standard (1986, poi 1989, 1992, 1999 e infine 2003) ma esistono varie versioni (DBMS diversi implementano versioni diverse). È un linguaggio **dichiarativo** (a differenza dell’algebra relazionale che è di tipo procedurale).
+Originariamente acronimo di *"Structured Query Language"*, ora nome proprio. È uno standard (1986, poi 1989, 1992, 1999 e infine 2003) ma esistono varie versioni (DBMS diversi implementano versioni diverse). È un linguaggio **dichiarativo** (a differenza dell’[[Algebra relazionale|algebra relazionale]] che è di tipo procedurale).
 
 - **DDL** (Data Definition Language);
 - **DML** (Data Manipulation Language);

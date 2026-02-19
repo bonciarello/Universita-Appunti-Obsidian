@@ -1,3 +1,7 @@
+---
+aliases: [LTUI, "LIVELLO TRASPORTO - TCP, UDP ICMP"]
+tags: [reti]
+---
 Il **livello trasporto** lo possiamo definirlo come un livello intermediario che permette di far comunicare due applicativi. A sua volta, il livello quattro si appoggia su un API attraverso la quale inoltra le informazioni al *livello rete* (datagramma: IP sorgente + IP destinatario + dati). Il terzo livello è detto *poco affidabile* (*best-efforts*) poiché non si ha la certezza che le informazioni vengano effettivamente recapitate all'utente finale e soprattutto non è detto che le informazioni rispettano l'ordine di invio.
 
 In particolare vedremo tre protocolli del livello trasporto: **TCP**, **UDP** e **ICMP**.

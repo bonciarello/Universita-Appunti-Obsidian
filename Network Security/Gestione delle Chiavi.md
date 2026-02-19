@@ -1,7 +1,11 @@
+---
+aliases: [GC, Gestione Chiavi]
+tags: [network-security]
+---
 ## 1. Introduzione
 L'uso sicuro degli algoritmi delle chiavi crittografiche dipende dalla protezione delle chiavi crittografiche. La **gestione delle chiavi crittografiche** è il processo di amministrazione o gestione delle chiavi crittografiche per un sistema crittografico. Implica la generazione, la creazione, la protezione, l'archiviazione, lo scambio, la sostituzione e l'uso di chiavi e consente restrizioni selettive per determinate chiavi. Oltre alla restrizione dell'accesso, la gestione delle chiavi comporta anche il monitoraggio e la registrazione dell'accesso, dell'uso e del contesto di ciascuna chiave.
 
-Per la crittografia simmetrica, sono generalmente desiderabili modifiche frequenti della chiave per limitare la quantità di dati compromessi se un utente malintenzionato apprende la chiave. Pertanto, la forza di qualsiasi sistema crittografico risiede nella tecnica di distribuzione delle chiavi, termine che si riferisce ai mezzi per consegnare una chiave a due parti che desiderano scambiare dati, senza consentire ad altri di vedere la chiave.
+Per la [[Crittografia Simmetrica|crittografia simmetrica]], sono generalmente desiderabili modifiche frequenti della chiave per limitare la quantità di dati compromessi se un utente malintenzionato apprende la chiave. Pertanto, la forza di qualsiasi sistema crittografico risiede nella tecnica di distribuzione delle chiavi, termine che si riferisce ai mezzi per consegnare una chiave a due parti che desiderano scambiare dati, senza consentire ad altri di vedere la chiave.
 
 Per due parti A e B, la distribuzione delle chiavi può essere ottenuta in diversi modi:
 1.  A può selezionare una chiave e consegnarla fisicamente a B;
@@ -52,7 +56,7 @@ Il cuore della tecnica è il certificato a chiave pubblica associato a ciascun u
 Quando richiediamo un certificato, la nostra richiesta viene gestita da un'**autorità di registrazione** che è una sub-autorità i cui poteri sono assegnati dal CA. Il momento in cui il certificato viene richiesto e creato è molto importante perché l'emittente deve identificarsi. Se richiediamo un certificato per il nostro sito Web, possiamo dimostrare la nostra identità in due modi diversi:
 
 *   Devi aggiungere una nuova voce nel server DNS per dimostrare che il dominio specifico è correlato a te;
-*   Devi aggiungere un nodo specifico nel file HTML in modo che l'autorità possa verificare che abbiamo aggiunto il nodo.
+*   Devi aggiungere un nodo specifico nel file [[HTML]] in modo che l'autorità possa verificare che abbiamo aggiunto il nodo.
 
 Ovviamente questo controllo è soggetto a vulnerabilità perché, se qualcuno può controllare il server DNS o fingere di essere il proprietario del sito, tutti i controlli sono inutili.
 

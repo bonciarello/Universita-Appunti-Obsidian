@@ -1,6 +1,10 @@
-Per velocità si intende la quantità di lavoro che tipicamente viene svolto durante ogni sprint. Per misurarla bisogna sommare la dimensione dei PBI che sono stati completati ad ogni sprint e farne la media. Generalmente è più utile esprimerla in range **(es. il team sviluppa con un andamento di 25-30 punti a sprint)** e *NON È UN INDICE DI PERFORMACE*, bensì è uno strumento di diagnostica del team, attraverso cui si può autovalutare e migliorarsi. Possiamo fare una stima a diversi livelli di granularità: 
+---
+aliases: [Estimation Velocity, EV]
+tags: [agile-research-and-development-methodologies]
+---
+Per velocità si intende la quantità di lavoro che tipicamente viene svolto durante ogni [[Sprint|sprint]]. Per misurarla bisogna sommare la dimensione dei PBI che sono stati completati ad ogni [[Sprint|sprint]] e farne la media. Generalmente è più utile esprimerla in range **(es. il team sviluppa con un andamento di 25-30 punti a [[Sprint|sprint]])** e *NON È UN INDICE DI PERFORMACE*, bensì è uno strumento di diagnostica del team, attraverso cui si può autovalutare e migliorarsi. Possiamo fare una stima a diversi livelli di granularità: 
 - portfolio backlog;
-- product backlog;
+- [[Product Backlog|product backlog]];
 - spring backlog.
 
 ![](img/sezione11/estimation_velocity.png)
@@ -12,7 +16,7 @@ La fase di stima dei PBI fa parte del **grooming**, in cui si cerca di associare
 - **0:** incluso in alcuni mazzi per indicare che l'oggetto è già completato o è così piccolo che non ha senso nemmeno dargli un numero di taglia;
 - **1/2:** usato per dimensionare piccolissimi oggetti;
 - **1, 2, 3:** usato per dimensionare piccoli oggetti;
-- **5, 8, 13:** usato per il dimensionamento di articoli medi. Per molte squadre, un oggetto di taglia 13 sarebbe il più grande che pianificherebbero in uno sprint. Spezzerebbero qualsiasi oggetto più grande di 13 in un insieme di oggetti più piccoli;
+- **5, 8, 13:** usato per il dimensionamento di articoli medi. Per molte squadre, un oggetto di taglia 13 sarebbe il più grande che pianificherebbero in uno [[Sprint|sprint]]. Spezzerebbero qualsiasi oggetto più grande di 13 in un insieme di oggetti più piccoli;
 - **20, 40:** utilizzato per ridimensionare oggetti di grandi dimensioni (ad esempio, storie a livello di funzionalità o tema);
 - **100:** o una caratteristica molto grande o un'epica;
 - **$\infty$ (infinito:** usato per indicare che l'oggetto è così grande che non ha nemmeno senso apporre un numero su di esso;

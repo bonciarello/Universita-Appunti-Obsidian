@@ -1,3 +1,7 @@
+---
+aliases: [unity3d]
+tags: [virtual-reality]
+---
 **Unity3D** è spesso rappresentato semplicemente come un elenco di funzionalità senza necessità di programmazione e questa è una visione fuorviante!
 *Per ottenere risultati significativi è necessaria una programmazione rigorosa.* Ci sono numerosi giochi creati con Unity3D che hanno vinto dei premi come Fall Guys, Pokémon Unite oppure Call of Duty Mobile.
 
@@ -17,7 +21,7 @@ L'interfaccia in Unity è suddivisa in diverse sezioni:
 - la **finestra Inspector** ti consente di visualizzare e modificare tutte le proprietà del *GameObject* attualmente selezionato. Poiché diversi tipi di *GameObject* hanno componenti diversi con diversi insiemi di proprietà, il layout e il contenuto della finestra dell'*Inspector* cambiano ogni volta che selezioni un *GameObject* diverso;
 - la *finestra Project* mostra la tua libreria di risorse disponibili per l'uso nel tuo progetto. Quando importi le risorse nel tuo progetto, vengono visualizzate qui. Sulla sinistra abbiamo un elenco delle cartelle del progetto.
 
-Il layout dell'interfaccia che stai vedendo ora è solo il layout predefinito in Unity. Tutte le varie viste sono in schede e possono essere spostate o ridimensionate, agganciandosi in diversi punti dello schermo.
+Il layout dell'interfaccia che stai vedendo ora è solo il layout predefinito in Unity. Tutte le varie [[Viste|viste]] sono in schede e possono essere spostate o ridimensionate, agganciandosi in diversi punti dello schermo.
 
 Il funzionamento di Unity viene eseguito tramite mouse e tastiera, ma per un principiante non è ovvio come vengono utilizzati mouse e tastiera in Unity. Il tipo più semplice di input da mouse e tastiera è navigare all'interno della scena e guardare gli oggetti 3D tramite le azioni **Move**, **Orbit** e **Zoom**:
 - **Move:** fare clic/trascinare il pulsante centrale;

@@ -1,3 +1,7 @@
+---
+aliases: [IPM, Inizializzazione progetto Unity3D MouseLook]
+tags: [virtual-reality]
+---
 Con questo laboratorio, costruiremo una scena FPS di base: sarà una stanza in cui navigare, il giocatore vedrà il mondo dal punto di vista del suo personaggio e l'utente controllerà il personaggio usando il mouse e la tastiera.
 
 ## Tabella di marcia
@@ -16,7 +20,7 @@ L'asse Z è perpendicolare alla pagina; immagina questa linea che si conficca di
 ![](img/sezione6/3DCoordinateSpace.png)
 
 ## Coordinate mancine
-Generalmente X va a destra e Y sale, ma ora abbiamo anche l'asse Z che entra o esce dalla pagina/schermo. Unity3D utilizza un **sistema di coordinate per mancini** come di seguito:
+Generalmente X va a destra e Y sale, ma ora abbiamo anche l'asse Z che entra o esce dalla pagina/schermo. [[Unity3D]] utilizza un **sistema di coordinate per mancini** come di seguito:
 
 ![](img/sezione6/leftHandedCoordinates.png)
 

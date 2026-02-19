@@ -1,4 +1,8 @@
-Le **reti neurali (NN)** forniscono un metodo per apprendere sia le funzioni a valori reali che quelle a valori discreti dai set di addestramento. Abbiamo un ampia gamma di applicazioni, ad esempio: 
+---
+aliases: [Rete neurale, Introduzione alle reti neurali, Rete, NN, Neural Networks]
+tags: [machine-learning]
+---
+Le **[[Reti|reti]] neurali (NN)** forniscono un metodo per apprendere sia le funzioni a valori reali che quelle a valori discreti dai set di addestramento. Abbiamo un ampia gamma di applicazioni, ad esempio: 
 - riconoscimento vocale;
 - guida autonoma;
 - classificazione delle immagini;
@@ -7,7 +11,7 @@ Le **reti neurali (NN)** forniscono un metodo per apprendere sia le funzioni a v
 - finanza.
 
 ## Perceptron
-***Perceptron* è una rete neurale a livello singolo e un perceptron multistrato è chiamato reti neurali.**
+***Perceptron* è una rete neurale a livello singolo e un perceptron multistrato è chiamato [[Reti|reti]] neurali.**
 
 Perceptron è un classificatore lineare (binario). Inoltre, è utilizzato nell'apprendimento supervisionato ed aiuta a classificare i dati di input forniti.
 
@@ -72,17 +76,17 @@ Nel caso dell'OR e nell'AND, il set di dati è *separabile linearmente*, quindi 
 ### Problema dell'XOR
 Nell'caso dell'XOR, il set di dati **non è separabile linearmente** (due linee di separazione). Non esiste un perceptron per implementare la funzione XOR. Il suggerimento è di combinare due perceptron in un perceptron multistrato (MLP).
 
-I perceptron sono definiti principalmente come *classificatori lineari* e possono essere utilizzati solo per casi d'uso separabili lineari e XOR è una delle operazioni logiche che non sono separabili linearmente in quanto i punti dati si sovrappongono ai punti dati della linea lineare o si verificano classi diverse su un solo lato della linea lineare.
+I perceptron sono definiti principalmente come *classificatori lineari* e possono essere utilizzati solo per [[Casi d'uso|casi d'uso]] separabili lineari e XOR è una delle operazioni logiche che non sono separabili linearmente in quanto i punti dati si sovrappongono ai punti dati della linea lineare o si verificano classi diverse su un solo lato della linea lineare.
 
 ![](img/sezione17/problemXOR1.png)
 
-Nella figura, possiamo vedere che sopra la linea separabile lineare il triangolo rosso si sovrappone al punto rosa e la separabilità lineare dei punti dati non è possibile utilizzando la logica XOR. Quindi è qui che più neuroni definiti anche *perceptron multistrato* vengono utilizzati con uno strato nascosto per indurre alcuni pregiudizi durante l'aggiornamento del peso e ottenere la separabilità lineare dei punti dati utilizzando la logica XOR. Quindi ora cerchiamo di capire come risolvere il problema XOR con le reti neurali.
+Nella figura, possiamo vedere che sopra la linea separabile lineare il triangolo rosso si sovrappone al punto rosa e la separabilità lineare dei punti dati non è possibile utilizzando la logica XOR. Quindi è qui che più neuroni definiti anche *perceptron multistrato* vengono utilizzati con uno strato nascosto per indurre alcuni pregiudizi durante l'aggiornamento del peso e ottenere la separabilità lineare dei punti dati utilizzando la logica XOR. Quindi ora cerchiamo di capire come risolvere il problema XOR con le [[Reti|reti]] neurali.
 
-Il problema XOR con le reti neurali può essere risolto utilizzando *perceptron multistrato* o un'architettura di rete neurale con un livello di input, un livello nascosto e un livello di output. Pertanto, durante la propagazione in avanti attraverso le reti neurali, i pesi vengono aggiornati ai livelli corrispondenti e viene eseguita la logica XOR.
+Il problema XOR con le [[Reti|reti]] neurali può essere risolto utilizzando *perceptron multistrato* o un'[[Architettura|architettura]] di rete neurale con un livello di input, un livello nascosto e un livello di output. Pertanto, durante la propagazione in avanti attraverso le [[Reti|reti]] neurali, i pesi vengono aggiornati ai livelli corrispondenti e viene eseguita la logica XOR.
 
 ![](img/sezione17/problemXOR2.png)
 
-Quindi, con questa architettura complessiva e determinati parametri di peso tra ogni livello, l'output logico XOR può essere prodotto tramite propagazione in avanti. L'architettura complessiva della rete neurale utilizza la funzione di attivazione Relu per garantire che i pesi aggiornati in ciascuno dei processi siano 1 o 0 di conseguenza dove per l'insieme positivo di pesi l'output al neurone particolare sarà 1 e per un aggiornamento del peso negativo al neurone particolare sarà 0 rispettivamente.
+Quindi, con questa [[Architettura|architettura]] complessiva e determinati parametri di peso tra ogni livello, l'output logico XOR può essere prodotto tramite propagazione in avanti. L'[[Architettura|architettura]] complessiva della rete neurale utilizza la funzione di attivazione Relu per garantire che i pesi aggiornati in ciascuno dei processi siano 1 o 0 di conseguenza dove per l'insieme positivo di pesi l'output al neurone particolare sarà 1 e per un aggiornamento del peso negativo al neurone particolare sarà 0 rispettivamente.
 
 Per $X_1=0$ e $X_2=0$ dovremmo ottenere un input di 0. Consideriamo $X_1=0$ e $X_2=0$, allora:
 
@@ -93,7 +97,7 @@ Quindi ora abbiamo ottenuto i pesi che sono stati propagati dal livello di input
 
 > $Y=RELU(0.1+0.(-2))=0$
 
-Questo è il modo in cui le *reti neurali multistrato* o anche conosciute come *perceptron multistrato (MLP)* vengono utilizzate per risolvere il problema XOR e per tutti gli altri set di input è possibile verificare l'architettura fornita sopra e ottenere il risultato corretto per la logica XOR.
+Questo è il modo in cui le *[[Reti neurali multistrato|reti neurali multistrato]]* o anche conosciute come *perceptron multistrato (MLP)* vengono utilizzate per risolvere il problema XOR e per tutti gli altri set di input è possibile verificare l'[[Architettura|architettura]] fornita sopra e ottenere il risultato corretto per la logica XOR.
 
 ## Calcolo delle perceptron multistrato (MLP)
 Il problema XOR dimostra che le MLP possono essere utilizzate per rappresentare funzioni booleane non linearmente separabili. **Le MLP sono *funzioni booleane universali*.**
@@ -122,7 +126,7 @@ Maggiore è il numero di nodi nascosti, più precisa sarà l'approssimazione di 
 
 ![](img/sezione17/MLP3.png)
 
-Le MLP sono funzioni 0-1 universali poiché qualsiasi limite decisionale complesso può essere composto da MLP. In realtà, è sufficiente un MLP a un livello: tuttavia, gli MLP a uno strato possono richiedere un numero esponenzialmente elevato di perceptron rispetto a uno profondo. **Reti più profonde possono richiedere molti meno neuroni.**
+Le MLP sono funzioni 0-1 universali poiché qualsiasi limite decisionale complesso può essere composto da MLP. In realtà, è sufficiente un MLP a un livello: tuttavia, gli MLP a uno strato possono richiedere un numero esponenzialmente elevato di perceptron rispetto a uno profondo. **[[Reti]] più profonde possono richiedere molti meno neuroni.**
 
 ## Neuroni sigmoidei
 Nei **neuroni sigmoidei**, la funzione di output è molto più fluida della funzione di gradino. Nel neurone sigmoideo, un piccolo cambiamento nell'input provoca solo un piccolo cambiamento nell'output rispetto all'output a gradini. Esistono molte funzioni con la caratteristica di una curva a forma di "S" note come **funzioni sigmoidee**. La funzione più comunemente usata è la funzione logistica.

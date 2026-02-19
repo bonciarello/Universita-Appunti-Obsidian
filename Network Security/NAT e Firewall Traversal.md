@@ -1,4 +1,8 @@
-Immaginiamo una conversazione UDP peer-to-peer tra due client: il client A e il client B sono in delle reti che hanno un firewall. Supponendo che A abbia l'indirizzo IP di B, di solito la nuova conversazione in arrivo viene rifiutata dal firewall B; quindi, A non può avviare un handshake con B e viceversa.
+---
+aliases: [NFT, NAT Firewall Traversal]
+tags: [network-security]
+---
+Immaginiamo una conversazione UDP peer-to-peer tra due client: il client A e il client B sono in delle [[Reti|reti]] che hanno un firewall. Supponendo che A abbia l'indirizzo IP di B, di solito la nuova conversazione in arrivo viene rifiutata dal firewall B; quindi, A non può avviare un handshake con B e viceversa.
 
 Cosa possiamo fare? Abbiamo diverse alternative:
 

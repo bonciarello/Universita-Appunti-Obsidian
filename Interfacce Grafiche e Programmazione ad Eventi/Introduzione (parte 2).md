@@ -1,3 +1,7 @@
+---
+aliases: [Introduzione, parte 2]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Package
 
 I package sono il meccanismo attraverso il quale si possono creare librerie di classi correlate (come le librerie C++). Ad esempio **java.lang** o **java.io** visti precedentemente.

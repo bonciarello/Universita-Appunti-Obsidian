@@ -1,10 +1,14 @@
+---
+aliases: [GP, Gestione progetti]
+tags: [ingegneria-del-software]
+---
 Sono attività che garantiscono che il software venga consegnato in tempo e nei tempi previsti e in conformità con i requisiti delle organizzazioni che sviluppano e che forniscono il software.
 
 La gestione del progetto è necessaria perché lo sviluppo del software è sempre soggetto a vincoli di budget e di pianificazione stabiliti dall'organizzazione che sviluppa il software.
 
 Il software è immateriale ed è straordinariamente flessibile.
 
-L'ingegneria del software non è riconosciuta come disciplina di ingegneria con lo status sano di ingegneria meccanica, elettrica, ecc.
+L'[[Ingegneria del Software|ingegneria del software]] non è riconosciuta come disciplina di ingegneria con lo status sano di ingegneria meccanica, elettrica, ecc.
 
 Il processo di sviluppo del software non è standardizzato e molti progetti software sono progetti "una tantum".
 

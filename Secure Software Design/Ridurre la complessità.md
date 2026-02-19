@@ -1,3 +1,7 @@
+---
+aliases: [RC, Ridurre complessità]
+tags: [secure-software-design]
+---
 Le entità possono transitare in stati inconsistenti, pertanto bisogna garantire che queste vengano gestite adeguatamente. Ci sono dei pattern che ci aiutano a fare questo:
 - **Partially immutable entities:** tutto ciò che non si aspetta debba mutare deve essere immutabile;
 - **Entity state objects (single thread):** vengono modellate alcune entità per rappresentare gli stati in cui piò vertere il sistema;
@@ -15,8 +19,8 @@ Passiamo ora a un aspetto più complicato delle entità: il fatto che il comport
 ## Entity state objects
 Una cosa che rende difficile lavorare con le entità è che non tutte le azioni sono consentite in tutti gli stati.
 
-Il progetto deve garantire che queste regole sugli stati delle entità siano rispettate. In caso contrario, possono verificarsi problemi di sicurezza. La gestione mancante, incompleta o interrotta dello stato dell'entità è qualcosa che incontriamo spesso in quasi tutte le basi di codice di dimensioni significative.
-La causa di questo problema di sicurezza è che le regole statali spesso non sono affatto progettate o sono implicite e vaghe. Spesso è ovvio che non c'è uno sforzo cosciente nel design; piuttosto, le regole sono apparse gradualmente nella base di codice, molto probabilmente caso per caso.
+Il progetto deve garantire che queste regole sugli stati delle entità siano rispettate. In caso contrario, possono verificarsi problemi di [[Sicurezza|sicurezza]]. La gestione mancante, incompleta o interrotta dello stato dell'entità è qualcosa che incontriamo spesso in quasi tutte le basi di codice di dimensioni significative.
+La causa di questo problema di [[Sicurezza|sicurezza]] è che le regole statali spesso non sono affatto progettate o sono implicite e vaghe. Spesso è ovvio che non c'è uno sforzo cosciente nel design; piuttosto, le regole sono apparse gradualmente nella base di codice, molto probabilmente caso per caso.
 
 La manifestazione nel codice è spesso una di due varianti: regole incorporate nei metodi di servizio o istruzioni *if* nei metodi di entità.
 
@@ -37,9 +41,9 @@ L'estrazione della gestione dello stato in un oggetto separato rende il codice d
 Sfortunatamente, ciò porta ad altri problemi, come **capacità limitata** e **potenziali deadlock**.
 
 ## Entity snapshot
-Gli ambienti multithread sono ambienti in cui è possibile accedere alla stessa istanza di entità da più thread. In una soluzione ad alte prestazioni in cui i tempi di risposta sono critici, si desidera evitare di colpire il database.
+Gli ambienti multithread sono ambienti in cui è possibile accedere alla stessa istanza di entità da più thread. In una soluzione ad alte prestazioni in cui i tempi di risposta sono critici, si desidera evitare di colpire il [[Database|database]].
 
-Il tempo di andata e ritorno per recuperare i dati dal database ucciderebbe le risposte rapide che cerchi in queste situazioni. Invece, potresti tenere in memoria le tue entità il più possibile. Tutti i thread che devono funzionare con un'entità recuperano i dati dalla cache e la rappresentazione dell'entità viene condivisa tra i thread. Ciò si traduce in tempi di risposta rapidi e capacità elevata, ma pone un onere aggiuntivo sulla progettazione delle entità: devono vivere bene in un ambiente con più thread.
+Il tempo di andata e ritorno per recuperare i dati dal [[Database|database]] ucciderebbe le risposte rapide che cerchi in queste situazioni. Invece, potresti tenere in memoria le tue entità il più possibile. Tutti i thread che devono funzionare con un'entità recuperano i dati dalla cache e la rappresentazione dell'entità viene condivisa tra i thread. Ciò si traduce in tempi di risposta rapidi e capacità elevata, ma pone un onere aggiuntivo sulla progettazione delle entità: devono vivere bene in un ambiente con più thread.
 
 Un modo per gestire questa situazione sarebbe aggiungere molte parole chiave sincronizzate al codice, ma ciò comporterebbe molti thread in attesa l'uno dell'altro e ridurrebbe drasticamente la capacità: peggio ancora, potrebbe causare un deadlock, in cui due thread si aspettano l'un l'altro indefinitamente.
 
@@ -47,7 +51,7 @@ Quando si progetta con il modello *entity snapshot*, si dispone di un'entità, m
 
 Il modello *entity snapshot* supporta anche l'integrità poiché l'istantanea è immutabile, non c'è alcun rischio che la rappresentazione muti in uno stato falloso. Un'entità ordinaria con metodi che cambiano il suo stato è vulnerabile a bug di quel tipo, ma l'istantanea non lo è. C'è un codice che cambia lo stato dei dati sottostanti e quel codice può contenere bug, ma almeno lo snapshot utilizzato per mostrare lo stato dell'entità non può cambiare.
 
-L'implementazione di entità che utilizzano il modello *entity snapshot* consente loro di vivere bene in un ambiente multithread senza causare gli svantaggi che si ottengono se si spruzza il codice con la sincronizzazione. Evitare inoltre conflitti consentendo al database di gestire la sincronizzazione delle transazioni, con tutti i problemi di blocco coinvolti.
+L'implementazione di entità che utilizzano il modello *entity snapshot* consente loro di vivere bene in un ambiente multithread senza causare gli svantaggi che si ottengono se si spruzza il codice con la sincronizzazione. Evitare inoltre conflitti consentendo al [[Database|database]] di gestire la sincronizzazione delle transazioni, con tutti i problemi di blocco coinvolti.
 
 ## Entity relay
 Molte entità hanno un numero ragionevolmente basso di stati separati e sono abbastanza facili da comprendere.
@@ -74,4 +78,4 @@ Se è possibile riaprire un'entità precedente, sarebbe paragonabile a un corrid
 Se ci sono molti modi in cui un'entità precedente può dar luogo a un'entità successiva, è necessario considerare se i vantaggi dell'inoltro di entità superano i costi. C'è una semplicità nell'avere un solo posto dove nasce l'entità successiva. Se ce ne sono diversi, prendi in considerazione il rimodellamento.
 
 ## Conclusione
-In sintesi, le entità possono essere progettate per essere parzialmente immutabili. La gestione dello stato è più facile da testare e sviluppare quando viene estratta in un oggetto separato. Gli ambienti multithread per capacità elevate richiedono un'attenta progettazione. Il blocco del database può porre un limite alla disponibilità delle entità. Gli snapshot di entità sono un modo per riguadagnare un'elevata disponibilità in ambienti multithread. L'*entity relay* (quando l'adempimento di un'entità ne dà origine a un'altra) è un modo alternativo per modellare un'entità che ha molti stati diversi.
+In sintesi, le entità possono essere progettate per essere parzialmente immutabili. La gestione dello stato è più facile da testare e sviluppare quando viene estratta in un oggetto separato. Gli ambienti multithread per capacità elevate richiedono un'attenta progettazione. Il blocco del [[Database|database]] può porre un limite alla disponibilità delle entità. Gli snapshot di entità sono un modo per riguadagnare un'elevata disponibilità in ambienti multithread. L'*entity relay* (quando l'adempimento di un'entità ne dà origine a un'altra) è un modo alternativo per modellare un'entità che ha molti stati diversi.

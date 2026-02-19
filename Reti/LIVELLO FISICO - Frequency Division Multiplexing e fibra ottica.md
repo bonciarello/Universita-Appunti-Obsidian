@@ -1,3 +1,7 @@
+---
+aliases: [LFFDMFO, LIVELLO FISICO - Frequency Division Multiplexing fibra ottica]
+tags: [reti]
+---
 Il livello fisico si preoccupa di trasformare le informazioni in segnali elettrici. Ci sono diversi modi per decodificare i bit in impulsi elettrici: in particolare, **Manchester Encoding** viene usata nella codifica *10BaseT* (cavo ethernet base RJ45) (non supporta la GigaBit), permette di associare una funzione ad ogni simbolo 0,1. Nei modem queste funzioni vengono a loro volta convertite in frequenze.
 
 ![](img/modemFrequenze.png)

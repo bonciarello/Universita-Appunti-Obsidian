@@ -1,4 +1,8 @@
-L'SQL injection (SQLi) è una vulnerabilità della sicurezza web che consente a un aggressore di interferire con le query che un'applicazione effettua sul suo database. Ciò può consentire a un aggressore di visualizzare dati che normalmente non è in grado di recuperare. Ciò potrebbe includere dati che appartengono ad altri utenti o qualsiasi altro dato a cui l'applicazione può accedere. In molti casi, un aggressore può modificare o eliminare questi dati, causando modifiche persistenti al contenuto o al comportamento dell'applicazione.
+---
+aliases: [SQL Injection, SQLi]
+tags: [cyber-offence-and-defence]
+---
+L'SQL injection (SQLi) è una vulnerabilità della [[Sicurezza|sicurezza]] web che consente a un aggressore di interferire con le query che un'applicazione effettua sul suo [[Database|database]]. Ciò può consentire a un aggressore di visualizzare dati che normalmente non è in grado di recuperare. Ciò potrebbe includere dati che appartengono ad altri utenti o qualsiasi altro dato a cui l'applicazione può accedere. In molti casi, un aggressore può modificare o eliminare questi dati, causando modifiche persistenti al contenuto o al comportamento dell'applicazione.
 
 In alcune situazioni, un aggressore può intensificare un attacco di SQLi per compromettere il server sottostante o altre infrastrutture back-end. Può anche consentire loro di eseguire attacchi denial-of-service.
 
@@ -15,11 +19,11 @@ Possiamo classificare SQLi come di seguito:
 ' UNION SELECT username, password FROM users--`
     `SELECT name, description FROM products WHERE category = 'Gifts' UNION SELECT username, password FROM users--
 ```
-*   **blind SQLi:** l’attaccante non riceve feedback diretto dal database riguardo al successo o al fallimento della query iniettata. Invece, l’attaccante formula domande al database a cui si può rispondere con vero o falso e osserva come l’applicazione risponde (ad esempio, il comportamento della pagina o i tempi di risposta) per dedurre informazioni in modo indiretto. È più difficile da sfruttare, ma molto pericoloso;
-*   **first-order SQLi:** avviene quando l’input malevolo viene eseguito immediatamente dall’applicazione in un singolo ciclo di request-response. Il payload dell’attaccante viene utilizzato direttamente nella costruzione della query SQL, consentendogli di manipolare immediatamente il database;
-*   **second-order SQLi:** l’input malevolo viene memorizzato dall’applicazione (ad esempio, in un database) e viene eseguito successivamente in un contesto diverso. L’attacco non avviene immediatamente, ma viene attivato quando i dati memorizzati vengono recuperati e utilizzati in una futura query SQL;
+*   **blind SQLi:** l’attaccante non riceve feedback diretto dal [[Database|database]] riguardo al successo o al fallimento della query iniettata. Invece, l’attaccante formula domande al [[Database|database]] a cui si può rispondere con vero o falso e osserva come l’applicazione risponde (ad esempio, il comportamento della pagina o i tempi di risposta) per dedurre informazioni in modo indiretto. È più difficile da sfruttare, ma molto pericoloso;
+*   **first-order SQLi:** avviene quando l’input malevolo viene eseguito immediatamente dall’applicazione in un singolo ciclo di request-response. Il payload dell’attaccante viene utilizzato direttamente nella costruzione della query SQL, consentendogli di manipolare immediatamente il [[Database|database]];
+*   **second-order SQLi:** l’input malevolo viene memorizzato dall’applicazione (ad esempio, in un [[Database|database]]) e viene eseguito successivamente in un contesto diverso. L’attacco non avviene immediatamente, ma viene attivato quando i dati memorizzati vengono recuperati e utilizzati in una futura query SQL;
 *   **in-band:** si verifica quando l’attaccante inietta il payload malevolo e riceve i risultati della query attraverso lo stesso canale di comunicazione (ad esempio, la pagina web). È il tipo di SQLi più comune e facile da sfruttare, poiché l’attaccante può vedere direttamente i risultati.
-*   **out-of-band:** l’attaccante inietta codice SQL ma riceve i risultati attraverso un canale diverso (come una richiesta HTTP separata o una risposta via email). Questo tipo di attacco è meno comune e viene utilizzato quando i metodi “in-band” non sono praticabili o il database non risponde direttamente.
+*   **out-of-band:** l’attaccante inietta codice SQL ma riceve i risultati attraverso un canale diverso (come una richiesta HTTP separata o una risposta via email). Questo tipo di attacco è meno comune e viene utilizzato quando i metodi “in-band” non sono praticabili o il [[Database|database]] non risponde direttamente.
 
 ## Qual è l'impatto di un attacco SQLi riuscito?
 
@@ -54,7 +58,7 @@ Esistono numerose vulnerabilità, attacchi e tecniche di SQLi che si verificano 
 
 *   **recupero di dati nascosti** in cui è possibile modificare una query SQL per restituire risultati aggiuntivi;
 *   **sovvertimento della logica dell'applicazione** in cui è possibile modificare una query per interferire con la logica dell'applicazione;
-*   **attacchi UNION** in cui è possibile recuperare dati da diverse tabelle di database;
+*   **attacchi UNION** in cui è possibile recuperare dati da diverse tabelle di [[Database|database]];
 *   **blind SQLi** in cui i risultati di una query controllata non vengono restituiti nelle risposte dell'applicazione.
 
 ## Sovvertimento della logica dell'applicazione
@@ -83,13 +87,13 @@ Immagina un'applicazione di shopping che mostra prodotti in diverse categorie. Q
 
 `https://insecure-website.com/products?category=Gifts`
 
-Ciò fa sì che l'applicazione esegua una query SQL per recuperare i dettagli dei prodotti rilevanti dal database:
+Ciò fa sì che l'applicazione esegua una query SQL per recuperare i dettagli dei prodotti rilevanti dal [[Database|database]]:
 
 ```sql
 SELECT * FROM products WHERE category = 'Gifts' AND released = 1
 ```
 
-Questa query SQL chiede al database di restituire:
+Questa query SQL chiede al [[Database|database]] di restituire:
 
 *   tutti i dettagli (*)
 *   dalla tabella dei prodotti
@@ -126,11 +130,11 @@ La query modificata restituisce tutti gli elementi in cui la categoria è Gifts 
 
 *(APPRENTICE: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data)*
 
-## Esaminando il database
+## Esaminando il [[Database|database]]
 
-Alcune funzionalità principali del linguaggio SQL sono implementate nello stesso modo su piattaforme di database popolari, e molti modi di rilevare e sfruttare le vulnerabilità di iniezione SQL funzionano in modo identico su diversi tipi di database.
+Alcune funzionalità principali del linguaggio SQL sono implementate nello stesso modo su piattaforme di [[Database|database]] popolari, e molti modi di rilevare e sfruttare le vulnerabilità di iniezione SQL funzionano in modo identico su diversi tipi di [[Database|database]].
 
-Tuttavia, ci sono anche molte differenze tra database comuni. Ciò significa che alcune tecniche per rilevare e sfruttare l'SQLi funzionano in modo diverso su piattaforme diverse. Ad esempio:
+Tuttavia, ci sono anche molte differenze tra [[Database|database]] comuni. Ciò significa che alcune tecniche per rilevare e sfruttare l'SQLi funzionano in modo diverso su piattaforme diverse. Ad esempio:
 
 *   sintassi per la concatenazione di stringhe;
 *   commenti;
@@ -138,15 +142,15 @@ Tuttavia, ci sono anche molte differenze tra database comuni. Ciò significa che
 *   API specifiche della piattaforma;
 *   messaggi di errore.
 
-Dopo aver identificato una vulnerabilità di SQLi, spesso è utile ottenere informazioni sul database. Queste informazioni possono aiutarti a sfruttare la vulnerabilità.
+Dopo aver identificato una vulnerabilità di SQLi, spesso è utile ottenere informazioni sul [[Database|database]]. Queste informazioni possono aiutarti a sfruttare la vulnerabilità.
 
-Puoi interrogare i dettagli della versione per il database. Metodi diversi funzionano per tipi di database diversi. Ciò significa che se trovi un metodo particolare che funziona, puoi dedurre il tipo di database. Ad esempio, su Oracle puoi eseguire:
+Puoi interrogare i dettagli della versione per il [[Database|database]]. Metodi diversi funzionano per tipi di [[Database|database]] diversi. Ciò significa che se trovi un metodo particolare che funziona, puoi dedurre il tipo di [[Database|database]]. Ad esempio, su Oracle puoi eseguire:
 
 ```sql
 SELECT * FROM v$version
 ```
 
-Puoi anche identificare quali tabelle di database esistono e le colonne che contengono. Ad esempio, sulla maggior parte dei database puoi eseguire la seguente query per elencare le tabelle:
+Puoi anche identificare quali tabelle di [[Database|database]] esistono e le colonne che contengono. Ad esempio, sulla maggior parte dei [[Database|database]] puoi eseguire la seguente query per elencare le tabelle:
 
 ```sql
 SELECT * FROM information_schema.tables
@@ -156,7 +160,7 @@ Per altre informazioni, leggere la pagina a questo link.
 
 ## Attacchi UNION
 
-Quando un'applicazione è vulnerabile alle SQLi e i risultati della query vengono restituiti nelle risposte dell'applicazione, puoi usare la parola chiave `UNION` per recuperare dati da altre tabelle nel database. Questo è comunemente noto come **attacco UNION di SQLi**.
+Quando un'applicazione è vulnerabile alle SQLi e i risultati della query vengono restituiti nelle risposte dell'applicazione, puoi usare la parola chiave `UNION` per recuperare dati da altre tabelle nel [[Database|database]]. Questo è comunemente noto come **attacco UNION di SQLi**.
 
 La parola chiave `UNION` ti consente di eseguire una o più query `SELECT` aggiuntive e di aggiungere i risultati alla query originale. Ad esempio:
 
@@ -189,11 +193,11 @@ Quando esegui un attacco UNION di SQLi, ci sono due metodi efficaci per determin
 etc.
 ```
 
-Questa serie di payload modifica la query originale per ordinare i risultati in base a colonne diverse nel set di risultati. La colonna in una clausola `ORDER BY` può essere specificata dal suo indice; quindi, non è necessario conoscere i nomi di alcuna colonna. Quando l'indice di colonna specificato supera il numero di colonne effettive nel set di risultati, il database restituisce un errore, come:
+Questa serie di payload modifica la query originale per ordinare i risultati in base a colonne diverse nel set di risultati. La colonna in una clausola `ORDER BY` può essere specificata dal suo indice; quindi, non è necessario conoscere i nomi di alcuna colonna. Quando l'indice di colonna specificato supera il numero di colonne effettive nel set di risultati, il [[Database|database]] restituisce un errore, come:
 
 `The ORDER BY position number 3 is out of range of the number of items in the select list.`
 
-L'applicazione potrebbe effettivamente restituire l'errore del database nella sua risposta HTTP, ma potrebbe anche emettere una risposta di errore generica. In altri casi, potrebbe semplicemente non restituire alcun risultato. In entrambi i casi, finché riesci a rilevare qualche differenza nella risposta, puoi dedurre quante colonne vengono restituite dalla query.
+L'applicazione potrebbe effettivamente restituire l'errore del [[Database|database]] nella sua risposta HTTP, ma potrebbe anche emettere una risposta di errore generica. In altri casi, potrebbe semplicemente non restituire alcun risultato. In entrambi i casi, finché riesci a rilevare qualche differenza nella risposta, puoi dedurre quante colonne vengono restituite dalla query.
 
 **Il secondo metodo** prevede l'invio di una serie di payload `UNION SELECT` che specificano un numero diverso di valori nulli:
 
@@ -204,14 +208,14 @@ L'applicazione potrebbe effettivamente restituire l'errore del database nella su
 etc.
 ```
 
-Se il numero di valori nulli non corrisponde al numero di colonne, il database restituisce un errore, ad esempio:
+Se il numero di valori nulli non corrisponde al numero di colonne, il [[Database|database]] restituisce un errore, ad esempio:
 
 `All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists.`
 
 Utilizziamo `NULL` come valori restituiti dalla query `SELECT` iniettata perché i tipi di dati in ogni colonna devono essere compatibili tra le query originali e quelle iniettate. `NULL` è convertibile in ogni tipo di dati comune, quindi massimizza la possibilità che il payload abbia successo quando il conteggio delle colonne è corretto.
 
-Come con la tecnica `ORDER BY`, l'applicazione potrebbe effettivamente restituire l'errore del database nella sua risposta HTTP, ma potrebbe restituire un errore generico o semplicemente non restituire alcun risultato.
-Quando il numero di valori nulli corrisponde al numero di colonne, il database restituisce una riga aggiuntiva nel set di risultati, contenente valori nulli in ogni colonna. L'effetto sulla risposta HTTP dipende dal codice dell'applicazione. Se sei fortunato, vedrai del contenuto aggiuntivo all'interno della risposta, come una riga extra su una tabella HTML. Altrimenti, i valori nulli potrebbero innescare un errore diverso, come una `NullPointerException`. Nel caso peggiore, la risposta potrebbe apparire uguale a una risposta causata da un numero errato di valori nulli. Ciò renderebbe questo metodo inefficace.
+Come con la tecnica `ORDER BY`, l'applicazione potrebbe effettivamente restituire l'errore del [[Database|database]] nella sua risposta HTTP, ma potrebbe restituire un errore generico o semplicemente non restituire alcun risultato.
+Quando il numero di valori nulli corrisponde al numero di colonne, il [[Database|database]] restituisce una riga aggiuntiva nel set di risultati, contenente valori nulli in ogni colonna. L'effetto sulla risposta HTTP dipende dal codice dell'applicazione. Se sei fortunato, vedrai del contenuto aggiuntivo all'interno della risposta, come una riga extra su una tabella [[HTML]]. Altrimenti, i valori nulli potrebbero innescare un errore diverso, come una `NullPointerException`. Nel caso peggiore, la risposta potrebbe apparire uguale a una risposta causata da un numero errato di valori nulli. Ciò renderebbe questo metodo inefficace.
 
 *(PRACTITIONER: SQL injection UNION attack, determining the number of columns returned by the query)*
 
@@ -228,7 +232,7 @@ Dopo aver determinato il numero di colonne richieste, è possibile sondare ogni 
 ' UNION SELECT NULL,NULL,NULL,'a'--
 ```
 
-Se il tipo di dati della colonna non è compatibile con i dati stringa, la query inserita causerà un errore del database, ad esempio:
+Se il tipo di dati della colonna non è compatibile con i dati stringa, la query inserita causerà un errore del [[Database|database]], ad esempio:
 
 `Conversion failed when converting the varchar value 'a' to data type int.`
 
@@ -244,7 +248,7 @@ Supponiamo che:
 
 *   la query originale restituisca due colonne, entrambe in grado di contenere dati stringa;
 *   il punto di iniezione è una stringa tra virgolette all'interno della clausola `WHERE`;
-*   il database contiene una tabella denominata `utenti` con le colonne `username` e `password`.
+*   il [[Database|database]] contiene una tabella denominata `utenti` con le colonne `username` e `password`.
 
 In questo esempio, è possibile recuperare il contenuto della tabella `users` inviando l'input:
 
@@ -252,7 +256,7 @@ In questo esempio, è possibile recuperare il contenuto della tabella `users` in
 ' UNION SELECT username, password FROM users--
 ```
 
-Per eseguire questo attacco, devi sapere che esiste una tabella chiamata `users` con due colonne chiamate `username` e `password`. Senza queste informazioni, dovresti indovinare i nomi delle tabelle e delle colonne. Tutti i database moderni forniscono modi per esaminare la struttura del database e determinare quali tabelle e colonne contengono.
+Per eseguire questo attacco, devi sapere che esiste una tabella chiamata `users` con due colonne chiamate `username` e `password`. Senza queste informazioni, dovresti indovinare i nomi delle tabelle e delle colonne. Tutti i [[Database|database]] moderni forniscono modi per esaminare la struttura del [[Database|database]] e determinare quali tabelle e colonne contengono.
 
 *(PRACTITIONER: SQL injection UNION attack, retrieving data from other tables)*
 
@@ -277,13 +281,13 @@ carlos~montoya
 ...
 ```
 
-Diversi database utilizzano sintassi diverse per eseguire la concatenazione delle stringhe. Per altre informazioni, leggere la pagina a questo link.
+Diversi [[Database|database]] utilizzano sintassi diverse per eseguire la concatenazione delle stringhe. Per altre informazioni, leggere la pagina a questo link.
 
 *(PRACTITIONER: SQL injection UNION attack, retrieving multiple values in a single column)*
 
 ## Blind SQLi
 
-La **blind SQLi** si verifica quando un'applicazione è vulnerabile all'SQLi, ma le sue risposte HTTP non contengono i risultati della query SQL pertinente o i dettagli di eventuali errori del database.
+La **blind SQLi** si verifica quando un'applicazione è vulnerabile all'SQLi, ma le sue risposte HTTP non contengono i risultati della query SQL pertinente o i dettagli di eventuali errori del [[Database|database]].
 
 Molte tecniche come gli attacchi UNION non sono efficaci con le vulnerabilità della blind SQLi. Questo perché si basano sulla possibilità di vedere i risultati della query iniettata all'interno delle risposte dell'applicazione. È ancora possibile sfruttare la blind SQLi per accedere a dati non autorizzati, ma devono essere utilizzate tecniche diverse.
 
@@ -334,8 +338,8 @@ Possiamo continuare questo processo per determinare sistematicamente la password
 
 Alcune applicazioni eseguono query SQL ma il loro comportamento non cambia, indipendentemente dal fatto che la query restituisca dati. La tecnica nella sezione precedente non funzionerà, perché l'iniezione di diverse condizioni booleane non fa alcuna differenza nelle risposte dell'applicazione.
 
-Spesso è possibile indurre l'applicazione a restituire una risposta diversa a seconda che si verifichi un errore SQL. È possibile modificare la query in modo che causi un errore del database solo se la condizione è vera.
-Molto spesso, un errore non gestito generato dal database causa una differenza nella risposta dell'applicazione, come un messaggio di errore. Ciò consente di dedurre la verità della condizione iniettata.
+Spesso è possibile indurre l'applicazione a restituire una risposta diversa a seconda che si verifichi un errore SQL. È possibile modificare la query in modo che causi un errore del [[Database|database]] solo se la condizione è vera.
+Molto spesso, un errore non gestito generato dal [[Database|database]] causa una differenza nella risposta dell'applicazione, come un messaggio di errore. Ciò consente di dedurre la verità della condizione iniettata.
 
 Per vedere come funziona, supponiamo che vengano inviate due richieste contenenti i seguenti valori del cookie `TrackingId` a turno:
 
@@ -361,12 +365,12 @@ xyz' AND (SELECT CASE WHEN (Username = 'Administrator' AND SUBSTRING(Password, 1
 
 ### Sfruttare la blind SQLi innescando ritardi temporali
 
-Se l'applicazione rileva errori del database quando viene eseguita la query SQL e li gestisce correttamente, non ci sarà alcuna differenza nella risposta dell'applicazione. Ciò significa che la tecnica precedente per indurre errori condizionali non funzionerà.
+Se l'applicazione rileva errori del [[Database|database]] quando viene eseguita la query SQL e li gestisce correttamente, non ci sarà alcuna differenza nella risposta dell'applicazione. Ciò significa che la tecnica precedente per indurre errori condizionali non funzionerà.
 
 In questa situazione, è spesso possibile sfruttare la vulnerabilità della blind SQLi attivando ritardi temporali a seconda che una condizione iniettata sia vera o falsa. Poiché le query SQL vengono normalmente elaborate in modo sincrono dall'applicazione, ritardare l'esecuzione di una query SQL ritarda anche la risposta HTTP.
 Ciò consente di determinare la verità della condizione iniettata in base al tempo impiegato per ricevere la risposta HTTP.
 
-Le tecniche per attivare un ritardo temporale sono specifiche del tipo di database utilizzato. Ad esempio, su Microsoft SQL Server, è possibile utilizzare quanto segue per testare una condizione e attivare un ritardo a seconda che l'espressione sia vera:
+Le tecniche per attivare un ritardo temporale sono specifiche del tipo di [[Database|database]] utilizzato. Ad esempio, su Microsoft SQL Server, è possibile utilizzare quanto segue per testare una condizione e attivare un ritardo a seconda che l'espressione sia vera:
 
 *   `'; IF (1=2) WAITFOR DELAY '0:0:10'--` non innesca un ritardo, perché la condizione `1=2` è falsa;
 *   `'; IF (1=1) WAITFOR DELAY '0:0:10'--` innesca un ritardo di 10 secondi, perché la condizione `1=1` è vera.
@@ -382,11 +386,11 @@ Utilizzando questa tecnica, possiamo recuperare i dati testando un carattere all
 
 ### Sfruttare la blind SQLi mediante tecniche out-of-band (OAST)
 
-Un'applicazione potrebbe eseguire la stessa query SQL dell'esempio precedente, ma in modo asincrono. L'applicazione continua a elaborare la richiesta dell'utente nel thread originale e utilizza un altro thread per eseguire una query SQL utilizzando il cookie di tracciamento. La query è ancora vulnerabile all'iniezione SQL, ma nessuna delle tecniche descritte finora funzionerà. La risposta dell'applicazione non dipende dal fatto che la query restituisca dati, che si verifichi un errore del database o dal tempo impiegato per eseguire la query.
+Un'applicazione potrebbe eseguire la stessa query SQL dell'esempio precedente, ma in modo asincrono. L'applicazione continua a elaborare la richiesta dell'utente nel thread originale e utilizza un altro thread per eseguire una query SQL utilizzando il cookie di tracciamento. La query è ancora vulnerabile all'iniezione SQL, ma nessuna delle tecniche descritte finora funzionerà. La risposta dell'applicazione non dipende dal fatto che la query restituisca dati, che si verifichi un errore del [[Database|database]] o dal tempo impiegato per eseguire la query.
 
 In questa situazione, è spesso possibile sfruttare la vulnerabilità della blind SQLi attivando interazioni **out-of-band** con un sistema che controlli. Queste possono essere attivate in base a una condizione iniettata per dedurre informazioni un pezzo alla volta. Ancora più utile, i dati possono essere filtrati direttamente all'interno dell'interazione di rete.
 
-A questo scopo possono essere utilizzati vari protocolli di rete, ma in genere il più efficace è DNS (domain name service). Molte reti di produzione consentono l'uscita libera delle query DNS, perché sono essenziali per il normale funzionamento dei sistemi di produzione.
+A questo scopo possono essere utilizzati vari protocolli di rete, ma in genere il più efficace è DNS (domain name service). Molte [[Reti|reti]] di produzione consentono l'uscita libera delle query DNS, perché sono essenziali per il normale funzionamento dei sistemi di produzione.
 
 *(PRACTITIONER: Blind SQL injection with out-of-band data exfiltration)*
 

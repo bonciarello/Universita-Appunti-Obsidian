@@ -1,8 +1,12 @@
+---
+aliases: [SS]
+tags: [ingegneria-del-software]
+---
 Abbiamo vari tipi di sviluppo software:
 
 - Sviluppo rapido del software (RAD);
-- Ingegneria del software basata sul riutilizzo;
-- Ingegneria del software basata su componenti.
+- [[Ingegneria del Software|Ingegneria del software]] basata sul riutilizzo;
+- [[Ingegneria del Software|Ingegneria del software]] basata su componenti.
 
 ## Sviluppo rapido del software
 
@@ -54,7 +58,7 @@ Un prototipo è una versione iniziale di un sistema utilizzato per dimostrare co
 Un prototipo può essere utilizzato in:
 
 - il processo di ingegneria dei requisiti per aiutare con l'elicitazione e la convalida dei requisiti;
-- nei processi di progettazione per esplorare le opzioni e sviluppare un design dell'interfaccia utente;
+- nei processi di progettazione per esplorare le opzioni e sviluppare un design dell'[[Interfaccia utente|interfaccia utente]];
 - nel processo di test per eseguire test back-to-back.
 
 ### Prototipi usa e getta
@@ -68,9 +72,9 @@ I prototipi dovrebbero essere scartati dopo lo sviluppo in quanto non sono una b
 
 ### Ambienti RAD
 
-I RAD sono progettati per sviluppare applicazioni aziendali ad alta intensità di dati e si basano sulla programmazione e sulla presentazione di informazioni da un database. 
+I RAD sono progettati per sviluppare applicazioni aziendali ad alta intensità di dati e si basano sulla programmazione e sulla presentazione di informazioni da un [[Database|database]]. 
 
-Alcuni tools sono: linguaggio di programmazione del database, generatore di interfaccia, collegamenti ad applicazioni per ufficio e generatori di rapporti.
+Alcuni tools sono: linguaggio di programmazione del [[Database|database]], generatore di interfaccia, collegamenti ad applicazioni per ufficio e generatori di rapporti.
 
 ![[RAD.png]]
 
@@ -80,7 +84,7 @@ Altro metodo per sviluppo rapido sono i COTS. Un approccio efficace allo svilupp
 
 Ad esempio, un sistema di gestione dei requisiti potrebbe essere costruito utilizzando:
 
-- un database per memorizzare i requisiti;
+- un [[Database|database]] per memorizzare i requisiti;
 - un elaboratore di testi per acquisire i requisiti e formattare i report;
 - un foglio elettronico per la gestione della tracciabilità.
 

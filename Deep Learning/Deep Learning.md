@@ -1,16 +1,20 @@
+---
+aliases: [DL]
+tags: [deep-learning]
+---
 ## Programma del corso
 Il programma del corso si divide in categorie principali che coprono dalle basi teoriche alle architetture più avanzate:
-- **Fondamenti di Deep Learning:** Introduzione all'AI, Machine Learning e Deep Learning, con focus sulle reti neurali (NN), backpropagation e ottimizzazione.
-- **Computer Vision (CNN):** Studio approfondito delle Reti Neurali Convoluzionali, tecniche di regolarizzazione (Dropout, L1/L2), Data Augmentation e Transfer Learning con modelli pre-addestrati.
+- **Fondamenti di Deep Learning:** Introduzione all'AI, [[Machine Learning]] e Deep Learning, con focus sulle [[Reti|reti]] neurali (NN), backpropagation e ottimizzazione.
+- **Computer Vision (CNN):** Studio approfondito delle [[Reti]] Neurali Convoluzionali, tecniche di regolarizzazione (Dropout, L1/L2), Data Augmentation e Transfer Learning con modelli pre-addestrati.
 - **Sequenze e Time Series (RNN):** Analisi di dati sequenziali tramite RNN, LSTM, GRU e modelli Sequence-to-Sequence per il Natural Language Processing (NLP).
 - **Modelli Generativi:** Esplorazione di architetture per la generazione di dati, tra cui Autoencoder, Variational Autoencoder (VAE) e Generative Adversarial Networks (GAN).
 - **Architetture Avanzate:** Studio dei meccanismi di Attenzione, Trasformatori (Transformers) e Graph Neural Networks (GNN).
 
 ## Obiettivi del corso
 Gli **obiettivi** del corso sono:
-- comprendere la differenza tra AI, ML e DL e le basi matematiche delle reti neurali;
+- comprendere la differenza tra AI, ML e DL e le basi matematiche delle [[Reti|reti]] neurali;
 - apprendere come costruire, addestrare e validare modelli di deep learning utilizzando framework come Keras e TensorFlow;
-- saper implementare e ottimizzare reti convoluzionali per la classificazione di immagini;
+- saper implementare e ottimizzare [[Reti|reti]] convoluzionali per la classificazione di immagini;
 - gestire dati sequenziali e testuali per compiti di NLP e previsione;
 - comprendere e implementare modelli generativi complessi e architetture basate sull'attenzione.
 

@@ -1,3 +1,7 @@
+---
+aliases: [Documenti Finanziari, Financial Statements]
+tags: [business-game]
+---
 I **financial statements** riassumono la salute finanziaria di un'azienda.
 
 ## 1. Documenti Obbligatori

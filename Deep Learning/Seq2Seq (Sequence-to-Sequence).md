@@ -1,7 +1,11 @@
-Il modello **Seq2Seq** (o Encoder-Decoder) è l'architettura che ha reso possibile la moderna traduzione automatica (Google Translate pre-2016), i chatbot e il riassunto automatico di testi.
+---
+aliases: [Seq2Seq, Sequence-to-Sequence]
+tags: [deep-learning]
+---
+Il modello **Seq2Seq** (o Encoder-Decoder) è l'[[Architettura|architettura]] che ha reso possibile la moderna traduzione automatica (Google Translate pre-2016), i chatbot e il riassunto automatico di testi.
 L'obiettivo è mappare una sequenza di input $X$ (di lunghezza $N$) in una sequenza di output $Y$ (di lunghezza $M$), dove $N$ può essere diverso da $M$.
 
-## Architettura Base
+## [[Architettura]] Base
 
 ### 1. Encoder
 È una RNN (spesso LSTM o GRU bi-direzionale) che legge la sequenza di input un token alla volta.
@@ -17,7 +21,7 @@ $$ s_t = RNN_{dec}(y_{t-1}, s_{t-1}) $$
 $$ y_t = Softmax(Dense(s_t)) $$
 
 ## Il "Collo di Bottiglia" e l'Attenzione
-Il problema dell'architettura base è che il Vettore di Contesto deve contenere *tutte* le informazioni della frase. Se la frase è molto lunga (es. 50 parole), è impossibile comprimerla in un vettore di dimensione fissa (es. 256 numeri) senza perdere dettagli. Questo è il collo di bottiglia.
+Il problema dell'[[Architettura|architettura]] base è che il Vettore di Contesto deve contenere *tutte* le informazioni della frase. Se la frase è molto lunga (es. 50 parole), è impossibile comprimerla in un vettore di dimensione fissa (es. 256 numeri) senza perdere dettagli. Questo è il collo di bottiglia.
 
 Il **Meccanismo di Attenzione (Attention Mechanism)** (Bahdanau et al., 2014) risolve questo problema.
 Invece di passare al decoder solo l'ultimo stato dell'encoder, gli permettiamo di accedere a **tutti gli stati nascosti** dell'encoder ($h_1, h_2, ..., h_N$).

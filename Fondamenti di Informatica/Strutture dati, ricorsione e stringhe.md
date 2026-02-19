@@ -1,3 +1,7 @@
+---
+aliases: [SRS, "Strutture dati, ricorsione stringhe"]
+tags: [fondamenti-di-informatica]
+---
 ## Array (Vettori)
 Un array è una struttura dati complessa, statica e omogenea. È una sequenza di elementi dello stesso tipo immagazzinata in locazioni di memoria consecutive. Il primo elemento ha indice **0**, l'ultimo ha indice **N-1** (dove N è la dimensione) .
 

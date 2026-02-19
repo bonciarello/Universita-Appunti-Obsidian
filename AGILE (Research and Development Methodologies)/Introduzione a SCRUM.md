@@ -1,3 +1,7 @@
+---
+aliases: [IS, Introduzione SCRUM, SCRUM]
+tags: [agile-research-and-development-methodologies]
+---
 SCRUM non è un acronimo ed è un termine utilizzato nel rugby quando si rompe (collassa) la mischia e la prima idea è stata citata in un articolo del 1986 chiamato *“The New New Product Development Game”* che illustra come Honda, Canon e Fuji-Xerox hanno prodotto risultati di livello mondiale, utilizzando un approccio scalabile e basato sul team per lo sviluppo di prodotti "all-at-once".
 
 ***SCRUM è un approccio agile per sviluppare prodotti e servizi innovativi.*** Abbiamo due approcci:
@@ -28,8 +32,8 @@ SCRUM è anche **adatto ad aiutare le organizzazioni ad avere successo in un mon
 
 **SCRUM non è adatto a un lavoro che richiede molte interruzioni:** in ambienti caratterizzati da interruzioni sarebbe meglio considerare un approccio agile alternativo chiamato *Kanban* (ideale per la manutenzione e il supporto del software).
 
-## Framework SCRUM
-*Il framework SCRUM è semplice ma non è facile e indolore da applicare.* SCRUM dà potere ai team rendendo visibili le disfunzioni, rendendo visibili gli sprechi e non è una soluzione da libro di cucina per tutte i malesseri organizzativi. I benefici del framework SCRUM sono:
+## [[Framework SCRUM]]
+*Il [[Framework SCRUM|framework SCRUM]] è semplice ma non è facile e indolore da applicare.* SCRUM dà potere ai team rendendo visibili le disfunzioni, rendendo visibili gli sprechi e non è una soluzione da libro di cucina per tutte i malesseri organizzativi. I benefici del [[Framework SCRUM|framework SCRUM]] sono:
 - clienti soddisfatti;
 - miglioramento del ritorno sugli investimenti;
 - riduzione dei costi;

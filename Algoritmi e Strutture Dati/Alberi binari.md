@@ -1,3 +1,7 @@
+---
+aliases: [Albero]
+tags: [algoritmi-e-strutture-dati]
+---
 Sono strutture gerarchiche in cui ad ogni oggetto (nodo padre) ha associato più oggetti (nodo figli).
 I figli hanno solo un padre tranne l'oggetto iniziale che costituisce la radice dell'albero. I nodi senza figli sono detti foglie e i nodi appartenenti allo stesso padre sono detti fratelli.
 

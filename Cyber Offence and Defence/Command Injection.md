@@ -1,3 +1,7 @@
+---
+aliases: [CI]
+tags: [cyber-offence-and-defence]
+---
 L'iniezione di comandi del sistema operativo (Command Injection), anche nota come iniezione di shell, consente a un aggressore di eseguire comandi del sistema operativo (SO) sul server che esegue un'applicazione e, in genere, di compromettere completamente l'applicazione e i suoi dati. Spesso, un aggressore può sfruttare una vulnerabilità di iniezione di comandi del sistema operativo per compromettere altre parti dell'infrastruttura di hosting e sfruttare le relazioni di fiducia per indirizzare l'attacco ad altri sistemi all'interno dell'organizzazione.
 ## OS Command Injection
 Consideriamo un'applicazione di shopping consente all'utente di visualizzare se un articolo è disponibile in magazzino in un particolare negozio. Questa informazione è accessibile tramite un URL:
@@ -77,7 +81,7 @@ Puoi usare un comando iniettato per innescare un ritardo temporale, consentendot
 
 Questo comando fa sì che l'applicazione esegua il ping sulla sua scheda di rete loopback per 10 secondi (PRACTITIONER: Blind OS command injection with time delays).
 ### Sfruttamento tramite reindirizzamento dell’output
-Puoi reindirizzare l'output del comando iniettato in un file all'interno della radice web che puoi quindi recuperare tramite il browser. Ad esempio, se l'applicazione serve risorse statiche dalla posizione del file system `/var/www/static`, puoi inviare il seguente input:
+Puoi reindirizzare l'output del comando iniettato in un file all'interno della radice web che puoi quindi recuperare tramite il browser. Ad esempio, se l'applicazione serve risorse statiche dalla posizione del [[File System|file system]] `/var/www/static`, puoi inviare il seguente input:
 
 `& whoami > /var/www/static/whoami.txt &`
 

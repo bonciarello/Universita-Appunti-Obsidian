@@ -1,4 +1,8 @@
-Gli Sprint sono lo scheletro del framework SCRUM. 
+---
+aliases: [sprint]
+tags: [agile-research-and-development-methodologies]
+---
+Gli Sprint sono lo scheletro del [[Framework SCRUM|framework SCRUM]]. 
 
 ![](img/sezione7/sprint.png)
 
@@ -74,7 +78,7 @@ Sebbene l'obiettivo dello sprint non debba essere modificato in modo sostanziale
 Può sembrare che la regola del non modificare gli obiettivi sia in diretto conflitto con il principio fondamentale di SCRUM secondo cui dovremmo abbracciare il cambiamento. **Accettiamo il cambiamento, ma vogliamo abbracciarlo in modo equilibrato ed economicamente ragionevole.** Le conseguenze economiche di un cambiamento aumentano all'aumentare del nostro livello di investimento nel lavoro modificato.
 
 ## Terminazione anormale
-*Se l'obiettivo dello sprint diventa completamente non valido, il team SCRUM può decidere che continuare con lo sprint attuale non ha senso e consigliare al proprietario di interrompere lo sprint in modo anomalo.* Quando uno sprint viene interrotto in modo anomalo, lo sprint in corso si interrompe bruscamente e il team SCRUM si riunisce per eseguire una retrospettiva dello sprint. Il team si incontra quindi con il proprietario per pianificare lo sprint successivo, con un obiettivo diverso e un diverso insieme di elementi del product backlog.
+*Se l'obiettivo dello sprint diventa completamente non valido, il team SCRUM può decidere che continuare con lo sprint attuale non ha senso e consigliare al proprietario di interrompere lo sprint in modo anomalo.* Quando uno sprint viene interrotto in modo anomalo, lo sprint in corso si interrompe bruscamente e il team SCRUM si riunisce per eseguire una retrospettiva dello sprint. Il team si incontra quindi con il proprietario per pianificare lo sprint successivo, con un obiettivo diverso e un diverso insieme di elementi del [[Product Backlog|product backlog]].
 
 **La *sprint termination* viene utilizzata quando si è verificato un evento economicamente significativo**, come le azioni di un concorrente che invalidano completamente lo sprint o il finanziamento del prodotto viene sostanzialmente modificato.
 
@@ -94,6 +98,6 @@ Molti team, iniziano con una definizione di fatto che non termina in uno stato i
 ## Criteri di accettazione
 La definizione di completamento si applica all'incremento di prodotto sviluppato durante lo sprint. L'**incremento del prodotto** è composto da un insieme di elementi del backlog del prodotto, quindi ogni elemento del backlog deve essere completato in conformità con il lavoro specificato dalla lista di definizione del completamento.
 
-Ogni elemento del *product backlog* introdotto nello sprint dovrebbe avere una serie di **condizioni di soddisfazione** (criteri di accettazione specifici dell'elemento), specificate dal proprietario. Questi **criteri di accettazione** alla fine verranno verificati in test di accettazione che il proprietario del prodotto confermerà per determinare se l'elemento del backlog funziona come desiderato.
+Ogni elemento del *[[Product Backlog|product backlog]]* introdotto nello sprint dovrebbe avere una serie di **condizioni di soddisfazione** (criteri di accettazione specifici dell'elemento), specificate dal proprietario. Questi **criteri di accettazione** alla fine verranno verificati in test di accettazione che il proprietario del prodotto confermerà per determinare se l'elemento del backlog funziona come desiderato.
 
-**Un articolo del *product backlog* può essere considerato terminato solo quando sia i criteri di accettazione specifici dell'articolo sia la definizione di completamento a livello di sprint sono stati soddisfatti.**
+**Un articolo del *[[Product Backlog|product backlog]]* può essere considerato terminato solo quando sia i criteri di accettazione specifici dell'articolo sia la definizione di completamento a livello di sprint sono stati soddisfatti.**

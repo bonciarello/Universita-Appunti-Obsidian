@@ -1,3 +1,7 @@
+---
+aliases: [Paint Swing, PS]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Come realizzare una chat come la seguente?
 
 ![](paint.PNG)

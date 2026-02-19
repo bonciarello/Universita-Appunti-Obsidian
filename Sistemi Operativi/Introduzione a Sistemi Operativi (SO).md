@@ -1,10 +1,14 @@
+---
+aliases: [SO, OS, Introduzione a Sistemi Operativi]
+tags: [sistemi-operativi]
+---
 ## Programma del modulo
 
 Il programma del modulo di SO prevede:
 - **Teoria dei sistemi operaativi:** gestione dei file, dei processi e della memoria;
 - **Linguaggi di scripting:** Perl;
 - **Programmazione multithreading** (Python);
-- **Case studies:** Linux, Windows, Sistemi Operativi Mobili.
+- **Case studies:** Linux, Windows, [[Sistemi Operativi]] Mobili.
 
 ## Testi suggeriti e materiale
 
@@ -45,13 +49,13 @@ Quando si parla di accounting in SO, non si parla di permessi ma di logging (cio
 Un SO è una raccolta di software predefiniti con lo scopo primario di gestire le risorse di un calcolatore. Nel dettaglio, con un SO si può:
 - *generalizzare l'uso delle periferiche tramite un interfaccia comune* con funzioni di libreria comuni per le più grandi categorie di periferiche;
 - *gestire la memoria primaria (RAM)* con allocazione e protezione;
-- *gestire la memoria secondaria (dischi fissi, ecc.)* con mappatura sul dispositivo fisico, organizzazione e gestione degli errori;
+- *gestire la memoria secondaria (dischi fissi, ecc.)* con mappatura sul dispositivo fisico, organizzazione e [[Gestione degli errori|gestione degli errori]];
 - **gestire i processi e i thread** con scheduling e accesso condiviso alle risorse;
-- *gestire gli eventi e l'interfaccia utente* con cattura e smistamento degli eventi ai processi;
+- *gestire gli [[Eventi|eventi]] e l'[[Interfaccia utente|interfaccia utente]]* con cattura e smistamento degli [[Eventi|eventi]] ai processi;
 - *gestire i diritti di accesso e la presenza di più utenti* con accesso multiplo, quote e diritti di accesso;
 - *gestire la rete* con applicazioni distribuite, condivisione di risorse, socket;
 
-Nella costruzione di un SO, la tecnica della programmazione ad oggetti è molto più lenta rispetto alle funzioni pure. Si utilizza, quindi, il *linguaggio C* nudo e crudo.
+Nella costruzione di un SO, la tecnica della [[Programmazione ad oggetti|programmazione ad oggetti]] è molto più lenta rispetto alle funzioni pure. Si utilizza, quindi, il *linguaggio C* nudo e crudo.
 
 ## Funzioni di libreria
 

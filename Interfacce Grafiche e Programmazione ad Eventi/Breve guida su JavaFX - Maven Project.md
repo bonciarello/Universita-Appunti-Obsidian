@@ -1,10 +1,14 @@
-Come avviare un progetto Maven che serve per far funzionare JavaFX:
+---
+aliases: [BGJMP, Breve guida JavaFX - Maven Project]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
+Come avviare un progetto [[Maven]] che serve per far funzionare [[JavaFX]]:
 
 1. Avvia *Eclipse*;
 2. Clicca con il tasto destro nella parte sinistra dove sono i vostri progetti;
 3. Seleziona *New → New project* (non java project):
 ![](1.png)
-4. Scegli *Maven → Maven project* e clicca su *Next*:
+4. Scegli *[[Maven]] → [[Maven]] project* e clicca su *Next*:
 ![](2.png)
 5. Seleziona esattamente gli stessi elementi dell'immagine di seguito e clicca su: *Next*
 ![](3.png)

@@ -1,3 +1,7 @@
+---
+aliases: [metodologia crisp-dm]
+tags: [machine-learning]
+---
 **CRISP-DM** è l'acronimo di **CRoss-Industry Standard Process for Data Mining**, un metodo di comprovata efficacia per l'esecuzione di operazioni di data mining.
 - come **metodologia**, comprende descrizioni delle tipiche fasi di un progetto e delle attività incluse in ogni fase e fornisce una spiegazione delle relazioni esistenti tra tali attività;
 - come **modello di elaborazione**, CRISP-DM fornisce una panoramica del ciclo di vita del data mining.
@@ -28,7 +32,7 @@ Questa sotto-fase serve per determinare gli obiettivi aziendali. A sua volta, ab
 Questa sotto-fase serve per valutare la situazione. A sua volta, abbiamo alcune fasi come:
 - *inventario delle risorse:* elenco delle risorse disponibili per il progetto;
 - *requisiti, ipotesi e vincoli:* elenco di tutti i requisiti del progetto, delle ipotesi fatte dal progetto ed elenco dei vincoli sul progetto;
-- *rischi e imprevisti:* elenco dei rischi o degli eventi che potrebbero ritardare il progetto o causarne il fallimento e elenco delle azioni da intraprendere se si presentano i rischi;
+- *rischi e imprevisti:* elenco dei rischi o degli [[Eventi|eventi]] che potrebbero ritardare il progetto o causarne il fallimento e elenco delle azioni da intraprendere se si presentano i rischi;
 - *terminologia:* glossario della terminologia rilevante per il progetto;
 - *costi e benefici:* un'analisi costi-benefici che confronta i costi del progetto con i potenziali benefici.
 
@@ -99,7 +103,7 @@ Questa sotto-fase serve per definire:
 - **impostazioni dei parametri riviste:** in base alla valutazione del modello, rivedere le impostazioni dei parametri e ottimizzarle per la successiva esecuzione di modellazione e iterare finché non si è fermamente convinti di aver trovato i modelli migliori.
 
 ## Valutazione (evaluation)
-In questa fase penseremo alla valutazione del modello (come ha funzionato sui dati di test), ai metodi e i criteri dipendono dal tipo di modello (ad es. matrice di coincidenza con modelli di classificazione, tasso di errore medio con modelli di regressione) e all'interpretazione del modello: importante o meno, facile o difficile dipende dall'algoritmo.
+In questa fase penseremo alla valutazione del modello (come ha funzionato sui dati di test), ai metodi e i criteri dipendono dal tipo di modello (ad es. matrice di coincidenza con modelli di classificazione, tasso di errore medio con modelli di [[Regressione|regressione]]) e all'interpretazione del modello: importante o meno, facile o difficile dipende dall'algoritmo.
 
 ![](img/sezione5/evaluation.png)
 
@@ -117,7 +121,7 @@ Questa sotto-fase serve per definire:
 - *decisione:* descrivere la decisione su come procedere.
 
 ## Distribuzione (deployment)
-In questa fase penseremo a determinare come devono essere utilizzati i risultati, chi deve utilizzarli, quanto spesso devono essere utilizzati e alla distribuire i risultati del data mining assegnando un punteggio a un database e sfruttando i risultati come regole aziendali.
+In questa fase penseremo a determinare come devono essere utilizzati i risultati, chi deve utilizzarli, quanto spesso devono essere utilizzati e alla distribuire i risultati del data mining assegnando un punteggio a un [[Database|database]] e sfruttando i risultati come regole aziendali.
 
 ![](img/sezione5/deployment.png)
 

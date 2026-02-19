@@ -1,3 +1,7 @@
+---
+aliases: [AI, Algoritmi introduzione C++]
+tags: [fondamenti-di-informatica]
+---
 ## Concetti Base di Programmazione
 La **Programmazione** è l'attività con cui si predispone l'elaboratore ad eseguire un particolare insieme di azioni su una particolare tipologia di dati, allo scopo di risolvere un problema.
 

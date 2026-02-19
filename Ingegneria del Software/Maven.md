@@ -1,3 +1,7 @@
+---
+aliases: [maven]
+tags: [ingegneria-del-software]
+---
 Maven è uno strumento di gestione del progetto per Java.
 Basato sul concetto di Project Object Model (POM).
 Gestisce il processo di costruzione di un progetto (dalla sorgente al programma).
@@ -7,7 +11,7 @@ Maven è uno strumento di costruzione. Maven adotta un ciclo di vita dell'edific
 
 - **validate:** convalida che il progetto sia corretto e che tutte le informazioni siano disponibili;
 - **compile:** compila i sorgenti del progetto (in Bytecode per i sorgenti Java);
-- **test:** verifica i sorgenti compilati utilizzando un framework di unit test (ad es. con JUnit);
+- **test:** verifica i sorgenti compilati utilizzando un framework di unit test (ad es. con [[JUnit]]);
 - **package:** impacchetta il codice sorgente compilato in un pacchetto distribuibile (ad es. come file JAR);
 - **install:** installa il pacchetto nel repository locale in modo da poter essere utilizzato in altri progetti locali;
 - **deploy:** copia il pacchetto in un repository remoto permettendo di condividere il progetto con altri sviluppatori e altri progetti esterni

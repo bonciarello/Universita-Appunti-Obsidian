@@ -1,3 +1,7 @@
+---
+aliases: [Gestione memoria, GM]
+tags: [programmazione-ad-oggetti]
+---
 In questa sezione viene illustrato come le variabili vengono allocate in memoria (indirizzi) e come gestirle tramite puntatori.
 ### Allocazione Statica e Indirizzi
 Quando dichiariamo una variabile `int a = 5;`, il sistema scrive il valore `5` in uno specifico indirizzo di memoria (es. `0x3`).

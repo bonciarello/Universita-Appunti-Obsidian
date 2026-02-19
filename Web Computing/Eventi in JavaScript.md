@@ -1,7 +1,11 @@
-Gli eventi sono il cuore dell'interattività in JavaScript. Permettono di eseguire codice in risposta ad azioni dell'utente (click, digitazione) o del browser (caricamento pagina).
-## Gestione degli Eventi
-Esistono tre modi per gestire gli eventi.
-### Attributi HTML (Sconsigliato)
+---
+aliases: [Evento]
+tags: [web-computing]
+---
+Gli [[Eventi|eventi]] sono il cuore dell'interattività in [[JavaScript]]. Permettono di eseguire codice in risposta ad azioni dell'utente (click, digitazione) o del browser (caricamento pagina).
+## Gestione degli [[Eventi]]
+Esistono tre modi per gestire gli [[Eventi|eventi]].
+### Attributi [[HTML]] (Sconsigliato)
 Vecchio stile, mischia logica e contenuto.
 ```html
 <button onclick="alert('Ciao!')">Cliccami</button>
@@ -46,7 +50,7 @@ document.addEventListener("click", function(e) {
     });
     ```
 2.  **`e.stopPropagation()`**: Ferma la propagazione dell'evento (vedi sotto).
-## Flusso degli Eventi: Bubbling vs Capturing
+## Flusso degli [[Eventi]]: Bubbling vs Capturing
 Quando clicchi su un elemento annidato (es. uno `<span>` dentro un `<div>` dentro `<body>`), l'evento non riguarda solo lo span, ma attraversa l'albero del DOM.
 ### Le due fasi
 1.  **Capturing (Cattura):** L'evento scende dalla radice (`window`) fino al target.
@@ -69,7 +73,7 @@ document.getElementById("figlio").addEventListener("click", () => console.log("F
 // 2. "Padre"
 ```
 Se volessimo intercettare l'evento *prima* che arrivi al figlio (fase di Capturing), useremmo `true` come terzo parametro.
-## Tipi di Eventi Comuni
+## Tipi di [[Eventi]] Comuni
 ### Mouse
 *   `click`: Pressione e rilascio tasto sinistro.
 *   `dblclick`: Doppio click.
@@ -86,7 +90,7 @@ Se volessimo intercettare l'evento *prima* che arrivi al figlio (fase di Capturi
 *   `input`: Il valore cambia (mentre si digita).
 ### Finestra/Documento
 *   `load`: Pagina e risorse (immagini) caricate completamente.
-*   `DOMContentLoaded`: HTML caricato (senza aspettare le immagini). **Molto usato.**
+*   `DOMContentLoaded`: [[HTML]] caricato (senza aspettare le immagini). **Molto usato.**
 *   `resize`: Ridimensionamento finestra.
 *   `scroll`: Scorrimento pagina.
 ### Esempio: Validazione Form

@@ -1,3 +1,7 @@
+---
+aliases: [PG]
+tags: [algoritmi-e-strutture-dati]
+---
 La tecnica golosa è utilizzata generalmente per risolvere problemi di ottimizzazione cioè problemi in cui bisogna ricercare una soluzione che soddisfi alcuni vincoli e che massimizzi/minimizzi il valore di una funzione obiettivo.
 
 > max F = Σ xᵢ * Vᵢ (x₁ ... xₙ)

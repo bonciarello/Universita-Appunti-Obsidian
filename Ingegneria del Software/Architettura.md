@@ -1,3 +1,7 @@
+---
+aliases: [architettura]
+tags: [ingegneria-del-software]
+---
 ## Che cos'è un'architettura software
 
 Si è accennato alle architetture logiche e alle architetture di rilascio, e ora è il momento di dare una definizione di **architettura software**. Una è la seguente:
@@ -14,11 +18,11 @@ La figura di seguito mostra un'architettura logica (parziale) a strati, disegnat
 
 L'**architettura logica** è l'organizzazione su larga scala delle classi software in package (o namespace), sottosistemi e strati. È chiamata architettura *logica* poichè non ci sono decisioni da prendere su come questi elementi siano distribuiti sui processi o sui diversi computer fisici di una rete (queste ultime decisioni fanno parte dell'**architettura di deployment**).
 
-Uno **strato** è un gruppo a grana molto grossa di classi, package o sottosistemi, che ha delle responsabilità coese rispetto a un aspetto importante del sistema. Inoltre gli strati sonoi organizzati in modo tale che strati "più alti" (come lo strato dell'interfaccia utente) ricorrano ai servizi degli strati "più bassi", mentre normalmente non avviene il contrario.
+Uno **strato** è un gruppo a grana molto grossa di classi, package o sottosistemi, che ha delle responsabilità coese rispetto a un aspetto importante del sistema. Inoltre gli strati sonoi organizzati in modo tale che strati "più alti" (come lo strato dell'[[Interfaccia utente|interfaccia utente]]) ricorrano ai servizi degli strati "più bassi", mentre normalmente non avviene il contrario.
 
 Gli strati di un sistema orientato agli oggetti comprendono normalmente i seguenti:
 
-- **User Interface (Interfaccia utente)**;
+- **User Interface ([[Interfaccia utente]])**;
 - **Application Logic e Domain Objects (Logica applicativa e Oggetti di dominio):** oggetti software che rappresentano concetti del dominio (per esempio, una classe software *Sale*) che soddisfano i requisiti dell'applicazione, come calcolare il totale di una vendita;
 - **Technical Services (Servizi tecnici):** oggetti e sottosistemi d'uso generale che forniscono servizi tecnici di supporto, come l'interfacciamento con una base di dati o il logging degli errori. Questi servizi sono solitamente indipendenti dall'applicazione e riusabili in diversi sistemi.
 
@@ -66,7 +70,7 @@ org.apache.soap.rpc
 com.mycompany.util
 ```
 
-> **Modello di Dominio di UP:** vista delle parti interessate dei concetti significativi del dominio.
+> **[[Modello di dominio|Modello di Dominio]] di UP:** vista delle parti interessate dei concetti significativi del dominio.
 
 ![[architettura5.png]]
 
@@ -74,7 +78,7 @@ com.mycompany.util
 
 ### Definizione: livelli, strati e partizioni
 
-La nozione originaria di **livello (tier)** nell'architettura era uno strato logico, non un nodo fisico; tuttavia questo termine è stato ampiamente utilizzato per indicare un nodo fisico di elaborazione (o un cluster di nodi), come il "livello client" (il computer client). Evitiamo di utilizzare questo termine per motivi di sicurezza, ma lo si tenga a mente quando si legge la letteratura sulle architetture.
+La nozione originaria di **livello (tier)** nell'architettura era uno strato logico, non un nodo fisico; tuttavia questo termine è stato ampiamente utilizzato per indicare un nodo fisico di elaborazione (o un cluster di nodi), come il "livello client" (il computer client). Evitiamo di utilizzare questo termine per motivi di [[Sicurezza|sicurezza]], ma lo si tenga a mente quando si legge la letteratura sulle architetture.
 
 Si dice che gli **strati** di un'architettura rappresentano le sezioni verticali, mentre le **partizioni** rappresentano una divisione orizzontale di sottosistemi relativamente paralleli di uno strato. Per esempio, lo strato *Technical Services* può essere diviso in partizioni quali *Security* e *Reporting* (figura seguente).
 
@@ -82,7 +86,7 @@ Si dice che gli **strati** di un'architettura rappresentano le sezioni verticali
 
 ### Linea guida: non mostrare le risorse esterne come lo strato più basso
 
-La maggior parte dei sistemi si basa su risorse o servizi esterni, come una base di dati MySQL per l'inventario o un servizio di naming e directory Novell LDAP. Si tratta di componenti di implementazione *fisici*, non di uno strato dell'architettura *logica*.
+La maggior parte dei sistemi si basa su risorse o servizi esterni, come una base di dati [[MySQL]] per l'inventario o un servizio di naming e directory Novell LDAP. Si tratta di componenti di implementazione *fisici*, non di uno strato dell'architettura *logica*.
 
 ## Linea guida: Principio di Separazione Modello-Vista
 
@@ -92,14 +96,14 @@ Che tipo di visibilità devono avere gli altri package verso lo strato UI? Come 
 > 
 > Questo principio è costituito da almeno due parti: 
 > 1. Gli oggetti non UI non devono essere connessi o accoppiati direttamente agli oggetti UI. Per esempio, non permettere a un oggetto software *Sale* (un oggetto di "dominio", non UI) di avere un riferimento a un oggetto finestra *JFrame* di Java Swing (un oggetto UI). Infatti le finestre sono relativa ad una applicazione specifica, mentre (idealmente) gli oggetti non appartenenti all'interfaccia grafica possono essere riusati in nuove applicazioni o vi si può accedere mediante una nuova interfaccia.
-> 2. Non mettere logica applicativa (come il calcolo delle imposte) nei metodi di un oggetto dell'interfaccia utente. Gli oggetti UI dovrebbero solo inizializzare gli elementi dell'interfaccia utente, ricevere eventi UI (come un clic del mouse su un pulsante), e delegare le richieste di logica applicativa agli oggetti non UI (come gli oggetti di dominio).
+> 2. Non mettere logica applicativa (come il calcolo delle imposte) nei metodi di un oggetto dell'[[Interfaccia utente|interfaccia utente]]. Gli oggetti UI dovrebbero solo inizializzare gli elementi dell'[[Interfaccia utente|interfaccia utente]], ricevere [[Eventi|eventi]] UI (come un clic del mouse su un pulsante), e delegare le richieste di logica applicativa agli oggetti non UI (come gli oggetti di dominio).
 
-In questo contesto, **modello** è un sinonimo per lo strato degli oggetti del dominio (è un vecchio termine OO della fine degli anni '70). **Vista** è un sinonimo per gli oggetti dell'interfaccia utente, come finestre, pagine web, applet e report.
+In questo contesto, **modello** è un sinonimo per lo strato degli oggetti del dominio (è un vecchio termine OO della fine degli anni '70). **Vista** è un sinonimo per gli oggetti dell'[[Interfaccia utente|interfaccia utente]], come finestre, pagine web, applet e report.
 
 Il principio di **Separazione Modello-Vista** afferma che gli oggetti del modello (dominio) non devono avere una conoscenza *diretta* degli oggetti della vista (UI), almeno in quanto oggetti della vista.
 
 > **I messaggi inviati dallo strato UI allo strato del dominio saranno i messaggi mostrati negli SSD, come *enterItem*.**
 
-Per esempio, usando Java Swing, è possibile che una classe finestra della GUI di nome *ProcessSaleFrame* nello strato UI rilevi gli eventi del mouse e della tastiera che richiedono l'inserimento di un articolo; in questo caso, l'oggetto *ProcessSaleFrame* invierà un messaggio *enterItem* a un oggetto software dello strato del dominio, per esempio *Register*, per far eseguire la logica applicativa (figura seguente).
+Per esempio, usando Java Swing, è possibile che una classe finestra della GUI di nome *ProcessSaleFrame* nello strato UI rilevi gli [[Eventi|eventi]] del mouse e della tastiera che richiedono l'inserimento di un articolo; in questo caso, l'oggetto *ProcessSaleFrame* invierà un messaggio *enterItem* a un oggetto software dello strato del dominio, per esempio *Register*, per far eseguire la logica applicativa (figura seguente).
 
 ![[architettura7.png]]

@@ -1,3 +1,7 @@
+---
+aliases: [FS]
+tags: [sistemi-operativi]
+---
 I file system nascono dall'esigenza di gestire la periferica più importante, la memoria di massa. I **file system** sono un insieme di funzionalità per astrarre i dati grezzi presenti in memoria di massa e interpretare questi ultimi in termini di files e cartelle. Abbiamo vari livelli tra le applicazioni e le memorie di massa e sono le seguenti:
 
 ![](applicazioniToMemory.png)
@@ -41,7 +45,7 @@ DMA consente l'accesso diretto alla memoria da parte del disco con intervento mi
 
 ### Notifiche alla CPU
 
-Gli eventi hardware possono essere catturati e gestiti tramite gli interrupt: ad esempio, possono essere generati da dei processi a causa di una divisione per zero oppure a causa di un tentativo di accesso a un area di memoria protetta ma anche, possono nascere da eventi esterni, ad esempio un interrupt è generato se il mouse viene mosso o se qualcuno preme un tasto sulla tastiera.
+Gli [[Eventi|eventi]] hardware possono essere catturati e gestiti tramite gli interrupt: ad esempio, possono essere generati da dei processi a causa di una divisione per zero oppure a causa di un tentativo di accesso a un area di memoria protetta ma anche, possono nascere da [[Eventi|eventi]] esterni, ad esempio un interrupt è generato se il mouse viene mosso o se qualcuno preme un tasto sulla tastiera.
 
 La scomoda alternativa è il *polling* continuo in cui il processore controlla continuamente tutti i dispositivi.
 
@@ -80,7 +84,7 @@ In FAT32 il file eliminato viene indicato con l'esadecimale E5: ovviamente molta
 
 ### Frammentazione
 
-Purtroppo non sempre i nostri file vengono memorizzati in maniera contigua all'interno della memoria: questo causa un rallentamento generale delle performance di lettura/scrittura sequenziale. Questo problema purtroppo non può essere risolto ma può essere solo mitigato tramite meccanismi di deframmentazione cioè programmi che riorganizzano i file all'interno della nostra memoria in maniera tale da evitare il più possibile la frammentazione. Questo problema esiste soprattutto nei dischi meccanici, mentre negli SSD i tempi di accesso sono nettamente superiori. I sistemi operativi moderni hanno meccanismi di deframmentazione in background che ne migliorano le performance dei dischi.
+Purtroppo non sempre i nostri file vengono memorizzati in maniera contigua all'interno della memoria: questo causa un rallentamento generale delle performance di lettura/scrittura sequenziale. Questo problema purtroppo non può essere risolto ma può essere solo mitigato tramite meccanismi di deframmentazione cioè programmi che riorganizzano i file all'interno della nostra memoria in maniera tale da evitare il più possibile la frammentazione. Questo problema esiste soprattutto nei dischi meccanici, mentre negli SSD i tempi di accesso sono nettamente superiori. I [[Sistemi Operativi|sistemi operativi]] moderni hanno meccanismi di deframmentazione in background che ne migliorano le performance dei dischi.
 
 Nel FAT32 abbiamo una cosiddetta **Fat Table** in cui si tiene conto dei cluster occupati e di quelli liberi: possiamo immaginare questa tabella come se fosse una lista doppiamente concatenata. Questo file system purtroppo **non è transazionale** cioè l'insieme delle operazioni da eseguire deve essere atomico, pertanto non ci devono essere interruzioni di alcun tipo. La conseguenza sarebbe avere un disallineamento tra la fat table e il file stesso. Ad oggi altri file system permettono di fare un UNDO delle operazioni qualora non ci fosse la giusta corrispondenza (operazione di **JOURNALINE**).
 

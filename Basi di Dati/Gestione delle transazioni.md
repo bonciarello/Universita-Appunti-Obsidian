@@ -1,3 +1,7 @@
+---
+aliases: [GT, Gestione transazioni]
+tags: [basi-di-dati]
+---
 Una **transazione** è una unità logica di elaborazione composta da una sequenza di operazioni di lettura/scrittura sulla BD.
 Le sue proprietà sono:
 
@@ -61,7 +65,7 @@ w(Y)
 COMMIT
 ```
 
-Tutte le operazioni tra *BEGIN* e *COMMIT* sono viste come un tutt'uno dal punto di vista logico, quindi, è necessario che vengano eseguite *tutte o nessuna*.
+Tutte le operazioni tra *BEGIN* e *COMMIT* sono [[Viste|viste]] come un tutt'uno dal punto di vista logico, quindi, è necessario che vengano eseguite *tutte o nessuna*.
 
 In assenza del *BEGIN* e del *COMMIT*, ognuna delle suddette operazioni sarebbe considerata come una operazione a sé stante.
 
@@ -111,7 +115,7 @@ Come in questo caso, durante l'esecuzione di una transazione, la BD può transit
 
 ## Il controllo di affidabilità: perché serve?
 
-L'esecuzione di una transazione può essere pregiudicata da eventi anomali causati da malfunzionamenti:
+L'esecuzione di una transazione può essere pregiudicata da [[Eventi|eventi]] anomali causati da malfunzionamenti:
 
 - **Transaction failure:** la transazione abortisce;
 - **System failure:** guasto hardware o software che causa l'interruzione di tutte le transazioni.
@@ -160,7 +164,7 @@ Le dimensioni tipiche delle BD non consentono il loro trasferimento in memoria c
 
 I dati in MS sono memorizzati nelle pagine, che sono le unità di trasferimento della MS alla MC.
 
-Per limitare gli accessi alle pagine, che sono relativamente molto lenti, il DBMS utilizza opportuni *metodi di accesso* e tecniche di *gestione della memoria*, queste ultime basate sull’uso di un buffer.
+Per limitare gli accessi alle pagine, che sono relativamente molto lenti, il DBMS utilizza opportuni *metodi di accesso* e tecniche di *[[Gestione della memoria|gestione della memoria]]*, queste ultime basate sull’uso di un buffer.
 
 Il buffer è una zona della memoria centrale che gestisce l’interazione tra quest’ultima e la memoria di massa, di fatto svolge il ruolo di una memoria cache.
 

@@ -1,3 +1,7 @@
+---
+aliases: [TD]
+tags: [agile-research-and-development-methodologies]
+---
 Con questo termine ci riferiamo all'insieme di scorciatoie o agli aspetti negativi che infettano il nostro codice, come ad esempio:
 - **design inadatto (cattivo):** un design che una volta aveva senso ma non ha più;
 - **difetti:** problemi noti nel software per i quali non abbiamo ancora investito tempo nella rimozione;
@@ -27,7 +31,7 @@ Ciononostante ci sono alcune ripercussioni:
 ## Far fronte al debito
 Per far fronte al debito contratto ci sono un insieme di strategie, tra cui:
 - *utilizzare le good-practice:* sfruttare il test driven development, refactoring (*regola del boy-scout*, cioè miglioro il codice ogni volta che ci metto mano). Migliorare la definizione di **completato**;
-- *cercare di darne una rappresentazione tangibile:* generalmente si realizza andando a realizzare un *Tecnical Debt Backlog* associato al product backlog.
+- *cercare di darne una rappresentazione tangibile:* generalmente si realizza andando a realizzare un *Tecnical Debt Backlog* associato al [[Product Backlog|product backlog]].
 
 Inoltre non tutto il debito contratto deve essere necessariamente ripagato. Per esempio, nello sviluppo dei prototipi o di prodotti che hanno vita breve, è inutile andare a pagarne i debiti poiché sono stati concepiti per essere *"usa e getta"*.  
 

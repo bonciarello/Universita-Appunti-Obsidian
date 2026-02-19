@@ -1,3 +1,7 @@
+---
+aliases: [AGILE, Research and Development Methodologies]
+tags: [agile-research-and-development-methodologies]
+---
 ## Programma del corso
 Il corso è diviso in due parti:
 - **Agile Software Development (6 CFU)**, che inizia immediatamente, faremo quello che abbiamo citato sopra, con la parte pratica completamente rinnovata e specializzata nello sviluppo guidato dai test e pipeline CI-CD;

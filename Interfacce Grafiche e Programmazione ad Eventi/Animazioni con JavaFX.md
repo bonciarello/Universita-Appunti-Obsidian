@@ -1,3 +1,7 @@
+---
+aliases: [AJ, Animazioni JavaFX]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src/main/java* andremo ad elencare i *package* di seguito, mentre nella cartella *src/main/resources/images* si trovano le immagini dell'omino che si muove.
 
 ## PACKAGE: application

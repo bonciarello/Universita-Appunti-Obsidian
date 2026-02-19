@@ -1,7 +1,11 @@
+---
+aliases: [trasmissione, Broadcasting  e invio messaggi dal gioco 3D all'interfaccia 2D]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo al rispondere a un altro evento del mouse, a fare in modo che l'HUD influenzi il gioco e a come mettere in pausa il nostro gioco.
 
-## Rispondere ad altri eventi del mouse
-*OnClick* è l'unico evento esposto dal componente pulsante, ma gli elementi dell'interfaccia utente possono rispondere a una serie di interazioni diverse utilizzando un componente *EventTrigger*. Aggiungi un nuovo componente all'oggetto pulsante e cerca la sezione *Event* del menu del componente, troverai il componente *EventTrigger*.
+## Rispondere ad altri [[Eventi|eventi]] del mouse
+*OnClick* è l'unico evento esposto dal componente pulsante, ma gli elementi dell'[[Interfaccia utente|interfaccia utente]] possono rispondere a una serie di interazioni diverse utilizzando un componente *EventTrigger*. Aggiungi un nuovo componente all'oggetto pulsante e cerca la sezione *Event* del menu del componente, troverai il componente *EventTrigger*.
 
 Sebbene l'*OnClick* del pulsante abbia risposto solo a un clic completo (il pulsante del mouse è stato premuto e quindi rilasciato), proviamo a rispondere al pulsante del mouse premuto ma non rilasciato.
 
@@ -12,30 +16,30 @@ public void OnPointerDown() {
     Debug.Log("pointer down");
 }
 ```
-Ora fai clic su *Add New Event Type* per aggiungere un nuovo tipo al componente *EventTrigger*. Scegli *Pointer Down* per l'evento. Questo creerà un pannello vuoto per quell'evento, proprio come *OnClick*. Fare clic sul pulsante *+* per aggiungere un elenco di eventi, trascinare l'oggetto controller su questa voce e selezionare *OnPointerDown()* nel menu.
+Ora fai clic su *Add New Event Type* per aggiungere un nuovo tipo al componente *EventTrigger*. Scegli *Pointer Down* per l'evento. Questo creerà un pannello vuoto per quell'evento, proprio come *OnClick*. Fare clic sul pulsante *+* per aggiungere un elenco di [[Eventi|eventi]], trascinare l'oggetto controller su questa voce e selezionare *OnPointerDown()* nel menu.
 
 ## Fare in modo che l'HUD influenzi il gioco
 I controlli che abbiamo creato durante la lezione precedente generano output di debug, ma in realtà non influiscono sul gioco. Ora, l'HUD e il gioco principale si sono ignorati a vicenda.
 
 L'obiettivo è mantenerli abbastanza indipendenti l'uno dall'altro limitando i riferimenti tra gli oggetti nella scena e gli oggetti della nostra UI.
 
-## Sistema di eventi di trasmissione
-Vedremo come funziona un sistema di eventi di trasmissione come mostrato in questo diagramma.
+## Sistema di [[Eventi|eventi]] di trasmissione
+Vedremo come funziona un sistema di [[Eventi|eventi]] di trasmissione come mostrato in questo diagramma.
 
 ![](img/sezione16/broadcast1.png)
 
-- **ListenObject:** gli oggetti possono registrarsi per ascoltare eventi specifici, assegnando una funzione come callback;
+- **ListenObject:** gli oggetti possono registrarsi per ascoltare [[Eventi|eventi]] specifici, assegnando una funzione come callback;
 - **Messenger:** è un modulo centrale che instrada i messaggi tra emittenti e ascoltatori;
-- **BroadcastObj:** un altro oggetto può dire al Messenger di trasmettere eventi specifici. Messenger indirizzerà il messaggio a tutto ciò che è in ascolto per quell'evento.
+- **BroadcastObj:** un altro oggetto può dire al Messenger di trasmettere [[Eventi|eventi]] specifici. Messenger indirizzerà il messaggio a tutto ciò che è in ascolto per quell'evento.
 
-Per avvisare l'interfaccia utente delle azioni nella scena (o viceversa), utilizzeremo un sistema di messaggistica broadcast.
+Per avvisare l'[[Interfaccia utente|interfaccia utente]] delle azioni nella scena (o viceversa), utilizzeremo un sistema di messaggistica broadcast.
 
-Il diagramma illustra come funziona questo sistema di messaggistica degli eventi: gli script possono registrarsi per ascoltare un evento, un altro codice può trasmettere un evento e gli ascoltatori verranno avvisati dei messaggi trasmessi.
+Il diagramma illustra come funziona questo sistema di messaggistica degli [[Eventi|eventi]]: gli script possono registrarsi per ascoltare un evento, un altro codice può trasmettere un evento e gli ascoltatori verranno avvisati dei messaggi trasmessi.
 
-## Integrazione di un sistema di eventi
+## Integrazione di un sistema di [[Eventi|eventi]]
 Vogliamo un sistema di trasmissione di messaggistica, in cui le trasmissioni possono provenire da qualsiasi luogo. Unity non ha un sistema di trasmissione di messaggistica integrato.
 
-Un sistema di messaggistica è ottimo per fornire un modo disaccoppiato di comunicare gli eventi al resto del programma. Quando un codice trasmette un messaggio, quel codice non ha bisogno di sapere nulla sugli ascoltatori, consentendo una grande flessibilità nell'aggiunta di oggetti.
+Un sistema di messaggistica è ottimo per fornire un modo disaccoppiato di comunicare gli [[Eventi|eventi]] al resto del programma. Quando un codice trasmette un messaggio, quel codice non ha bisogno di sapere nulla sugli ascoltatori, consentendo una grande flessibilità nell'aggiunta di oggetti.
 
 ## Script *GameEvent*
 Devi anche creare uno script chiamato *GameEvent*. Lo script definisce una costante per un paio di messaggi di evento; i messaggi sono più organizzati in questo modo e non devi ricordare e digitare la stringa del messaggio dappertutto. Il codice dovrebbe essere il seguente:
@@ -47,7 +51,7 @@ public static class GameEvent {
 ```
 
 ## Trasmettere dalla scena
-Ora il sistema di messaggistica degli eventi è pronto per l'uso, quindi iniziamo a usarlo. Per prima cosa comunicheremo **dalla scena all'HUD**, quindi andremo nell'altra direzione.
+Ora il sistema di messaggistica degli [[Eventi|eventi]] è pronto per l'uso, quindi iniziamo a usarlo. Per prima cosa comunicheremo **dalla scena all'HUD**, quindi andremo nell'altra direzione.
 
 Finora il display del punteggio ha visualizzato un timer come test della funzionalità di visualizzazione del testo. Ma vogliamo visualizzare un conteggio dei nemici colpiti, quindi modifichiamo il codice in *UIController*: per prima cosa **elimina l'intero contenuto di *Update()***, perché quello era il codice di test; quando un nemico muore, emetterà un evento, quindi *UIController* ascolterà quell'evento.
 
@@ -104,7 +108,7 @@ Ma vogliamo anche un esempio che vada nella direzione opposta.
 ## Trasmissione dall'HUD
 Nelle diapositive precedenti, un evento è stato trasmesso dalla scena e ricevuto dall'HUD.
 
-In modo simile, i controlli dell'interfaccia utente possono trasmettere un messaggio ascoltato sia dai giocatori che dai nemici. In questo modo, il pop-up delle impostazioni può influenzare le impostazioni del gioco.
+In modo simile, i controlli dell'[[Interfaccia utente|interfaccia utente]] possono trasmettere un messaggio ascoltato sia dai giocatori che dai nemici. In questo modo, il pop-up delle impostazioni può influenzare le impostazioni del gioco.
 
 Apri *WanderingAI.cs* e aggiungi il codice mostrato qui:
 ```csharp
@@ -188,7 +192,7 @@ private void UpdateNewEnemiesSpeed(float value) {
 ```
 
 ## Utilizzare il campo di immissione
-Nel nostro pop-up delle impostazioni abbiamo il campo di input per definire il nome del giocatore. Per fare ciò dobbiamo inserire nella nostra tela un altro oggetto Text UI chiamato "PlayerName" a cui andremo a seleziona un colore bianco, aggiungere l'addetto alle dimensioni del contenuto del componente, aggiungere un'ombra componente e posizionare l'interfaccia utente di testo davanti alla health bar.
+Nel nostro pop-up delle impostazioni abbiamo il campo di input per definire il nome del giocatore. Per fare ciò dobbiamo inserire nella nostra tela un altro oggetto Text UI chiamato "PlayerName" a cui andremo a seleziona un colore bianco, aggiungere l'addetto alle dimensioni del contenuto del componente, aggiungere un'ombra componente e posizionare l'[[Interfaccia utente|interfaccia utente]] di testo davanti alla health bar.
 
 Quindi definiamo come aggiornare il nome del giocatore nel nostro script *SettingsPopup*.
 

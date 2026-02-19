@@ -1,8 +1,12 @@
+---
+aliases: [PH]
+tags: [web-computing]
+---
 L'**HTTP** (HyperText Transfer Protocol) è un protocollo di livello applicativo fondamentale per il Web. È utilizzato per trasferire risorse (documenti, immagini, video) tra un **Client** (es. Browser) e un **Server**.
 
 > [!INFO] Concetti Chiave
 > - **Richiesta/Risposta (Request/Response):** Il client invia una richiesta, il server risponde.
-> - **Risorsa:** Qualsiasi oggetto identificabile sul web (pagina HTML, immagine, servizio API).
+> - **Risorsa:** Qualsiasi oggetto identificabile sul web (pagina [[HTML]], immagine, servizio API).
 > - **URI (Uniform Resource Identifier):** Stringa univoca che identifica una risorsa.
 > - **Stateless:** Il server non "ricorda" le richieste precedenti dello stesso client.
 ## URI: Identificare le Risorse
@@ -20,7 +24,7 @@ Esempio pratico: `http://www.example.com:8080/blog/articolo?id=123&lang=it`
 | **Protocollo** | `http` | Lo schema di accesso (altri: `https`, `ftp`, `mailto`). |
 | **Host** | `www.example.com` | Indirizzo del server (nome dominio o IP). |
 | **Porta** | `:8080` | Porta di ascolto (default HTTP: 80, HTTPS: 443). |
-| **Percorso (Path)** | `/blog/articolo` | Posizione della risorsa nel file system del server. |
+| **Percorso (Path)** | `/blog/articolo` | Posizione della risorsa nel [[File System|file system]] del server. |
 | **Query String** | `?id=123&lang=it` | Parametri passati alla risorsa (coppie `chiave=valore`). |
 ## Il Messaggio HTTP
 Sia le richieste che le risposte seguono lo stesso formato testuale standard.
@@ -35,7 +39,7 @@ MESSAGE-BODY (opzionale)
 1.  **Start-Line:** Definisce il tipo di messaggio (Richiesta o Risposta).
 2.  **Headers:** Metadati (es. tipo di contenuto, lingua, cookie).
 3.  **Riga Vuota:** Separa gli header dal corpo.
-4.  **Message-Body:** Il contenuto vero e proprio (es. HTML della pagina o dati di un form).
+4.  **Message-Body:** Il contenuto vero e proprio (es. [[HTML]] della pagina o dati di un form).
 ## Metodi di Richiesta (Request Methods)
 La "Start-Line" di una richiesta contiene: `METODO + PERCORSO + VERSIONE HTTP`.
 ### GET (Recupero)
@@ -81,7 +85,7 @@ Piccoli file di testo inviati dal server e salvati dal browser.
 1.  Il server invia l'header: `Set-Cookie: session_id=xyz123; Path=/; HttpOnly`
 2.  Il browser lo salva.
 3.  Alle successive richieste, il browser lo rimanda automaticamente: `Cookie: session_id=xyz123`
-### Sicurezza e Autenticazione
+### [[Sicurezza]] e Autenticazione
 *   **HTTP Basic Auth:** Invia username e password codificati in Base64 nell'header (poco sicuro se non su HTTPS).
     `Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=`
 *   **HTTPS:** Fondamentale per cifrare la comunicazione, altrimenti header, cookie e dati POST viaggiano in chiaro.

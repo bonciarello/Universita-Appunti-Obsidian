@@ -1,3 +1,7 @@
+---
+aliases: [ACPE]
+tags: [aws-clf-002-cloud-practitioner-essentials]
+---
 ## Programma del corso
 Il programma della certificazione copre i fondamenti del cloud AWS.
 
@@ -5,7 +9,7 @@ Il programma della certificazione copre i fondamenti del cloud AWS.
 Gli **obiettivi** della certificazione sono:
 - Comprendere i concetti base del cloud AWS.
 - Conoscere i servizi principali di AWS.
-- Comprendere la sicurezza e la conformità in AWS.
+- Comprendere la [[Sicurezza|sicurezza]] e la conformità in AWS.
 - Comprendere i modelli di pricing e supporto.
 
 ## Indice

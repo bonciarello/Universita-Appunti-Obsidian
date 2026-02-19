@@ -1,3 +1,7 @@
+---
+aliases: [APFDR, Alcuni principi fondamentali documenti ricerca]
+tags: [agile-research-and-development-methodologies]
+---
 La ricerca è un'attività umana altamente non banale e c'è molto da dire su di essa. Ma in genere si dice poco. Quasi tutte le attività umane hanno uno scopo e la comprensione dello scopo è fondamentale per discutere su come condurre quell'attività.
 
 Esiston alcuni punti fondamentali per scrivere un documento di ricerca (paper):

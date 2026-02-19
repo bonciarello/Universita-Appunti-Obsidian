@@ -1,3 +1,7 @@
+---
+aliases: [Strategie competitive innovative, SCI]
+tags: [business-game]
+---
 ## 1. Strategia Competitiva
 Piano d'azione per raggiungere la missione. L'obiettivo è una prestazione **sostenibile** (nel tempo) e **competitiva** (livello dei rivali).
 

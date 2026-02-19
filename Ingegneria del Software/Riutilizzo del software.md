@@ -1,3 +1,7 @@
+---
+aliases: [RS, Riutilizzo software]
+tags: [ingegneria-del-software]
+---
 I sistemi sono spesso progettati componendo componenti esistenti che sono stati utilizzati in altri sistemi.
 
 Il riutilizzo sistematico del software può ottenere un software migliore, più rapidamente e a costi inferiori.
@@ -21,19 +25,19 @@ Il riutilizzo è possibile a vari livelli, da semplici funzioni a sistemi applic
 - **Framework applicativi:** raccolte di classi astratte e concrete che possono essere adattate ed estese per creare sistemi applicativi;
 - **Wrapping del sistema legacy:** sistemi legacy che possono essere "avvolti" definendo un insieme di interfacce e fornendo accesso a questi sistemi legacy attraverso queste interfacce;
 - **Sistemi orientati ai servizi:** i sistemi sono sviluppati collegando servizi condivisi che possono essere forniti esternamente;
-- **Linee di prodotti applicativi:** un tipo di applicazione è generalizzato attorno a un'architettura comune in modo che possa essere adattato in modi diversi per i diversi clienti;
+- **Linee di prodotti applicativi:** un tipo di applicazione è generalizzato attorno a un'[[Architettura|architettura]] comune in modo che possa essere adattato in modi diversi per i diversi clienti;
 - **Integrazione COTS:** i sistemi vengono sviluppati integrando sistemi applicativi esistenti;
 - **Applicazioni verticali configurabili:** un sistema generico è progettato in modo da poter essere configurato in base alle esigenze dei clienti del sistema specifico;
 - **Librerie di programmi:** sono disponibili per il riutilizzo librerie di classi e funzioni che implementano le astrazioni di uso comune;
 - **Generatori di programmi:** un sistema generatore incorpora la conoscenza di un particolare tipo di applicazione e può generare sistemi o frammenti di sistema in quel dominio;
-- **Sviluppo software orientato all'aspetto:** i componenti condivisi vengono intrecciati in un'applicazione in punti diversi quando il programma viene compilato.
+- **[[Sviluppo software]] orientato all'aspetto:** i componenti condivisi vengono intrecciati in un'applicazione in punti diversi quando il programma viene compilato.
 
 ## Design pattern
 
 **Un modello di progettazione è un modo per riutilizzare la conoscenza astratta di un problema e della sua soluzione.**
 Un modello è una descrizione del problema e l'essenza della sua soluzione.
 Dovrebbe essere sufficientemente astratto da essere riutilizzato in contesti diversi.
-I modelli si basano spesso su caratteristiche dell'oggetto come l'ereditarietà e il polimorfismo.
+I modelli si basano spesso su caratteristiche dell'oggetto come l'ereditarietà e il [[Polimorfismo|polimorfismo]].
 
 ## Riutilizzo dei prodotti COTS
 

@@ -1,4 +1,8 @@
-La maggior parte degli attacchi **MITM** appartiene ad aggressori che condividono il tuo stesso dominio di collisione, cioè, si trovano nella stessa rete locale. Ovviamente, questo non significa che i MITM non possano appartenere ad un aggressore al di fuori della rete locale. I MITM sono collegati a problemi di sicurezza nel livello 2. In particolare, il protocollo **ARP** ha il ruolo principale negli attacchi MITM, perché può consentire attacchi che violano la riservatezza e la disponibilità.
+---
+aliases: [AL, Attacchi Livello 2]
+tags: [network-security]
+---
+La maggior parte degli attacchi **MITM** appartiene ad aggressori che condividono il tuo stesso dominio di collisione, cioè, si trovano nella stessa rete locale. Ovviamente, questo non significa che i MITM non possano appartenere ad un aggressore al di fuori della rete locale. I MITM sono collegati a problemi di [[Sicurezza|sicurezza]] nel livello 2. In particolare, il protocollo **ARP** ha il ruolo principale negli attacchi MITM, perché può consentire attacchi che violano la riservatezza e la disponibilità.
 
 Alcuni dei problemi comuni associati al livello 2:
 *   ARP Poisoning;
@@ -54,7 +58,7 @@ Le possibili contromisure sono:
 *   Si usa il protocollo **DNSSEC** che garantisce l’affidabilità e l’integrità delle risposte DNS tramite meccanismi di firma digitale.
 
 ## DNS Rebinding
-Il **DNS Rebinding** è un tipo di attacco che sfrutta le vulnerabilità nelle politiche di sicurezza dei browser web per aggirare le restrizioni di sicurezza associate al modello Same-Origin Policy (SOP). L’obiettivo principale del DNS Rebinding è quello di accedere a risorse o informazioni all’interno di una rete locale a cui altrimenti non avrebbe accesso. Il funzionamento del DNS Rebinding si basa sull’uso di un dominio che inizialmente punta a un indirizzo IP controllato dall’attaccante, ma successivamente cambia per puntare a un indirizzo IP all’interno della rete locale della vittima. Ciò viene realizzato mediante la manipolazione dei record DNS o l’utilizzo di timeout brevi per le risoluzioni DNS.
+Il **DNS Rebinding** è un tipo di attacco che sfrutta le vulnerabilità nelle politiche di [[Sicurezza|sicurezza]] dei browser web per aggirare le restrizioni di [[Sicurezza|sicurezza]] associate al modello Same-Origin Policy (SOP). L’obiettivo principale del DNS Rebinding è quello di accedere a risorse o informazioni all’interno di una rete locale a cui altrimenti non avrebbe accesso. Il funzionamento del DNS Rebinding si basa sull’uso di un dominio che inizialmente punta a un indirizzo IP controllato dall’attaccante, ma successivamente cambia per puntare a un indirizzo IP all’interno della rete locale della vittima. Ciò viene realizzato mediante la manipolazione dei record DNS o l’utilizzo di timeout brevi per le risoluzioni DNS.
 
 Le possibili contromisure sono:
 *   Configurazione corretta del firewall e del router;

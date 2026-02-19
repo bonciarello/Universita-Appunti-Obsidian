@@ -1,3 +1,7 @@
+---
+aliases: [EDB, Esercizio dataset banca]
+tags: [machine-learning]
+---
 Il nostro dataset della banca è un semplice file con estensione *csv* (*bank.csv*).
 Le **istruzioni più importanti (in Python)** sono le seguenti:
 - caricare le librerie e il nostro dataset: 

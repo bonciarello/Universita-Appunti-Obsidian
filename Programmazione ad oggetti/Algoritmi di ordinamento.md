@@ -1,3 +1,7 @@
+---
+aliases: [AO, Algoritmi ordinamento]
+tags: [programmazione-ad-oggetti]
+---
 Vengono presentati tre algoritmi fondamentali per ordinare un array.
 ### Bubble Sort
 Scorre l'array confrontando ogni elemento con il successivo. Se non sono in ordine, li scambia. Ripete il processo finché non ci sono più scambi da effettuare .

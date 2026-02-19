@@ -1,3 +1,7 @@
+---
+aliases: [Ricerca uniforme binaria, RUB]
+tags: [algoritmi-e-strutture-dati]
+---
 ## Differenze tra gli algoritmi
 
 La *ricerca lineare* ha complessità:

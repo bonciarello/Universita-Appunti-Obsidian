@@ -1,3 +1,7 @@
+---
+aliases: [ASD, Architetture sistemi distribuiti]
+tags: [ingegneria-del-software]
+---
 Sarebbe avere la capacità di dividere i compiti in una maniera furba. Ci sono diversi tipi di applicazioni distribuite:
 
 - sistemi personali non distribuiti e progettati per essere eseguiti su un personal computer o una workstation;
@@ -12,11 +16,11 @@ L'elaborazione delle informazioni è distribuita su più computer anziché confi
 
 In sintesi, sempre più si sta abbandonando un sistema centralizzato, questo perché il volume dei dati sta crescendo ad un livello tale che conviene un lavoro cooperativo, distribuito.
 
-L'ingegneria del software distribuito è quindi molto importante per i sistemi informatici aziendali.
+L'[[Ingegneria del Software|ingegneria del software]] distribuito è quindi molto importante per i sistemi informatici aziendali.
 
 Le prime osservazioni che facciamo su un sistema distribuito è quello che *condivide hardware e software*, sono *sistemi aperti* (hardware prodotti da diversi fornitori), *gestisce problemi di concorrenza*, *scalabilità* (avere la capacità di ingrandire le caratteristiche del sistema per affrontare grandi quantità crescenti) e *tolleranza al guasto*.
 
-Abbiamo una serie di svantaggi: se io devo andare a distribuire l'applicazione, avremo *problemi di complessità* (nel programmare applicazione compatibili per più dispositivi), *problemi di sicurezza* (dovremmo creare una protezione per ogni sistema), *difficili da gestire* e potremmo avere **problemi imprevedibili**.
+Abbiamo una serie di svantaggi: se io devo andare a distribuire l'applicazione, avremo *problemi di complessità* (nel programmare applicazione compatibili per più dispositivi), *problemi di [[Sicurezza|sicurezza]]* (dovremmo creare una protezione per ogni sistema), *difficili da gestire* e potremmo avere **problemi imprevedibili**.
 
 Se noi guardiamo al mondo prima del cloud, c'erano due modi per creare un infrastruttura:
 
@@ -39,13 +43,13 @@ I client conoscono i server, ma i server non devono necessariamente conoscere i 
 
 Client e server sono processi logici e la mappatura dei processori ai processi non è necessariamente 1:1.
 
-## Architettura dell'applicazione a più livelli
+## [[Architettura]] dell'applicazione a più livelli
 
 Anche nell'ambito delle architetture distribuite, possiamo suddividerle in strati:
 
 - **strato della presentazione:** *riguarda la presentazione dei risultati* di un calcolo agli utenti del sistema e la raccolta degli input degli utenti;
 - **strato applicativo (web-server):** preoccupato di fornire funzionalità specifiche della applicazione, ad esempio in un sistema bancario, funzioni bancarie come apertura conto, chiusura conto, ecc.;
-- **strato della gestione dati (database):** si occupa della gestione dei database di sistema.
+- **strato della gestione dati ([[Database|database]]):** si occupa della gestione dei [[Database|database]] di sistema.
 
 *Strato applicativo* serve per comunicare con gli altri due strati.
 
@@ -72,11 +76,11 @@ Più complesso di un modello thin client soprattutto per la gestione. Le nuove v
 
 ## Architetture a tre livelli
 
-In un'architettura a tre livelli, ciascuno dei livelli dell'architettura della applicazione può essere eseguito su un processore separato.
+In un'[[Architettura|architettura]] a tre livelli, ciascuno dei livelli dell'[[Architettura|architettura]] della applicazione può essere eseguito su un processore separato.
 
 Consente prestazioni migliori rispetto a un approccio thin client ed è più semplice da gestire rispetto a un approccio fat client.
 
-Un'architettura più scalabile: all'aumentare delle richieste, è possibile aggiungere server aggiuntivi.
+Un'[[Architettura|architettura]] più scalabile: all'aumentare delle richieste, è possibile aggiungere server aggiuntivi.
 
 ## Architetture a oggetti distribuiti
 
@@ -93,7 +97,7 @@ In sintesi, oggetti diversi in macchine diverse comunicano tra di loro tramite u
 I vantaggi sono:
 
 - consente al progettista del sistema di ritardare le decisioni su dove e come fornire i servizi;
-- è un'architettura di sistema molto aperta che consente di aggiungere nuove risorse secondo necessità;
+- è un'[[Architettura|architettura]] di sistema molto aperta che consente di aggiungere nuove risorse secondo necessità;
 - il sistema è flessibile e scalabile;
 - è possibile riconfigurare il sistema in modo dinamico con gli oggetti che migrano attraverso la rete secondo necessità.
 
@@ -114,12 +118,12 @@ L'intero sistema è progettato per sfruttare la potenza di calcolo e l'archiviaz
 
 La maggior parte dei sistemi p2p sono stati sistemi personali, ma c'è un crescente utilizzo aziendale di questa tecnologia.
 
-Abbiamo due tipi di architettura peer-to-peer:
+Abbiamo due tipi di [[Architettura|architettura]] peer-to-peer:
 
-- architettura p2p decentralizzata: 
+- [[Architettura|architettura]] p2p decentralizzata: 
   ![[decentralizzato.png]]
 
-- architettura p2p semi-centralizzata: 
+- [[Architettura|architettura]] p2p semi-centralizzata: 
   ![[semicentralizzato.png]]
 
 ## Architetture orientate ai servizi

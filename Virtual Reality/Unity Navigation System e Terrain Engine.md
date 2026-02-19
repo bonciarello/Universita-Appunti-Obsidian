@@ -1,3 +1,7 @@
+---
+aliases: [Unity Navigation System Terrain Engine, UNSTE]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo all'introduzione del sistema di navigazione Unity e alla presentazione di *Terrain Engine*.
 
 ## Introduzione
@@ -125,7 +129,7 @@ I **Off-Mesh Link** vengono utilizzati per creare percorsi che si incrociano all
 Se il percorso attraverso il collegamento fuori rete è più breve rispetto al percorso a piedi lungo il *Navmesh*, verrà utilizzato il collegamento fuori rete.
 Il processo di cottura di *NavMesh* è in grado di rilevare e creare automaticamente collegamenti a scorrimento e a discesa comuni, come spiegato nella diapositiva successiva.
 
-Alcuni casi d'uso per i collegamenti fuori rete possono essere rilevati automaticamente. I due più comuni sono: *Drop-Down* e *Jump-Across*. Questo viene fatto selezionando l'opzione *Generate Off-Mesh Links* nella finestra di navigazione nella scheda *Objects*.
+Alcuni [[Casi d'uso|casi d'uso]] per i collegamenti fuori rete possono essere rilevati automaticamente. I due più comuni sono: *Drop-Down* e *Jump-Across*. Questo viene fatto selezionando l'opzione *Generate Off-Mesh Links* nella finestra di navigazione nella scheda *Objects*.
 
 La proprietà della mesh di altezza ti consente di posizionare il tuo personaggio in modo più accurato sulle superfici calpestabili. Durante la navigazione, l'*NavMesh Agent* è vincolato alla superficie di *NavMesh*: se il gioco richiede un posizionamento accurato dell'agente, è necessario abilitare la costruzione della maglia di altezza quando si esegue la cottura di *NavMesh*. L'impostazione può essere trovata nelle *Advanced settings* nella finestra di navigazione. Nota che la costruzione di *Height Mesh* richiederà un po' più di tempo per cuocere *NavMesh*.
 

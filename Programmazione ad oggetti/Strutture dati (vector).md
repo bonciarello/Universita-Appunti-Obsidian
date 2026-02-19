@@ -1,3 +1,7 @@
+---
+aliases: [vector, Strutture dati]
+tags: [programmazione-ad-oggetti]
+---
 Il documento analizza la struttura dati `Vector`, che rappresenta un array dinamico ridimensionabile.
 ### Implementazione Interna
 Un Vector si basa su 3 elementi:

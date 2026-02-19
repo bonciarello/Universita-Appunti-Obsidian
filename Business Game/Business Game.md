@@ -1,10 +1,14 @@
+---
+aliases: [BG]
+tags: [business-game]
+---
 ## Programma del corso
 Il corso di Business Game simula la creazione e gestione di una start-up, coprendo tutti gli aspetti fondamentali dall'ideazione alla valutazione finanziaria.
 
 - **Imprenditorialità e Strategia:**
 	- Visione, Missione e Business Model (Lean Canvas);
 	- Analisi competitiva e strategie di innovazione;
-	- Piano marketing e organizzativo.
+	- [[Piano marketing e organizzativo]].
 - **Finanza e Pianificazione:**
 	- Financial Statements (Bilancio, Conto Economico, Cash Flow);
 	- Pianificazione finanziaria e Break-even analysis;

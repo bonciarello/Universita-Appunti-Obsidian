@@ -1,7 +1,11 @@
+---
+aliases: [Rete]
+tags: [network-security]
+---
 ## 1. Introduzione
-Le reti Wi-Fi sono regolate dallo standard **802.11** che definisce principalmente le tecnologie Wi-Fi. In ogni rete Wi-Fi ci sono alcune stazioni, abbreviate con **STA**, ognuna di queste ha un indirizzo MAC e una **NIC (Network Interface Controller)**. Ogni STA può anche sintonizzarsi su un canale o saltare da un canale all'altro; in quest'ultimo caso, quando la NIC "salta" da un canale all'altro, possiamo parlare di **channel hopping**.
+Le [[Reti|reti]] Wi-Fi sono regolate dallo standard **802.11** che definisce principalmente le tecnologie Wi-Fi. In ogni rete Wi-Fi ci sono alcune stazioni, abbreviate con **STA**, ognuna di queste ha un indirizzo MAC e una **NIC (Network Interface Controller)**. Ogni STA può anche sintonizzarsi su un canale o saltare da un canale all'altro; in quest'ultimo caso, quando la NIC "salta" da un canale all'altro, possiamo parlare di **channel hopping**.
 
-Le reti wireless funzionano utilizzando la tecnologia **Radio Frequency (RF)**, una frequenza associata alla propagazione delle onde radio all'interno dello spettro elettromagnetico. Un campo elettromagnetico viene generato quando una corrente RF viene fornita a un'antenna che può quindi diffondersi nello spazio.
+Le [[Reti|reti]] wireless funzionano utilizzando la tecnologia **Radio Frequency (RF)**, una frequenza associata alla propagazione delle onde radio all'interno dello spettro elettromagnetico. Un campo elettromagnetico viene generato quando una corrente RF viene fornita a un'antenna che può quindi diffondersi nello spazio.
 
 Un sistema riconosciuto come **access point (AP)** è il cuore di una rete wireless. Il ruolo principale di un AP è trasmettere un segnale wireless rilevato e sintonizzato dai computer. Anche la RF è governata dallo standard 802.11 che utilizza lo spettro 2.4-2.5 GHz. Ogni spettro è suddiviso in canali con frequenza centrale e larghezza di banda.
 
@@ -21,7 +25,7 @@ Ogni NIC in una STA può essere impostata in due diverse modalità per ricevere 
 *   **Modalità managed:** configurazione standard, vengono bufferizzati solo i frame il cui BSSID corrisponde a quello a cui è associato lo STA. Essenzialmente i frame che non superano il cosiddetto BSSID Filter vengono scartati.
 
 ## 4. Discovery e Fingerprinting
-La lista delle reti WiFi che il nostro computer riesce a identificare viene stilata in diversi modi:
+La lista delle [[Reti|reti]] WiFi che il nostro computer riesce a identificare viene stilata in diversi modi:
 *   **Beacon Frames:** l’access point notifica in broadcast la sua presenza;
 *   **Probe Frames:** sono delle richieste esplicite che il client fa nei confronti dell’access point. Tramite esse è possibile contattare access point nascosti;
 

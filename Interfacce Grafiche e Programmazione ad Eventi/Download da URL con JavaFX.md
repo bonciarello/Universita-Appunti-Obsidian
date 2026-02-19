@@ -1,3 +1,7 @@
+---
+aliases: [Download URL JavaFX, DUJ]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src/main/java* andremo ad elencare i *package* di seguito, mentre nella cartella *src/main/resources* si trova il file css *style.css*. Tutto il programma gira sul view *MainWindow.fxml* presente in *src/main/java/application/view*. Il file *style.css* è il seguente:
 
 ```css

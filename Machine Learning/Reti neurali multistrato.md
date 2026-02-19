@@ -1,3 +1,7 @@
+---
+aliases: [Rete neurale, Rete, Neural Networks, NN]
+tags: [machine-learning]
+---
 ## Struttura del 2-layer NN
 Le caratteristiche del **2-layer NN** sono:
 - l'indice di conteggio inizia dal primo layer nascosto fino al layer di output;
@@ -43,7 +47,7 @@ Quando viene fornito un esempio di addestramento $d = <x_1, ..., x_n>$, viene pr
 
 ## Addestrare una rete neurale
 
-Addestrare un NN significa assegnare pesi e distorsioni a tutti gli archi e nodi, rispettivamente, in modo tale da calcolare la funzione target, con un certo grado di approssimazione. Ogni assegnazione di pesi e distorsioni rappresenta un'**ipotesi**. Lo spazio delle ipotesi è l'insieme di tutte le possibili ipotesi. Lo spazio delle ipotesi è **continuo**, a differenza dello spazio delle ipotesi degli alberi decisionali, dei classificatori basati su regole, ecc.
+Addestrare un NN significa assegnare pesi e distorsioni a tutti gli archi e nodi, rispettivamente, in modo tale da calcolare la funzione target, con un certo grado di approssimazione. Ogni assegnazione di pesi e distorsioni rappresenta un'**ipotesi**. Lo spazio delle ipotesi è l'insieme di tutte le possibili ipotesi. Lo spazio delle ipotesi è **continuo**, a differenza dello spazio delle ipotesi degli [[Alberi decisionali|alberi decisionali]], dei [[Classificatori basati su regole|classificatori basati su regole]], ecc.
 
 ## Esempio di NN per classificare le cifre scritte a mano
 

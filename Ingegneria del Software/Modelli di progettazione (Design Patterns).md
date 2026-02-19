@@ -1,3 +1,7 @@
+---
+aliases: [Design Patterns, Modelli di progettazione]
+tags: [ingegneria-del-software]
+---
 I **Design Patterns (DP)** sono esperienze registrate nella progettazione di software orientato agli oggetti.
 
 Ogni **DP nomina, spiega e valuta sistematicamente un progetto importante e ricorrente** nei sistemi orientati agli oggetti.

@@ -1,3 +1,7 @@
+---
+aliases: [Grafo]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Sono quegli elementi che possono essere aggiunti ai container per mostrare delle informazioni agli utenti. Ad esempio, pulsanti, aree di testo, etichette, ecc.
 
 ## Main.resources

@@ -1,5 +1,9 @@
+---
+aliases: [GAJA, GitHub Actions JFrog Artifactory]
+tags: [agile-research-and-development-methodologies]
+---
 ## GitHub Actions
-**GitHub Actions** è una funzionalità di GitHub che consente di eseguire flussi di lavoro definiti dall'utente la cui esecuzione è attivata da eventi relativi a *git*.  Ciò consente facilmente di definire una fase di *commit*, ma è abbastanza ricco di funzionalità da implementare un'intera pipeline di CD.
+**GitHub Actions** è una funzionalità di GitHub che consente di eseguire flussi di lavoro definiti dall'utente la cui esecuzione è attivata da [[Eventi|eventi]] relativi a *git*.  Ciò consente facilmente di definire una fase di *commit*, ma è abbastanza ricco di funzionalità da implementare un'intera pipeline di CD.
 
 Alternative a GA sono Travis CI, Circle CI, Gitlab CI/CD, Buddy C, AWS CodePipeline, Azure Pipeline, Atlassian Bamboo e tanti altri.
 
@@ -9,7 +13,7 @@ I componenti principali di GA sono **workflows**, **jobs** e **steps**.
 Un *workflow* è una sequenza di lavori che vengono eseguiti sui corridori. I *jobs* sono composti da *steps*, che sono comandi della shell o funzionalità di terze parti note come *action*.
 
 ### Workflows
-I **flussi di lavoro (workflow)** vengono attivati da eventi correlati a git. I flussi di lavoro sono definiti da file YAML (simili a JSON) in una directory *.github/workflows* all'interno di un repository di GitHub. Sono “contenitori” per una sequenza di *lavori (jobs)*. Un esempio di workflow è il seguente:
+I **flussi di lavoro (workflow)** vengono attivati da [[Eventi|eventi]] correlati a git. I flussi di lavoro sono definiti da file YAML (simili a JSON) in una directory *.github/workflows* all'interno di un repository di GitHub. Sono “contenitori” per una sequenza di *lavori (jobs)*. Un esempio di workflow è il seguente:
 ```yaml
 name: workflow_name
 on:
@@ -43,7 +47,7 @@ I **jobs** sono sequenze di passaggi che vengono eseguiti in ordine. I jobs poss
 Il livello gratuito fornisce 3000 minuti di tempo di esecuzione del flusso di lavoro (imbrogliano un po' con l'arrotondamento). **Sei responsabile del tuo utilizzo (anche per qualsiasi strumento CI/CD che usi).** Se inizi a esaurire i limiti, destreggiati tra i repository all'interno del tuo team, fai attenzione a preservare l'intera cronologia di commit se lo fai (cambia upstream e invia a un nuovo repository). **Non creare un nuovo repository con un primo commit che è il “progetto già finito”.**
 
 ## JFrog Artifactory
-**JFrog Artifactory** è un *repository di artefatti di livello industriale*, che ti consente di archiviare pacchetti Maven, pacchetti Python, file zip e molti altri. Funzionalità di livello industriale significa anche complessità e curva di apprendimento di livello industriale: puoi fare di più rispetto agli artefatti di GitHub, è più simile al repository di artefatti del libro di testo ma è più complesso.
+**JFrog Artifactory** è un *repository di artefatti di livello industriale*, che ti consente di archiviare pacchetti [[Maven]], pacchetti Python, file zip e molti altri. Funzionalità di livello industriale significa anche complessità e curva di apprendimento di livello industriale: puoi fare di più rispetto agli artefatti di GitHub, è più simile al repository di artefatti del libro di testo ma è più complesso.
 
 La piattaforma di JFrog offre anche una funzionalità *Pipelines* simile a GitHub Actions: flussi di lavoro definiti da file YAML, si integra con i repository *git* e così via.
 

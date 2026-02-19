@@ -1,36 +1,40 @@
+---
+aliases: [ASD]
+tags: [algoritmi-e-strutture-dati]
+---
 ## Programma del corso
 Il corso fornisce una introduzione agli algoritmi e alle strutture dati fondamentali dell'informatica. Il programma si divide in quattro aree principali:
 
 - **Fondamenti e complessità computazionale:** concetti base per l'analisi degli algoritmi, includendo:
-	- introduzione alla complessità;
-	- calcolo della complessità;
+	- [[Introduzione alla complessità|introduzione alla complessità]];
+	- [[Calcolo della complessità|calcolo della complessità]];
 	- notazioni asintotiche (O, Ω, Θ);
 	- ripasso su ricorsione e funzioni booleane.
 
 - **Algoritmi di ricerca e ordinamento:** tecniche fondamentali per organizzare e trovare dati:
-	- ricerca uniforme e binaria;
-	- algoritmi di ordinamento quadratico (bubble sort, selection sort, insertion sort);
-	- algoritmi di ordinamento efficienti basati su divide et impera.
+	- [[Ricerca uniforme e binaria|ricerca uniforme e binaria]];
+	- [[Algoritmi di ordinamento quadratico|algoritmi di ordinamento quadratico]] (bubble sort, selection sort, insertion sort);
+	- [[Algoritmi di ordinamento|algoritmi di ordinamento]] efficienti basati su [[Divide et impera|divide et impera]].
 
 - **Strutture dati:** organizzazione e rappresentazione dei dati in memoria:
-	- alberi binari e loro implementazione;
+	- [[Alberi binari|alberi binari]] e loro implementazione;
 	- visite degli alberi (in-order, pre-order, post-order);
-	- grafi e loro rappresentazione;
-	- visite su grafi (BFS, DFS).
+	- [[Grafi|grafi]] e loro rappresentazione;
+	- visite su [[Grafi|grafi]] (BFS, DFS).
 
 - **Tecniche algoritmiche avanzate:** paradigmi di progettazione di algoritmi per risolvere problemi complessi:
-	- divide et impera;
-	- programmazione dinamica;
-	- programmazione golosa (greedy);
+	- [[Divide et impera|divide et impera]];
+	- [[Programmazione dinamica|programmazione dinamica]];
+	- [[Programmazione golosa|programmazione golosa]] (greedy);
 	- backtracking;
-	- algoritmi su grafi (Dijkstra per cammini minimi).
+	- algoritmi su [[Grafi|grafi]] (Dijkstra per cammini minimi).
 
 ## Obiettivi del corso
 Gli **obiettivi** del corso sono:
 - comprendere e analizzare la complessità computazionale degli algoritmi;
 - progettare algoritmi efficienti per risolvere problemi computazionali;
-- conoscere e utilizzare le strutture dati fondamentali (alberi, grafi);
-- applicare tecniche algoritmiche avanzate (programmazione dinamica, greedy, backtracking);
+- conoscere e utilizzare le strutture dati fondamentali (alberi, [[Grafi|grafi]]);
+- applicare tecniche algoritmiche avanzate ([[Programmazione dinamica|programmazione dinamica]], greedy, backtracking);
 - implementare e testare algoritmi in modo corretto ed efficiente;
 - sviluppare capacità di problem solving algoritmico.
 

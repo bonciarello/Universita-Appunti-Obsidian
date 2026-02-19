@@ -1,3 +1,7 @@
+---
+aliases: [Porte interattive cambiamento stato GameObject, PICSG]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo alla programmazione di porte che il giocatore può aprire, all'abilitazione delle simulazioni fisiche per rompere una pila di scatole e all'aggiunta di elementi interattivi al tuo gioco.
 
 ## Come creare oggetti funzionali

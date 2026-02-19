@@ -1,18 +1,22 @@
+---
+aliases: [Grafo]
+tags: [network-security]
+---
 Una **funzione hash** $H$ accetta un blocco di dati $M$ di lunghezza variabile come input e produce un risultato di dimensione fissa $h=H(M)$, denominato **digest** o **hash value** la cui dimensione è solitamente di 128 o 256 bit.
 
 Una "buona" funzione hash ha la proprietà che i risultati dell'applicazione della funzione a un ampio insieme di input produrranno output uniformemente distribuiti e apparentemente casuali. In termini generali, l'obiettivo principale della funzione hash è l'**integrità dei dati**: una modifica a qualsiasi bit in $M$ risulta, con alta probabilità, in una modifica del digest.
 
 ## 1. Proprietà
-Il tipo di funzione hash necessaria per le applicazioni di sicurezza viene definita **funzione hash crittografica** per il quale è computazionalmente impossibile trovare:
+Il tipo di funzione hash necessaria per le applicazioni di [[Sicurezza|sicurezza]] viene definita **funzione hash crittografica** per il quale è computazionalmente impossibile trovare:
 
 *   Un oggetto che esegue il mapping a un risultato hash pre-specificato (**proprietà unidirezionale**);
 *   Due oggetti mappati allo stesso risultato hash (**proprietà delle collisioni**).
 
-A causa di queste caratteristiche, le funzioni hash vengono spesso utilizzate per determinare se i dati sono stati modificati o meno. In genere, il campo della lunghezza del messaggio è una misura di sicurezza per aumentare la difficoltà per un utente malintenzionato di produrre un messaggio alternativo con lo stesso valore hash. Per evitare forti attacchi di collisione, è importante aumentare le dimensioni del messaggio di un numero enorme.
+A causa di queste caratteristiche, le funzioni hash vengono spesso utilizzate per determinare se i dati sono stati modificati o meno. In genere, il campo della lunghezza del messaggio è una misura di [[Sicurezza|sicurezza]] per aumentare la difficoltà per un utente malintenzionato di produrre un messaggio alternativo con lo stesso valore hash. Per evitare forti attacchi di collisione, è importante aumentare le dimensioni del messaggio di un numero enorme.
 
 > **Commentato [CP3]:** La proprietà dell’unidirezionalità nelle funzioni hash significa che è facile calcolare l’hash per un dato input, ma estremamente difficile invertire il processo, ovvero risalire all’input originale a partire dall’hash.
 
-> **Commentato [CP4]:** La proprietà delle collisioni nelle funzioni hash si riferisce alla possibilità che due diversi input producano lo stesso hash. Una buona funzione hash minimizza le collisioni, rendendole rare, poiché le collisioni possono compromettere la sicurezza e l’integrità dei dati.
+> **Commentato [CP4]:** La proprietà delle collisioni nelle funzioni hash si riferisce alla possibilità che due diversi input producano lo stesso hash. Una buona funzione hash minimizza le collisioni, rendendole rare, poiché le collisioni possono compromettere la [[Sicurezza|sicurezza]] e l’integrità dei dati.
 
 ## 2. Message Authentication
 Il **message authentication** (autenticazione del messaggio) è un meccanismo o un servizio utilizzato per verificare l'integrità di un messaggio e garantisce che i dati ricevuti corrispondano esattamente a quelli inviati.
@@ -24,8 +28,8 @@ Gli step necessari per l’uso di una funzione hash per l'integrità del messagg
 
 Esistono diversi modi in cui è possibile utilizzare un codice hash per fornire l'autenticazione dei messaggi:
 
-1.  Il messaggio e il codice hash concatenato viene crittografato utilizzando la crittografia simmetrica: poiché solo A e B condividono la chiave segreta, il messaggio deve provenire da A e non è stato alterato;
-2.  Solo il digest viene crittografato, utilizzando la crittografia simmetrica;
+1.  Il messaggio e il codice hash concatenato viene crittografato utilizzando la [[Crittografia Simmetrica|crittografia simmetrica]]: poiché solo A e B condividono la chiave segreta, il messaggio deve provenire da A e non è stato alterato;
+2.  Solo il digest viene crittografato, utilizzando la [[Crittografia Simmetrica|crittografia simmetrica]];
 3.  Utilizzare una funzione hash ma nessuna crittografia per l'autenticazione dei messaggi: la tecnica presuppone che le due parti comunicanti condividano un valore segreto comune $S$ e si procede come di seguito:
     *   A calcola il valore hash sulla concatenazione di $M$ e $S$ e aggiunge il valore hash risultante a $M$;
     *   Poiché B possiede $S$, può ricalcolare il valore hash per verificare;
@@ -44,7 +48,7 @@ L’HMAC opera nel seguente modo:
 4.  Applica nuovamente la funzione di hash all’output combinato;
 5.  Il risultato finale, chiamato HMAC, viene utilizzato per autenticare e verificare l’integrità dei dati.
 
-L’HMAC garantisce che il messaggio non sia stato alterato e che provenga da una fonte autentica ed è ampiamente utilizzato in diversi protocolli e applicazioni che richiedono sicurezza dei dati.
+L’HMAC garantisce che il messaggio non sia stato alterato e che provenga da una fonte autentica ed è ampiamente utilizzato in diversi protocolli e applicazioni che richiedono [[Sicurezza|sicurezza]] dei dati.
 
 ## 4. Attacchi alle Funzioni Hash
 Come per gli algoritmi di crittografia, esistono due categorie di attacchi alle funzioni hash:

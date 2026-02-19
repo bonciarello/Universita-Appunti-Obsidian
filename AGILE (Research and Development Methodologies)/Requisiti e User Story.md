@@ -1,3 +1,7 @@
+---
+aliases: [Requisiti User Story, RUS]
+tags: [agile-research-and-development-methodologies]
+---
 ## Requisiti
 Nello sviluppo sequenziale del prodotto, i *requisiti non sono negoziabili*, dettagliati in anticipo e pensati per essere autonomi. In SCRUM, *non investire mai molto tempo e denaro per definire in anticipo i dettagli di un requisito*: i dettagli vengono negoziati attraverso conversazioni che avvengono continuamente durante lo sviluppo e sono appena sufficienti per iniziare a creare funzionalità.
 
@@ -16,7 +20,7 @@ SCRUM non ha un formato standard per PBI, spesso sostituito come ***user story* 
 
 Comprensibile sia per il team SCRUM che per gli stakeholder, è strutturalmente semplice, un ottimo segnaposto per una conversazione: è scritto a vari livelli di granularità e facilmente aggiustabili progressivamente.
 
-Non è l'unico modo per rappresentare gli elementi del product backlog: *Ron Jeffries le descrive come le tre C: **card**, **conversation** e **confirmation**.*
+Non è l'unico modo per rappresentare gli elementi del [[Product Backlog|product backlog]]: *Ron Jeffries le descrive come le tre C: **card**, **conversation** e **confirmation**.*
 
 ## *Card*, *conversation* e *confirmation*
 Il *modello tre C* è un formato modello comune composto da:
@@ -35,8 +39,8 @@ Le *user story* catturano le esigenze dei clienti e degli utenti a vari livelli 
 
 Abbiamo le etichette di convenienza:
 - **epic:** di dimensioni da pochi a molti mesi e potrebbe comprendere un'intera versione o più versioni;
-- **features:** nell'ordine delle settimane e quindi troppo grande per un solo sprint;
-- **sprintable stories:** nell'ordine dei giorni in termini di dimensioni e quindi abbastanza piccolo da adattarsi a uno sprint ed essere implementato;
+- **features:** nell'ordine delle settimane e quindi troppo grande per un solo [[Sprint|sprint]];
+- **sprintable stories:** nell'ordine dei giorni in termini di dimensioni e quindi abbastanza piccolo da adattarsi a uno [[Sprint|sprint]] ed essere implementato;
 - **theme:** una raccolta di storie correlate;
 - **tasks:** cosa costruire (in termine di ore).
 
@@ -46,7 +50,7 @@ Per la definizione di buone user stories si utilizzano alcuni criteri (*invest c
 - **negoziabili:** quindi è possibile discuterne con gli stakeholder;
 - **di valore:** devono rappresentare un beneficio;
 - **stimabili:** è possibile andare a stimarne la grandezza; 
-- **piccoli:** cioè è possibile realizzarli durante una sprint;
+- **piccoli:** cioè è possibile realizzarli durante una [[Sprint|sprint]];
 - **testabili**.
 
 ## Knowledge-Acquisition Stories e Story Mapping

@@ -1,3 +1,7 @@
+---
+aliases: [Classe]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Ereditarietà
 
 Non esistono i tipi di ereditarietà come su C++, per effettuare il processo di ereditarietà in Java si utilizza la keyword *extends* come da sintassi:
@@ -77,11 +81,11 @@ public class TestObject2 {
 }
 ```
 
-## Binding dinamico e polimorfismo
+## Binding dinamico e [[Polimorfismo|polimorfismo]]
 
 Negli esempi, **Object** è superclasse di **TestObject** e di **TestObject2**.
 Riferendosi agli oggetti di TestObject e di TestObject2 come se fossero Object, si possono utilizzare su di essi **tutti e soli** i metodi definiti in Object.
-Se i metodi sono stati ridefiniti (come nel caso di TestObject2) il binding dinamico invocherà il metodo corrispondente (**polimorfismo**).
+Se i metodi sono stati ridefiniti (come nel caso di TestObject2) il binding dinamico invocherà il metodo corrispondente (**[[Polimorfismo|polimorfismo]]**).
 
 Possiamo creare un array Object che può contenere oggetti di tutti i tipi. Per esempio:
 
@@ -343,7 +347,7 @@ public class Pair2 {
 }
 ```
 
-Le classi generiche in Java sono **costrutti sintattici** per gestire una forma di **polimorfismo dinamico**.
+Le classi generiche in Java sono **costrutti sintattici** per gestire una forma di **[[Polimorfismo|polimorfismo]] dinamico**.
 I tipi parametrici vengono gestiti tramite riferimenti a Object.
 Per questo motivo non si possono utilizzare i tipi base!
 

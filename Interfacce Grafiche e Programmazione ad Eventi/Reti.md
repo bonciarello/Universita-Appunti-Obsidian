@@ -1,3 +1,7 @@
+---
+aliases: [Reto, Rete]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Modalità di comunicazione
 
 Abbiamo due modalità di comunicazione:

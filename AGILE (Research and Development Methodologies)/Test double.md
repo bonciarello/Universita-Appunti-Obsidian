@@ -1,3 +1,7 @@
+---
+aliases: [TD]
+tags: [agile-research-and-development-methodologies]
+---
 Kent Beck fornisce una discussione sulle tecniche/suggerimenti che nell'esperienza sua e dei suoi compagni di squadra migliorano il flusso di lavoro TDD. Tra questi:
 
 - **pattern a barre rosse:** quando e dove scrivere i test e quando interromperli;
@@ -10,7 +14,7 @@ La maggior parte di essi è diventata "conoscenza implicita" tra gli sviluppator
 ## Pattern a barre rosse
 - **Test iniziale:** il primo test che scrivi dovrebbe essere qualcosa che sei sicuro di poter implementare
 - **Spiegazione test:** include discussioni/suggerimenti con i colleghi come test nella codebase;
-- **Test di regressione:** una volta trovato un bug, aggiungi un test nella tua suite che lo "copra".
+- **Test di [[Regressione|regressione]]:** una volta trovato un bug, aggiungi un test nella tua suite che lo "copra".
 
 ## Pattern a barre verdi
 - **Fake it:** va bene restituire le costanti per far passare un test all'inizio;
@@ -47,4 +51,4 @@ I principali tipi di test double secondo la classificazione comune sono i seguen
 - **Stub:** un test double che fornisce un comportamento fissato (per esempio, dotato di metodi che tornano sempre lo stesso valore, senza eseguire alcuna computazione). Viene usato per controllare l'"input indiretto" del codice sotto test;
 - **Spy:** un test double che memorizza i messaggi (chiamate di metodo) che riceve dal codice sotto test, in modo che sia possibile in seguito verificare che siano soddisfatte determinate aspettative;
 - **Mock:** una variante dello "spy" in cui il test double è responsabile anche di memorizzare esplicitamente le aspettative sul comportamento del codice sotto test, e di verificare che siano soddisfatte;
-- **Fake:** test double con un comportamento programmabile, che simula quello dell'oggetto reale (per esempio un oggetto che implementa un database in memoria invece di accedere a un database reale).
+- **Fake:** test double con un comportamento programmabile, che simula quello dell'oggetto reale (per esempio un oggetto che implementa un [[Database|database]] in memoria invece di accedere a un [[Database|database]] reale).

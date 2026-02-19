@@ -1,6 +1,10 @@
+---
+aliases: [DB, Database, DBMS]
+tags: [basi-di-dati]
+---
 ## Programma del corso
 Il programma del corso si concentra sui seguenti argomenti principali:
-- **Progettazione dei dati**: Analisi del dominio, progettazione concettuale, logica e fisica.
+- **Progettazione dei dati**: Analisi del dominio, [[Progettazione concettuale|progettazione concettuale]], logica e fisica.
 - **Linguaggi di interrogazione**: Studio dei linguaggi formali e pratici per l'interazione con le basi di dati.
 - **SQL**: Approfondimento del linguaggio SQL per la definizione, manipolazione e interrogazione dei dati.
 

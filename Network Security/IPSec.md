@@ -1,24 +1,28 @@
-Implementando la sicurezza a livello IP, un'organizzazione può garantire una rete sicura per le numerose applicazioni che ignorano la sicurezza. La sicurezza a livello IP (IPSec) comprende tre aree funzionali:
+---
+aliases: [ipsec]
+tags: [network-security]
+---
+Implementando la [[Sicurezza|sicurezza]] a livello IP, un'organizzazione può garantire una rete sicura per le numerose applicazioni che ignorano la [[Sicurezza|sicurezza]]. La [[Sicurezza|sicurezza]] a livello IP (IPSec) comprende tre aree funzionali:
 
 *   **Autenticazione:** garantisce che un pacchetto ricevuto sia stato effettivamente trasmesso dalla parte identificata come sorgente nell'intestazione del pacchetto;
 *   **Riservatezza:** consente ai nodi comunicanti di crittografare i messaggi per impedire l'intercettazione da parte di terzi;
-*   **Gestione delle chiavi:** si occupa dello scambio sicuro delle chiavi.
+*   **[[Gestione delle Chiavi|Gestione delle chiavi]]:** si occupa dello scambio sicuro delle chiavi.
 
-La caratteristica principale di IPsec che gli consente di supportare queste diverse applicazioni è che può crittografare e autenticare tutto il traffico a livello IP. Pertanto, tutte le applicazioni distribuite possono essere protette. Per garantire la sicurezza, vengono utilizzati due protocolli:
+La caratteristica principale di IPsec che gli consente di supportare queste diverse applicazioni è che può crittografare e autenticare tutto il traffico a livello IP. Pertanto, tutte le applicazioni distribuite possono essere protette. Per garantire la [[Sicurezza|sicurezza]], vengono utilizzati due protocolli:
 *   **Authentication Header (AH):** un protocollo di autenticazione designato dall'intestazione del protocollo;
 *   **Encapsulating Security Payload (ESP):** un protocollo combinato di crittografia/autenticazione designato dal formato del pacchetto per quel protocollo.
 
-Uno dei concetti fondamentali per il funzionamento di IPSec è il concetto di una politica di sicurezza applicata a ciascun pacchetto IP che transita da una sorgente a una destinazione. La politica IPsec è determinata principalmente dall'interazione di due database, il **Security Association Database (SAD)** e il **Security Policy Database (SPD)**.
+Uno dei concetti fondamentali per il funzionamento di IPSec è il concetto di una politica di [[Sicurezza|sicurezza]] applicata a ciascun pacchetto IP che transita da una sorgente a una destinazione. La politica IPsec è determinata principalmente dall'interazione di due [[Database|database]], il **Security Association [[Database]] (SAD)** e il **Security Policy [[Database]] (SPD)**.
 
 ## 1. Security Association (SA)
-Il **Security Association (SA)** è una connessione logica unidirezionale tra un mittente e un destinatario che offre servizi di sicurezza al traffico trasportato su di essa. Se è necessaria una relazione peer-to-peer per lo scambio sicuro bidirezionale, sono necessarie due SA.
+Il **Security Association (SA)** è una connessione logica unidirezionale tra un mittente e un destinatario che offre servizi di [[Sicurezza|sicurezza]] al traffico trasportato su di essa. Se è necessaria una relazione peer-to-peer per lo scambio sicuro bidirezionale, sono necessarie due SA.
 
 Una SA è identificata in modo univoco da tre parametri:
 *   **Security Parameters Index (SPI):** un numero intero senza segno a 32 bit assegnato a questa SA e con significato solo locale. L'SPI viene trasportato nelle intestazioni AH ed ESP per consentire al sistema ricevente di selezionare la SA in base alla quale verrà elaborato un pacchetto ricevuto;
 *   **IP Destination Address:** questo è l'indirizzo dell'endpoint di destinazione della SA;
-*   **Security Protocol Identifier:** questo campo dell'intestazione IP esterna indica se l'associazione è un'associazione di sicurezza AH o ESP.
+*   **Security Protocol Identifier:** questo campo dell'intestazione IP esterna indica se l'associazione è un'associazione di [[Sicurezza|sicurezza]] AH o ESP.
 
-In ogni implementazione IPsec, è presente un database di SA nominali che definisce i parametri associati a ciascuna SA. Una SA è normalmente definita dai seguenti parametri:
+In ogni implementazione IPsec, è presente un [[Database|database]] di SA nominali che definisce i parametri associati a ciascuna SA. Una SA è normalmente definita dai seguenti parametri:
 *   **Security Parameter Index:** viene utilizzato per costruire l'intestazione AH o ESP del pacchetto e per mappare il traffico alla SA appropriata;
 *   **Sequence Number Counter:** utilizzato per generare il campo Sequence Number nelle intestazioni ESP;
 *   **Sequence Counter Overflow:** un flag che indica se l'overflow del Sequence Number Counter deve generare un evento controllabile e impedire l'ulteriore trasmissione di pacchetti su questa SA (richiesto per tutte le implementazioni);
@@ -29,10 +33,10 @@ In ogni implementazione IPsec, è presente un database di SA nominali che defini
 *   Modalità protocollo IPsec;
 *   Path MTU.
 
-> **Commentato [CP15]:** Security Association Database (SAD) contiene le informazioni sulle Security Association (SA) attive, che definiscono i parametri di sicurezza per le connessioni IPsec.
+> **Commentato [CP15]:** Security Association [[Database]] (SAD) contiene le informazioni sulle Security Association (SA) attive, che definiscono i parametri di [[Sicurezza|sicurezza]] per le connessioni IPsec.
 
-## 2. Security Policy Database (SPD)
-Il mezzo con cui il traffico IP è correlato a SA specifiche (o nessuna SA nel caso di traffico autorizzato a bypassare IPsec) è il **Security Policy Database (SPD)** nominale. Un SPD contiene voci, ognuna delle quali definisce un sottoinsieme di traffico IP e punta a una SA per quel traffico. Ogni voce SPD è definita da un insieme di valori di campo IP e protocollo di livello superiore, chiamati **selettori**. Questi selettori vengono utilizzati per filtrare il traffico in uscita al fine di mapparlo in una particolare SA.
+## 2. Security Policy [[Database]] (SPD)
+Il mezzo con cui il traffico IP è correlato a SA specifiche (o nessuna SA nel caso di traffico autorizzato a bypassare IPsec) è il **Security Policy [[Database]] (SPD)** nominale. Un SPD contiene voci, ognuna delle quali definisce un sottoinsieme di traffico IP e punta a una SA per quel traffico. Ogni voce SPD è definita da un insieme di valori di campo IP e protocollo di livello superiore, chiamati **selettori**. Questi selettori vengono utilizzati per filtrare il traffico in uscita al fine di mapparlo in una particolare SA.
 
 L'elaborazione in uscita obbedisce ad una sequenza generale per ciascun pacchetto IP:
 1.  Confrontare i valori dei campi appropriati nel pacchetto (i campi del selettore) con l'SPD per trovare una voce SPD corrispondente;
@@ -44,7 +48,7 @@ I seguenti selettori determinano una voce SPD:
 *   **Next Layer Protocol:** l'intestazione del protocollo IP include un campo che designa il protocollo che opera su IP. Se si utilizza AH o ESP, questa intestazione del protocollo IP precede immediatamente l'intestazione AH o ESP nel pacchetto;
 *   **Porte locali e remote:** possono essere singoli valori di porta TCP o UDP, un elenco enumerato di porte o una porta jolly.
 
-> **Commentato [CP16]:** Security Policy Database (SPD) contiene le politiche di sicurezza che determinano come il traffico di rete deve essere protetto.
+> **Commentato [CP16]:** Security Policy [[Database]] (SPD) contiene le politiche di [[Sicurezza|sicurezza]] che determinano come il traffico di rete deve essere protetto.
 
 ## 3. Modalità di Trasporto e Tunnel
 Sia AH che ESP supportano due modalità di utilizzo:
@@ -83,4 +87,4 @@ Le superfici di attacco su protocollo ESP sono:
 *   SA è un campo obbligatorio ma se un utente malintenzionato tentasse di iniettare un datagramma originale, verrebbe comunque ricevuto e memorizzato nel buffer, perché la SA nel datagramma va bene.
 
 *   **Modalità trasporto:** Fornisce protezione principalmente per i protocolli di livello superiore. In genere, la modalità trasporto viene utilizzata per la comunicazione end-to-end tra due host. Viene utilizzato per crittografare e facoltativamente autenticare i dati trasportati dall'IP. Per questa modalità che utilizza IPv4, l'intestazione ESP viene inserita nel pacchetto IP immediatamente prima dell'intestazione del livello di trasporto e un trailer ESP viene inserito dopo il pacchetto IP. L'intero segmento a livello di trasporto più il trailer ESP sono crittografati.
-*   **Modalità tunnel:** La modalità tunnel fornisce protezione all'intero pacchetto IP. Per ottenere ciò, dopo che i campi AH o ESP sono stati aggiunti al pacchetto IP, l'intero pacchetto più i campi di sicurezza vengono trattati con una nuova intestazione IP esterna. L'intero pacchetto originale, interno, viaggia attraverso un tunnel da un punto all'altro di una rete IP; nessun router lungo il percorso è in grado di esaminare l'intestazione IP interna. Poiché il pacchetto originale è incapsulato, il nuovo pacchetto più grande potrebbe avere indirizzi di origine e destinazione completamente diversi. La modalità tunnel viene utilizzata quando una o entrambe le estremità di una SA sono un gateway di sicurezza.
+*   **Modalità tunnel:** La modalità tunnel fornisce protezione all'intero pacchetto IP. Per ottenere ciò, dopo che i campi AH o ESP sono stati aggiunti al pacchetto IP, l'intero pacchetto più i campi di [[Sicurezza|sicurezza]] vengono trattati con una nuova intestazione IP esterna. L'intero pacchetto originale, interno, viaggia attraverso un tunnel da un punto all'altro di una rete IP; nessun router lungo il percorso è in grado di esaminare l'intestazione IP interna. Poiché il pacchetto originale è incapsulato, il nuovo pacchetto più grande potrebbe avere indirizzi di origine e destinazione completamente diversi. La modalità tunnel viene utilizzata quando una o entrambe le estremità di una SA sono un gateway di [[Sicurezza|sicurezza]].

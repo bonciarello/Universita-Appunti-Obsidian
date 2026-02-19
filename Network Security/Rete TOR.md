@@ -1,3 +1,7 @@
+---
+aliases: [RT]
+tags: [network-security]
+---
 Rimanere anonimi su Internet è molto importante non solo dal punto di vista dell'aggressore ma anche per l'utente comune. Un modo importante per farlo è mantenere anonimo l'indirizzo IP. Sfortunatamente, non è abbastanza e spesso vuoi fare di più che mascherare il tuo IP. Per fare ciò, puoi utilizzare la rete TOR.
 
 Dal punto di vista dell'utente, utilizzare TOR è molto semplice: basta installarlo e aprire il browser TOR: incanala tutto il traffico nella rete TOR. L'IP assegnato alla postazione personale dalla rete TOR non è il solito; infatti, quando ci colleghiamo al browser, viene utilizzato il **circuito TOR**: è una catena composta da free-peer nella rete TOR che gestirà la connessione di rete in modo tale da preservare alcune proprietà di privacy.

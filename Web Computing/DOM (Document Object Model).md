@@ -1,9 +1,13 @@
-Il **DOM** (*Document Object Model*) è l'interfaccia di programmazione per i documenti HTML e XML. Rappresenta la pagina web come una struttura ad albero, dove ogni nodo è un oggetto (es. un tag, un attributo, un testo).
-Grazie al DOM, JavaScript può accedere e modificare dinamicamente contenuto, struttura e stile della pagina.
+---
+aliases: [Document Object Model, DOM]
+tags: [web-computing]
+---
+Il **DOM** (*Document Object Model*) è l'interfaccia di programmazione per i documenti [[HTML]] e XML. Rappresenta la pagina web come una struttura ad albero, dove ogni nodo è un oggetto (es. un tag, un attributo, un testo).
+Grazie al DOM, [[JavaScript]] può accedere e modificare dinamicamente contenuto, struttura e stile della pagina.
 ## Struttura e Nodi
 L'albero del DOM è composto da diversi tipi di nodi, tutti derivati dall'interfaccia base `Node`:
 1.  **Document Node:** La radice dell'albero (`document`).
-2.  **Element Node:** I tag HTML (`<div>`, `<p>`, `<body>`).
+2.  **Element Node:** I tag [[HTML]] (`<div>`, `<p>`, `<body>`).
 3.  **Text Node:** Il testo contenuto nei tag.
 4.  **Attribute Node:** Gli attributi dei tag (`href`, `src`).
 
@@ -44,7 +48,7 @@ var tuttiLink = document.querySelectorAll("a.nav-link");
 ```
 ## Manipolazione del Contenuto
 ### Lettura/Scrittura
-*   **`innerHTML`**: Legge/Scrive l'HTML interno (processa i tag).
+*   **`innerHTML`**: Legge/Scrive l'[[HTML]] interno (processa i tag).
     ```javascript
     div.innerHTML = "<strong>Nuovo contenuto</strong>";
     ```
@@ -76,7 +80,7 @@ document.body.appendChild(nuovoP); // Aggiunge in fondo al body
 ```
 ## Gestione Attributi e Classi
 ### Attributi Standard
-Possiamo leggere/scrivere attributi HTML (`href`, `src`, `id`...).
+Possiamo leggere/scrivere attributi [[HTML]] (`href`, `src`, `id`...).
 ```javascript
 var img = document.querySelector("img");
 img.getAttribute("src");
@@ -108,7 +112,7 @@ box.style.display = "none"; // Nasconde l'elemento
 > [!TIP] Best Practice
 > Evita di impostare molti stili inline con JS. È meglio aggiungere/rimuovere una **classe CSS** predefinita che contiene tutti gli stili necessari.
 ## Browser Object Model (BOM)
-Oltre al documento (`document`), JavaScript può interagire con il browser tramite l'oggetto globale `window`.
+Oltre al documento (`document`), [[JavaScript]] può interagire con il browser tramite l'oggetto globale `window`.
 
 *   **`window.location`**: URL corrente, redirect (`location.href = '...'`).
 *   **`window.history`**: Navigazione avanti/indietro (`history.back()`).

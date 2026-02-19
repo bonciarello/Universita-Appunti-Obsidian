@@ -1,4 +1,8 @@
-La sicurezza web si è evoluta parallelamente alla complessità dei browser e delle tecnologie (HTML, JavaScript, DOM, AJAX).
+---
+aliases: [WS]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
+La [[Sicurezza|sicurezza]] web si è evoluta parallelamente alla complessità dei browser e delle tecnologie ([[HTML]], [[JavaScript]], DOM, [[Ajax|AJAX]]).
 
 ## 1. Fondamenti: URL e HTTP
 *   **URL:** Identifica una risorsa tramite protocollo, credenziali, server (IP/Hostname), porta, path e parametri.
@@ -14,12 +18,12 @@ Avviene quando l'input dell'utente viene concatenato direttamente in una query S
 *   **Union-based SQLi:** Sfrutta l'operatore `UNION` per unire i risultati della query originale con quelli di una tabella scelta dall'attaccante.
     *   *Tecnica:* Usare `ORDER BY` per indovinare il numero di colonne.
 *   **Blind SQLi:** Il risultato non è visibile nella pagina. L'attaccante usa "oracoli" (es. la pagina cambia se la condizione è vera) o il tempo (es. `sleep(10)` se la condizione è vera) per indovinare i dati carattere per carattere.
-*   **Information Schema:** Database meta-dati (in MySQL/PostgreSQL) usato per scoprire i nomi di tabelle e colonne.
+*   **Information Schema:** [[Database]] meta-dati (in [[MySQL]]/PostgreSQL) usato per scoprire i nomi di tabelle e colonne.
 
 ### Mitigazione SQLi
 *   **Whitelisting:** Accettare solo input conformi a una lista fissa.
 *   **Sanitizzazione (Blacklisting/Escaping):** Rimuovere caratteri pericolosi (es. `'`, `;`). *Rischio:* Facilmente bypassabile con encoding diversi.
-*   **Prepared Statements:** La soluzione migliore. Si definisce un template di query e si passano i parametri separatamente, impedendo al database di interpretarli come codice.
+*   **Prepared Statements:** La soluzione migliore. Si definisce un template di query e si passano i parametri separatamente, impedendo al [[Database|database]] di interpretarli come codice.
 *   **ORM (Object-Relational Mapper):** Usare framework (es. CodeIgniter) che astrazgono le query.
 
 ## 3. Session Hijacking e CSRF
@@ -35,8 +39,8 @@ L'attaccante induce il browser della vittima (già autenticata su un sito) a inv
     *   **Referer check:** Verificare la provenienza della richiesta (ma può essere rimosso).
     *   **Anti-CSRF Tokens:** Inserire un valore segreto e casuale in ogni form/link che il client deve restituire per validare la richiesta.
 
-## 4. JavaScript e Same Origin Policy (SOP)
-La **SOP** è il pilastro della sicurezza dei browser: uno script può accedere solo a risorse (cookie, DOM) che hanno la stessa **origine** (schema + hostname + porta).
+## 4. [[JavaScript]] e Same Origin Policy (SOP)
+La **SOP** è il pilastro della [[Sicurezza|sicurezza]] dei browser: uno script può accedere solo a risorse (cookie, DOM) che hanno la stessa **origine** (schema + hostname + porta).
 
 ## 5. Cross-Site Scripting (XSS)
 Attacco per sovvertire la SOP iniettando script malevoli in una pagina web.
@@ -46,7 +50,7 @@ Attacco per sovvertire la SOP iniettando script malevoli in una pagina web.
 
 ### Mitigazione XSS
 *   **Filtraggio/Escape:** Rimuovere tag `<script>` (complesso per via degli encoding e dei tag CSS/XML).
-*   **HttpOnly Cookies:** Impedisce a JavaScript di leggere i cookie di sessione.
+*   **HttpOnly Cookies:** Impedisce a [[JavaScript]] di leggere i cookie di sessione.
 *   **Content Security Policy (CSP):** Il server comunica al browser quali origini sono autorizzate per caricare script e risorse.
 
 ## 6. DNS Rebinding
@@ -57,6 +61,6 @@ Attacco avanzato per aggirare la SOP.
 4.  Lo script malevolo ora può inviare richieste alla macchina interna perché l'origine (il nome dominio) sembra la stessa.
 
 ## 7. File Disclosure e SSRF
-*   **File Disclosure:** Accesso a file sensibili (configurazioni, credenziali, codice sorgente) tramite vulnerabilità come il **Path Traversal** (`../../etc/passwd`).
+*   **File Disclosure:** Accesso a file sensibili (configurazioni, credenziali, codice sorgente) tramite vulnerabilità come il **[[Path Traversal]]** (`../../etc/passwd`).
 *   **Server-Side Request Forgery (SSRF):** L'attaccante forza il server a effettuare richieste verso altre macchine (spesso interne o metadati cloud come l'IP `169.254.169.254` di AWS).
     *   *Mitigazione:* Whitelist di host autorizzati, isolamento della rete interna.

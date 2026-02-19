@@ -1,17 +1,21 @@
+---
+aliases: [DM]
+tags: [secure-software-design]
+---
 ## Problema della libreria online
-Immaginiamo di avere un sito di vendita di libri. Nell’immagine possiamo vedere un problema scoperto durante un controllo di sicurezza.
+Immaginiamo di avere un sito di vendita di libri. Nell’immagine possiamo vedere un problema scoperto durante un controllo di [[Sicurezza|sicurezza]].
 
 ![](img/sezione3/bookShop1.png)
 
-L'infrastruttura sembra solida, mentre la squadra di sicurezza si mette a curiosare: sonda i firewall, scansionano le porte aperte del sistema operativo, lanciano pacchetti dannosi al server web, eppure tutto funziona bene. 
-Non è una grande sorpresa: al giorno d'oggi, i problemi di sicurezza problemi di sicurezza sono raramente il risultato di un'infrastruttura non funzionante. Abbiamo imparato che le cose che non dovrebbero essere esposte al pubblico dovrebbero essere tagliate fuori dal pubblico.
+L'infrastruttura sembra solida, mentre la squadra di [[Sicurezza|sicurezza]] si mette a curiosare: sonda i firewall, scansionano le porte aperte del sistema operativo, lanciano pacchetti dannosi al server web, eppure tutto funziona bene. 
+Non è una grande sorpresa: al giorno d'oggi, i problemi di [[Sicurezza|sicurezza]] problemi di [[Sicurezza|sicurezza]] sono raramente il risultato di un'infrastruttura non funzionante. Abbiamo imparato che le cose che non dovrebbero essere esposte al pubblico dovrebbero essere tagliate fuori dal pubblico.
 
 La svolta arriva quando uno dei membri del team si incuriosisce del campo *Quantity* del modulo d'ordine ed inserisce come quantità -1 per una copia dell'Amleto al prezzo di 39 dollari: quindi, cerca di acquistare un Amleto negativo, un *anti-Amleto*.
 **Rimane sorpreso di non ricevere alcun messaggio di errore.**
 
 ![](img/sezione3/bookShop2.png)
 
-Il problema della sicurezza attraversa diversi moduli del sistema. Il modulo di fatturazione stabilisce che è previsto un pagamento. Il modulo di contabilità rileva un addebito da saldare il prima possibile.
+Il problema della [[Sicurezza|sicurezza]] attraversa diversi moduli del sistema. Il modulo di fatturazione stabilisce che è previsto un pagamento. Il modulo di contabilità rileva un addebito da saldare il prima possibile.
 
 ![](img/sezione3/bookShop3.png)
 
@@ -21,7 +25,7 @@ Nel caso di studio era frequente ed ulteriori indagini rivelano che il problema 
 L'acquisto di -1 libro provoca un incremento dell'inventario: la rappresentazione informatica dell'inventario diventa inconsistente. L'acquisto di -1 libro causa la spedizione di -1 libro: il sistema di spedizione ignora la richiesta, nessuno controlla i log. ***Le incoerenze possono compensare e passare inosservate, causando perdite consistenti per l'azienda.***
 
 ### Modellazione a bassa profondità
-*Un'azienda che fa trapelare denaro in questo modo ha ovviamente un problema di sicurezza.* Come può accadere accadere? E, soprattutto, come si sarebbe potuto evitare? Questo tipo di situazione è spesso il risultato di una modellazione che si ferma al primo modello che sembra adatto, senza approfondire o mettere in discussione e senza pianificare o considerare o considerazione. Questo stile ad hoc viene definito **modellazione superficiale o a bassa profondità** (in contrasto con la modellazione profonda).
+*Un'azienda che fa trapelare denaro in questo modo ha ovviamente un problema di [[Sicurezza|sicurezza]].* Come può accadere accadere? E, soprattutto, come si sarebbe potuto evitare? Questo tipo di situazione è spesso il risultato di una modellazione che si ferma al primo modello che sembra adatto, senza approfondire o mettere in discussione e senza pianificare o considerare o considerazione. Questo stile ad hoc viene definito **modellazione superficiale o a bassa profondità** (in contrasto con la modellazione profonda).
 
 *Riteniamo che molti di questi errori dipendano dal fatto che la modellazione è incompleta o addirittura mancante.* Questi possono emergere dalla discussione tra lo sviluppatore ed il cliente. La discussione potrebbe svolgersi in questo modo:
 

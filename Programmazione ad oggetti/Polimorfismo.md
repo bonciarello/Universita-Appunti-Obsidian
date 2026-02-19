@@ -1,3 +1,7 @@
+---
+aliases: [polimorfismo]
+tags: [programmazione-ad-oggetti]
+---
 Il polimorfismo permette di trattare oggetti di classi diverse (ma imparentate) in modo uniforme, invocando il metodo corretto a tempo di esecuzione.
 ### Override e Funzioni Virtuali
 Per abilitare il polimorfismo, la classe base deve dichiarare i metodi come `virtual`.

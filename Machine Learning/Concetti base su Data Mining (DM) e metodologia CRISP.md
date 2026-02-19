@@ -1,3 +1,7 @@
+---
+aliases: [Concetti base su Data Mining  e metodologia CRISP, DM]
+tags: [machine-learning]
+---
 ## Concetti base su Data Mining (DM)
 
 Ci sono enormi quantità di dati disponibili grazie ai rapidi progressi nella raccolta dei dati e nella tecnologia di archiviazione. Questi dati non hanno valore finché non estraiamo informazioni utili. Sono assolutamente necessari strumenti potenti e versatili per scoprire automaticamente informazioni preziose dall'enorme quantità di dati e per trasformare tali dati in conoscenza. Questa necessità ha portato alla nascita del **Data Mining**.
@@ -11,9 +15,9 @@ In generale, le attività di DM sono suddivise in due categorie principali:
 - **predittivo:** sfrutta alcune variabili per prevedere i valori sconosciuti di una particolare variabile;
 - **descrittivo:** deriva modelli che riassumono le relazioni sottostanti nei dati.
 
-La *modellazione predittiva* si riferisce al compito di costruire un modello per la variabile target in funzione della variabile indipendente. Esistono due tipi di attività di *modellazione predittiva*: **classificazione** e **regressione**.
+La *modellazione predittiva* si riferisce al compito di costruire un modello per la variabile target in funzione della variabile indipendente. Esistono due tipi di attività di *modellazione predittiva*: **classificazione** e **[[Regressione|regressione]]**.
 
-L'obiettivo della *classificazione* è trovare un modello per l'attributo di classe in funzione dei valori di altri attributi. L'*attività di regressione* mira a prevedere un valore di una data variabile continua in base ai valori di altre variabili.
+L'obiettivo della *classificazione* è trovare un modello per l'attributo di classe in funzione dei valori di altri attributi. L'*attività di [[Regressione|regressione]]* mira a prevedere un valore di una data variabile continua in base ai valori di altre variabili.
 
 ![](img/sezione2/analisiDM.png)
 
@@ -23,9 +27,9 @@ L'obiettivo dell'*analisi dei cluster* è trovare gruppi di osservazioni stretta
 
 Il *rilevamento delle anomalie* è il compito di identificare le osservazioni le cui caratteristiche sono significativamente diverse dal resto dei dati.
 
-**In sintesi, il *Data Mining (DM)* estrae conoscenza dai dati per aiutare le persone a prendere decisioni.** *Come eseguire il DM?* Tramite la **metodologia CRISP-DM**.
+**In sintesi, il *Data Mining (DM)* estrae conoscenza dai dati per aiutare le persone a prendere decisioni.** *Come eseguire il DM?* Tramite la **[[Metodologia CRISP-DM|metodologia CRISP-DM]]**.
 
-## Concetti base su metodologia CRISP-DM
+## Concetti base su [[Metodologia CRISP-DM|metodologia CRISP-DM]]
 
 L'acronimo CRISP-DM sta per *CRoss Industry Standard Process for Data Mining* e la sua metodologia è divisa in diverse fasi:
 

@@ -1,4 +1,8 @@
-*agilemanifesto.org* è un sito che contiene tutti i 12 principi dell’ingegneria del software e nascono per creare modi migliore per sviluppare software. Servono per valorizzare:
+---
+aliases: [Agile Manifesto, Manifesto dello sviluppo agile]
+tags: [agile-research-and-development-methodologies]
+---
+*agilemanifesto.org* è un sito che contiene tutti i 12 principi dell’[[Ingegneria del Software|ingegneria del software]] e nascono per creare modi migliore per sviluppare software. Servono per valorizzare:
 - individui e interazioni su processi e strumenti;
 - software funzionante su documentazione completa;
 - collaborazione con il cliente nella negoziazione del contratto;

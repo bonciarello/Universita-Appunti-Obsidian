@@ -1,3 +1,7 @@
+---
+aliases: ["Chiavi composte , reificazione di relazioni e generalizzazione", o esterne]
+tags: [basi-di-dati]
+---
 ## Chiavi composte (o esterne)
 
 Ogni entità E ha una chiave primaria

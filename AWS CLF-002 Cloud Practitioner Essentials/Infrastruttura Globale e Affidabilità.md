@@ -1,6 +1,10 @@
+---
+aliases: [IGA, Infrastruttura Globale Affidabilità]
+tags: [aws-clf-002-cloud-practitioner-essentials]
+---
 ## Infrastruttura globale di AWS
 
-Le regioni sono gruppi di data center distribuiti in tutto il mondo. AWS le ha progettate per garantire ridondanza, resilienza e prossimità ai clienti, così che le aziende possano eseguire applicazioni vicino agli utenti senza dover gestire da sole i costi elevati di costruzione e manutenzione di data center duplicati, né gestire hardware, sicurezza, elettricità e personale.
+Le regioni sono gruppi di data center distribuiti in tutto il mondo. AWS le ha progettate per garantire ridondanza, resilienza e prossimità ai clienti, così che le aziende possano eseguire applicazioni vicino agli utenti senza dover gestire da sole i costi elevati di costruzione e manutenzione di data center duplicati, né gestire hardware, [[Sicurezza|sicurezza]], elettricità e personale.
 
 I quattro fattori principali per scegliere una regione AWS sono:
 
@@ -47,7 +51,7 @@ I tre modi principali per interagire con AWS sono:
 
 *   **AWS Management Console**: interfaccia grafica basata su browser che permette di gestire risorse AWS in modo visivo e intuitivo. È utile soprattutto per chi inizia ad usare AWS, per creare ambienti di test, monitorare le risorse, visualizzare le fatture e per chi non ha competenze tecniche avanzate.
 *   **AWS Command Line Interface (CLI)**: consente di interagire con AWS dal terminale eseguendo comandi testuali e permette di automatizzare attività ripetitive tramite script, riduce il rischio di errori manuali e rende le operazioni ripetibili e veloci, particolarmente utile in ambienti di produzione.
-*   **AWS Software Development Kits (SDK)**: librerie che permettono di interagire con AWS tramite diversi linguaggi di programmazione (Python, Java, JavaScript, ecc.). Consentono di integrare direttamente i servizi cloud nelle applicazioni, semplificando lo sviluppo di soluzioni cloud-native automatizzate e personalizzate.
+*   **AWS Software Development Kits (SDK)**: librerie che permettono di interagire con AWS tramite diversi linguaggi di programmazione (Python, Java, [[JavaScript]], ecc.). Consentono di integrare direttamente i servizi cloud nelle applicazioni, semplificando lo sviluppo di soluzioni cloud-native automatizzate e personalizzate.
 
 Gli strumenti di gestione che permettono di automatizzare il provisioning e la configurazione delle risorse AWS sono:
 

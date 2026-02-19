@@ -1,3 +1,7 @@
+---
+aliases: [ASU, Approfondimento Skybox UnityWebRequest]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo alla come inviare e ricevere dati su una rete e al download dei dati utilizzando gli oggetti *UnityWebRequest* nelle coroutine.
 
 ## Richieste HTTP e fonti dati da Internet
@@ -75,7 +79,7 @@ Ricordati di allegare il tuo nuovo script *WeatherController* al nostro oggetto 
 ## Dati meteorologici da Internet
 Per raggiungere il nostro obiettivo dobbiamo iniziare a scaricare i dati meteo da internet. Scriveremo il codice che scaricherà i dati meteorologici e modificheremo la scena in base a tali dati: questa attività fornirà un buon esempio di recupero dei dati utilizzando le richieste HTTP. Un servizio web per i dati meteo gratuiti è *OpenWeatherMap*.
 
-Il codice che scriverai sarà strutturato attorno alla stessa architettura *Manager* utilizzata durante l'ultima lezione. Questa volta avrai una classe *WeatherManager* che viene inizializzata dallo script *Managers* principale. *WeatherManager* si occuperà del recupero e della memorizzazione dei dati meteorologici, ma per fare ciò dovrà comunicare con internet. Per farlo, creerai una classe di utilità chiamata *NetworkService*.
+Il codice che scriverai sarà strutturato attorno alla stessa [[Architettura|architettura]] *Manager* utilizzata durante l'ultima lezione. Questa volta avrai una classe *WeatherManager* che viene inizializzata dallo script *Managers* principale. *WeatherManager* si occuperà del recupero e della memorizzazione dei dati meteorologici, ma per fare ciò dovrà comunicare con internet. Per farlo, creerai una classe di utilità chiamata *NetworkService*.
 
 ## *NetoworkService*
 Questa classe gestirà i dettagli della connessione a Internet e dell'esecuzione di richieste HTTP. ***WeatherManager* può quindi dire a *NetworkService* di effettuare tali richieste.** Quindi crea un nuovo script chiamato *NetworkService* (lascialo vuoto per ora, lo compilerai in seguito).

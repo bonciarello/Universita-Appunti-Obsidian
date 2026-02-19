@@ -1,8 +1,12 @@
+---
+aliases: [Performance, parte 1]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 Un **algoritmo sequenziale** viene valutato dal suo runtime, tipicamente espresso **in funzione del suo input**.
 
 In ogni caso, il tempo di funzionamento asintotico è lo stesso per qualsiasi macchina.
 
-Il **tempo di esecuzione** di un programma parallelo dipende invece, oltre dalla **dimensione dell'ingresso**, dal **numero di processori** e dai **parametri di comunicazione** della macchina (cioè ANCHE dal tipo di architettura).
+Il **tempo di esecuzione** di un programma parallelo dipende invece, oltre dalla **dimensione dell'ingresso**, dal **numero di processori** e dai **parametri di comunicazione** della macchina (cioè ANCHE dal tipo di [[Architettura|architettura]]).
 
 Per questo motivo le "regole" per l'analisi asintotica (es. "L'algoritmo di bubble sort è $O(n^2)$", ecc.) per i programmi sequenziali non sono più **valide**: dobbiamo analizzare l'algoritmo nel **contesto** della macchina che lo esegue.
 
@@ -10,7 +14,7 @@ Un **sistema parallelo** è la combinazione di un algoritmo parallelo e della pi
 
 Alcune misure per le prestazioni di algoritmi paralleli sono intuitive:
 
-- **WALL CLOCK TIME** è il tempo di elaborazione trascorso dall'inizio del primo processore all'ora finale dell'ultimo processore. Cosa succede se modifichi il numero di processori o se modifichi la tua architettura?
+- **WALL CLOCK TIME** è il tempo di elaborazione trascorso dall'inizio del primo processore all'ora finale dell'ultimo processore. Cosa succede se modifichi il numero di processori o se modifichi la tua [[Architettura|architettura]]?
 
 ## Fonti di sovraccarico nei programmi paralleli
 

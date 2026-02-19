@@ -1,3 +1,7 @@
+---
+aliases: [CS, Comunicazione Client-Server Swing]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## PARTE Server
 
 Per quanto riguarda il file *Main.java*:

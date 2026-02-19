@@ -1,3 +1,7 @@
+---
+aliases: [GS, Gestione staff]
+tags: [ingegneria-del-software]
+---
 Le persone sono le risorse più importanti di un'organizzazione.
 
 I compiti di un manager sono essenzialmente orientati alle persone. A meno che non ci sia una certa comprensione delle persone, la gestione non avrà successo.
@@ -49,7 +53,7 @@ La coesione è influenzata da fattori quali la cultura organizzativa e le person
 
 La coesione può essere incoraggiata attraverso:
 
-- eventi sociali;
+- [[Eventi|eventi]] sociali;
 - sviluppare un'identità e un territorio di gruppo;
 - attività esplicite di team building.
 
@@ -57,7 +61,7 @@ L'apertura alle informazioni è un modo semplice per garantire che tutti i membr
 
 ## Organizzazione del gruppo
 
-I piccoli gruppi di ingegneria del software sono generalmente organizzati in modo informale senza una struttura rigida.
+I piccoli gruppi di [[Ingegneria del Software|ingegneria del software]] sono generalmente organizzati in modo informale senza una struttura rigida.
 
 Per i progetti di grandi dimensioni, potrebbe esistere una struttura gerarchica in cui diversi gruppi sono responsabili di diversi sottoprogetti.
 

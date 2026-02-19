@@ -1,10 +1,14 @@
-Con questo laboratorio, penseremo all'importazione e riproduzione di clip audio per vari effetti sonori e all'utilizzo dell'interfaccia utente per gestire le impostazioni audio.
+---
+aliases: [gestione dell'audio]
+tags: [virtual-reality]
+---
+Con questo laboratorio, penseremo all'importazione e riproduzione di clip audio per vari effetti sonori e all'utilizzo dell'[[Interfaccia utente|interfaccia utente]] per gestire le impostazioni audio.
 
 ## Funzionalità audio
 Nei videogiochi, **gli effetti audio sono importanti quanto gli effetti visivi**. Ogni gioco generalmente riproduce una **musica di sottofondo** e ha **effetti sonori**. Unity fornisce **funzionalità audio** in modo da poter inserire effetti sonori e musica nei tuoi giochi: Unity può importare e riprodurre una varietà di formati di file audio, regolare il volume dei suoni e persino gestire i suoni riprodotti da una posizione specifica all'interno della scena.
 
 ## Effetti sonori
-Gli **effetti sonori** sono *brevi clip* che vengono riprodotte insieme alle *azioni* del gioco. Considerando che i **clip audio per la musica sono più lunghi** e la riproduzione non è direttamente collegata agli eventi del gioco: i file audio per la musica sono generalmente molto più grandi dei clip brevi utilizzati per gli effetti sonori (i file per la musica sono spesso i file più grandi del gioco).
+Gli **effetti sonori** sono *brevi clip* che vengono riprodotte insieme alle *azioni* del gioco. Considerando che i **clip audio per la musica sono più lunghi** e la riproduzione non è direttamente collegata agli [[Eventi|eventi]] del gioco: i file audio per la musica sono generalmente molto più grandi dei clip brevi utilizzati per gli effetti sonori (i file per la musica sono spesso i file più grandi del gioco).
 
 ## Importazione di effetti sonori
 Prima di poter riprodurre qualsiasi suono, devi importare i file audio nel tuo progetto Unity. Unity supporta una varietà di formati audio: *WAV*, *AIF*, *MP3*, *OGG*, *MOD*, *XM*, ecc.
@@ -203,7 +207,7 @@ public class DoorOpenAnimated : MonoBehaviour {
 ```
 
 ## Interfaccia di controllo audio (*AudioManager*)
-Continuando l'**architettura del codice** stabilita nelle lezioni precedenti, creerai un **_AudioManager_**. Questo modulo audio centrale ti consentirà di **modulare il volume** dell'audio (e/o della musica) nel gioco e persino silenziarlo.
+Continuando l'**[[Architettura|architettura]] del codice** stabilita nelle lezioni precedenti, creerai un **_AudioManager_**. Questo modulo audio centrale ti consentirà di **modulare il volume** dell'audio (e/o della musica) nel gioco e persino silenziarlo.
 
 Crea un nuovo script chiamato *AudioManager.cs* a cui il codice *Manager* può fare riferimento: questo codice iniziale ha l'aspetto dei manager delle lezioni precedenti, questa è la quantità minima che *IGameManager* richiede che la classe implementi.
 
@@ -240,7 +244,7 @@ Lo script *Manager* può ora essere modificato con il nuovo manager: ricorda di 
 ```
 
 ## UI per il controllo del volume
-Con *AudioManager* impostato, è ora di dargli la funzionalità di controllo del volume. Questi metodi di controllo del volume verranno quindi utilizzati dai **display dell'interfaccia utente** per **disattivare gli effetti sonori o regolare il volume**: in particolare, **aggiornerai la finestra pop-up** con un pulsante e uno slider per controllare le impostazioni del volume. Creerai un nuovo pulsante dell'interfaccia utente e un nuovo dispositivo di scorrimento dell'interfaccia utente (con un'etichetta di testo dell'interfaccia utente "volume").
+Con *AudioManager* impostato, è ora di dargli la funzionalità di controllo del volume. Questi metodi di controllo del volume verranno quindi utilizzati dai **display dell'[[Interfaccia utente|interfaccia utente]]** per **disattivare gli effetti sonori o regolare il volume**: in particolare, **aggiornerai la finestra pop-up** con un pulsante e uno slider per controllare le impostazioni del volume. Creerai un nuovo pulsante dell'[[Interfaccia utente|interfaccia utente]] e un nuovo dispositivo di scorrimento dell'[[Interfaccia utente|interfaccia utente]] (con un'etichetta di testo dell'[[Interfaccia utente|interfaccia utente]] "volume").
 
 ![](img/sezione24/volumeControlUI.png)
 
@@ -277,14 +281,14 @@ Con questi metodi aggiunti ad *AudioManager*, ora puoi scrivere metodi per il po
     }
 } // SettingsPopup
 ```
-Per richiamare le funzioni dal pulsante e dal dispositivo di scorrimento, collegare l'oggetto a comparsa agli **eventi di interazione** in quei controlli.
+Per richiamare le funzioni dal pulsante e dal dispositivo di scorrimento, collegare l'oggetto a comparsa agli **[[Eventi|eventi]] di interazione** in quei controlli.
 
 Nell'*Inspector* del pulsante, cerca il pannello denominato **_OnClick_**. Fare clic sul pulsante *+* per aggiungere una **nuova voce a questo evento**. Trascina il *Popup (oggetto)* nello slot dell'oggetto nella nuova voce e quindi cerca *SettingsPopup* nel menu; selezionare **_OnSoundToggle()_** per fare in modo che il pulsante chiami quella funzione.
 
 Fai la stessa azione per lo **slider**, il pannello si chiama **_OnValueChanged_**. Fare clic sul pulsante *+* per aggiungere una **nuova voce**. Trascina il *Popup (oggetto)* nello slot dell'oggetto nella nuova voce. Nel menu delle funzioni trova lo script *SettingsPopup* e quindi scegli **_OnSoundVolume()_** in *Dynamic Float*.
 
 ## Riproduzione del suono dell'UI
-Ora farai un'altra aggiunta ad *AudioManager* per consentire all'interfaccia utente di **riprodurre suoni** quando si **fa clic sui pulsanti**: quando gli effetti sonori emessi da oggetti nella scena, era ovvio dove allegare *AudioSource* ma gli effetti sonori dell'interfaccia utente non fanno parte di la scena, quindi imposterai un *AudioSource* speciale solo per *AudioManager*.
+Ora farai un'altra aggiunta ad *AudioManager* per consentire all'[[Interfaccia utente|interfaccia utente]] di **riprodurre suoni** quando si **fa clic sui pulsanti**: quando gli effetti sonori emessi da oggetti nella scena, era ovvio dove allegare *AudioSource* ma gli effetti sonori dell'[[Interfaccia utente|interfaccia utente]] non fanno parte di la scena, quindi imposterai un *AudioSource* speciale solo per *AudioManager*.
 
 Crea un **nuovo *GameObject* vuoto** e collegalo all'oggetto *Game Managers* principale, questo nuovo oggetto avrà un *AudioSource* utilizzato da *AudioManager*, quindi chiama il nuovo oggetto *Audio*: aggiungi un componente *AudioSource* a questo oggetto.
 
@@ -299,7 +303,7 @@ Regola l'*AudioManager* aggiungendo un nuovo slot variabile che apparirà nell'*
     ...
 ```
 
-Ora aggiungi l'effetto sonoro dell'interfaccia utente allo script pop-up: trascina l'effetto sonoro dell'interfaccia utente sullo slot variabile, ho usato il suono *thump* e quando premi il pulsante dell'interfaccia utente, quell'effetto sonoro viene riprodotto contemporaneamente.
+Ora aggiungi l'effetto sonoro dell'[[Interfaccia utente|interfaccia utente]] allo script pop-up: trascina l'effetto sonoro dell'[[Interfaccia utente|interfaccia utente]] sullo slot variabile, ho usato il suono *thump* e quando premi il pulsante dell'[[Interfaccia utente|interfaccia utente]], quell'effetto sonoro viene riprodotto contemporaneamente.
 ```csharp
     ...
     [SerializeField] private AudioClip sound;
@@ -350,8 +354,8 @@ Definire in *AudioManager* i seguenti metodi per caricare e riprodurre musica:
     ...
 ```
 
-## Controlli della musica dell'interfaccia utente
-Aggiungiamo più pulsanti all'interfaccia utente che riprodurranno musica diversa quando premuti: crea tre nuovi pulsanti in modo da ottenere un popup di impostazione come mostrato nella figura seguente (*Level Music* - *Intro Music* - *No Music*).
+## Controlli della musica dell'[[Interfaccia utente|interfaccia utente]]
+Aggiungiamo più pulsanti all'[[Interfaccia utente|interfaccia utente]] che riprodurranno musica diversa quando premuti: crea tre nuovi pulsanti in modo da ottenere un popup di impostazione come mostrato nella figura seguente (*Level Music* - *Intro Music* - *No Music*).
 
 ![](img/sezione24/musicaPulsanti.png)
 
@@ -434,7 +438,7 @@ Il **metodo *Startup()*** inizializza la sorgente musicale con *ignoreListenerVo
     ...
 ```
 
-Puoi premere *Play* ora per verificare che la musica non sia più influenzata dal controllo del volume esistente. Ora aggiungiamo un secondo controllo dell'interfaccia utente per il volume della musica, iniziamo regolando *SettingsPopup* come mostrato di seguito.
+Puoi premere *Play* ora per verificare che la musica non sia più influenzata dal controllo del volume esistente. Ora aggiungiamo un secondo controllo dell'[[Interfaccia utente|interfaccia utente]] per il volume della musica, iniziamo regolando *SettingsPopup* come mostrato di seguito.
 ```csharp
     ...
     public void OnMusicToggle() {
@@ -451,4 +455,4 @@ Ora il nostro codice nello script *SettingsPopup* è pronto per essere utilizzat
 
 ![](img/sezione24/musicVolumeControl.png)
 
-Infine, collega questi controlli dell'interfaccia utente al codice in *SettingsPopup*, utilizzando il pannello *OnClick*. Le funzioni che devi selezionare sono *OnMusicToggle()* e *OnMusicValue()* dalla sezione *Dynamic Float* del menu. **Premi *Play* e ora il tuo gioco avrà effetti sonori e musica di sottofondo.**
+Infine, collega questi controlli dell'[[Interfaccia utente|interfaccia utente]] al codice in *SettingsPopup*, utilizzando il pannello *OnClick*. Le funzioni che devi selezionare sono *OnMusicToggle()* e *OnMusicValue()* dalla sezione *Dynamic Float* del menu. **Premi *Play* e ora il tuo gioco avrà effetti sonori e musica di sottofondo.**

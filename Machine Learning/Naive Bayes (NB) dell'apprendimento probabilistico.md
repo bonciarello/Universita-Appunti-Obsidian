@@ -1,3 +1,7 @@
+---
+aliases: [Naive Bayes  dell'apprendimento probabilistico, NB]
+tags: [machine-learning]
+---
 ## Classificatori probabilistici
 
 Nell'approccio probabilistico, un modello è una distribuzione di probabilità. Data un'istanza X e un insieme di classi {c_1, ..., c_n}, un **classificatore probabilistico**:

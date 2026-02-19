@@ -1,3 +1,7 @@
+---
+aliases: [entropia]
+tags: [machine-learning]
+---
 ## Entropia nella teoria dell'informazione
 L'**entropia** è un concetto utilizzato come misura del disordine. Ha origine dalla termodinamica (*Boltzmann*) e più recentemente utilizzato nella teoria dell'informazione (*Shannon*). Ovviamente, trova applicazione anche nel data mining.
 

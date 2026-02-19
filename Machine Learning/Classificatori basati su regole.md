@@ -1,3 +1,7 @@
+---
+aliases: [Classe]
+tags: [machine-learning]
+---
 ## Regole di classificazione
 Un classificatore basato su regole è un insieme di regole proposizionali "if... then" della forma:
 
@@ -14,7 +18,7 @@ Le regole di cui sopra sono equivalenti alla formula DNF:
 
 > *Body Temperature = warm OR Body Temperature = cool AND Gives Birth = yes* allora **Mammal**
 
-Mettendo le *regole di classificazione* in relazione con gli *alberi decisionali* avremo una regola per ogni nodo foglia. 
+Mettendo le *regole di classificazione* in relazione con gli *[[Alberi decisionali|alberi decisionali]]* avremo una regola per ogni nodo foglia. 
 
 È possibile generare regole:
 - direttamente dal training set detti anche **direct learning**;
@@ -164,7 +168,7 @@ In sintesi, quando una nuova istanza viene presentata al classificatore:
 - se nessuna delle regole viene attivata, viene assegnata alla classe predefinita.
 
 I vantaggi dei classificatori basati su regole sono:
-- altamente espressivi come gli alberi decisionali;
+- altamente espressivi come gli [[Alberi decisionali|alberi decisionali]];
 - facile da interpretare;
 - può classificare rapidamente nuove istanze;
-- prestazioni paragonabili agli alberi decisionali.
+- prestazioni paragonabili agli [[Alberi decisionali|alberi decisionali]].

@@ -1,4 +1,8 @@
-## Interfaccia utente
+---
+aliases: [UI, User Interface, Interfacce utente]
+tags: [ingegneria-del-software]
+---
+## [[Interfaccia utente]]
 
 Dovrebbe essere progettato per corrispondere a competenze, esperienza e aspettative dei suoi utenti previsti.
 
@@ -6,7 +10,7 @@ Gli utenti spesso giudicano un sistema dalla sua interfaccia piuttosto che dalla
 
 Un'interfaccia mal progettata può indurre un utente a commettere errori catastrofici.
 
-Il design scadente dell'interfaccia utente è il motivo per cui così tanti sistemi software non vengono mai utilizzati.
+Il design scadente dell'[[Interfaccia utente|interfaccia utente]] è il motivo per cui così tanti sistemi software non vengono mai utilizzati.
 
 I fattori umani nel design dell'interfaccia sono:
 
@@ -15,7 +19,7 @@ I fattori umani nel design dell'interfaccia sono:
 - **Le persone sono diverse:** le persone hanno un'ampia gamma di capacità fisiche. I designer non dovrebbero limitarsi a progettare per le proprie capacità;
 - **Le persone hanno preferenze di interazione diverse:** ad alcuni piacciono le immagini, ad altri il testo.
 
-## Principi di progettazione dell'interfaccia utente
+## Principi di progettazione dell'[[Interfaccia utente|interfaccia utente]]
 
 Prendiamo in considerazione le esigenze, l'esperienza e le capacità degli utenti del sistema.
 
@@ -98,7 +102,7 @@ Sono un insieme di tecniche per visualizzare grandi quantità di informazioni. L
 
 Il colore aggiunge una dimensione extra a un'interfaccia e può aiutare l'utente a comprendere strutture informative complesse.
 
-Il colore può essere utilizzato per evidenziare eventi eccezionali.
+Il colore può essere utilizzato per evidenziare [[Eventi|eventi]] eccezionali.
 
 Gli errori comuni nell'uso del colore nella progettazione dell'interfaccia includono:
 
@@ -139,9 +143,9 @@ Ecco un esempio di design del messaggio **cattivo** e **buono** per l'utente:
 
 ![[userError2.png]]
 
-## Processo di progettazione dell'interfaccia utente
+## Processo di progettazione dell'[[Interfaccia utente|interfaccia utente]]
 
-La progettazione dell'interfaccia utente è un processo iterativo che coinvolge stretti collegamenti tra utenti e designer.
+La progettazione dell'[[Interfaccia utente|interfaccia utente]] è un processo iterativo che coinvolge stretti collegamenti tra utenti e designer.
 
 Le 3 attività principali in questo processo sono:
 
@@ -183,7 +187,7 @@ Prezioso perché molte attività dell'utente sono intuitive e le trovano molto d
 
 Aiuta anche a comprendere il ruolo delle influenze sociali e organizzative sul lavoro.
 
-## Prototipazione dell'interfaccia utente
+## Prototipazione dell'[[Interfaccia utente|interfaccia utente]]
 
 Lo scopo della prototipazione è consentire agli utenti di **acquisire esperienza diretta con l'interfaccia**.
 
@@ -202,7 +206,7 @@ Abbiamo varie tecniche di prototipazione:
 - **Programmazione visiva:** utilizzare un linguaggio progettato per uno sviluppo rapido come Visual Basic;
 - **Prototipazione basata su Internet:** utilizzare un browser Web e gli script associati.
 
-## Valutazione dell'interfaccia utente
+## Valutazione dell'[[Interfaccia utente|interfaccia utente]]
 
 La valutazione completa è molto costosa e poco pratica per la maggior parte dei sistemi.
 

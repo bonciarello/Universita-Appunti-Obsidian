@@ -1,7 +1,11 @@
+---
+aliases: [DNS]
+tags: [cyber-offence-and-defence]
+---
 ## Serializzazione e deserializzazione
 
 La serializzazione è il processo di conversione di strutture dati complesse, come oggetti e i loro campi, in un formato "più piatto" che può essere inviato e ricevuto come flusso sequenziale di byte. La serializzazione dei dati semplifica notevolmente:
-- scrivere dati complessi nella memoria interprocesso, in un file o in un database
+- scrivere dati complessi nella memoria interprocesso, in un file o in un [[Database|database]]
 - inviare dati complessi, ad esempio, tramite una rete, tra diversi componenti di un'applicazione o in una chiamata API
 
 Fondamentalmente, quando si serializza un oggetto, anche il suo stato viene reso persistente. In altre parole, gli attributi dell'oggetto vengono preservati, insieme ai loro valori assegnati.
@@ -100,9 +104,9 @@ Oltre a controllare semplicemente i valori degli attributi, la funzionalità di 
 
 Ad esempio, come parte della funzionalità "Delete user" di un sito web, l'immagine del profilo dell'utente viene eliminata accedendo al percorso del file nell'attributo `$user->image_location`. Se questo `$user` è stato creato da un oggetto serializzato, un aggressore potrebbe sfruttarlo passando un oggetto modificato con `image_location` impostato su un percorso di file arbitrario. L'eliminazione del proprio account utente eliminerebbe quindi anche questo file arbitrario.
 ### Magic methods
-I magic methods sono metodi speciali che vengono invocati automaticamente al verificarsi di determinati eventi, senza bisogno di richiamarli esplicitamente. Questi metodi, comuni nella programmazione orientata agli oggetti, sono spesso identificati da doppie underscore nel nome (ad esempio, `__construct()` in PHP o `__init__()` in Python).
+I magic methods sono metodi speciali che vengono invocati automaticamente al verificarsi di determinati [[Eventi|eventi]], senza bisogno di richiamarli esplicitamente. Questi metodi, comuni nella programmazione orientata agli oggetti, sono spesso identificati da doppie underscore nel nome (ad esempio, `__construct()` in PHP o `__init__()` in Python).
 
-I magic method possono essere personalizzati dagli sviluppatori per eseguire codice specifico in risposta a eventi, come l’istanziazione di un oggetto (`__construct()` in PHP) o il caricamento di dati durante la deserializzazione (`__wakeup()` in PHP e `readObject()` in Java). In Java, i metodi come `readObject()` permettono alle classi di controllare come i campi vengono deserializzati.
+I magic method possono essere personalizzati dagli sviluppatori per eseguire codice specifico in risposta a [[Eventi|eventi]], come l’istanziazione di un oggetto (`__construct()` in PHP) o il caricamento di dati durante la deserializzazione (`__wakeup()` in PHP e `readObject()` in Java). In Java, i metodi come `readObject()` permettono alle classi di controllare come i campi vengono deserializzati.
 
 I rischi potenziali sono:
 - **manipolazione dati:** se i magic methods gestiscono dati controllabili dall’utente (ad esempio, provenienti da oggetti deserializzati), possono diventare vettori di attacco;

@@ -1,8 +1,12 @@
+---
+aliases: [Classe]
+tags: [deep-learning]
+---
 ## Framework Keras
-**Keras** è un framework di deep learning per Python che consente una sperimentazione rapida.
+**Keras** è un framework di [[Deep Learning|deep learning]] per Python che consente una sperimentazione rapida.
 *   Esegue codice su CPU o GPU.
 *   API intuitiva per prototipazione rapida.
-*   Supporto per reti convoluzionali (CNN) e ricorrenti (RNN).
+*   Supporto per [[Reti|reti]] convoluzionali (CNN) e ricorrenti (RNN).
 *   Backend modulare: può girare su **TensorFlow**, **Theano** o **CNTK**.
 
 Il flusso di lavoro tipico in Keras è:

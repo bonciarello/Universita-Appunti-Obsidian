@@ -1,3 +1,7 @@
+---
+aliases: [CFD, Concetti fondamentali Domain-Driven Design]
+tags: [secure-software-design]
+---
 ***Domain-Driven Design* è un approccio allo sviluppo di software complessi in cui ci concentriamo sul dominio principale, esploriamo modelli in una collaborazione creativa tra professionisti del dominio (stakeholder) e professionisti del software e parliamo un linguaggio onnipresente all'interno di un contesto delimitato in modo esplicito.**
 
 L'obiettivo di questa metodologia è **comprendere adeguatamente il dominio applicativo**. Per fare questo è necessario individuare un **esperto di dominio**, che coincide molto spesso con il cliente/stakeholder stesso, e stilare una sottospecie di **dizionario di dominio** (*omnipresent* e *obiquitous* language, cioè utilizziamo gli stessi termini ovunque si parli del sistema di interesse). La realtà generalmente risulta essere complessa ed ambigua da rappresentare, pertanto si utilizzano dei **"modelli di dominio"** e cioè delle astrazioni/semplificazioni teoriche della realtà, che ne permettono di dare una versione meno ambigua e rigorosa. 

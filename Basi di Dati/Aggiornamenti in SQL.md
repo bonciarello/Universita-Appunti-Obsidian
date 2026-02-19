@@ -1,3 +1,7 @@
+---
+aliases: [Aggiornamenti SQL, AS]
+tags: [basi-di-dati]
+---
 Gli esempi seguenti faranno riferimento o alla *BD1*
 
 - **Fornitori(codf, nome, età, città) -- F**

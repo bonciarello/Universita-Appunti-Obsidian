@@ -1,3 +1,7 @@
+---
+aliases: [SC]
+tags: [network-security]
+---
 ## 1. Introduzione
 Un **cifrario a flusso (Stream Cipher)** utilizza una breve chiave segreta e un flusso di bit generato in modo pseudocasuale, computazionalmente indistinguibile da un flusso di cifre casuali e sono utili quando è necessario crittografare grandi quantità di dati in streaming veloce.
 
@@ -19,6 +23,6 @@ Importanti considerazioni di progettazione per un cifrario a flusso:
 Con un PRNG correttamente progettato, un cifrario a flusso può essere sicuro quanto un cifrario a blocchi di lunghezza di chiave comparabile. Un potenziale vantaggio di un cifrario a flusso è che sono in genere più veloci e utilizzano molto meno codice rispetto ai cifrari a blocchi.
 
 ## 3. RC4
-**RC4 (Rivest Cipher 4)** è un algoritmo di cifratura a flusso ampiamente utilizzato. Una delle caratteristiche distintive di RC4 è il suo algoritmo di generazione del keystream basato su una permutazione casuale dei byte in un vettore di stato. Questo algoritmo consente una generazione efficiente del keystream e lo rende adatto per applicazioni con restrizioni di risorse. Tuttavia, nel corso degli anni sono state scoperte diverse debolezze in RC4 che ne hanno compromesso la sicurezza come, ad esempio, correlazioni statistiche tra i byte del keystream.
+**RC4 (Rivest Cipher 4)** è un algoritmo di cifratura a flusso ampiamente utilizzato. Una delle caratteristiche distintive di RC4 è il suo algoritmo di generazione del keystream basato su una permutazione casuale dei byte in un vettore di stato. Questo algoritmo consente una generazione efficiente del keystream e lo rende adatto per applicazioni con restrizioni di risorse. Tuttavia, nel corso degli anni sono state scoperte diverse debolezze in RC4 che ne hanno compromesso la [[Sicurezza|sicurezza]] come, ad esempio, correlazioni statistiche tra i byte del keystream.
 
-> **Commentato [CP2]:** Un algoritmo di generazione del keystream è un metodo usato in crittografia per produrre una sequenza di bit (keystream) che viene combinata con il testo in chiaro per creare il testo cifrato. Questo keystream deve essere imprevedibile e simile al rumore casuale per garantire la sicurezza del messaggio cifrato.
+> **Commentato [CP2]:** Un algoritmo di generazione del keystream è un metodo usato in crittografia per produrre una sequenza di bit (keystream) che viene combinata con il testo in chiaro per creare il testo cifrato. Questo keystream deve essere imprevedibile e simile al rumore casuale per garantire la [[Sicurezza|sicurezza]] del messaggio cifrato.

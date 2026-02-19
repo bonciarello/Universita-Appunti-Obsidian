@@ -1,3 +1,7 @@
+---
+aliases: [CASE STUDY - Business Model, EcoWash]
+tags: [business-game]
+---
 ## 1. Storia
 Aiden Patel (marketing) e Madelyn Chao (inventrice) si incontrano. Chao ha inventato **ECOWASH**, un sistema di autolavaggio ecologico "tutto in uno".
 *   **Caratteristiche:** Usa solo 2 litri d'acqua (contro i 38L standard). Installabile su un furgone. Richiede 2 operatori.

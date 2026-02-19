@@ -1,3 +1,7 @@
+---
+aliases: [casi d'uso]
+tags: [ingegneria-del-software]
+---
 È la descrizione di come un insieme di persone che utilizzano il sistema ci fa vedere come questi lo utilizzano e perchè quelle persone è interessata a svolgere quella sequenza di persone.
 
 ## Sezione del caso d'uso
@@ -162,7 +166,7 @@ Ecco come sviluppare i casi d'uso di questo problema:
         2. Il Cassiere sostituisce la carta;
         3. Il Cassiere richiede un'altra ricevuta.
 - **Requisiti speciali:** 
-    - Interfaccia utente di tipo touch screen su un monitor piatto grande. Il testo deve essere visibile da una distanza di un metro;
+    - [[Interfaccia utente]] di tipo touch screen su un monitor piatto grande. Il testo deve essere visibile da una distanza di un metro;
     - Risposta all'autorizzazione di credito entro 30 secondi il 90% delle volte;
     - In qualche modo si desidera un ripristino robusto quando non riesce l'accesso ai servizi remoti, come per esempio il sistema d'inventario;
     - Internazionalizzazione della lingua sul testo visualizzato;
@@ -212,8 +216,8 @@ Oltre agli attori primari e agli obiettivi più evidenti, le seguenti domande ai
 
 - *Chi avvia e arresta il sistema?*
 - *Chi si occupa dell'amministrazione del sistema?*
-- *Chi si occupa della gestione degli utenti e della sicurezza?*
-- *Il "tempo" è un attore, nel senso che il sistema esegue operazioni in risposta ad alcuni eventi temporali?*
+- *Chi si occupa della gestione degli utenti e della [[Sicurezza|sicurezza]]?*
+- *Il "tempo" è un attore, nel senso che il sistema esegue operazioni in risposta ad alcuni [[Eventi|eventi]] temporali?*
 - *Esiste un processo di monitoraggio che riavvia il sistema se si verifica un errore?*
 - *Chi valuta le attività e le prestazioni del sistema?*
 - *Come vengono gestiti gli aggiornamenti del software? Sono aggiornamenti automatici o a richiesta?*
@@ -246,7 +250,7 @@ Un'estensione è costituita da due parti: la condizione e la gestione.
 
 > **Linea guida:** quando è possibile, la condizione va scritta qualcosa che possa essere *rilevato* dal sistema o da un attore.
 
-> **Linea guida:** scrivere i casi d'uso in uno stile essenziale; ignorare l'interfaccia utente, concentrarsi sullo scopo dll'attore.
+> **Linea guida:** scrivere i casi d'uso in uno stile essenziale; ignorare l'[[Interfaccia utente|interfaccia utente]], concentrarsi sullo scopo dll'attore.
 
 Tutti i precedenti casi d'uso mostrati, come *Elabora Vendita*, sono stati scritti adottando uno stile essenziale.
 

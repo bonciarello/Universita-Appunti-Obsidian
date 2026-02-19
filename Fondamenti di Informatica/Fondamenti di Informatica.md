@@ -1,5 +1,9 @@
+---
+aliases: [FI, Fondamenti Informatica]
+tags: [fondamenti-di-informatica]
+---
 ## Programma del corso
-Il programma del corso si divide in categorie principali che coprono dalle basi dell'architettura dell'informazione fino alla programmazione a oggetti in C++:
+Il programma del corso si divide in categorie principali che coprono dalle basi dell'[[Architettura|architettura]] dell'informazione fino alla programmazione a oggetti in C++:
 - **Rappresentazione dell'Informazione:** Studio dei sistemi di numerazione (Binario, Ottale, Esadecimale), conversioni di base, aritmetica binaria e codifica dei caratteri (ASCII/Unicode).
 - **Logica e Algoritmi:** Introduzione al pensiero algoritmico, diagrammi di flusso, calcolo proposizionale e algebra booleana applicata alla programmazione.
 - **Fondamenti di C++:** Sintassi del linguaggio, gestione dell'Input/Output, strutture di controllo (selezione e iterazione) e funzioni.

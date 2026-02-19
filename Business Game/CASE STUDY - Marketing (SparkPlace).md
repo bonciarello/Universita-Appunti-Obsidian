@@ -1,3 +1,7 @@
+---
+aliases: [SparkPlace, CASE STUDY - Marketing]
+tags: [business-game]
+---
 **SparkPlace** vende software per il **marketing in entrata (Inbound Marketing)** per piccole imprese.
 *   **Premessa:** Il marketing tradizionale "interrompente" (Outbound) è meno efficace. I social/blog (Inbound) attirano i clienti in modo naturale.
 

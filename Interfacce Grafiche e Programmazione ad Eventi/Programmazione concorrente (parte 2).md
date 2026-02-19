@@ -1,3 +1,7 @@
+---
+aliases: [parte 2, Programmazione concorrente]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Concorrenza con le API ad alto livello e concurrences utilities
 
 Java offre delle API ad alto livello per la gestione ad alto livello delle concorrenza. Queste API consentono:
@@ -88,21 +92,21 @@ public class Cinema{
 }
 ```
 
-## I thread e JavaFX
+## I thread e [[JavaFX]]
 
-Lo Scene Graph di JavaFX non è thread-safe e può essere letto e modificato solo dal thread dell'interfaccia grafica, detto **JavaFX Application thread**. Quindi, nelle applicazioni JavaFX non è possibile usare dei thread che modificano l'interfaccia grafica come nel caso delle Swing.
+Lo Scene Graph di [[JavaFX]] non è thread-safe e può essere letto e modificato solo dal thread dell'interfaccia grafica, detto **[[JavaFX]] Application thread**. Quindi, nelle applicazioni [[JavaFX]] non è possibile usare dei thread che modificano l'interfaccia grafica come nel caso delle Swing.
 
-Nel caso in cui si voglia implementare una porzione di codice che funziona in parallelo rispetto all'interfaccia grafica, si possono utilizzare le API definite nel package *javafx.concurrent*. Queste API si occupano di interagire con l'interfaccia grafica di JavaFX, assicurandosi che l'interazione avvenga nel thread corretto.
+Nel caso in cui si voglia implementare una porzione di codice che funziona in parallelo rispetto all'interfaccia grafica, si possono utilizzare le API definite nel package *[[JavaFX|javafx]].concurrent*. Queste API si occupano di interagire con l'interfaccia grafica di [[JavaFX]], assicurandosi che l'interazione avvenga nel thread corretto.
 
-## Il package javafx.concurrent
+## Il package [[JavaFX|javafx]].concurrent
 
-Il package javafx.concurrent consiste dell'interfaccia Worker e due classi, Task e Service, che implementano l'interfaccia Worker.
+Il package [[JavaFX|javafx]].concurrent consiste dell'interfaccia Worker e due classi, Task e Service, che implementano l'interfaccia Worker.
 
-La classe Task permette agli sviluppatori di sviluppare task asincroni in applicazioni JavaFX. La classe Service esegue i task. Inoltre, le classi Task e Service implementano l'interfaccia EventTarget e questo permette di ricevere notifiche quando lo stato di un Worker cambia.
+La classe Task permette agli sviluppatori di sviluppare task asincroni in applicazioni [[JavaFX]]. La classe Service esegue i task. Inoltre, le classi Task e Service implementano l'interfaccia EventTarget e questo permette di ricevere notifiche quando lo stato di un Worker cambia.
 
 ## L'interfaccia Worker
 
-Definisce un oggetto che esegue codice su uno o più thread in background. Lo stato dell'oggetto Worker è osservabile e usabile dal JavaFX Application thread. Gli stati di un Worker sono i seguenti:
+Definisce un oggetto che esegue codice su uno o più thread in background. Lo stato dell'oggetto Worker è osservabile e usabile dal [[JavaFX]] Application thread. Gli stati di un Worker sono i seguenti:
 
 - *READY* è lo stato che assume quando è creato;
 - *SCHEDULED* è lo stato che assume non appena l'oggetto viene schedulato per eseguire il lavoro;
@@ -155,7 +159,7 @@ new Thread(task).start();
 
 ## La classe Service
 
-La classe Service è progettata per eseguire un oggetto di tipo Task su uno o più thread in background. Lo scopo di questa classe è di aiutare lo sviluppatore ad implementare la corretta interazione tra i thread in background e il JavaFX Application thread.
+La classe Service è progettata per eseguire un oggetto di tipo Task su uno o più thread in background. Lo scopo di questa classe è di aiutare lo sviluppatore ad implementare la corretta interazione tra i thread in background e il [[JavaFX]] Application thread.
 
 Un oggetto di tipo Service può essere avviato, cancellato e riavviato. Per avviare un oggetto di tipo Service si può usare il metodo start().
 

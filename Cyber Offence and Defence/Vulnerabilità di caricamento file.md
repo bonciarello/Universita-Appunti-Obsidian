@@ -1,4 +1,8 @@
-Le vulnerabilità di caricamento file si verificano quando un server web consente agli utenti di caricare file sul suo file system senza convalidare sufficientemente elementi come nome, tipo, contenuto o dimensione. Non riuscire a far rispettare correttamente le restrizioni su questi potrebbe significare che anche una funzione di caricamento immagini di base può essere utilizzata per caricare file arbitrari e potenzialmente pericolosi. Ciò potrebbe persino includere file di script lato server che consentono l'esecuzione di codice remoto.
+---
+aliases: [Vulnerabilità caricamento file, VCF]
+tags: [cyber-offence-and-defence]
+---
+Le vulnerabilità di caricamento file si verificano quando un server web consente agli utenti di caricare file sul suo [[File System|file system]] senza convalidare sufficientemente elementi come nome, tipo, contenuto o dimensione. Non riuscire a far rispettare correttamente le restrizioni su questi potrebbe significare che anche una funzione di caricamento immagini di base può essere utilizzata per caricare file arbitrari e potenzialmente pericolosi. Ciò potrebbe persino includere file di script lato server che consentono l'esecuzione di codice remoto.
 
 In alcuni casi, l'atto di caricare il file è di per sé sufficiente a causare danni. Altri attacchi possono comportare una richiesta HTTP di follow-up per il file, in genere per innescarne l'esecuzione da parte del server.
 ### Come nascono le vulnerabilità nel caricamento dei file?
@@ -22,20 +26,20 @@ Non assicurarsi che la dimensione del file rientri nelle soglie previste potrebb
 ### In che modo i server web gestiscono le richieste di file statici?
 Prima di esaminare come sfruttare le vulnerabilità di caricamento file, è importante avere una conoscenza di base di come i server gestiscono le richieste di file statici.
 
-Storicamente, i siti web erano costituiti quasi interamente da file statici che venivano forniti agli utenti quando richiesti. Di conseguenza, il percorso di ogni richiesta poteva essere mappato 1:1 con la gerarchia di directory e file sul file system del server. Oggigiorno, i siti web sono sempre più dinamici e il percorso di una richiesta spesso non ha alcuna relazione diretta con il file system. Tuttavia, i server web gestiscono ancora le richieste di alcuni file statici, inclusi fogli di stile, immagini e così via.
+Storicamente, i siti web erano costituiti quasi interamente da file statici che venivano forniti agli utenti quando richiesti. Di conseguenza, il percorso di ogni richiesta poteva essere mappato 1:1 con la gerarchia di directory e file sul [[File System|file system]] del server. Oggigiorno, i siti web sono sempre più dinamici e il percorso di una richiesta spesso non ha alcuna relazione diretta con il [[File System|file system]]. Tuttavia, i server web gestiscono ancora le richieste di alcuni file statici, inclusi fogli di stile, immagini e così via.
 
 Il processo per gestire questi file statici è ancora in gran parte lo stesso. A un certo punto, il server analizza il percorso nella richiesta per identificare l'estensione del file. Quindi lo utilizza per determinare il tipo di file richiesto, in genere confrontandolo con un elenco di mappature preconfigurate tra estensioni e tipi MIME. Ciò che accade dopo dipende dal tipo di file e dalla configurazione del server:
-- se questo tipo di file non è eseguibile, come un'immagine o una pagina HTML statica, il server potrebbe semplicemente inviare il contenuto del file al client in una response HTTP.
+- se questo tipo di file non è eseguibile, come un'immagine o una pagina [[HTML]] statica, il server potrebbe semplicemente inviare il contenuto del file al client in una response HTTP.
 - se il tipo di file è eseguibile, come un file PHP, e il server è configurato per eseguire file di questo tipo, assegnerà variabili in base alle intestazioni e ai parametri nella richiesta HTTP prima di eseguire lo script. L'output risultante potrebbe quindi essere inviato al client in una response HTTP.
 - se il tipo di file è eseguibile, ma il server non è configurato per eseguire file di questo tipo, in genere risponderà con un errore. Tuttavia, in alcuni casi, il contenuto del file potrebbe comunque essere fornito al client come testo normale. Tali configurazioni errate possono occasionalmente essere sfruttate per far trapelare il codice sorgente e altre informazioni sensibili. Puoi vedere un esempio di ciò nei nostri materiali didattici sulla divulgazione delle informazioni.
 
 **Consiglio:** l'intestazione di risposta `Content-Type` può fornire indizi sul tipo di file che il server pensa di aver servito. Se questa intestazione non è stata impostata esplicitamente dal codice dell'applicazione, normalmente contiene il risultato della mappatura estensione file/tipo MIME.
 ## Sfruttare i caricamenti di file senza restrizioni per distribuire una web shell
-Da una prospettiva di sicurezza, lo scenario peggiore possibile è quando un sito web consente di caricare script lato server, come file PHP, Java o Python, ed è anche configurato per eseguirli come codice. Ciò rende banale creare la propria web shell sul server.
+Da una prospettiva di [[Sicurezza|sicurezza]], lo scenario peggiore possibile è quando un sito web consente di caricare script lato server, come file PHP, Java o Python, ed è anche configurato per eseguirli come codice. Ciò rende banale creare la propria web shell sul server.
 
 Una web shell è uno script dannoso che consente a un aggressore di eseguire comandi arbitrari su un server web remoto semplicemente inviando richieste HTTP all'endpoint corretto.
 
-Se riesci a caricare con successo una web shell, hai effettivamente il controllo completo sul server. Ciò significa che puoi leggere e scrivere file arbitrari, esfiltrare dati sensibili, persino usare il server per indirizzare attacchi sia contro l'infrastruttura interna che contro altri server esterni alla rete. Ad esempio, il seguente one-liner PHP potrebbe essere usato per leggere file arbitrari dal file system del server:
+Se riesci a caricare con successo una web shell, hai effettivamente il controllo completo sul server. Ciò significa che puoi leggere e scrivere file arbitrari, esfiltrare dati sensibili, persino usare il server per indirizzare attacchi sia contro l'infrastruttura interna che contro altri server esterni alla rete. Ad esempio, il seguente one-liner PHP potrebbe essere usato per leggere file arbitrari dal [[File System|file system]] del server:
 
 `<?php echo file_get_contents('/path/to/target/file'); ?>`
 
@@ -51,7 +55,7 @@ Questo script consente di passare un comando di sistema arbitrario tramite un pa
 ## Sfruttare la convalida difettosa dei caricamenti di file
 In natura, è improbabile che tu trovi un sito web che non abbia protezione contro gli attacchi di caricamento file. Ma solo perché le difese sono in atto, ciò non significa che siano robuste. A volte puoi ancora sfruttare i difetti di questi meccanismi per ottenere una web shell per l'esecuzione di codice remoto.
 ### Convalida del tipo di file difettosa
-Quando si inviano moduli HTML, il browser in genere invia i dati forniti in una richiesta POST con il tipo di contenuto `application/x-www-form-url-encoded`. Questo va bene per inviare testo semplice come il tuo nome o indirizzo. Tuttavia, non è adatto per inviare grandi quantità di dati binari, come un intero file immagine o un documento PDF. In questo caso, è preferibile il tipo di contenuto `multipart/form-data`.
+Quando si inviano moduli [[HTML]], il browser in genere invia i dati forniti in una richiesta POST con il tipo di contenuto `application/x-www-form-url-encoded`. Questo va bene per inviare testo semplice come il tuo nome o indirizzo. Tuttavia, non è adatto per inviare grandi quantità di dati binari, come un intero file immagine o un documento PDF. In questo caso, è preferibile il tipo di contenuto `multipart/form-data`.
 
 Considera un modulo contenente campi per caricare un'immagine, fornire una descrizione e immettere il tuo nome utente. L'invio di un modulo del genere potrebbe comportare una richiesta simile a questa:
 
@@ -98,7 +102,7 @@ Content-Length: 39
 
 Questo comportamento è potenzialmente interessante di per sé, in quanto potrebbe fornire un modo per far trapelare il codice sorgente, ma annulla qualsiasi tentativo di creare una web shell.
 
-Questo tipo di configurazione spesso differisce tra le directory. Una directory in cui vengono caricati file forniti dall'utente avrà probabilmente controlli molto più severi rispetto ad altre posizioni sul file system che si presume siano fuori dalla portata degli utenti finali. Se riesci a trovare un modo per caricare uno script in una directory diversa che non dovrebbe contenere file forniti dall'utente, il server potrebbe eseguire lo script dopo tutto (PRACTITIONER: Web shell upload via path traversal).
+Questo tipo di configurazione spesso differisce tra le directory. Una directory in cui vengono caricati file forniti dall'utente avrà probabilmente controlli molto più severi rispetto ad altre posizioni sul [[File System|file system]] che si presume siano fuori dalla portata degli utenti finali. Se riesci a trovare un modo per caricare uno script in una directory diversa che non dovrebbe contenere file forniti dall'utente, il server potrebbe eseguire lo script dopo tutto (PRACTITIONER: Web shell upload via [[Path Traversal|path traversal]]).
 
 **Consiglio:** i server web utilizzano spesso il campo `filename` nelle richieste `multipart/form-data` per determinare il nome e la posizione in cui salvare il file.
 
@@ -127,7 +131,7 @@ I server web utilizzano questi tipi di file di configurazione quando sono presen
 ## Sfruttare le vulnerabilità di caricamento file senza esecuzione di codice remoto
 Siamo stati in grado di caricare script lato server per l'esecuzione di codice remoto. Questa è la conseguenza più grave di una funzione di caricamento file non sicura, ma queste vulnerabilità possono comunque essere sfruttate in altri modi.
 ### Caricamento di script dannosi lato client
-Sebbene tu possa non essere in grado di eseguire script sul server, potresti comunque essere in grado di caricare script per attacchi lato client. Ad esempio, se riesci a caricare file HTML o immagini SVG, puoi potenzialmente utilizzare i tag `<script>` per creare payload XSS archiviati.
+Sebbene tu possa non essere in grado di eseguire script sul server, potresti comunque essere in grado di caricare script per attacchi lato client. Ad esempio, se riesci a caricare file [[HTML]] o immagini SVG, puoi potenzialmente utilizzare i tag `<script>` per creare payload XSS archiviati.
 
 Se il file caricato appare quindi su una pagina visitata da altri utenti, il loro browser eseguirà lo script quando tenterà di eseguire il rendering della pagina. Nota che a causa delle restrizioni della same-origin policy, questo tipo di attacchi funzionerà solo se il file caricato viene servito dalla stessa origine su cui lo carichi.
 ### Sfruttamento delle vulnerabilità nell'analisi dei file caricati
@@ -137,5 +141,5 @@ Consentire agli utenti di caricare file è una prassi comune e non deve essere p
 - controllare l'estensione del file rispetto a una whitelist di estensioni consentite anziché a una blacklist di estensioni vietate. È molto più facile indovinare quali estensioni si desidera consentire piuttosto che quali un aggressore potrebbe provare a caricare;
 - assicurarsi che il nome del file non contenga sottostringhe che potrebbero essere interpretate come una directory o una sequenza di attraversamento (`../`);
 - rinominare i file caricati per evitare collisioni che potrebbero causar la sovrascrittura dei file esistenti;
-- non caricare file sul file system permanente del server finché non sono stati completamente convalidati;
+- non caricare file sul [[File System|file system]] permanente del server finché non sono stati completamente convalidati;
 - per quanto possibile, utilizzare un framework consolidato per la preelaborazione dei caricamenti di file anziché tentare di scrivere i propri meccanismi di convalida.

@@ -1,4 +1,8 @@
-Il **behavior-driven development** (abbreviato in BDD e traducibile in Sviluppo guidato dal comportamento) è una metodologia di sviluppo del software basata sul test-driven development (TDD). Il BDD combina le tecniche generali e i principi del TDD, con idee prese dal domain-driven design e dal design orientato agli oggetti, per fornire agli sviluppatori software e ai business analysts degli strumenti e un processo condivisi per collaborare nello sviluppo software.
+---
+aliases: [BDD, Behavior-driven development]
+tags: [agile-research-and-development-methodologies]
+---
+Il **behavior-driven development** (abbreviato in BDD e traducibile in Sviluppo guidato dal comportamento) è una metodologia di sviluppo del software basata sul test-driven development (TDD). Il BDD combina le tecniche generali e i principi del TDD, con idee prese dal domain-driven design e dal design orientato agli oggetti, per fornire agli sviluppatori software e ai business analysts degli strumenti e un processo condivisi per collaborare nello [[Sviluppo software|sviluppo software]].
 
 Per quanto BDD sia principalmente un'idea di come lo sviluppo del software dovrebbe essere gestito sia da interessi di business e analisi tecniche, la pratica della BDD assume l'utilizzo di strumenti software specializzati per supportare il processo di sviluppo. Sebbene questi strumenti siano spesso sviluppati in particolare per essere utilizzati in progetti BDD, possono essere visti anche come delle forme specializzate degli strumenti che supportano la TDD. Gli strumenti servono per aggiungere automazione all'*ubiquitous language* che è il tema centrale della BDD.
 
@@ -13,7 +17,7 @@ Esistono varie tecniche/giochi/modi per scoprire i comportamenti, ma tutte le te
 
 È essenziale che sia gli uomini d'affari che i tecnici partecipino alle sessioni di scoperta, indipendentemente da come sono organizzate. In questo modo, **i comportamenti scoperti non saranno sbilanciati verso un aspetto particolare del sistema da implementare.**
 
-In BDD possono esserci più fasi di discovery e nessun vincolo sul "quando" possono aver luogo: tuttavia se applichi SCRUM la "scelta naturale" è quella di allinearsi con le cerimonie standard dello sprint, in particolare la pianificazione dello sprint o subito dopo la fase di stima per ogni elemento del backlog.
+In BDD possono esserci più fasi di discovery e nessun vincolo sul "quando" possono aver luogo: tuttavia se applichi SCRUM la "scelta naturale" è quella di allinearsi con le cerimonie standard dello [[Sprint|sprint]], in particolare la pianificazione dello [[Sprint|sprint]] o subito dopo la fase di stima per ogni elemento del backlog.
 
 ### *Formulation phase*
 Una volta che abbiamo una serie di comportamenti, dobbiamo formularli come documentazione strutturata e fornire una specifica eseguibile per loro. Anche questo passaggio deve essere svolto in collaborazione da tecnici e uomini d'affari.

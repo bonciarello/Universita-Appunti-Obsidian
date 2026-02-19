@@ -1,3 +1,7 @@
+---
+aliases: [CG, Creazione gioco 2D]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo alla creazione di un progetto 2D, al rendere selezionabili oggetti 2D, alla visualizzazione del punteggio e delle mosse utilizzando il componente *Text Mesh* e al caricamento dei livelli e riavvio del gioco.
 
 ## Spiegazione del gioco da implementare
@@ -17,7 +21,7 @@ Questo è un mockup del gioco che costruiremo:
 ![](img/sezione17/mockup.PNG)
 
 ## Configura il progetto 2D
-- Crea un nuovo progetto in Unity3D;
+- Crea un nuovo progetto in [[Unity3D]];
 - Nella finestra *New Project* è possibile passare dalla modalità 2D alla modalità 3D, passare alla modalità 2D durante la creazione di questo nuovo progetto;
 - Se si imposta l'editor in modalità 2D, le immagini importate vengono impostate su *Sprite*: nei progetti 3D le immagini vengono importate come *Texture*;
 - Con il nuovo progetto creato e impostato per la modalità 2D, possiamo iniziare a inserire le nostre immagini nella scena.

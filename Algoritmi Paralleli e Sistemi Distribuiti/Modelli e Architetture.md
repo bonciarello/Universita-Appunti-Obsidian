@@ -1,8 +1,12 @@
-## Architettura di Von Neumann
+---
+aliases: [Modelli Architetture, MA]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
+## [[Architettura]] di Von Neumann
 
-Per oltre 50 anni, ogni computer ha adottato un modello comune di architettura noto come macchina di Von Neumann, dal nome del matematico ungherese John von Neumann. Una macchina di Von Neumann utilizza il concetto di "programma memorizzato". La CPU esegue un programma memorizzato che specifica una sequenza di letture e scritture in memoria.
+Per oltre 50 anni, ogni computer ha adottato un modello comune di [[Architettura|architettura]] noto come macchina di Von Neumann, dal nome del matematico ungherese John von Neumann. Una macchina di Von Neumann utilizza il concetto di "programma memorizzato". La CPU esegue un programma memorizzato che specifica una sequenza di letture e scritture in memoria.
 
-## Architettura di base
+## [[Architettura]] di base
 La **memoria** viene utilizzata per memorizzare sia le istruzioni del programma che i dati. Le **istruzioni** nel programma codificano i dati che dicono al computer cosa fare. I **dati** sono semplicemente informazioni utilizzate dal programma. Una **Central Processing Unit (CPU)** preleva le informazioni e/o i dati dalla memoria, decodifica le istruzioni e le esegue in sequenza.
 
 ![[architetturaBase.png]]
@@ -175,14 +179,14 @@ Abbiamo due tipi di accesso:
 
 ## Metodi alternativi per la programmazione multiprocessore (memoria condivisa)
 - **Thread** (Pthreads, Java, ecc.), in cui il programmatore scompone il programma in singole sequenze parallele, ciascuna delle quali è un "thread" e in grado di accedere a variabili dichiarate al di fuori di questo thread;
-- Un **linguaggio sequenziale (standard)**, con direttive di compilazione del preprocessore, adatto per la specifica di variabili condivise e la specifica del parallelismo. ES: *OpenMP* (standard industriale);
+- Un **linguaggio sequenziale (standard)**, con direttive di compilazione del preprocessore, adatto per la specifica di variabili condivise e la specifica del parallelismo. ES: *[[OpenMP]]* (standard industriale);
 - Un **linguaggio di compilazione (standard)** con librerie (ad esempio metodi, ecc.) Per la dichiarazione e l'accesso alle variabili condivise;
 - Un **linguaggio di programmazione parallelo con sintassi del parallelismo** in cui il compilatore crea il codice di esecuzione appropriato per ogni processore;
 - Un **linguaggio di programmazione sequenziale**, abbinato ad un compilatore "parallelo" ad hoc per la conversione in codice.
 
 ## Coerenza della cache nei sistemi multiprocessore
 
-Le reti di interconnessione **forniscono** i meccanismi di base per il trasferimento dei dati. Tuttavia, nel caso di macchine con spazio di indirizzi condiviso, è necessario hardware aggiuntivo per **coordinare l'accesso** ai dati che possono avere **più copie nella rete**. Quando il valore di una variabile cambia, tutte le altre copie devono essere **invalidate** o **aggiornate**.
+Le [[Reti|reti]] di interconnessione **forniscono** i meccanismi di base per il trasferimento dei dati. Tuttavia, nel caso di macchine con spazio di indirizzi condiviso, è necessario hardware aggiuntivo per **coordinare l'accesso** ai dati che possono avere **più copie nella rete**. Quando il valore di una variabile cambia, tutte le altre copie devono essere **invalidate** o **aggiornate**.
 
 ![[coerenzaCache.png]]
 
@@ -251,7 +255,7 @@ Queste piattaforme includono un set di processori con una propria **memoria escl
 
 ## Architetture ibride
 
-**Le architetture di computer più potenti utilizzano memoria condivisa e distribuita.** Il componente di memoria condivisa è solitamente un SMP coerente con la cache e quindi i processori di un dato SMP accedono a una memoria di indirizzi globali. Il componente di memoria distribuita è la rete di SMP. La tendenza attuale è l'utilizzo di questo tipo di macchine. **Vantaggi e svantaggi:** ciò che è comune ai vari componenti presi singolarmente. Uso congiunto MPI - OpenMP (e GPGPU)!
+**Le architetture di computer più potenti utilizzano memoria condivisa e distribuita.** Il componente di memoria condivisa è solitamente un SMP coerente con la cache e quindi i processori di un dato SMP accedono a una memoria di indirizzi globali. Il componente di memoria distribuita è la rete di SMP. La tendenza attuale è l'utilizzo di questo tipo di macchine. **Vantaggi e svantaggi:** ciò che è comune ai vari componenti presi singolarmente. Uso congiunto MPI - [[OpenMP]] (e GPGPU)!
 
 ![[architetturaIbride.png]]
 
@@ -261,11 +265,11 @@ Queste piattaforme includono un set di processori con una propria **memoria escl
 - Dati paralleli
 - Memoria condivisa
 - Discussioni
-- Ibrido (Es: OpenMP + MPI)
+- Ibrido (Es: [[OpenMP]] + MPI)
 - SPMD (Single Program Multiple Data)
 - MPMD (Multiple Program Multiple Data)
 
-Sebbene non evidenti, tali modelli non sono specifici per il particolare tipo di macchina o architettura di memoria. Ad esempio è possibile emulare Message Passing su architetture di memoria condivisa e viceversa (anche se in maniera molto "costosa").
+Sebbene non evidenti, tali modelli non sono specifici per il particolare tipo di macchina o [[Architettura|architettura]] di memoria. Ad esempio è possibile emulare Message Passing su architetture di memoria condivisa e viceversa (anche se in maniera molto "costosa").
 
 ## Sincronizzazione
 
@@ -332,7 +336,7 @@ La comunicazione è necessaria sui confini.
 
 Nel modello di memoria condivisa, le attività condividono uno spazio di indirizzi comune, in cui leggono e scrivono in modo sincrono. Vari meccanismi, come semafori o blocchi, possono essere utilizzati per controllare l'accesso alla memoria condivisa.
 
-**PRO:** poiché non esiste la nozione di "proprietà" dei dati, non è necessaria una comunicazione esplicita tra le attività. Lo sviluppo di programmi (sviluppo di programmi) può essere spesso semplificato. Parallelismo incrementale... (OpenMP!).
+**PRO:** poiché non esiste la nozione di "proprietà" dei dati, non è necessaria una comunicazione esplicita tra le attività. Lo sviluppo di programmi (sviluppo di programmi) può essere spesso semplificato. Parallelismo incrementale... ([[OpenMP]]!).
 
 **CONTRO:** può diventare difficile gestire la località dei dati (ad esempio, sezioni critiche, ecc.)
 
@@ -404,7 +408,7 @@ Il programma principale *a.out* è pianificato per essere eseguito dal sistema o
 
 Ogni thread ha dati locali, ma condivide anche le intere risorse di *a.out*. Ciò consente di risparmiare l'overhead generato dalla replica delle risorse del programma per ogni thread. Ogni thread beneficia anche della visione globale della memoria condivisa di *a.out*.
 
-I thread sono comunemente associati alle architetture di memoria condivisa e ai sistemi operativi.
+I thread sono comunemente associati alle architetture di memoria condivisa e ai [[Sistemi Operativi|sistemi operativi]].
 
 ## Implementazioni di thread
 Dal punto di vista della programmazione, le principali implementazioni del thread includono:

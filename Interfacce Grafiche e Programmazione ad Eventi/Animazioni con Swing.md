@@ -1,3 +1,7 @@
+---
+aliases: [Animazioni Swing, AS]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src* si trovano tutti i *package* di seguito, anche le immagini dell'omino che si muove.
 
 ## PACKAGE: application

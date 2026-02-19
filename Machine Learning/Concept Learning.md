@@ -1,3 +1,7 @@
+---
+aliases: [CL]
+tags: [machine-learning]
+---
 Concept Learning è il compito di indurre automaticamente la definizione generale (*modello*) di un concetto da un insieme di esempi.
 
 Un *modello* può anche essere considerato come una correlazione tra i valori dell'attributo, da un lato, e il valore dell'attributo obiettivo, dall'altro classificazione.

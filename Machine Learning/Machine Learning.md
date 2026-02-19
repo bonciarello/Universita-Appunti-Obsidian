@@ -1,26 +1,30 @@
+---
+aliases: [Apprendimento Automatico, ML]
+tags: [machine-learning]
+---
 ## Programma del corso
 Il programma del corso si divide in:
-- **introduzione al machine learning:** concetti base, approccio induttivo vs deduttivo, data mining e big data.
+- **[[Introduzione al machine learning|introduzione al machine learning]]:** concetti base, approccio induttivo vs deduttivo, data mining e big data.
 - **apprendimento supervisionato:**
-    - concept learning e Find-S;
-    - alberi decisionali e classificatori basati su regole;
-    - reti neurali (Perceptron, MLP, Backpropagation);
+    - [[Concept Learning|concept learning]] e Find-S;
+    - [[Alberi decisionali|alberi decisionali]] e [[Classificatori basati su regole|classificatori basati su regole]];
+    - [[Reti|reti]] neurali (Perceptron, MLP, Backpropagation);
     - classificatori probabilistici (Naive Bayes);
-    - classificatori basati su istanze (k-NN).
+    - [[Classificatori basati su istanze|classificatori basati su istanze]] (k-NN).
 - **apprendimento non supervisionato:**
     - clustering (K-means, EM);
     - analisi di associazione.
 - **metodologia e valutazione:**
-    - metodologia CRISP-DM;
+    - [[Metodologia CRISP-DM|metodologia CRISP-DM]];
     - preparazione dei dati (cleaning, integration, reduction);
     - valutazione dei modelli (matrice di confusione, cross-validation).
 
 ## Obiettivi del corso
 Gli **obiettivi** del corso sono:
 - comprendere i fondamenti del Machine Learning e del Data Mining;
-- apprendere le tecniche per l'apprendimento di modelli (alberi decisionali, reti neurali, ecc.) dall'esperienza;
+- apprendere le tecniche per l'apprendimento di modelli ([[Alberi decisionali|alberi decisionali]], [[Reti|reti]] neurali, ecc.) dall'esperienza;
 - capacità di estrarre conoscenza da grandi volumi di dati per scopi descrittivi e predittivi;
-- padroneggiare la metodologia CRISP-DM per la gestione di progetti di data mining;
+- padroneggiare la [[Metodologia CRISP-DM|metodologia CRISP-DM]] per la gestione di progetti di data mining;
 - capacità di valutare criticamente le performance dei modelli prodotti.
 
 ## Indice

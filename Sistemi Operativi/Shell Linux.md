@@ -1,3 +1,7 @@
+---
+aliases: [SL]
+tags: [sistemi-operativi]
+---
 ## Le basi della shell Linux
 
 - **Come si accede a *bash*?** i tasti utili sono *Ctrl-Alt-F1* oppure *Ctrl-Alt-F7*;
@@ -20,7 +24,7 @@ I **path assoluti** specificano esattamente l'intero path del file/directory. I 
 - */etc* → file di configurazione;
 - */home* → home degli utenti;
 - */lib* → librerie;
-- */mnt, /media* → file system esterni;
+- */mnt, /media* → [[File System|file system]] esterni;
 - */opt* → componenti opzionali;
 - */tmp* → file temporanei;
 - */usr* → molti eseguibili e tanto altro;
@@ -94,7 +98,7 @@ Possiamo decidere di immettere l'output di un programma P1 come input di un prog
 ## Altri comandi per il terminale (utili)
 
 - Per scaricare contenuto da internet: *wget <link>*;
-- Per scaricare contenuto da internet (anche con protocolli di sicurezza): *wget auto <link>*;
+- Per scaricare contenuto da internet (anche con protocolli di [[Sicurezza|sicurezza]]): *wget auto <link>*;
 - Per decomprimere un archivio compresso: *unzip <path>*;
 - Per spostare dei file con una certa estensione: *mv \*.<estensione> <directory>*;
 - Per dividere le stringhe: *cut -f <campo 1>,<campo n> -d "<carattere>" <file origine>*;

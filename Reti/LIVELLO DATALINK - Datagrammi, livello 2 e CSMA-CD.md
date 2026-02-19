@@ -1,3 +1,7 @@
+---
+aliases: ["LIVELLO DATALINK - Datagrammi, livello 2 CSMA-CD", LDL]
+tags: [reti]
+---
 Il livello datalink ha la responsabilità di trasferire i datagrammi da un nodo a uno adiacente lungo un link diretto. In questo layer il PDU è il **frame**.
 
 ## Struttura di un frame Ethernet
@@ -58,13 +62,13 @@ Abbiamo due standard:
 
 ![](img/CSMA-CA.png)
 
-Le reti Wi-Fi soffrono di numerosi tempi idling e soprattutto l'intero sistema di comunicazione è sincronizzato temporalmente, infatti se l'ACK esplicito non arriva nel tempo prestabilito il messaggio si dà per "colliso". 
+Le [[Reti Wi-Fi|reti Wi-Fi]] soffrono di numerosi tempi idling e soprattutto l'intero sistema di comunicazione è sincronizzato temporalmente, infatti se l'ACK esplicito non arriva nel tempo prestabilito il messaggio si dà per "colliso". 
 
-Le reti Wi-Fi vengono identificate da:
+Le [[Reti Wi-Fi|reti Wi-Fi]] vengono identificate da:
 - *SSID/ESSID:* è il nome testuale attraverso cui la rete Wi-Fi, cioè router e tutti gli access point, si identificano agli utenti;
 - *BSSID:* rappresenta il MAC address dell'access point.
 
-Le reti Wi-Fi sono un esempio di *FDMA (Frequency Division Multiplexing Access)* e cioè sfruttano un meccanismo di turnificazione del canale di comunicazione in funzione della banda di frequenza. 
+Le [[Reti Wi-Fi|reti Wi-Fi]] sono un esempio di *FDMA (Frequency Division Multiplexing Access)* e cioè sfruttano un meccanismo di turnificazione del canale di comunicazione in funzione della banda di frequenza. 
 
 ![](img/FDMA.png)
 

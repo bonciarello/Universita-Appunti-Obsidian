@@ -1,3 +1,7 @@
+---
+aliases: [html]
+tags: [web-computing]
+---
 L'**HTML** (*HyperText Markup Language*) è il linguaggio standard per la creazione di pagine web. Non è un linguaggio di programmazione, ma un linguaggio di **markup** (marcatura) che descrive la struttura del contenuto tramite **tag**.
 ## Panoramica
 ### Concetti Base

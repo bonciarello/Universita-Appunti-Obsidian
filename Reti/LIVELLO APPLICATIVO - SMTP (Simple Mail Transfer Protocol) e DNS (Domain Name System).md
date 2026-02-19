@@ -1,3 +1,7 @@
+---
+aliases: [Simple Mail Transfer Protocol, LIVELLO APPLICATIVO - SMTP  e DNS]
+tags: [reti]
+---
 ## SMTP (Simple Mail Transfer Protocol)
 L'**SMTP (Simple Mail Transfer Protocol)** è un protocollo basato su messaggi testuali, che permette di scambiare un'email tra un client e un server. Viene definito nell'RFC 2821, è basato su TCP e rimane in ascolto ad una delle seguenti porte: *25*, *465*, *587* le cui ultime due hanno un layer di protezione. 
 

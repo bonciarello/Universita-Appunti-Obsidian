@@ -1,3 +1,7 @@
+---
+aliases: [IMDb, Classificazione Testo Avanzata, Classe]
+tags: [deep-learning]
+---
 In questo laboratorio useremo il dataset **IMDb Reviews** (25.000 recensioni di film) per costruire un classificatore di sentiment (Positivo/Negativo). Useremo tecniche moderne di Keras come il layer `TextVectorization` integrato.
 
 ## 1. Caricamento e Ottimizzazione Dati

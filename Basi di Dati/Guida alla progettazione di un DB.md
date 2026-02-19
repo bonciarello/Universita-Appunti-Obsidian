@@ -1,15 +1,19 @@
+---
+aliases: [Guida progettazione DB, GPD]
+tags: [basi-di-dati]
+---
 ## Fasi preliminari
 Progettare una base di dati significa definirne il contenuto e la struttura che essa deve avere.
-Per quanto riguarda le metodologie di progettazione, essendo che le basi di dati sono sempre più complesse e sofisticate, è necessario un approccio sistematico.
+Per quanto riguarda le metodologie di progettazione, essendo che le [[Basi di Dati|basi di dati]] sono sempre più complesse e sofisticate, è necessario un approccio sistematico.
 L'obiettivo della progettazione è produrre i seguenti risultati:
 - uno schema dei dati;
 - un insieme di sottoschemi di applicazione;
 - un insieme di programmi applicativi.
 Le fasi di progettazione sono:
 - raccolta ed analisi dei requisiti;
-- progettazione concettuale;
+- [[Progettazione concettuale|progettazione concettuale]];
 - progettazione logica;
-- progettazione fisica.
+- [[Progettazione fisica|progettazione fisica]].
 Ogni fase si basa su un modello che permette di generare una rappresentazione formale della base di dati ad un dato livello di astrazione.
 
 L’utilizzo dei modelli appropriati permette di verificare le caratteristiche della base di dati e comunicare con i futuri utenti della base di dati.
@@ -54,7 +58,7 @@ I documenti da produrre sono:
 
 ![[raffinamentoEindividuazione.PNG]]
 
-## Progettazione concettuale
+## [[Progettazione concettuale]]
 A partire dai requisiti informativi viene creato uno **schema concettuale**, cioè una descrizione formalizzata e integrata delle esigenze aziendali, espressa in modo **indipendente** dal DBMS adottato.
 
 Lo schema prodotto nella progettazione è concettuale si basa sul modello concettuale: quest'ultimo è una descrizione ad alto livello indipendente dall'implementazione ed è la prima rappresentazione formale e del tutto indipendente dall'implementazione della base di dati (indipendente anche dal tipo di DBMS che sarà utilizzato - relazionale, object-relational, gerarchico, …).
@@ -91,13 +95,13 @@ Sarebbe la descrizione schematica dei dati espressi nello schema ER. Contiene:
     - ruolo della partecipazione di ogni entità coinvolta nelle relationship mettendo in evidenza il significato del ruolo (motivando, se necessario, la scelta delle cardinalità).
 
 ## Progettazione logica
-È la traduzione dello schema concettuale nel modello dei dati del DBMS. Il risultato sarebbe lo schema logico nel DDL del DBMS. Gli aspetti considerati durante la progettazione logica sarebbero integrità e consistenza, sicurezza ed efficienza.
+È la traduzione dello schema concettuale nel modello dei dati del DBMS. Il risultato sarebbe lo schema logico nel DDL del DBMS. Gli aspetti considerati durante la progettazione logica sarebbero integrità e consistenza, [[Sicurezza|sicurezza]] ed efficienza.
 
 La progettazione logica consiste nelle seguenti fasi:
 - ristrutturazione dello schema concettuale;
 - traduzione canonica;
 - valutazione ed eventuale modifica dello schema.
 
-## Progettazione fisica
+## [[Progettazione fisica]]
 In questa fase vengono scelte le caratteristiche fisiche di realizzazione della base di dati.
 Il risultato sarebbe lo schema fisico che descrive le strutture di memorizzazione e accesso ai dati (es. clustering, indici, ...)

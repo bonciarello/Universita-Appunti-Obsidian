@@ -1,6 +1,10 @@
+---
+aliases: [TAP, Test avanzati Python]
+tags: [secure-software-design]
+---
 *La descrizione di un dominio applicativo è volutamente minimale in modo da poterci concentrare sui problemi architettonici e su come risolverli.*
 
-Come spinto dal modello di architettura pulita, siamo interessati a separare i diversi livelli del sistema: ricorda che ci sono diversi modi per implementare i concetti di architettura pulita e il codice che puoi inventare dipende fortemente da ciò che la tua lingua preferita ti consente di fare.
+Come spinto dal modello di [[Architettura|architettura]] pulita, siamo interessati a separare i diversi livelli del sistema: ricorda che ci sono diversi modi per implementare i concetti di [[Architettura|architettura]] pulita e il codice che puoi inventare dipende fortemente da ciò che la tua lingua preferita ti consente di fare.
 
 ## Moduli di terze parti
 Un approccio semplice per convalidare tipi e valori può essere l'utilizzo di istruzioni IF e la generazione di eccezioni. Riutilizziamo meglio i moduli di terze parti e le nuove funzionalità di Python. I suggerimenti sul tipo possono essere utilizzati da un analizzatore statico. Le classi di dati sono utili per definire le classi dalle annotazioni.

@@ -1,3 +1,7 @@
+---
+aliases: [MECG]
+tags: [basi-di-dati]
+---
 È un modello concettuale per la rappresentazione dei dati del dominio di interesse ad un elevato livello di astrazione. È un modello grafico molto semplice da rappresentare ed ha una sua complessità. I suoi costrutti di base sono:
 - *entità*
 - *attributi*

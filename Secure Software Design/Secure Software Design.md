@@ -1,7 +1,11 @@
+---
+aliases: [SSD]
+tags: [secure-software-design]
+---
 ## Programma del corso
 Il programma del corso si divide in tre parti principali:
-- **introduzione alla progettazione sicura del software:** triade della CIA, perché la progettazione è importante per la sicurezza e modellazione profonda;
-- **progettazione guidata dal dominio:** costrutti che promuovono la sicurezza, primitive di dominio, garantire l'integrità dello stato e ridurre la complessità dello stato;
+- **introduzione alla progettazione sicura del software:** triade della CIA, perché la progettazione è importante per la [[Sicurezza|sicurezza]] e modellazione profonda;
+- **progettazione guidata dal dominio:** costrutti che promuovono la [[Sicurezza|sicurezza]], primitive di dominio, garantire l'integrità dello stato e [[Ridurre la complessità|ridurre la complessità]] dello stato;
 - **sviluppo guidato dai test:** progettazione di test, mock e patch e gestire i fallimenti in modo sicuro.
 
 ## Obiettivi del corso

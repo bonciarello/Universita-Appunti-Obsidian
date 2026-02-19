@@ -1,4 +1,8 @@
-**Bootstrap** è il framework CSS più popolare al mondo per lo sviluppo di siti responsive e mobile-first. Fornisce una collezione di stili CSS predefiniti e componenti JavaScript (modali, carousel, tooltip) pronti all'uso.
+---
+aliases: [bootstrap]
+tags: [web-computing]
+---
+**Bootstrap** è il framework CSS più popolare al mondo per lo sviluppo di siti responsive e mobile-first. Fornisce una collezione di stili CSS predefiniti e componenti [[JavaScript]] (modali, carousel, tooltip) pronti all'uso.
 ## Installazione
 
 1.  **CDN (Consigliato per test):** Includi i link CSS e JS nell'`<head>` e prima della chiusura del `<body>`.

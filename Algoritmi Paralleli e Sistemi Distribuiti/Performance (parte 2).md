@@ -1,3 +1,7 @@
+---
+aliases: [parte 2, Performance]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## Legge di Amdahl
 
 **Bestia nera** dei ricercatori nel campo del calcolo parallelo fino al 1988. Ha “**limitato**” la velocità di una macchina parallela a 20-50, indipendentemente dal numero di processori! Nel 1988, tuttavia, alcuni ricercatori dei Sandia National Labs ottennero una velocità di 1000 su una macchina da 1024 processori **senza violare** la legge di Amdahl. Come hanno fatto?

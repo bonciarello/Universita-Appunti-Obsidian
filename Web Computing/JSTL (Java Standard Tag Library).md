@@ -1,3 +1,7 @@
+---
+aliases: [JSTL, Java Standard Tag Library]
+tags: [web-computing]
+---
 La **JSTL** (*JavaServer Pages Standard Tag Library*) è una collezione di tag personalizzati che permettono di implementare logica comune (cicli, condizioni, formattazione) nelle JSP senza ricorrere agli scriptlet Java.
 
 Per usarla, bisogna dichiarare la taglib nell'intestazione della JSP:
@@ -58,6 +62,6 @@ Il tag `<c:url>` è fondamentale per gestire correttamente gli URL all'interno d
 <a href="${urlModifica}">Modifica</a>
 ```
 ## Perché usare JSTL invece degli Scriptlet?
-1.  **Leggibilità:** Il codice somiglia all'HTML, facilitando il lavoro ai front-end designer.
+1.  **Leggibilità:** Il codice somiglia all'[[HTML]], facilitando il lavoro ai front-end designer.
 2.  **Meno Errori:** Riduce la complessità sintattica (niente parentesi graffe aperte/chiuse sparse).
 3.  **Manutenibilità:** Separa nettamente la logica di visualizzazione da quella Java.

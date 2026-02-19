@@ -1,3 +1,7 @@
+---
+aliases: [IP, Python, Introduzione Python]
+tags: [sistemi-operativi]
+---
 Python è un linguaggio di *scripting pseudocompilato*, cioè un linguaggio interpretato. L'**interprete** è un normale programma che va installato sulla propria macchina, e si occuperà di interpretare il codice sorgente e di eseguirlo. Non c'è una fase di compilazione (linking che trasforma il sorgente in eseguibile) e si ha a disposizione solo il sorgente che viene direttamente eseguito dall'interprete. I vantaggi di Python sono:
 - *portabilità*, lo stesso programma potrà girare su diverse piattaforme purché vi sia installato l'interprete;
 - *Object Oriented*, supporta le classi, l'ereditarietà e si caratterizza per il binding dinamico;

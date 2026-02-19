@@ -1,3 +1,7 @@
+---
+aliases: [iso-osi]
+tags: [reti]
+---
 L'organizzazione che caratterizza una rete è di tipo "gerarchico", cioè i sistemi complessi vengono suddivisi in moduli. Questa soluzione offre un **vantaggio** principale e cioè ne facilita la manutenzione oltre che di flessibilità (gli strati infatti sono l'uno indipendente dall'altro come per esempio il *pattern Bridge*). Purtroppo, però questa strategia introduce grande inefficienza e ridondanza dei compiti oltre che dei dati.
 
 L'intera struttura internet è suddivisibile in cinque layer (facendo riferimento al modello TCP/IP sennò sarebbero sette) ed in particolare:

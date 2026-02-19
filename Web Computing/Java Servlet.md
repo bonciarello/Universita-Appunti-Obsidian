@@ -1,9 +1,13 @@
+---
+aliases: [JS]
+tags: [web-computing]
+---
 Le **Servlet** sono componenti lato server scritti in Java che estendono le funzionalità di un web server. Sono il cuore del framework Java EE (Enterprise Edition) per il web e gestiscono il modello **Request/Response**.
-## Architettura 3-Tier
+## [[Architettura]] 3-Tier
 Le applicazioni web moderne sono divise in tre livelli logici:
-1.  **Presentation Tier:** L'interfaccia utente (HTML, CSS, JS).
-2.  **Logic Tier:** Il cervello dell'app (Servlet, Application Server come Tomcat). Si occupa della decodifica richieste, logica di business e sicurezza.
-3.  **Persistence Tier:** Dove i dati vengono salvati (Database, RDBMS).
+1.  **Presentation Tier:** L'[[Interfaccia utente|interfaccia utente]] ([[HTML]], CSS, JS).
+2.  **Logic Tier:** Il cervello dell'app (Servlet, Application Server come Tomcat). Si occupa della decodifica richieste, logica di business e [[Sicurezza|sicurezza]].
+3.  **Persistence Tier:** Dove i dati vengono salvati ([[Database]], RDBMS).
 ## Cosa sono le Servlet?
 In termini pratici, una Servlet è una classe Java che estende `HttpServlet`. Gira all'interno di un **Web Container** (es. Apache Tomcat), che si occupa di gestire la rete e il ciclo di vita della servlet.
 ### Esempio Base: HelloServlet

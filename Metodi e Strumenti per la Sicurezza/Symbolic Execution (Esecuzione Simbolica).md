@@ -1,3 +1,7 @@
+---
+aliases: [Symbolic Execution, Esecuzione Simbolica]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
 L'**esecuzione simbolica** è una tecnica di analisi che utilizza variabili simboliche anziché valori concreti per rappresentare gli input di un programma. Questo permette di esplorare sistematicamente i diversi percorsi di esecuzione (**path**) per identificare bug o vulnerabilità senza testare manualmente ogni caso.
 
 ## 1. Obiettivi e Funzionamento
@@ -40,4 +44,4 @@ L'esecuzione simbolica deve affrontare l'**esplosione dei percorsi**: il numero 
     *   Evitare di esplorare percorsi simili a quelli già esclusi.
 
 ## 5. Conclusioni
-L'analisi simbolica è uno strumento potente per la sicurezza perché permette di esplorare rami di codice difficili da raggiungere con i test tradizionali, fornendo una copertura molto più profonda rispetto al semplice testing dinamico.
+L'analisi simbolica è uno strumento potente per la [[Sicurezza|sicurezza]] perché permette di esplorare rami di codice difficili da raggiungere con i test tradizionali, fornendo una copertura molto più profonda rispetto al semplice testing dinamico.

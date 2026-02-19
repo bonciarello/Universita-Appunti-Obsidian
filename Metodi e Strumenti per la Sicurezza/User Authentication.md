@@ -1,3 +1,7 @@
+---
+aliases: [UA]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
 L'autenticazione è la prima linea di difesa e si sviluppa in due fasi:
 1.  **Identificazione:** l'utente presenta un identificatore unico e non segreto (es. username).
 2.  **Verifica:** l'utente dimostra la corrispondenza con l'identità dichiarata tramite informazioni segrete o uniche.
@@ -17,13 +21,13 @@ Le password sono segreti condivisi.
 *   **Attacco alle password popolari:** Provare password comuni su molti account.
 *   **Monitoring (Sniffing):** Intercettazione delle password inviate in chiaro (mitigato da HTTPS).
 
-### Forza della Password ed Entropia
-La forza è misurata dall'entropia (caos). Bit necessari per simbolo:
+### Forza della Password ed [[Entropia]]
+La forza è misurata dall'[[Entropia|entropia]] (caos). Bit necessari per simbolo:
 *   Cifre (base 10): 3.32 bit.
 *   Lettere minuscole (az): 4.70 bit.
 *   Caratteri ASCII stampabili (94): 6.55 bit.
 
-**Il problema umano:** Le password non sono casuali. Nel 2016, le 5000 password più comuni coprivano il 20% degli utenti. L'entropia reale è spesso di soli **20 bit**.
+**Il problema umano:** Le password non sono casuali. Nel 2016, le 5000 password più comuni coprivano il 20% degli utenti. L'[[Entropia|entropia]] reale è spesso di soli **20 bit**.
 
 ### Strategie di miglioramento
 *   **Controllo reattivo:** Segnalare password deboli dopo che sono state scelte.

@@ -1,3 +1,7 @@
+---
+aliases: [Liste, Linked Lists]
+tags: [programmazione-ad-oggetti]
+---
 ### Lista Concatenata
 Sequenza di elementi dove ogni **nodo** contiene il dato e un puntatore al nodo successivo .
 - Vantaggio: Inserimento/Rimozione veloci.

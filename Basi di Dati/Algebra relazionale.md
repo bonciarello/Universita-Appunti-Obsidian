@@ -1,3 +1,7 @@
+---
+aliases: [AR]
+tags: [basi-di-dati]
+---
 È un linguaggio di interrogazione costituito da un insieme di operatori definiti su relazioni che producono relazioni.
 Le interrogazioni vengono formulate attraverso espressioni algebriche.
 Gli operatori sono:
@@ -135,7 +139,7 @@ dove $\pi_Z$ produce la proiezione su tutti gli attributi di R e S, prendendo un
 ## Algebra relazionale per le interrogazioni
 
 Usando gli operatori dell’algebra relazionale è possibile costruire delle espressioni che producono come risultato una relazione.
-Tali espressioni possono essere utilizzate per formulare interrogazioni sulle basi di dati relazionali
+Tali espressioni possono essere utilizzate per formulare interrogazioni sulle [[Basi di Dati|basi di dati]] relazionali
 
 ### Base di dati di esempio
 L'esempio di riferimento per le prossime spiegazioni saranno:

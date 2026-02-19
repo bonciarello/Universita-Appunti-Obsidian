@@ -1,3 +1,7 @@
+---
+aliases: [CP, Code pile]
+tags: [programmazione-ad-oggetti]
+---
 ### Queue (Coda) - FIFO
 Struttura **First In First Out** (Il primo ad entrare è il primo ad uscire).
 - `push()`: Inserisce in fondo.

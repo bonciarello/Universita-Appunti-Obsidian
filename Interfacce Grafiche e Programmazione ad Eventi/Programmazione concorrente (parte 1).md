@@ -1,3 +1,7 @@
+---
+aliases: [Programmazione concorrente, parte 1]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 La programmazione concorrente indica la possibilità di scrivere programmi che possono eseguire più operazioni in parallelo.
 
 Usare la programmazione concorrente garantisce l'esecuzione di compiti potenzialmente pesanti in background in modo che l'utente non debba attendere l'esito dell'operazione prima di eseguirne altre.

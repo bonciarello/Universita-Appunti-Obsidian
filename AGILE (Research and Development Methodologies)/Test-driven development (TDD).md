@@ -1,3 +1,7 @@
+---
+aliases: [TDD, Test-driven development]
+tags: [agile-research-and-development-methodologies]
+---
 Questi laboratori servono per introdurre tecniche che si adattano bene ai paradigmi di sviluppo iterativo delle metodologie agili. I laboratori sono divisi in due parti:
 - ***parte 1,* esercitati con tecniche di test-driven development**: base di TDD, test doppi e sviluppo guidato dal comportamento;
 - ***parte 2,* pipeline CI/CD:** cos'è una pipeline CI/CD, come progettare una pipeline per il tuo progetto e come lavorare in team in un ambiente CI/CD.
@@ -23,7 +27,7 @@ Per soddisfare le regole del TDD, lo sviluppatore è “costretto” verso il se
 
 Se mettiamo in pratica il flusso di lavoro TDD:
 - è impossibile non scrivere dei test per le funzionalità che implementiamo;
-- di solito terminiamo con un'elevata copertura del codice (principalmente unit test, test di integrazione), che aiuta nel refactoring (test di regressione);
+- di solito terminiamo con un'elevata copertura del codice (principalmente unit test, test di integrazione), che aiuta nel refactoring (test di [[Regressione|regressione]]);
 - siamo costretti a pensare alle API che stiamo progettando;
 - i nostri test saranno generalmente molto descrittivi ("documentazione vivente").
 
@@ -45,6 +49,6 @@ Nel corso degli anni, la comunità dei professionisti del TDD ha acquisito molte
 
 Semplici affermazioni saranno sufficienti per oggi, ma sei incoraggiato a sfogliare i documenti per "funzionalità avanzate" se decidi di utilizzarlo per il tuo lavoro di progetto. Altre funzionalità importanti sono:
 - *pytest.fixture* permette di usare l'iniezione di dipendenza per impostare il contesto per l'esecuzione dei test;
-- il suo argomento *scope='module'|'function'|'class'* è simile alle annotazioni *@BeforeClass*, *@AfterClas*s di JUnit;
+- il suo argomento *scope='module'|'function'|'class'* è simile alle annotazioni *@BeforeClass*, *@AfterClas*s di [[JUnit]];
 - installa con *pip install pytest* (consigliato per utilizzare un ambiente virtuale);
 - viene eseguito con *pytest* (consigliato *pytest -v*) nella cartella principale del progetto. Puoi anche specificare una sottodirectory o un modulo, l'impostazione predefinita è "esecuzione di tutti i test rilevati".

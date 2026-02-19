@@ -1,3 +1,7 @@
+---
+aliases: [OI, Opportunità imprenditorialità]
+tags: [business-game]
+---
 ## 1. Imprenditorialità
 Un **imprenditore** (entrepreneur) è un individuo che assume rischi finanziari per avviare e gestire un'attività economica con l'obiettivo di ottenere profitto.
 Caratteristiche chiave: leadership, creatività, adattabilità, determinazione.
@@ -53,4 +57,4 @@ Basata su moduli e collegamenti:
 
 ### Raccolta Dati
 *   **Primary Data:** specifici per il caso (Focus Group, interviste, questionari).
-*   **Secondary Data:** dati esistenti generici (database, report di settore).
+*   **Secondary Data:** dati esistenti generici ([[Database|database]], report di settore).

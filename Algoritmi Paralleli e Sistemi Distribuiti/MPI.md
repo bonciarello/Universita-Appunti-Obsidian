@@ -1,3 +1,7 @@
+---
+aliases: [mpi]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## Informazioni su MPI
 
 Vedremo solo la prima versione! Seconda versione e terza versione hanno caratteristiche avanzate interessanti, ma i fondamenti di MPI sono sufficientemente coperti già per la prima versione.
@@ -671,7 +675,7 @@ int main (int argc, char* argv[]) {
 
 Una comunicazione è completata quando:
 
-- **Le posizioni di memoria utilizzate per il trasferimento dei messaggi possono essere utilizzate in sicurezza:**
+- **Le posizioni di memoria utilizzate per il trasferimento dei messaggi possono essere utilizzate in [[Sicurezza|sicurezza]]:**
     - *Invia:* la variabile che è stata inviata può essere riutilizzata
     - *Ricevi:* è possibile utilizzare la variabile ricevuta
 
@@ -1412,7 +1416,7 @@ Oltre al **gruppo** e al **contesto**, altri attributi possono essere associati 
 
 La topologia di comunicazione identifica i **principali modelli** di comunicazione che si verificano in un codice parallelo. Le **topologie virtuali MPI** sono uno strumento utile per risparmiare tempo, evitare deadlock/errori logici e codice struttura migliore. Per impostazione predefinita, MPI assegna a ciascun processo di un gruppo un rango da *0* a *n-1* (**topologia lineare**). Con funzioni adeguate, MPI supporta anche **topologie** e **grafici cartesiani**. Utile quando i modelli di comunicazione seguono una o più **strutture particolari**.
 
-## Topologie delle reti: ipercubi e loro costruzione
+## Topologie delle [[Reti|reti]]: ipercubi e loro costruzione
 
 Ricordiamo la seguente importante proprietà degli ipercubi: "La distanza tra due nodi è data dal numero di posizioni di bit in cui i due nodi differiscono (es. 0110 e 0101 sono distanti 2 nodi)".
 
@@ -1424,7 +1428,7 @@ Ricordiamo la seguente importante proprietà degli ipercubi: "La distanza tra du
 
 > Diversi modi per mappare un insieme di processi su una griglia bidimensionale: *(a)* e *(b)* riga e colonna; *(c)* curve di riempimento dello spazio; *(d)* mostra un processo di mappatura in cui i "vicini" sono collegati all'ipercubo.
 
-**ESEMPIO:** se hai bisogno di una topologia in cui ogni processo comunichi con i suoi vicini lungo xey, e l'architettura della macchina parallela per la comunicazione reale è quella dell'ipercubo, la mappatura della figura (d) risulta essere la migliore.
+**ESEMPIO:** se hai bisogno di una topologia in cui ogni processo comunichi con i suoi vicini lungo xey, e l'[[Architettura|architettura]] della macchina parallela per la comunicazione reale è quella dell'ipercubo, la mappatura della figura (d) risulta essere la migliore.
 
 I processi sono ai nodi di una griglia N-dimensionale. Le caratteristiche della topologia sono:
 - numero di dimensioni;

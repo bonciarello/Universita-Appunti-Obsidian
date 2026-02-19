@@ -1,4 +1,8 @@
-## Concetto generale di progettazione concettuale
+---
+aliases: [LEME, Limiti espressivi modello ER]
+tags: [basi-di-dati]
+---
+## Concetto generale di [[Progettazione concettuale|progettazione concettuale]]
 
 Si parte dall'analisi del dominio applicativo, questa analisi si mette nero su bianco, nel linguaggio naturale, che è informale. Per questo, bisogna utilizzare il modello ER. Quando si progetta uno schema concettuale si deve porre una serie di domande, cioè:
 

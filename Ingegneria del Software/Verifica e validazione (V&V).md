@@ -1,3 +1,7 @@
+---
+aliases: [V&V, Verifica e validazione]
+tags: [ingegneria-del-software]
+---
 Con la **verifica** il software deve essere conforme alle sue specifiche. Per esempio ci dobbiamo fare la domanda "stiamo costruendo il prodotto giusto?".
 
 Con la **validazione** il software dovrebbe fare ciò che l'utente richiede realmente. Per esempio ci dobbiamo fare la domanda "stiamo costruendo il prodotto giusto?". 
@@ -109,7 +113,7 @@ I metodi formali possono essere utilizzati quando viene prodotta una specifica m
 
 Implicano un'analisi matematica dettagliata della specifica e possono sviluppare argomenti formali che un programma è conforme alla sua specifica matematica.
 
-## Sviluppo software "Cleanroom"
+## [[Sviluppo software]] "Cleanroom"
 
 Il nome deriva dal processo "Cleanroom" nella fabbricazione dei semiconduttori. **La filosofia è evitare i difetti piuttosto che rimuoverli.**
 

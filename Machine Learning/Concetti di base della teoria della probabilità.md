@@ -1,3 +1,7 @@
+---
+aliases: [CBTP, Concetti base teoria probabilità]
+tags: [machine-learning]
+---
 ## Probabilità condizionale
 La probabilità condizionata $p(A|B)$ è la probabilità dell'evento $A$ dato che l'evento $B$ si è verificato. Ad esempio:
 - $A$ rappresenta l'evento “un paziente ha una malattia del fegato”;
@@ -23,7 +27,7 @@ $A$ è **indipendente** da $B$ se $p(A|B) = p(A)$. Se $A$ indipendente da $B$, a
 Ad esempio:
 ![](img/sezione13/indipendenzaEsclusivitaReciproca.png)
 
-$X=1$ e $Y=1$ sono eventi indipendenti, in quanto la probabilità di $X=1$ non è influenzata dalla condizione $Y=1$. Allora:
+$X=1$ e $Y=1$ sono [[Eventi|eventi]] indipendenti, in quanto la probabilità di $X=1$ non è influenzata dalla condizione $Y=1$. Allora:
 - $p(X=1) = 0.5$;
 - $p(X=1|Y=1) = 0.5$.
 
@@ -35,21 +39,21 @@ La probabilità congiunta $p(A=1,B=1)$ è stimata come $p(A=1,B=1)*p(B=1) = \fra
 
 Nota che  $p(A=1,B=1) \neq p(A=1)*p(B=1) = \frac{1}{5}$.
 
-In effetti, "essere alcolizzati" e "malattie del fegato" NON sono eventi indipendenti.
+In effetti, "essere alcolizzati" e "malattie del fegato" NON sono [[Eventi|eventi]] indipendenti.
 
 ## Indipendenza condizionale
 $X$ e $Y$ sono **condizionatamente indipendenti**, dato $Z$, se $p(X|Y,Z) = p(X|Z)$. Se $X$ e $Y$ sono condizionatamente indipendenti, allora $p(X|Y,Z) = p(X|Z)p(Y|Z)$. In generale, se $X_1, ..., X_n$ sono condizionatamente indipendenti, dato $Z$, allora $p(X_1, ..., X_n|Y,Z) = p(X_1|Z)...p(X_n|Z)$. Ad esempio:
 
 ![](img/sezione13/conditionalndependence.png)
 
-Gli eventi $A=0$ e $B=0$ sono condizionatamente indipendenti quando $C=Yes$, come $p(A=0|B=0,Y) = \frac{1}{3} = p(A=0|Y)$. La probabilità $p(A=0, B=0|Y)=\frac{1}{6}$ può quindi essere stimata come prodotto di probabilità $p(A=0|Y)*p(B=0|Y) = \frac{1}{6}$. $A=0$ e $B=0$ NON sono indipendenti quando $C=No$ come $p(A=0 | B=0, N)=\frac{2}{3}$ e $p(A=0|N) = \frac{2}{5}$.
+Gli [[Eventi|eventi]] $A=0$ e $B=0$ sono condizionatamente indipendenti quando $C=Yes$, come $p(A=0|B=0,Y) = \frac{1}{3} = p(A=0|Y)$. La probabilità $p(A=0, B=0|Y)=\frac{1}{6}$ può quindi essere stimata come prodotto di probabilità $p(A=0|Y)*p(B=0|Y) = \frac{1}{6}$. $A=0$ e $B=0$ NON sono indipendenti quando $C=No$ come $p(A=0 | B=0, N)=\frac{2}{3}$ e $p(A=0|N) = \frac{2}{5}$.
 
 ## Addition Law
 La probabilità che si **verifichino** $A$ o $B$ è $p(A + B) = p(A) + p(B) - p(A, B) = p(A) + p(B) - p(A|B) p(B)$. Se $A$ e $B$ si **escludono a vicenda**, cioè $p(A|B) = 0$, allora $p(A + B) = p(A) + p(B)$. Se $A$ e $B$ sono **indipendenti**, cioè $p(A|B) = p(A)$, allora $p(A + B) = p(A) + p(B) - p(A)p(B)$. Ad esempio:
 
 ![](img/sezione13/additionLaw.png)
 
-Avremo $p(A=1 + B=1) = p(A=1) + p(B=1) - p(A=1,B=1)$. Poiché $A=1$ e $B=1$ sono eventi indipendenti, allora $p(A=1,B=1) = p(A=1)*p(B=1) = \frac{1}{5}$. Quindi $p(A=1 + B=1) = \frac{7}{10}$.
+Avremo $p(A=1 + B=1) = p(A=1) + p(B=1) - p(A=1,B=1)$. Poiché $A=1$ e $B=1$ sono [[Eventi|eventi]] indipendenti, allora $p(A=1,B=1) = p(A=1)*p(B=1) = \frac{1}{5}$. Quindi $p(A=1 + B=1) = \frac{7}{10}$.
 
 ## Probabilità totale
 Sia $B = {B1, ... ,Bn}$ una variabile aleatoria, dove $p(B_1) + ... + p(B_n) = 1$. Per qualsiasi evento $X$, $p(X) = p(X|B_1)p(B_1) + ... + p(X|B_n)p(B_n)$. Se $X$ è **indipendente** da $B_1,...,B_n$ allora $p(X) = p(X)p(B_1) + ... + p(X)p(B_n)$. Se $X$ è **mutualmente esclusivo** con $B1, ..., Bn$ allora $p(X)=0$.

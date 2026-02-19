@@ -1,3 +1,7 @@
+---
+aliases: [ME]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## Hello World
 
 ```c

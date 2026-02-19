@@ -1,6 +1,10 @@
+---
+aliases: [MS]
+tags: [basi-di-dati]
+---
 ## Scheduling
 
-È possibile definire due tipologie di eventi:
+È possibile definire due tipologie di [[Eventi|eventi]]:
 
 - ad una sola esecuzione;
 - ricorrente.
@@ -47,7 +51,7 @@ CREATE EVENT contaMinuti ON SCHEDULE EVERY 1 MINUTE DO call memScatto;
 
 Con questi comandi DDL è stato preparato il sistema, ma occorre attivare il processo di *scheduling*.
 
-Per far si che un evento venga eseguito dal DBMS, è necessario che venga registrato nell’event scheduler di MySQL. Sarà questo infatti ad occuparsi di eseguire periodicamente (nel tempo definito dall’amministratore) i vari eventi. Prima di creare un evento, bisogna che l’event scheduler venga attivato all’interno del nostro database, perché di default questo è disabilitato.
+Per far si che un evento venga eseguito dal DBMS, è necessario che venga registrato nell’event scheduler di [[MySQL]]. Sarà questo infatti ad occuparsi di eseguire periodicamente (nel tempo definito dall’amministratore) i vari [[Eventi|eventi]]. Prima di creare un evento, bisogna che l’event scheduler venga attivato all’interno del nostro [[Database|database]], perché di default questo è disabilitato.
 
 Questo si ottiene tramite una variabile globale *event\_scheduler*. Si possono controllare i valori di tutte le variabili settate utilizzando il comando:
 
@@ -60,20 +64,20 @@ Nel nostro caso:
 Show global varables like '%event%';
 ```
 
-Se *event\_scheduler* è a OFF, la schedulazione degli eventi è disattivata e si può utilizzare il seguente comando per l’attivazione:
+Se *event\_scheduler* è a OFF, la schedulazione degli [[Eventi|eventi]] è disattivata e si può utilizzare il seguente comando per l’attivazione:
 
 ```sql
 SET GLOBAL event_scheduler = ON;
 ```
 
-Una volta in esecuzione il processo che sovrintende agli eventi, ogni minuto scatterà *contaMinuti*, che richiamerà la procedura *memScatto* e questa inserirà un record nella tabella *regeventi*. La query *SELECT * FROM 'regeventi';*  mostrerà i record inseriti con data, che differisce esattamente di un minuto uno dall’altro.
+Una volta in esecuzione il processo che sovrintende agli [[Eventi|eventi]], ogni minuto scatterà *contaMinuti*, che richiamerà la procedura *memScatto* e questa inserirà un record nella tabella *regeventi*. La query *SELECT * FROM 'regeventi';*  mostrerà i record inseriti con data, che differisce esattamente di un minuto uno dall’altro.
 
 Con il comando:
 
 ```sql
 SHOW PROCESSLIST;
 ```
-controlliamo tutti i processi attivi in MySQL.
+controlliamo tutti i processi attivi in [[MySQL]].
 
 ## Creazione di un evento
 
@@ -132,12 +136,12 @@ DROP EVENT [IF EXISTS] event_name
 
 ## Event\_scheduler
 
-Per far sì che un evento venga eseguito dal DBMS, è necessario che venga registrato nell’event scheduler di MySQL. Sarà questo infatti ad occuparsi di eseguire periodicamente (nel tempo definito dall’amministratore) i vari eventi. Prima di creare un evento, bisogna che l’event scheduler venga attivato all’interno del nostro database, perché di default questo è disabilitato. Per far ciò bisogna lanciare il seguente comando SQL nella console di MySQL:
+Per far sì che un evento venga eseguito dal DBMS, è necessario che venga registrato nell’event scheduler di [[MySQL]]. Sarà questo infatti ad occuparsi di eseguire periodicamente (nel tempo definito dall’amministratore) i vari [[Eventi|eventi]]. Prima di creare un evento, bisogna che l’event scheduler venga attivato all’interno del nostro [[Database|database]], perché di default questo è disabilitato. Per far ciò bisogna lanciare il seguente comando SQL nella console di [[MySQL]]:
 
 ```sql
 SET GLOBAL event_scheduler = ON;
 ```
-dopo aver abilitato lo scheduler possiamo verificare quali eventi sono registrati al suo interno. Eseguiamo il comando:
+dopo aver abilitato lo scheduler possiamo verificare quali [[Eventi|eventi]] sono registrati al suo interno. Eseguiamo il comando:
 
 ```sql
 SHOW PROCESSLIST;

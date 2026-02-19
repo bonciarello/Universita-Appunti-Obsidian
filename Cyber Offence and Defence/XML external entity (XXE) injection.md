@@ -1,10 +1,14 @@
-La XML external entity injection (nota anche come XXE) è una vulnerabilità di sicurezza web che consente a un aggressore di interferire con l'elaborazione di dati XML da parte di un'applicazione. Spesso consente a un aggressore di visualizzare file sul file system del server applicativo e di interagire con qualsiasi sistema back-end o esterno a cui l'applicazione stessa può accedere.
+---
+aliases: [XML external entity  injection, XXE]
+tags: [cyber-offence-and-defence]
+---
+La XML external entity injection (nota anche come XXE) è una vulnerabilità di [[Sicurezza|sicurezza]] web che consente a un aggressore di interferire con l'elaborazione di dati XML da parte di un'applicazione. Spesso consente a un aggressore di visualizzare file sul [[File System|file system]] del server applicativo e di interagire con qualsiasi sistema back-end o esterno a cui l'applicazione stessa può accedere.
 
 In alcune situazioni, un aggressore può intensificare un attacco XXE per compromettere il server sottostante o altre infrastrutture back-end, sfruttando la vulnerabilità XXE per eseguire attacchi di falsificazione delle richieste lato server (SSRF).
 ### Come nascono le vulnerabilità XXE?
 Alcune applicazioni utilizzano il formato XML per trasmettere dati tra il browser e il server. Le applicazioni che lo fanno utilizzano quasi sempre una libreria standard o una API di piattaforma per elaborare i dati XML sul server. Le vulnerabilità XXE sorgono perché la specifica XML contiene varie funzionalità potenzialmente pericolose e i parser standard supportano queste funzionalità anche se non sono normalmente utilizzate dall'applicazione.
 
-Le entità esterne XML sono un tipo di entità XML personalizzata i cui valori definiti vengono caricati dall'esterno del DTD in cui sono dichiarati. Le entità esterne sono particolarmente interessanti dal punto di vista della sicurezza perché consentono di definire un'entità in base al contenuto di un percorso di file o di un URL.
+Le entità esterne XML sono un tipo di entità XML personalizzata i cui valori definiti vengono caricati dall'esterno del DTD in cui sono dichiarati. Le entità esterne sono particolarmente interessanti dal punto di vista della [[Sicurezza|sicurezza]] perché consentono di definire un'entità in base al contenuto di un percorso di file o di un URL.
 ### Quali sono i tipi di attacchi XXE?
 Esistono vari tipi di attacchi XXE:
 - sfruttamento di XXE per recuperare file, dove un'entità esterna è definita contenente il contenuto di un file e restituita nella risposta dell'applicazione;
@@ -12,7 +16,7 @@ Esistono vari tipi di attacchi XXE:
 - sfruttamento di blind XXE, dove i dati sensibili vengono trasmessi dal server applicativo a un sistema controllato dall'aggressore;
 - sfruttamento di blind XXE per recuperare dati tramite messaggi di errore, dove l'aggressore può attivare un messaggio di errore di analisi contenente dati sensibili.
 ## Sfruttare XXE per recuperare i file
-Per eseguire un attacco di XXE injection che recupera un file arbitrario dal file system del server, è necessario modificare l'XML inviato in due modi:
+Per eseguire un attacco di XXE injection che recupera un file arbitrario dal [[File System|file system]] del server, è necessario modificare l'XML inviato in due modi:
 - introdurre (o modificare) un elemento `DOCTYPE` che definisce un'entità esterna contenente il percorso al file;
 - modificare un valore di dati nell'XML restituito nella risposta dell'applicazione, per utilizzare l'entità esterna definita.
 

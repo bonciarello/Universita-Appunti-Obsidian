@@ -1,3 +1,7 @@
+---
+aliases: [Breve guida Eclipse, BGE]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Eclipse è un ambiente di sviluppo integrato multi-linguaggio e multipiattaforma che utilizzeremo per sviluppare i nostri programmi in Java. I programmi che abbiamo scritto verranno compilati dalla JDK che abbiamo installato in precedenza.
 
 ## Creare un progetto Java

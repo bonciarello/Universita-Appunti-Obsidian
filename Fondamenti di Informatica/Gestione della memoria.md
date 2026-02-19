@@ -1,3 +1,7 @@
+---
+aliases: [Gestione memoria, GM]
+tags: [fondamenti-di-informatica]
+---
 ## Puntatori
 Le variabili puntatore contengono **indirizzi di memoria** di altre variabili. Mentre le variabili normali contengono un valore diretto (Riferimento Diretto), i puntatori contengono l'indirizzo di una variabile che ha uno specifico valore (Riferimento Indiretto) .
 

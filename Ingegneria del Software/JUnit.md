@@ -1,3 +1,7 @@
+---
+aliases: [junit]
+tags: [ingegneria-del-software]
+---
 Il testing è un metodo empirico per verificare la correttezza di un software ed è un processo automatizzato volto a mostrare il comportamento di un software su un dato input:
 
 Abbiamo due categorie: 
@@ -16,7 +20,7 @@ Unit Testing è il test di un'unità specifica.
 Un codice sorgente non può essere considerato corretto senza essere verificato. Possiamo verificare in due modi:
 
 - **Approccio *Divide-et-impera*:** suddividi il sistema in unità, ogni unità viene sottoposta a debug separatamente, ridurre la probabilità di presentare bug e gli errori non vengono propagati tra le unità;
-- **Test di supporto regressione:** verificare che l'applicazione funzioni come specificato anche dopo che sono state apportate modifiche/aggiunte/modifica. La funzionalità originale continua a funzionare come specificato anche dopo modifiche/aggiunte/modifica all'applicazione software. Le modifiche/integrazioni/modifica all'applicazione software non hanno introdotto alcun nuovo bug.
+- **Test di supporto [[Regressione|regressione]]:** verificare che l'applicazione funzioni come specificato anche dopo che sono state apportate modifiche/aggiunte/modifica. La funzionalità originale continua a funzionare come specificato anche dopo modifiche/aggiunte/modifica all'applicazione software. Le modifiche/integrazioni/modifica all'applicazione software non hanno introdotto alcun nuovo bug.
 
 ## JUnit
 

@@ -1,3 +1,7 @@
+---
+aliases: [EL]
+tags: [web-computing]
+---
 L'**Expression Language** (EL) è una sintassi semplificata per accedere ai dati memorizzati nei JavaBeans e negli oggetti scoped (Request, Session, Application) all'interno delle JSP, senza dover scrivere codice Java (`scriptlet`).
 L'obiettivo è rimuovere i tag `<% ... %>` dalle JSP per renderle più leggibili e focalizzate solo sulla presentazione.
 ## Sintassi di Base

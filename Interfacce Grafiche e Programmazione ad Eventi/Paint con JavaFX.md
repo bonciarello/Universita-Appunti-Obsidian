@@ -1,3 +1,7 @@
+---
+aliases: [Paint JavaFX, PJ]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ![](boardJavaFX.png)
 
 Per quanto riguarda il file *Main.java*:

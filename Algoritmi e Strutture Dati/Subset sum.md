@@ -1,3 +1,7 @@
+---
+aliases: [SS]
+tags: [algoritmi-e-strutture-dati]
+---
 Dato un insieme di numeri interi positivi S = {x₁, ..., xₙ} determinare se esiste un sottoinsieme R ⊆ S tale che la somma dei numeri contenuti in *R* sia esattamente uguale ad una costante data *W*.
 
 Per esempio:

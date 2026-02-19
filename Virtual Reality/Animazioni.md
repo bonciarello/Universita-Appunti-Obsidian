@@ -1,3 +1,7 @@
+---
+aliases: [Animazione, Animaziono]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo all'applicazione e controllo delle animazioni.
 
 ## Impostazione delle animazioni

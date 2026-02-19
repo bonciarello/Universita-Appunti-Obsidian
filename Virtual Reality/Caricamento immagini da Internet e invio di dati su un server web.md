@@ -1,9 +1,13 @@
+---
+aliases: [CIIIDSW, Caricamento immagini Internet invio dati server web]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo a come visualizzare le immagini scaricate da Internet, all'invio di dati a un server web e all'analisi dei dati JSON.
 
 ## Caricamento immagini da Internet
 Creiamo un cartellone che mostra un'immagine scaricata da Internet. È necessario codificare due passaggi: **scaricare** un'immagine da visualizzare e **applicare** quell'immagine all'oggetto *Billboard*. Quindi, come terzo passaggio, migliorerai il codice in modo che l'immagine venga archiviata per essere utilizzata su **più cartelloni**.
 
-Stai per scaricare alcune immagini pubbliche. L'architettura del codice per il download di un'immagine è molto simile all'architettura per il download dei dati: il nuovo modulo manager (chiamato *ImagesManager*) verrà utilizzato per scaricare le immagini da visualizzare. Ancora una volta, i dettagli della connessione a Internet e dell'invio di richieste HTTP verranno sviluppati in *NetworkService* e *ImagesManager* chiamerà *NetworkService* per scaricare le immagini.
+Stai per scaricare alcune immagini pubbliche. L'[[Architettura|architettura]] del codice per il download di un'immagine è molto simile all'[[Architettura|architettura]] per il download dei dati: il nuovo modulo manager (chiamato *ImagesManager*) verrà utilizzato per scaricare le immagini da visualizzare. Ancora una volta, i dettagli della connessione a Internet e dell'invio di richieste HTTP verranno sviluppati in *NetworkService* e *ImagesManager* chiamerà *NetworkService* per scaricare le immagini.
 
 Il codice per scaricare un'immagine sarà quasi identico al codice per scaricare i dati. La differenza principale è il tipo di metodo di callback; nota che questa volta il callback prende un **Texture2D** invece di una stringa.
 ```csharp

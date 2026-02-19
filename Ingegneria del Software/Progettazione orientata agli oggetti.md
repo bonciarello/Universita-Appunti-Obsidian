@@ -1,3 +1,7 @@
+---
+aliases: [Oggetto]
+tags: [ingegneria-del-software]
+---
 L'analisi orientata agli oggetti, la progettazione e la programmazione sono correlate ma distinte.
 
 - **OOA:** sviluppo di un modello a oggetti del dominio dell'applicazione;
@@ -39,7 +43,7 @@ Tuttavia, per i grandi sistemi sviluppati da gruppi diversi, i modelli di proget
 Evidenzia le attività chiave senza essere vincolato ad alcun processo proprietario come il RUP. Possibili attività chiavi:
 
 - definire il contesto e le modalità di utilizzo del sistema;
-- progettare l'architettura del sistema;
+- progettare l'[[Architettura|architettura]] del sistema;
 - identificare i principali oggetti di sistema;
 - sviluppare modelli di progettazione;
 - specificare le interfacce degli oggetti.
@@ -47,15 +51,15 @@ Evidenzia le attività chiave senza essere vincolato ad alcun processo proprieta
 ## Contesto e modelli di utilizzo del sistema
 
 - **Contesto di sistema:** un modello statico che descrive altri sistemi nella ambiente. Utilizzare un modello di sottosistema per mostrare altri sistemi. La diapositiva seguente mostra i sistemi intorno al sistema della stazione meteorologica;
-- **Modello di utilizzo del sistema:** un modello dinamico che descrive come il sistema interagisce con il suo ambiente. Usa casi d'uso per mostrare le interazioni.
+- **Modello di utilizzo del sistema:** un modello dinamico che descrive come il sistema interagisce con il suo ambiente. Usa [[Casi d'uso|casi d'uso]] per mostrare le interazioni.
 
-## Architettura a strati
+## [[Architettura]] a strati
 
 ![[architetturaStrati.png]]
 
-## Casi d'uso per la stazione meteorologica
+## [[Casi d'uso]] per la stazione meteorologica
 
-Per dare un rapido accesso ai requisiti, si utilizza il diagramma dei casi d'uso.
+Per dare un rapido accesso ai requisiti, si utilizza il diagramma dei [[Casi d'uso|casi d'uso]].
 
 ![[casiDUso.png]]
 
@@ -69,7 +73,7 @@ Per dare un rapido accesso ai requisiti, si utilizza il diagramma dei casi d'uso
 
 ## Progettazione architettonica
 
-Una volta comprese le interazioni tra il sistema e il relativo ambiente, si utilizzano queste informazioni per progettare l'architettura del sistema.
+Una volta comprese le interazioni tra il sistema e il relativo ambiente, si utilizzano queste informazioni per progettare l'[[Architettura|architettura]] del sistema.
 
 Normalmente non dovrebbero esserci più di 7 entità in un modello architettonico.
 

@@ -1,3 +1,7 @@
+---
+aliases: [Notazioni rappresentazione cardinalità, NRC]
+tags: [basi-di-dati]
+---
 ## Cardinalità schema E-R: 1 a 1
 Come si legge?
 - ad ogni persona è associata esattamente 1 tessera sanitaria;

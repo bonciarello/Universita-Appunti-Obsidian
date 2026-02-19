@@ -1,3 +1,7 @@
+---
+aliases: [sorting]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 L'ordinamento può essere basato sul **confronto** o **non basato sul confronto**. L'operazione fondamentale dell'ordinamento basato sul confronto è lo scambio-confronto (confronto-scambio). Il limite inferiore di qualsiasi algoritmo di ordinamento sequenziale per n numeri è *O(n log n)*. Nel campo del calcolo parallelo, il massimo che possiamo aspettarci da n processori è *O(log n)*! In effetti si ottiene, ma con costanti molto grandi...
 
 ## Ordinamento di n numeri
@@ -50,7 +54,7 @@ Qual è la controparte di un confronto di sequenze parallele? Se ogni processore
 
 ## Operazione di scambio di confronto parallelo
 
-Negli **algoritmi di ordinamento sequenziale**, l'input e le eventuali sequenze ordinate (incluso l'output) vengono archiviati nella memoria dello **stesso processo**. Nel caso parallelo, i dati possono, ovviamente, essere memorizzati in altri processi, complicando ulteriormente l'algoritmo!
+Negli **[[Algoritmi di ordinamento|algoritmi di ordinamento]] sequenziale**, l'input e le eventuali sequenze ordinate (incluso l'output) vengono archiviati nella memoria dello **stesso processo**. Nel caso parallelo, i dati possono, ovviamente, essere memorizzati in altri processi, complicando ulteriormente l'algoritmo!
 
 ![[operazioneScambio.png]]
 
@@ -64,7 +68,7 @@ Un'operazione di confronto e suddivisione. Ogni processo invia il proprio blocco
 
 ## Sorting Networks
 
-Sono reti "**comparatori**", progettate per lo smistamento. Un **comparatore è un dispositivo** con due ingressi *x* e *y* e due uscite *x'* e *y'*. Per un comparatore crescente, abbiamo *x' = min\{x, y\}* e *y' = max\{x, y\}* e viceversa. Indichiamo un comparatore crescente con $\oplus$ e un comparatore decrescente con $\Theta$. La "**velocità**" della rete è proporzionale alla sua profondità
+Sono [[Reti|reti]] "**comparatori**", progettate per lo smistamento. Un **comparatore è un dispositivo** con due ingressi *x* e *y* e due uscite *x'* e *y'*. Per un comparatore crescente, abbiamo *x' = min\{x, y\}* e *y' = max\{x, y\}* e viceversa. Indichiamo un comparatore crescente con $\oplus$ e un comparatore decrescente con $\Theta$. La "**velocità**" della rete è proporzionale alla sua profondità
 
 ### Comparatori
 
@@ -72,7 +76,7 @@ Sono reti "**comparatori**", progettate per lo smistamento. Un **comparatore è 
 
 ### Bitonic Sort
 
-Una rete di smistamento **bitonica** ordina n elementi nel tempo *$\Theta (log^2 n)$*. Una **sequenza bitonica** ha due "**tonalità**" - ascendente e discendente, o viceversa. Anche qualsiasi rotazione ciclica di tali reti è considerata **bitonica**. Ad esempio *\{1,2,4,7,6,0\}* è una sequenza bitonica, perché prima aumenta e poi diminuisce. *\{8,9,2,1,0,4\}* è un'altra sequenza bitonica, perché è uno spostamento ciclico di *\{0,4,8,9,2,1\}*. **Il cuore della rete è il riordino della sequenza bitonica in una sequenza ordinata.**
+Una rete di smistamento **bitonica** ordina n elementi nel tempo *$\Theta (log^2 n)$*. Una **sequenza bitonica** ha due "**tonalità**" - ascendente e discendente, o viceversa. Anche qualsiasi rotazione ciclica di tali [[Reti|reti]] è considerata **bitonica**. Ad esempio *\{1,2,4,7,6,0\}* è una sequenza bitonica, perché prima aumenta e poi diminuisce. *\{8,9,2,1,0,4\}* è un'altra sequenza bitonica, perché è uno spostamento ciclico di *\{0,4,8,9,2,1\}*. **Il cuore della rete è il riordino della sequenza bitonica in una sequenza ordinata.**
 
 Sia *S = \{a0, a1,…, an-1\}* una sequenza bitonica tale che $a0 <= a1 <= ... <= an / 2-1$ e $an / 2 >= an / 2 + 1 >= ... >= an - 1$. Consideriamo le seguenti sotto-sequenze di *S*:
 - *s1 = \{min\{a0 ,an/2\},min\{a1 ,an/2+1\},...,min\{an/2-1 ,an-1 \}\}*

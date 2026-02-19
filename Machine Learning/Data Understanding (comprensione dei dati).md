@@ -1,3 +1,7 @@
+---
+aliases: [Data Understanding, comprensione dei dati]
+tags: [machine-learning]
+---
 I **dati** sono una raccolta di oggetti. Gli **oggetti** (ovvero elementi, istanze, record, campioni, righe, ...) sono descritti per mezzo di un insieme di attributi. Un **attributo** (noto anche come caratteristica, campo, variabile, ...) definisce una proprietà, una caratteristica o una misura di un oggetto.
 
 ## Tipi di attributo
@@ -21,7 +25,7 @@ Le due grandi classificazione sono:
 Abbiamo diversi tipi di dati ma i più importanti sono:
 - **Graph Data:** utilizzato per rappresentare informazioni dal World Wide Web o con struttura molecolare;
 - **Ordered Data:** per esempio, Dati Sequenziali, Dati Sequenziali, Dati Spaziali e Temporali;
-- **Record Data:** è il tipo più generico, consiste in una raccolta di record, ogni record è costituito da un insieme fisso di attributi, non esiste alcuna relazione esplicita tra attributi o record e solitamente memorizzato in file *flat* o database relazionali. Esempi di Record Data sono: 
+- **Record Data:** è il tipo più generico, consiste in una raccolta di record, ogni record è costituito da un insieme fisso di attributi, non esiste alcuna relazione esplicita tra attributi o record e solitamente memorizzato in file *flat* o [[Database|database]] relazionali. Esempi di Record Data sono: 
     - *transaction or market basket data:* ogni record comprende una serie di elementi. Nella maggior parte dei casi, gli attributi sono binari e indicano se un articolo è stato acquistato o meno. Più in generale, gli attributi possono essere discreti o continui, come il numero di articoli acquistati o l'importo speso per tali articoli; 
         ![](img/sezione8/recordData1.png)
     - *data matrix:* consiste solo di attributi numerici dove ogni record può essere pensato come un vettore nello spazio multidimensionale. Può essere rappresentato da una matrice $m*n$ dove le righe rappresentano gli oggetti e le colonne gli attributi;

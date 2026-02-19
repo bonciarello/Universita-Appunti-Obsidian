@@ -1,4 +1,8 @@
-Costruiremo un modello Transformer completo per tradurre dal Portoghese all'Inglese. Keras fornisce `MultiHeadAttention`, ma dobbiamo assemblare noi l'architettura Encoder-Decoder.
+---
+aliases: [Transformer Traduzione, TT]
+tags: [deep-learning]
+---
+Costruiremo un modello Transformer completo per tradurre dal Portoghese all'Inglese. Keras fornisce `MultiHeadAttention`, ma dobbiamo assemblare noi l'[[Architettura|architettura]] Encoder-Decoder.
 
 ## 1. Positional Encoding
 Poiché non usiamo RNN, dobbiamo iniettare l'informazione sulla posizione.

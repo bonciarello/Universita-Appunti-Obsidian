@@ -1,8 +1,12 @@
-Le **ConvNets** (o CNN) sono un tipo di architettura di rete neurale progettata specificamente per elaborare dati che hanno una struttura a griglia, come immagini (griglia 2D di pixel) o serie temporali (griglia 1D).
-Sono state fondamentali per la rivoluzione del Deep Learning nella Computer Vision, alimentando applicazioni come il riconoscimento facciale, le auto a guida autonoma e la diagnostica medica.
+---
+aliases: [Reti Neurali Convoluzionali, Rete neurale, ConvNets, Rete, NN, Neural Networks]
+tags: [deep-learning]
+---
+Le **ConvNets** (o CNN) sono un tipo di [[Architettura|architettura]] di rete neurale progettata specificamente per elaborare dati che hanno una struttura a griglia, come immagini (griglia 2D di pixel) o serie temporali (griglia 1D).
+Sono state fondamentali per la rivoluzione del [[Deep Learning]] nella Computer Vision, alimentando applicazioni come il riconoscimento facciale, le auto a guida autonoma e la diagnostica medica.
 
-## Differenza Fondamentale con le Reti Dense
-Nelle reti densamente connesse (Dense/Fully Connected), ogni neurone è collegato a tutti i neuroni dello strato precedente. Queste reti apprendono **pattern globali** nel loro spazio di input.
+## Differenza Fondamentale con le [[Reti]] Dense
+Nelle [[Reti|reti]] densamente connesse (Dense/Fully Connected), ogni neurone è collegato a tutti i neuroni dello strato precedente. Queste [[Reti|reti]] apprendono **pattern globali** nel loro spazio di input.
 Al contrario, i livelli convoluzionali apprendono **pattern locali**: nel caso delle immagini, pattern presenti in piccole finestre 2D degli input (es. 3x3 pixel).
 
 Questa caratteristica conferisce alle ConvNets due proprietà cruciali:
@@ -28,7 +32,7 @@ Inoltre, la geometria dell'output è influenzata da:
 
 #### Padding (Riempimento)
 Se facciamo scorrere una finestra $3 \times 3$ su una griglia $5 \times 5$, possiamo centrarla solo in 9 posizioni (griglia interna $3 \times 3$). L'immagine si rimpicciolisce.
-Per mantenere le stesse dimensioni spaziali (spesso utile per costruire reti profonde), usiamo il **Padding**: aggiungiamo righe e colonne di zeri attorno all'input.
+Per mantenere le stesse dimensioni spaziali (spesso utile per costruire [[Reti|reti]] profonde), usiamo il **Padding**: aggiungiamo righe e colonne di zeri attorno all'input.
 *   `padding='valid'`: Nessun padding. L'output è più piccolo dell'input.
 *   `padding='same'`: Padding tale che l'output abbia la stessa altezza/larghezza dell'input.
 
@@ -46,7 +50,7 @@ Il **Max Pooling** consiste nell'estrarre finestre (solitamente $2 \times 2$) e 
 
 ---
 
-## Esempio di Architettura Completa (CIFAR-10)
+## Esempio di [[Architettura]] Completa (CIFAR-10)
 
 Ecco come appare una ConvNet tipica in codice. Notate lo schema ripetitivo: `Conv2D` -> `MaxPooling2D`.
 

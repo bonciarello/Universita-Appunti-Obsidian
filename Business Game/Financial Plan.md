@@ -1,3 +1,7 @@
+---
+aliases: [FP]
+tags: [business-game]
+---
 ## 1. Modelli di Entrate (Revenue Models)
 La maggior parte delle aziende ne usa una combinazione:
 1.  **Vendita del prodotto:** Prezzo per unità.

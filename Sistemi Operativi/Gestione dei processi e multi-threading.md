@@ -1,3 +1,7 @@
+---
+aliases: [Multi-threading, Threads, Processo]
+tags: [sistemi-operativi]
+---
 Come un SO gestisce più processi che girano in contemporanea? Innanzitutto, abbiamo una sola CPU, una sola memoria RAM e tanti programmi che condividono la stessa memoria. L'*esigenza* è quella di **far girare più software "contemporaneamente"**
 
 ## Processi e Thread
@@ -41,9 +45,9 @@ Il **ciclo di fetch esteso** è un ciclo di fetch ma con la presenza di *interru
 
 Un **evento** è qualcosa che è successa e che va gestita e tipicamente viene segnalato con un interrupt.
 
-## Coda eventi
+## Coda [[Eventi|eventi]]
 
-Una **coda eventi** è un buffer FIFO di eventi che una certa applicazione deve gestire.
+Una **coda [[Eventi|eventi]]** è un buffer FIFO di [[Eventi|eventi]] che una certa applicazione deve gestire.
 
 ## *winproc*
 
@@ -53,7 +57,7 @@ Una **coda eventi** è un buffer FIFO di eventi che una certa applicazione deve 
 
 Il multitasking collaboratico, detto anche multitasking cooperative, è uno scenario in cui *i programmi cedono volontariamente il controllo al sistema operativo una volta finita l'operazione in corso:* è il caso di Mac OS fino alla versione 9, o di Windows 3.0 e 3.1.
 
-Il vantaggio maggiore di questo metodo è che non ha bisogno di supporto hardware e si può implementare facilmente su ogni tipo di architettura. Comodo per multitasking I/O bound, cioè per applicazioni che non consumano tanta CPU perchè stanno in attesa di una periferica.
+Il vantaggio maggiore di questo metodo è che non ha bisogno di supporto hardware e si può implementare facilmente su ogni tipo di [[Architettura|architettura]]. Comodo per multitasking I/O bound, cioè per applicazioni che non consumano tanta CPU perchè stanno in attesa di una periferica.
 
 Il *grave* svantaggio è che un singolo programma che si rifiuta di cedere il controllo, o che si ferma per qualche errore, può bloccare l'intero computer in quanto il sistema operativo non ha modo di riprendere il controllo da solo. Più precisamente lo scheduler senza prelazione attua un cambio di contesto solo in circostanze quali:
 - il passaggio di un programma dallo stato di esecuzione allo stato di attesa;
@@ -61,7 +65,7 @@ Il *grave* svantaggio è che un singolo programma che si rifiuta di cedere il co
 
 In sintesi, possiamo avere una sola *winproc* che occupa tempo o va in loop infinito blocca tutto il SO/applicazione/tab del browser.
 
-Oggi si è evoluto in **programmazione asincrona** ed usato per la *gestione eventi in Java*, *gestione eventi in Javascript* e *Python Async I/O*.
+Oggi si è evoluto in **programmazione asincrona** ed usato per la *gestione [[Eventi|eventi]] in Java*, *gestione [[Eventi in JavaScript|eventi in Javascript]]* e *Python Async I/O*.
 
 > **ESEMPIO:** immaginiamo due coinquilini con un solo bagno. Il primo coinquilino va al bagno: fin quando non finisce, il secondo coinquilino dovrà aspettarlo e, quando finirà il primo coinquilino, potrà entrare.
 
@@ -69,7 +73,7 @@ Oggi si è evoluto in **programmazione asincrona** ed usato per la *gestione eve
 
 ## Multitasking non collaborativo
 
-Il multitasking non collaborativo, detto anche multitasking con prelazione (preemptive), è lo scenario in cui la prelazione è l'atto di *interrompere un programma a prescindere dalla volontà del programma stesso* e, quindi, non può essere implementato se la piattaforma hardware non mette a disposizione gli strumenti necessari, ma in compenso, grazie all'hardware, il cambio di contesto è molto più efficiente favorendo l'adozione di quanti di tempo regolari e una esecuzione più "fluida" dei vari processi. Il preemptive multitask è stato adottato dalla maggior parte dei sistemi operativi moderni.
+Il multitasking non collaborativo, detto anche multitasking con prelazione (preemptive), è lo scenario in cui la prelazione è l'atto di *interrompere un programma a prescindere dalla volontà del programma stesso* e, quindi, non può essere implementato se la piattaforma hardware non mette a disposizione gli strumenti necessari, ma in compenso, grazie all'hardware, il cambio di contesto è molto più efficiente favorendo l'adozione di quanti di tempo regolari e una esecuzione più "fluida" dei vari processi. Il preemptive multitask è stato adottato dalla maggior parte dei [[Sistemi Operativi|sistemi operativi]] moderni.
 
 > **ESEMPIO:** immaginiamo sempre due coinquilini con un solo bagno. Il primo coinquilino va al bagno e avrà un tempo prefissato per fare tutto quello che deve fare: alla fine di quel tempo, un "bodyguard del bagno" butterà fuori il primo coinquilino e farà entrare il secondo coinquilino.
 

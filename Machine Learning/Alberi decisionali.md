@@ -1,3 +1,7 @@
+---
+aliases: [Albero]
+tags: [machine-learning]
+---
 Facciamo un esempio: abbiamo due **attributi**, *color* e *shape*, e tre **classi**, *A*, *B* e *C*. Ci viene chiesto di esprimere la correlazione tra i valori degli attributi, da un lato, e le etichette delle classi, dall'altro, in termini di un albero decisionale.
 
 Avremo quindi questo risultato:
@@ -19,11 +23,11 @@ Vogliamo imparare i DT che sono una buona approssimazione del set di dati e sono
 
 ## Algoritmo Basic DT
 
-È un algoritmo utilizzato per la classificazione, viene applicato ricorsivamente. Ad ogni step viene scelto il **best-attribute**, per effettuare lo split. Il *best-attribute* sarà quello con la maggiore differenza di entropia prima e dopo lo split, perchè il nostro obiettivo è quello di formare alberi decisionali bilanciati e semplici, generando sotto-alberi (sottoinsiemi) puri.
+È un algoritmo utilizzato per la classificazione, viene applicato ricorsivamente. Ad ogni step viene scelto il **best-attribute**, per effettuare lo split. Il *best-attribute* sarà quello con la maggiore differenza di [[Entropia|entropia]] prima e dopo lo split, perchè il nostro obiettivo è quello di formare alberi decisionali bilanciati e semplici, generando sotto-alberi (sottoinsiemi) puri.
 
 I sottoinsiemi puri sono quelli in cui compare per tutti gli esempi la stessa *class label*.
 
-La purezza (concetto legato all'entropia) si misura con l'**Information Gain** o il **Gini Index**.
+La purezza (concetto legato all'[[Entropia|entropia]]) si misura con l'**Information Gain** o il **Gini Index**.
 
 L'algoritmo viene ripetuto ricorsivamente per generare i sotto-alberi fino a che non avviene una delle 3 condizioni di stop:
 1. siamo arrivati alla nostra condizione ideale, abbiamo generato un sotto-albero puro;
@@ -31,18 +35,18 @@ L'algoritmo viene ripetuto ricorsivamente per generare i sotto-alberi fino a che
 3. non c'è nessun esempio che soddisfa la condizione sull'arco. Generiamo la foglia prendendo in considerazione la *class label* di maggioranza della radice del sotto-albero.
 
 ## Information Gain
-L'**Information Gain *IG(S,A)*** è la prevista riduzione di entropia causata dal partizionamento degli esempi del training set *S* secondo l'attributo *A*.
+L'**Information Gain *IG(S,A)*** è la prevista riduzione di [[Entropia|entropia]] causata dal partizionamento degli esempi del training set *S* secondo l'attributo *A*.
 
 > $IG(S,A) = E(S) - \sum_{v \in values(A)} \frac{\left | S_v \right |}{\left | S \right |} E(S_v)$
 
 dove:
-- $E(S)$ è l'entropia di *S* (prima della divisione);
-- $E(S_v)$ è l'entropia del sottoinsieme $S_v$ di *S* dove $A=v$ (dopo la divisione)
+- $E(S)$ è l'[[Entropia|entropia]] di *S* (prima della divisione);
+- $E(S_v)$ è l'[[Entropia|entropia]] del sottoinsieme $S_v$ di *S* dove $A=v$ (dopo la divisione)
 
 *IG(S,A)* è massimo quando $E(S_v)= 0$, per ogni *v*, cioè quando tutti gli esempi in ogni partizione sono associati alla stessa etichetta di classe *c* (cioè, $p(c|Sv)=1$). La metrica *IG* fornisce supporto per la divisione bilanciata.
 
 Riassumendo:
-- *IG(S,A)* è la prevista riduzione di entropia causata dal partizionamento degli esempi di *S* secondo l'attributo *A*;
+- *IG(S,A)* è la prevista riduzione di [[Entropia|entropia]] causata dal partizionamento degli esempi di *S* secondo l'attributo *A*;
 - *IG(S,A)* è massimo quando gli esempi all'interno di ciascun sottoinsieme del training set in cui *S* è suddiviso per *A* sono tutti assegnati con la stessa etichetta di classe;
 - *IG(S,A)* è minimo (zero) quando ogni sottoinsieme dell'insieme di addestramento in cui *S* è diviso da *A* ha la stessa distribuzione dell'etichetta di classe di *A*;
 - maggiore è *IG*, più discriminante è *A*;
@@ -51,7 +55,7 @@ Riassumendo:
 ## Gini Index
 Il **Gini Index** (detto anche **Gini Impurity**) calcola la probabilità che un'istanza selezionata casualmente, con uno specifico attributo, venga classificato in modo errato. Nel DT ovviamente la preferiamo bassa, se uguale a zero l'insieme è chiamato puro.
 
-Può essere utilizzata come alternativa all’entropia.
+Può essere utilizzata come alternativa all’[[Entropia|entropia]].
 
 ## Osservazioni su BuildDT
 **BuildDT** si basa su una strategia di partizionamento avida e ricorsiva. L'algoritmo non guarda mai indietro per riconsiderare le scelte precedenti (nessun backtracking). L'output non è necessariamente coerente con i dati di addestramento. Con **bias induttivo** intendiamo che gli alberi più corti sono preferiti a quelli più grandi.
@@ -124,7 +128,7 @@ Con la *divisione a più vie*, trova una soglia *t* per la creazione di nodi bin
     - tratta dati incompleti;
     - risolve il problema dell'overfitting con una tecnica post-potatura (molto intelligente).
 - *C5.0* è l'ultima versione di C4.5 (più veloce C4.5, DT più piccoli, ecc);
-- CART *(alberi di classificazione e regressione)* costruisce alberi in cui la variabile target può assumere valori continui (tipicamente numeri reali). L'albero ottenuto viene potato mediante potatura costo-complessità. CART può gestire variabili sia numeriche che categoriche e si basa sull'indice di Gini.
+- CART *(alberi di classificazione e [[Regressione|regressione]])* costruisce alberi in cui la variabile target può assumere valori continui (tipicamente numeri reali). L'albero ottenuto viene potato mediante potatura costo-complessità. CART può gestire variabili sia numeriche che categoriche e si basa sull'indice di Gini.
 
 ## Conclusione
 Un albero decisionale è uno degli strumenti di apprendimento automatico più popolari perchè *facile da capire*, *facile da implementare*, *facile da usare* e *computazionalmente economico*.

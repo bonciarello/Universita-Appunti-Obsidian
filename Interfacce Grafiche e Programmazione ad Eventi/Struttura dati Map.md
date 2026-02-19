@@ -1,3 +1,7 @@
+---
+aliases: [SDM]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## Interfaccia Map
 
 La **mappa** è un oggetto che collega *keys* (chiavi) a *values* (valori).

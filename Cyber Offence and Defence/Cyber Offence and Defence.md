@@ -1,21 +1,25 @@
+---
+aliases: [Cyber Security]
+tags: [cyber-offence-and-defence]
+---
 ## Programma del corso
 Il programma del corso si divide in tre categorie principali:
 - **server-side topics:** queste vulnerabilità sono solitamente più facili da apprendere perché devi solo capire cosa sta succedendo sul server. Avremo:
 	- injection flaws;
 	- authentication e authorization;
-	- Path Traversal, server-side request forgery and business logic vulnerabilities.
+	- [[Path Traversal]], server-side request forgery and business logic vulnerabilities.
 - **client-side topics:** le vulnerabilità lato client introducono un ulteriore livello di complessità, che può renderle leggermente più impegnative. Avremo:
 	- cross-site scripting;
 	- cross-site request forgery;
 	- cross-origin resource sharing;
-	- clickjacking.
+	- [[Clickjacking|clickjacking]].
 - **argomenti avanzati:** questi argomenti non sono necessariamente più difficili da padroneggiare, ma generalmente richiedono una comprensione più approfondita e una più ampia gamma di conoscenze. Avremo:
 	- insecure deserialization;
 	- server-side template injection;
 	- OAuth authentication and JWT.
 ## Obiettivi del corso
 Gli **obiettivi** del corso sono:
-- introdurre aspetti della sicurezza informatica, i principali attacchi e le strategie per la loro mitigazione;
+- introdurre aspetti della [[Sicurezza|sicurezza]] informatica, i principali attacchi e le strategie per la loro mitigazione;
 - apprendere gli attacchi comuni ai sistemi informativi;
 - apprendere i metodi di difesa dei sistemi informativi;
 - capacità di analizzare le vulnerabilità comuni dei sistemi informativi;

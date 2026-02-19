@@ -1,4 +1,8 @@
-Il **Control Hijacking** è una categoria di attacchi in cui un aggressore prende il controllo di un sistema o programma senza autorizzazione. L'obiettivo è ottenere un accesso non autorizzato per rubare dati, danneggiare il sistema o comprometterne la sicurezza.
+---
+aliases: [CH]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
+Il **Control Hijacking** è una categoria di attacchi in cui un aggressore prende il controllo di un sistema o programma senza autorizzazione. L'obiettivo è ottenere un accesso non autorizzato per rubare dati, danneggiare il sistema o comprometterne la [[Sicurezza|sicurezza]].
 
 ## 1. Buffer Overflow
 È uno degli attacchi più classici. Si verifica quando un input supera la dimensione del buffer allocato, sovrascrivendo le aree di memoria adiacenti.
@@ -24,7 +28,7 @@ Il Buffer Overflow colpisce linguaggi a basso livello (C/C++) che espongono i pu
     *   **SQL Slammer (2003):** 75.000 macchine infette in 10 minuti.
 
 ### Perché persistono?
-*   Presenza di codice **legacy** non orientato alla sicurezza.
+*   Presenza di codice **legacy** non orientato alla [[Sicurezza|sicurezza]].
 *   Necessità di performance (uso di C per velocità).
 *   Aritmetica dei puntatori e dereferenziazioni non controllate.
 *   Il Sistema Operativo non interviene finché il processo non accede a pagine di memoria non assegnate (grazie alle tabelle delle pagine).

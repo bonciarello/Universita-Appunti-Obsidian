@@ -1,3 +1,7 @@
+---
+aliases: [Attacchi Tecnologia Ethernet, ATE]
+tags: [network-security]
+---
 I dispositivi hardware appartenenti al livello 2 sono gli switch e gli hub: questi ultimi in particolare applicano politiche di smistamento insicure. Grazie, naturalmente, alla crittografia il problema viene mitigato ma purtroppo continuano a persistere numerosi problemi.
 
 ## Port Stealing

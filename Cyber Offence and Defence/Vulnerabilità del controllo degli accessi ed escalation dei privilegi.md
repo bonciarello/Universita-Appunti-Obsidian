@@ -1,13 +1,17 @@
+---
+aliases: [Vulnerabilità controllo accessi escalation privilegi, VCAEP]
+tags: [cyber-offence-and-defence]
+---
 Il controllo degli accessi è l'applicazione di vincoli su chi o cosa è autorizzato a eseguire azioni o ad accedere alle risorse. Nel contesto delle applicazioni web, il controllo degli accessi dipende dall'autenticazione e dalla gestione delle sessioni:
 - l'autenticazione conferma che l'utente è chi dice di essere;
 - la gestione delle sessioni identifica quali richieste HTTP successive vengono effettuate dallo stesso utente;
 - il controllo degli accessi determina se all'utente è consentito eseguire l'azione che sta tentando di eseguire.
 
-I controlli degli accessi non funzionanti sono comuni e spesso presentano una vulnerabilità critica alla sicurezza. La progettazione e la gestione dei controlli degli accessi sono un problema complesso e dinamico che applica vincoli aziendali, organizzativi e legali a un'implementazione tecnica. Le decisioni sulla progettazione del controllo degli accessi devono essere prese da esseri umani; quindi, il potenziale di errori è elevato.
+I controlli degli accessi non funzionanti sono comuni e spesso presentano una vulnerabilità critica alla [[Sicurezza|sicurezza]]. La progettazione e la gestione dei controlli degli accessi sono un problema complesso e dinamico che applica vincoli aziendali, organizzativi e legali a un'implementazione tecnica. Le decisioni sulla progettazione del controllo degli accessi devono essere prese da esseri umani; quindi, il potenziale di errori è elevato.
 ## Controlli di accesso verticali
 I controlli di accesso verticali sono meccanismi che limitano l'accesso a funzionalità sensibili a specifici tipi di utenti.
 
-Con i controlli di accesso verticali, diversi tipi di utenti hanno accesso a diverse funzioni dell'applicazione. Ad esempio, un amministratore potrebbe essere in grado di modificare o eliminare l'account di qualsiasi utente, mentre un utente normale non ha accesso a queste azioni. I controlli di accesso verticali possono essere implementazioni più dettagliate di modelli di sicurezza progettati per applicare policy aziendali come la separazione dei compiti e il privilegio minimo.
+Con i controlli di accesso verticali, diversi tipi di utenti hanno accesso a diverse funzioni dell'applicazione. Ad esempio, un amministratore potrebbe essere in grado di modificare o eliminare l'account di qualsiasi utente, mentre un utente normale non ha accesso a queste azioni. I controlli di accesso verticali possono essere implementazioni più dettagliate di modelli di [[Sicurezza|sicurezza]] progettati per applicare policy aziendali come la separazione dei compiti e il privilegio minimo.
 ## Controlli di accesso orizzontali
 I controlli di accesso orizzontali sono meccanismi che limitano l'accesso alle risorse a utenti specifici.
 
@@ -26,17 +30,17 @@ Se un utente può ottenere l'accesso a funzionalità a cui non è autorizzato ad
 Ad esempio, un sito web potrebbe ospitare funzionalità sensibili al seguente URL:
 `https://insecure-website.com/admin`
 
-Questo potrebbe essere accessibile a qualsiasi utente, non solo agli utenti amministrativi che hanno un collegamento alla funzionalità nella loro interfaccia utente. In alcuni casi, l'URL amministrativo potrebbe essere divulgato in altre posizioni, come il file `robots.txt`:
+Questo potrebbe essere accessibile a qualsiasi utente, non solo agli utenti amministrativi che hanno un collegamento alla funzionalità nella loro [[Interfaccia utente|interfaccia utente]]. In alcuni casi, l'URL amministrativo potrebbe essere divulgato in altre posizioni, come il file `robots.txt`:
 `https://insecure-website.com/robots.txt`
 
 Anche se l'URL non è reso pubblico, un aggressore potrebbe riuscire a utilizzare un elenco di parole per forzare la posizione della funzionalità sensibile (APPRENTICE: Unprotected admin functionality).
 
-In alcuni casi, la funzionalità sensibile viene nascosta assegnandole un URL meno prevedibile. Questo è un esempio della cosiddetta "sicurezza per oscurità". Tuttavia, nascondere la funzionalità sensibile non fornisce un controllo di accesso efficace perché gli utenti potrebbero scoprire l'URL offuscato in vari modi.
+In alcuni casi, la funzionalità sensibile viene nascosta assegnandole un URL meno prevedibile. Questo è un esempio della cosiddetta "[[Sicurezza|sicurezza]] per oscurità". Tuttavia, nascondere la funzionalità sensibile non fornisce un controllo di accesso efficace perché gli utenti potrebbero scoprire l'URL offuscato in vari modi.
 
 Immagina un'applicazione che ospita funzioni amministrative al seguente URL:
 `https://insecure-website.com/administrator-panel-yb556`
 
-Questo potrebbe non essere direttamente indovinabile da un aggressore. Tuttavia, l'applicazione potrebbe comunque far trapelare l'URL agli utenti. L'URL potrebbe essere divulgato in JavaScript che costruisce l'interfaccia utente in base al ruolo dell'utente:
+Questo potrebbe non essere direttamente indovinabile da un aggressore. Tuttavia, l'applicazione potrebbe comunque far trapelare l'URL agli utenti. L'URL potrebbe essere divulgato in [[JavaScript]] che costruisce l'[[Interfaccia utente|interfaccia utente]] in base al ruolo dell'utente:
 
 ```javascript
 <script>
@@ -51,7 +55,7 @@ adminPanelTag.innerText = 'Admin panel';
 </script>
 ```
 
-Questo script aggiunge un collegamento all'interfaccia utente dell'utente se è un utente amministratore. Tuttavia, lo script contenente l'URL è visibile a tutti gli utenti, indipendentemente dal loro ruolo (APPRENTICE: Unprotected admin functionality with unpredictable URL).
+Questo script aggiunge un collegamento all'[[Interfaccia utente|interfaccia utente]] dell'utente se è un utente amministratore. Tuttavia, lo script contenente l'URL è visibile a tutti gli utenti, indipendentemente dal loro ruolo (APPRENTICE: Unprotected admin functionality with unpredictable URL).
 
 **Metodi di controllo degli accessi basati su parametri** Alcune applicazioni determinano i diritti di accesso o il ruolo dell'utente al momento dell’accesso; quindi, memorizzano queste informazioni in una posizione controllabile dall'utente. Potrebbe trattarsi di:
 - un campo nascosto;
@@ -104,14 +108,14 @@ Il termine IDOR è stato reso popolare dalla sua comparsa nella Top Ten di OWASP
 
 Esistono molti esempi di vulnerabilità del controllo degli accessi in cui i valori dei parametri controllati dall'utente vengono utilizzati per accedere direttamente a risorse o funzioni.
 
-**Vulnerabilità IDOR con riferimento diretto agli oggetti del database** Considera un sito web che utilizza il seguente URL per accedere alla pagina dell'account del cliente, recuperando le informazioni dal database back-end:
+**Vulnerabilità IDOR con riferimento diretto agli oggetti del [[Database|database]]** Considera un sito web che utilizza il seguente URL per accedere alla pagina dell'account del cliente, recuperando le informazioni dal [[Database|database]] back-end:
 `https://insecure-website.com/customer_account?customer_number=132355`
 
-Qui, il numero del cliente viene utilizzato direttamente come indice di record nelle query eseguite sul database back-end. Se non sono presenti altri controlli, un aggressore può semplicemente modificare il valore `customer_number`, aggirando i controlli di accesso per visualizzare i record di altri clienti. Questo è un esempio di vulnerabilità IDOR che porta all'escalation dei privilegi orizzontali.
+Qui, il numero del cliente viene utilizzato direttamente come indice di record nelle query eseguite sul [[Database|database]] back-end. Se non sono presenti altri controlli, un aggressore può semplicemente modificare il valore `customer_number`, aggirando i controlli di accesso per visualizzare i record di altri clienti. Questo è un esempio di vulnerabilità IDOR che porta all'escalation dei privilegi orizzontali.
 
 Un aggressore potrebbe essere in grado di eseguire l'horizontal e vertical privilege escalation modificando l'utente in uno con privilegi aggiuntivi aggirando i controlli di accesso. Altre possibilità includono lo sfruttamento della perdita di password o la modifica dei parametri una volta che l'aggressore è atterrato nella pagina degli account dell'utente, ad esempio.
 
-**Vulnerabilità IDOR con riferimento diretto ai file statici** Le vulnerabilità IDOR spesso si verificano quando risorse sensibili si trovano in file statici sul file system lato server. Ad esempio, un sito web potrebbe salvare le trascrizioni dei messaggi di chat su disco utilizzando un nome file incrementale e consentire agli utenti di recuperarle visitando un URL come il seguente:
+**Vulnerabilità IDOR con riferimento diretto ai file statici** Le vulnerabilità IDOR spesso si verificano quando risorse sensibili si trovano in file statici sul [[File System|file system]] lato server. Ad esempio, un sito web potrebbe salvare le trascrizioni dei messaggi di chat su disco utilizzando un nome file incrementale e consentire agli utenti di recuperarle visitando un URL come il seguente:
 `https://insecure-website.com/static/12144.txt`
 
 In questa situazione, un aggressore può semplicemente modificare il nome file per recuperare una trascrizione creata da un altro utente e potenzialmente ottenere credenziali utente e altri dati sensibili.

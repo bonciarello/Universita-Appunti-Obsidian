@@ -1,3 +1,7 @@
+---
+aliases: [calcolo sequenziale calcolo parallelo, CSCP]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## Calcolo sequenziale
 
 Risolve un problema mediante un algoritmo le cui istruzioni vengono eseguite in sequenza. Il modello computazionale è caratterizzato da un unico processore quindi abbiamo a che fare con la macchina di Von Newmann.

@@ -1,3 +1,7 @@
+---
+aliases: [CP]
+tags: [ingegneria-del-software]
+---
 Abbiamo 5 pattern:
 
 - **Factory Method** (FM, Metodo Fabbrica)
@@ -178,8 +182,8 @@ L'**intento** è fornire un'interfaccia per creare famiglie di oggetti correlati
 
 ### Motivazione
 
-**Considera un toolkit dell'interfaccia utente che supporti più standard di look-and-feel, come Motif e Presentation Manager.**
-Aspetto e sensazioni diversi definiscono aspetti e comportamenti diversi per i "widget" dell'interfaccia utente come barre di scorrimento, finestre e pulsanti.
+**Considera un toolkit dell'[[Interfaccia utente|interfaccia utente]] che supporti più standard di look-and-feel, come Motif e Presentation Manager.**
+Aspetto e sensazioni diversi definiscono aspetti e comportamenti diversi per i "widget" dell'[[Interfaccia utente|interfaccia utente]] come barre di scorrimento, finestre e pulsanti.
 Per essere portabile attraverso gli standard di aspetto, un'applicazione non dovrebbe codificare i suoi widget per un aspetto particolare.
 
 ![[AFesempio.png]]

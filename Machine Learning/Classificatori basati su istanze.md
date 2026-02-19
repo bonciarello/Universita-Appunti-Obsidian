@@ -1,8 +1,12 @@
+---
+aliases: [Classe]
+tags: [machine-learning]
+---
 I classificatori basati sull'istanza, a differenza degli altri classificatori, non utilizzano una serie di esempi pre-classificati per apprendere un modello.
 
 Al contrario, lo usano, al momento della classificazione, per prevedere "al volo" l'etichetta di classe di istanze invisibili, basata sulla somiglianza.
 
-Sono chiamati **classificatori pigri**, poiché non passano attraverso la fase di addestramento, al contrario dei **classificatori entusiasti** (come alberi decisionali, regole di classificazione, classificatori probabilistici, ecc.).
+Sono chiamati **classificatori pigri**, poiché non passano attraverso la fase di addestramento, al contrario dei **classificatori entusiasti** (come [[Alberi decisionali|alberi decisionali]], regole di classificazione, classificatori probabilistici, ecc.).
 
 ## Classificatori *K-Nearest Neighbor* (*k-NN*)
 L'esmepio di partenza è che *se cammina come un'anatra, cigola come un'anatra, allora probabilmente è un'anatra*.

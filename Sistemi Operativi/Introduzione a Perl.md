@@ -1,3 +1,7 @@
+---
+aliases: [Introduzione Perl, Perl, IP]
+tags: [sistemi-operativi]
+---
 **Perl** è un linguaggio di programmazione/scripting generico e, quindi, è un linguaggio interpretato (il codice sorgente viene tradotto da un interprete in linguaggio macchina al momento dell'esecuzione senza necessità di compilatore). Originariamente usato per la manipolazione di testi ed è oggi impiegato per una ampia gamma di attività come, per esempio, system administration, web development, network programming, GUI development, ecc.
 
 ## Vantaggi e svantaggi
@@ -537,7 +541,7 @@ Se vogliamo scrivere su un file:
 print $out_fh "Questa linea sara' scritta sul file\n";
 ```
 
-## Espressioni Regolari e Matching
+## [[Espressioni regolari|Espressioni Regolari]] e Matching
 
 Perl è talvolta chiamato *Practical Extraction and Reporting Language*. Una **espressione regolare** (chiamata anche *regex* o *regexp*) è un pattern che descrive le caratteristiche di un particolare pezzo di testo. Il *regular expression engine* di Perl applica questo pattern al fine di trovare un matching tra determinate porzioni di testo. Una espressione regolare è racchiusa tra 2 slash *'/'*:
 

@@ -1,3 +1,7 @@
+---
+aliases: [Classe, Classificazione Immagini, Fiori]
+tags: [deep-learning]
+---
 In questo laboratorio metteremo in pratica la teoria delle ConvNets costruendo un classificatore per riconoscere specie di fiori. Utilizzeremo un dataset contenente 3670 foto a colori divise in 5 classi: *daisy* (margherita), *dandelion* (dente di leone), *roses* (rose), *sunflowers* (girasoli), *tulips* (tulipani).
 
 Affronteremo i problemi tipici della Computer Vision reale: caricamento dati da disco, pre-processing, e overfitting su dataset piccoli.
@@ -51,7 +55,7 @@ val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 ```
 
 ## 2. Normalizzazione dei Dati
-Le immagini RGB hanno valori dei pixel nel range [0, 255]. Le reti neurali convergono molto più velocemente se gli input sono piccoli e normalizzati, tipicamente nel range [0, 1].
+Le immagini RGB hanno valori dei pixel nel range [0, 255]. Le [[Reti|reti]] neurali convergono molto più velocemente se gli input sono piccoli e normalizzati, tipicamente nel range [0, 1].
 Possiamo includere questo passaggio direttamente nel modello usando un livello di `Rescaling`.
 
 ```python

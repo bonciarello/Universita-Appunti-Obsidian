@@ -1,3 +1,7 @@
+---
+aliases: [ES, Evoluzione software]
+tags: [ingegneria-del-software]
+---
 Il cambiamento del software è inevitabile:
 
 - Nuovi requisiti emergono quando il software viene utilizzato;
@@ -31,7 +35,7 @@ Lehman e Belady hanno proposto una serie di "leggi", dedotto dopo importanti stu
 ## Manutenzione del software
 
 **Significa modificare un programma dopo che è stato messo in uso.**
-La manutenzione normalmente non comporta modifiche sostanziali all'architettura del sistema.
+La manutenzione normalmente non comporta modifiche sostanziali all'[[Architettura|architettura]] del sistema.
 Le modifiche vengono implementate modificando i componenti esistenti e aggiungendo nuovi componenti al sistema.
 
 La manutenzione è inevitabile: se l'ambiente sta cambiando, i requisiti cambiano. I sistemi DEVONO essere mantenuti quindi se devono rimanere utili in un ambiente.

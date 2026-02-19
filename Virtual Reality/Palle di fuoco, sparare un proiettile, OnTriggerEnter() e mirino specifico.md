@@ -1,3 +1,7 @@
+---
+aliases: ["Palle di fuoco, sparare un proiettile, OnTriggerEnter e mirino specifico"]
+tags: [virtual-reality]
+---
 Con questo laboratorio, pensiamo alla creazione di un metodo per sparare tramite l'istanziazione di oggetti, creazione un prefabbricato di proiettili (come creare un materiale, sparare un proiettile e scontrarsi con un bersaglio), danneggiamento del giocatore e miglioramento del tuo prefabbricato con una particella.
 
 ## Consenti ai nemici di sparare

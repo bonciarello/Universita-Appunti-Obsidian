@@ -1,27 +1,31 @@
+---
+aliases: [Contratti operazioni, CO]
+tags: [ingegneria-del-software]
+---
 ## Definizione: le sezioni di un contratto
 
 Il seguente schema mostra una descizione delle sezioni di un contratto:
 
 - **Operazione:** nome e parametri dell'operazione;
-- **Riferimenti:** casi d'uso in cui può verificarsi questa operazione;
+- **Riferimenti:** [[Casi d'uso|casi d'uso]] in cui può verificarsi questa operazione;
 - **Pre-condizioni:** ipotesi significative sullo stato del sistema o degli oggetti nel Modello del Dominio prima dell'esecuzione dell'operazione. Si tratta di ipotesi non banali, che dovrebbero essere comunicate al lettore;
-- **Post-condizioni:** è la sezione più importante. Lo stato degli oggetti nel Modello di Dominio dopo il completamento dell'operazione.
+- **Post-condizioni:** è la sezione più importante. Lo stato degli oggetti nel [[Modello di dominio|Modello di Dominio]] dopo il completamento dell'operazione.
 
 ## Definizione: che cos'è un'operazione di sistema
 
-I contratti delle operazioni possono essere definiti per le **operazioni di sistema**, ovvero operazioni che il sistema, considerato come un componente a scatola nera, offre nella sua interfaccia pubblica. Le operazioni di sistema possono essere identificare mentre si abbozzano gli SSD, come nella figura successiva,. Per essere più precisi, gli SSD mostrano **eventi di sistema**, ovvero eventi o messaggi di I/O relativi al sistema. Un evento di sistema di input implica che il sistema contenga un'operazione di sistema per gestire quell'evento, così come un messaggio OO (che è un tipo di evento o segnale) viene gestito da un metodo OO (che è un tipo di operazione).
+I contratti delle operazioni possono essere definiti per le **operazioni di sistema**, ovvero operazioni che il sistema, considerato come un componente a scatola nera, offre nella sua interfaccia pubblica. Le operazioni di sistema possono essere identificare mentre si abbozzano gli SSD, come nella figura successiva,. Per essere più precisi, gli SSD mostrano **[[Eventi|eventi]] di sistema**, ovvero [[Eventi|eventi]] o messaggi di I/O relativi al sistema. Un evento di sistema di input implica che il sistema contenga un'operazione di sistema per gestire quell'evento, così come un messaggio OO (che è un tipo di evento o segnale) viene gestito da un metodo OO (che è un tipo di operazione).
 
 ![[contrattiOperazioni1.png]]
 
-L'intero insieme delle operazioni di sistema, tra tutti i casi d'uso, definisce l'**interfaccia di sistema** pubblica, considerando il sistema come un singolo componente o una singola classe. In UML, il sistema nel suo insieme può essere rappresentato come un unico oggetto di una classe denominata, per esempio, *System*.
+L'intero insieme delle operazioni di sistema, tra tutti i [[Casi d'uso|casi d'uso]], definisce l'**interfaccia di sistema** pubblica, considerando il sistema come un singolo componente o una singola classe. In UML, il sistema nel suo insieme può essere rappresentato come un unico oggetto di una classe denominata, per esempio, *System*.
 
 ## Definizione: post-condizioni
 
 Si noti che ciascuna delle post-condizioni nell'esempio *enterItem* comprende una classificazione di aiuto per l'apprendimento come *creazione di istanza* o *associazione formata*. Ecco un punto importante.
 
-> **Definizione:** le **post-condizioni** descrivono i cambiamenti nello stato degli oggetti nel modello di dominio. I cambiamenti di stato nel modello di dominio comprendono le istanze create, le associazioni formate o rotte e gli attributi modificati.
+> **Definizione:** le **post-condizioni** descrivono i cambiamenti nello stato degli oggetti nel [[Modello di dominio|modello di dominio]]. I cambiamenti di stato nel [[Modello di dominio|modello di dominio]] comprendono le istanze create, le associazioni formate o rotte e gli attributi modificati.
 
-***Le post-condizioni non sono azioni da eseguire nel corso dell'operazione;*** si tratta piuttosto di *osservazioni* (rilevazioni) sugli oggetti del modello di dominio che risultano avere al termine dell'operazione.
+***Le post-condizioni non sono azioni da eseguire nel corso dell'operazione;*** si tratta piuttosto di *osservazioni* (rilevazioni) sugli oggetti del [[Modello di dominio|modello di dominio]] che risultano avere al termine dell'operazione.
 
 Per riassumere, le post-condizioni rientrano nelle seguenti categorie:
 
@@ -33,16 +37,16 @@ Come esempio di associazione spezzata, si consideri un'operazione che consente l
 
 Le post-condizioni di cancellazione (eliminazione) di istanza sono le più rare, poiché solitamente non si ha interesse nell'attuare in modo esplicito la distruzione di qualcosa ne mondo reale. Per esempio: in molti paesi dopo che una persona ha dichiarato il fallimento e sono trascorsi sette o dieci anni, tutta la documentazione relativa al fallimento deve essere distrutta per legge. Si noti che questo è un punto di vista concettuale, non di implementazione. Non si tratta di istruzioni su come liberare la memoria di un computer occupata da oggetti software.
 
-### Le post-condizioni sono correlate al modello di dominio
+### Le post-condizioni sono correlate al [[Modello di dominio|modello di dominio]]
 
-Queste post-condizioni sono espresse nel contesto degli oggetti del Modello di Dominio. Quali istanze si possono creare? Quelle del Modello di Dominio. Quali associazioni di possono formare? Quelle del Modello di Dominio, e così via.
+Queste post-condizioni sono espresse nel contesto degli oggetti del [[Modello di dominio|Modello di Dominio]]. Quali istanze si possono creare? Quelle del [[Modello di dominio|Modello di Dominio]]. Quali associazioni di possono formare? Quelle del [[Modello di dominio|Modello di Dominio]], e così via.
 
 ## Linea guida: come creare e scrivere contratti
 
 Per creare i contratti si proceda come segue:
 
 1. Identificare le operazioni di sistema dagli SSD;
-2. Creare un contratto per le operazioni di sistema complesse o i cui effetti sono probabilmente sottili, o che non sono chiare dai casi d'uso;
+2. Creare un contratto per le operazioni di sistema complesse o i cui effetti sono probabilmente sottili, o che non sono chiare dai [[Casi d'uso|casi d'uso]];
 3. Per descrivere le post-condizioni si utilizzino le seguenti categorie: 
     - creazione o cancellazione di istanza;
     - modifica di attributo;
@@ -65,7 +69,7 @@ Il problema più comune è dimenticarsi di includere la *formazione di associazi
 ### Contratto CO1: makeNewSale
 
 - **Operazione:** makeNewSale();
-- **Riferimenti:** casi d'uso: Process Sale;
+- **Riferimenti:** [[Casi d'uso|casi d'uso]]: Process Sale;
 - **Pre-condizioni:** nessuna;
 - **Post-condizioni:** 
     - è stata creata un'istanza s di Sale (creazione di istanza);
@@ -79,7 +83,7 @@ Si rammenti uno dei principi guida di un processo sano e UP: mantenere la massim
 ### Contratto CO2: enterItem
 
 - **Operazione:** enterItem(itemID: ItemID, quantity: integer);
-- **Riferimenti:** casi d'uso: Process Sale;
+- **Riferimenti:** [[Casi d'uso|casi d'uso]]: Process Sale;
 - **Pre-condizioni:** è in corso una vendita;
 - **Post-condizioni:** 
     - è stata creata un'istanza sli di SalesLineItem (creazione di istanza);
@@ -90,7 +94,7 @@ Si rammenti uno dei principi guida di un processo sano e UP: mantenere la massim
 ### Contratto CO3: endSale
 
 - **Operazione:** endSale();
-- **Riferimenti:** casi d'uso: Process Sale;
+- **Riferimenti:** [[Casi d'uso|casi d'uso]]: Process Sale;
 - **Pre-condizioni:** è in corso una vendita;
 - **Post-condizioni:** 
     - Sale.isComplete è diventato true (modifica di attributo);

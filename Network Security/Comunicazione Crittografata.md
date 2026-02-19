@@ -1,5 +1,9 @@
-## 1. Strumenti di Sicurezza
-Alcuni strumenti di sicurezza utilizzati per ottenere un livello basso/alto di crittografia:
+---
+aliases: [CC]
+tags: [network-security]
+---
+## 1. Strumenti di [[Sicurezza]]
+Alcuni strumenti di [[Sicurezza|sicurezza]] utilizzati per ottenere un livello basso/alto di crittografia:
 
 *   **Chiave singola:** se mittente e destinatario utilizzano la stessa chiave, si parla di cifratura simmetrica, a chiave singola, a chiave segreta o convenzionale;
 *   **Due chiavi:** se mittente e destinatario utilizzano chiavi diverse, si parla di cifratura asimmetrica, a due chiavi o a chiave pubblica;

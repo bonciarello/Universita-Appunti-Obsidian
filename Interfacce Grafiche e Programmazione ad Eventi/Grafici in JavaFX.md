@@ -1,3 +1,7 @@
+---
+aliases: [Grafo]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src/main/java* andremo ad elencare i file di seguito, mentre nella cartella *src/main/resources* package *application* troveremo l'interfaccia grafica.
 
 ## PACKAGE application

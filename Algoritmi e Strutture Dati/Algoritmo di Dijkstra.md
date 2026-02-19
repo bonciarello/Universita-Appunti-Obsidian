@@ -1,3 +1,7 @@
+---
+aliases: [Algoritmo Dijkstra, AD]
+tags: [algoritmi-e-strutture-dati]
+---
 ```cpp
 Dijkstra(G(V,E), w, x):
     for v in V:

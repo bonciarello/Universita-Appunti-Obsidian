@@ -1,3 +1,7 @@
+---
+aliases: [Cenabal, CASE STUDY - Entrepreneurial Strategy]
+tags: [business-game]
+---
 ## 1. Storia
 Jennifer MacDonald, ingegnere, crea **CENABAL**, un condimento per insalata biologico a base di olio di lino (Omega-3).
 *   **Innovazione:** Primo condimento biologico certificato con Omega-3 in Canada.

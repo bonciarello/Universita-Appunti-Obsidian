@@ -1,3 +1,7 @@
+---
+aliases: [Calcolo Parallelo, Introduzione Calcolo Parallelo, ICP]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## Impatto del miniaturizzazione del dispositivo
 Cosa succede quando la dimensione dell'elemento si riduce di un fattore *x*?
 - La frequenza di clock aumenta di *x* (realmente inferiore a *x*, a causa del consumo di energia);
@@ -141,7 +145,7 @@ I sistemi paralleli sono caratterizzati da una serie di processori che cooperano
 
 ![[schemaReal.PNG]]
 
-## Architettura parallela generica
+## [[Architettura]] parallela generica
 Qualsiasi macchina parallela può essere descritta, come da esempio:
 
 ![[archietturaGenerica.png]]
@@ -151,7 +155,7 @@ In questo schema, abbiamo delle CPU e delle memorie e sono interconnesse da un r
 ## Classificazione dei computer paralleli
 La prima classificazione è quella di Flynn, che si basa sulle istruzioni e sui dati, e sono SISD, SIMD, MISD e MIMD. L'altra classificazione è quella strutturale, cioè su come è costruita la macchina:
 - **basato sulla memoria** e abbiamo due tipi: memoria condivisa e memoria distribuita;
-- **basato sulla tipologia di rete di interconnessione**: bus, traversa, reti dirette e indirette
+- **basato sulla tipologia di rete di interconnessione**: bus, traversa, [[Reti|reti]] dirette e indirette
 
 ## Classificazione di Flynn
 
@@ -207,7 +211,7 @@ Comunemente si trova nelle catene di tecnologia, di solito costituito da macchin
 
 Perché utilizzare il Linux cluster? Costa poco, è facile da mantenere e installare, aggiungere nodi e mantenerli e si ha un ottimo rapporto prezzo/prestazioni.
 
-Come viene utilizzato? Come un computer parallelo (MPI, OpenMP, PVM), come un mucchio di CPU e come multiprocessore virtuale (Mosix).
+Come viene utilizzato? Come un computer parallelo (MPI, [[OpenMP]], PVM), come un mucchio di CPU e come multiprocessore virtuale (Mosix).
 
 Tuttavia le attuali architetture multi-core (esempio Intel i7) offrono buone soluzioni.
 
@@ -242,7 +246,7 @@ I dati vettoriali o di tipo array vengono distribuiti tra i processi. Tutti i pr
 ## Linguaggi di programmazione
 
 - **Message Passing Interface (MPI):** condivisione esplicita di variabili da un processore all'altro, in modo che ogni processo possa gestire un segmento di memoria del programma;
-- **OpenMP:** gestisce la distribuzione del processo e dei dati nelle macchine SMP, le comunicazioni avvengono tramite memoria condivisa;
+- **[[OpenMP]]:** gestisce la distribuzione del processo e dei dati nelle macchine SMP, le comunicazioni avvengono tramite memoria condivisa;
 - **High Performance Fortran:** crea un singolo segmento di memoria condivisa virtuale tra i processori, il programmatore sceglie come distribuire i dati in memoria;
 - **CUDA/OpenCL:** linguaggi di programmazione de-facto per sistemi basati su GPGPU.
 
@@ -252,7 +256,7 @@ I dati vettoriali o di tipo array vengono distribuiti tra i processi. Tutti i pr
 - **TASK PARALLELO** è un'attività che può essere eseguita da più processori in una "cassaforte", cioè, fornisce risultati corretti);
 - **ESECUZIONE SERIALE** è l'esecuzione sequenziale di un programma, un'istruzione alla volta. Nel senso più semplice, questo è ciò che accade utilizzando una macchina con un processore. Tuttavia, praticamente tutte le attività parallele hanno sezioni di un programma parallelo da eseguire in modo seriale;
 - **ESECUZIONE PARALLELA** è l'esecuzione di un programma consiste di più attività con ciascuna attività che è "in grado" di eseguire le stesse istruzioni o diverse allo stesso tempo;
-- **MEMORIA CONDIVISA:** da un \underline{punto di vista hardware}, descrive un'architettura in cui ogni processore ha accesso diretto (solitamente tramite bus) a una memoria fisica comune. Dal \underline{punto di vista del software}, descrive un modello in cui le attività parallele hanno la stessa "immagine" di memoria e possono accedere e indirizzare le stesse posizioni di memoria logica, indipendentemente da dove si trovano;
+- **MEMORIA CONDIVISA:** da un \underline{punto di vista hardware}, descrive un'[[Architettura|architettura]] in cui ogni processore ha accesso diretto (solitamente tramite bus) a una memoria fisica comune. Dal \underline{punto di vista del software}, descrive un modello in cui le attività parallele hanno la stessa "immagine" di memoria e possono accedere e indirizzare le stesse posizioni di memoria logica, indipendentemente da dove si trovano;
 - **MEMORIA DISTRIBUITA:** da un \underline{punto di vista hardware} si intende un accesso alla memoria basato su rete, per una memoria fisica non comune. Da un \underline{punto di vista software}, l'attività può solo "vedere", da un punto di vista logico, la memoria locale della macchina e può utilizzare le comunicazioni per accedere alla memoria di altre macchine su cui sono in esecuzione altre attività;
 - **COMUNICAZIONI:** le attività parallele in genere richiedono lo scambio di dati. Esistono diversi modi per ottenere ciò, ad esempio tramite un bus di memoria condivisa o tramite una rete. Tuttavia, lo scambio di dati è segnalato come **comunicazione efficace**, indipendentemente dal metodo utilizzato;
 - **SINCRONIZZAZIONE** è il coordinamento di attività parallele in tempo reale, spesso associate alle comunicazioni. Viene spesso implementato stabilendo un punto di sincronizzazione in un'applicazione in cui un'attività non può continuare fino a quando un'altra attività (o più) non raggiunge lo stesso punto (o logicamente equivalente). La sincronizzazione di solito implica l'aspettativa di almeno un'attività e può quindi causare un aumento del "wall-clock" delle applicazioni parallele;
@@ -261,7 +265,7 @@ I dati vettoriali o di tipo array vengono distribuiti tra i processi. Tutti i pr
     1. tempo di avvio dell'attività
     2. sincronizzazioni
     3. comunicazioni dei dati
-    4. overhead software imposto da compilatori paralleli, librerie, strumenti, sistemi operativi, ecc.
+    4. overhead software imposto da compilatori paralleli, librerie, strumenti, [[Sistemi Operativi|sistemi operativi]], ecc.
     5. tempo di conclusione dell'attività
 - **MASSIVE PARALLELISM** si riferisce all'hardware che include un dato sistema parallelo costituito da molti processori fisici. "Molti" si riferisce al mondo d'oggi in sistemi con più di 10.000 processori (ad esempio, GPGPU);
 - **SCALABILITÀ** si riferisce alla capacità dei sistemi paralleli (hardware e / o software) di consentire un **aumento proporzionale** della velocità con l'aumento dei processori. I fattori che contribuiscono alla scalabilità includono:

@@ -1,3 +1,7 @@
+---
+aliases: [Visione modello business, VMB]
+tags: [business-game]
+---
 ## 1. Modello di Business
 Un **modello di business** descrive come un'azienda crea, distribuisce e cattura valore.
 Include: proposta di valore, canali, flussi di ricavo, risorse chiave.

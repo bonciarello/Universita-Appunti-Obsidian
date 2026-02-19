@@ -1,14 +1,18 @@
+---
+aliases: [Reto, Rete]
+tags: [aws-clf-002-cloud-practitioner-essentials]
+---
 ## Connettività ad AWS
 
 Un **Amazon VPC (Virtual Private Cloud)** è una rete privata virtuale che puoi creare e gestire all’interno di AWS. Ti consente di definire un intervallo di indirizzi IP privati e ospitare al suo interno risorse come istanze EC2 o load balancer. In pratica, è come avere la tua rete dedicata nel cloud, con controllo completo su configurazioni e regole di accesso.
 
-Le **sottoreti** suddividono la VPC in segmenti più piccoli, permettendo di separare le risorse pubbliche da quelle private. In base alla sottorete in cui collochi una risorsa, puoi decidere se renderla accessibile da Internet (ad esempio un sito web) oppure solo da una rete privata interna (come un database aziendale).
+Le **sottoreti** suddividono la VPC in segmenti più piccoli, permettendo di separare le risorse pubbliche da quelle private. In base alla sottorete in cui collochi una risorsa, puoi decidere se renderla accessibile da Internet (ad esempio un sito web) oppure solo da una rete privata interna (come un [[Database|database]] aziendale).
 
 Un **gateway internet** è una connessione tra un VPC e internet. È come una porta d’ingresso pubblica: senza di esso, nessuna risorsa della VPC può comunicare con l’esterno. Serve quindi quando vuoi rendere accessibili risorse pubbliche, ad esempio un sito web ospitato su EC2.
 
 Un **Virtual Private Gateway** permette di collegare la tua VPC a una rete privata esterna (ad esempio il tuo data center aziendale) tramite una connessione VPN. È come avere una navetta privata e sicura che collega l’azienda alle risorse AWS, accessibile solo da utenti autenticati. La connessione è cifrata, ma utilizza comunque Internet, quindi può risentire di limiti di banda e latenza.
 
-**AWS Direct Connect** è un servizio che consente di stabilire una connessione privata dedicata tra il data center e un VPC: questa connessione garantisce maggiore velocità, minore latenza e più sicurezza. È la soluzione ideale per aziende con forti esigenze di affidabilità o requisiti normativi, perché offre un collegamento diretto e dedicato al cloud AWS. All’interno della stessa VPC puoi configurare più tipi di gateway, in sottoreti diverse, a seconda delle esigenze: ad esempio un gateway internet per i servizi pubblici, un Virtual Private Gateway per la connessione VPN privata e un Direct Connect per un collegamento dedicato. Questo consente grande flessibilità nella progettazione della rete.
+**AWS Direct Connect** è un servizio che consente di stabilire una connessione privata dedicata tra il data center e un VPC: questa connessione garantisce maggiore velocità, minore latenza e più [[Sicurezza|sicurezza]]. È la soluzione ideale per aziende con forti esigenze di affidabilità o requisiti normativi, perché offre un collegamento diretto e dedicato al cloud AWS. All’interno della stessa VPC puoi configurare più tipi di gateway, in sottoreti diverse, a seconda delle esigenze: ad esempio un gateway internet per i servizi pubblici, un Virtual Private Gateway per la connessione VPN privata e un Direct Connect per un collegamento dedicato. Questo consente grande flessibilità nella progettazione della rete.
 
 *   **AWS PrivateLink** collega il tuo VPC privatamente a servizi e risorse come se fossero nel tuo VPC.
 *   **VPN sito-sito AWS** crea una connessione sicura tra il data center o le filiali e le risorse del cloud AWS.
@@ -26,7 +30,7 @@ Un pacchetto viaggia da Internet verso una risorsa in una VPC tramite i seguenti
 2.  Viene valutato da una Network ACL, che decide se può entrare nella sottorete.
 3.  Se il pacchetto è destinato a un’istanza EC2, le regole del Security Group associato verificano le autorizzazioni.
 
-In questo modo, sia le ACL che i Security Group lavorano insieme per garantire sicurezza e controllo del traffico.
+In questo modo, sia le ACL che i Security Group lavorano insieme per garantire [[Sicurezza|sicurezza]] e controllo del traffico.
 
 ## Reti globali
 

@@ -1,6 +1,10 @@
+---
+aliases: [sicurezza]
+tags: [aws-clf-002-cloud-practitioner-essentials]
+---
 ## Prevenzione di accessi non autorizzati
 
-L’**utente root** è il primo utente creato automaticamente quando si apre un account AWS. Ha il controllo totale su tutte le risorse e può eseguire qualunque azione, dalla creazione di istanze EC2 fino all’eliminazione di interi database. Proprio per questo motivo è considerato un’identità estremamente potente e potenzialmente rischiosa. AWS raccomanda di proteggerlo con una password complessa e con l’autenticazione a più fattori (MFA), ma anche di non usarlo per le operazioni quotidiane. L’utente root dovrebbe essere riservato solo a compiti amministrativi critici, come la gestione dei pagamenti o la modifica delle impostazioni di sicurezza globali.
+L’**utente root** è il primo utente creato automaticamente quando si apre un account AWS. Ha il controllo totale su tutte le risorse e può eseguire qualunque azione, dalla creazione di istanze EC2 fino all’eliminazione di interi [[Database|database]]. Proprio per questo motivo è considerato un’identità estremamente potente e potenzialmente rischiosa. AWS raccomanda di proteggerlo con una password complessa e con l’autenticazione a più fattori (MFA), ma anche di non usarlo per le operazioni quotidiane. L’utente root dovrebbe essere riservato solo a compiti amministrativi critici, come la gestione dei pagamenti o la modifica delle impostazioni di sicurezza globali.
 
 **AWS Identity and Access Management (IAM)** è il servizio che consente di gestire in modo sicuro utenti, gruppi e autorizzazioni all’interno di un account AWS. Grazie a IAM, è possibile creare identità individuali (utenti IAM) e assegnare a ciascuna solo i permessi strettamente necessari per svolgere determinate operazioni.
 
@@ -18,23 +22,23 @@ La **federazione delle identità** permette agli utenti di un’organizzazione d
 
 Il **Centro identità IAM (IAM Identity Center)** è un servizio AWS che consente di configurare e gestire in modo centralizzato l’accesso degli utenti, introducendo un sistema di Single Sign-On (SSO). Gli utenti possono così accedere a più account o applicazioni AWS utilizzando un’unica identità, senza dover ricordare più password.
 
-**AWS Secrets Manager** offre un metodo sicuro per gestire, ruotare e recuperare credenziali del database, chiavi API e altri segreti durante l'intero ciclo di vita. In questo modo, le applicazioni, i servizi e le risorse IT restano al sicuro.
+**AWS Secrets Manager** offre un metodo sicuro per gestire, ruotare e recuperare credenziali del [[Database|database]], chiavi API e altri segreti durante l'intero ciclo di vita. In questo modo, le applicazioni, i servizi e le risorse IT restano al sicuro.
 
-**AWS Systems Manager** fornisce una visualizzazione centralizzata dei nodi negli account e nelle regioni dell'organizzazione e in ambienti multi-cloud e ibridi. Con questo servizio puoi accedere rapidamente alle informazioni sui nodi, come i dettagli su ID e sistemi operativi, e automatizzare le modifiche al registro, la gestione degli utenti e l'applicazione di patch di sicurezza.
+**AWS Systems Manager** fornisce una visualizzazione centralizzata dei nodi negli account e nelle regioni dell'organizzazione e in ambienti multi-cloud e ibridi. Con questo servizio puoi accedere rapidamente alle informazioni sui nodi, come i dettagli su ID e [[Sistemi Operativi|sistemi operativi]], e automatizzare le modifiche al registro, la gestione degli utenti e l'applicazione di patch di sicurezza.
 
-## Protezione di reti e applicazioni
+## Protezione di [[Reti|reti]] e applicazioni
 
 Un **attacco DoS (Denial of Service)** consiste nel sovraccaricare un’applicazione web con un volume eccessivo di traffico di rete. L’obiettivo è rendere il servizio indisponibile agli utenti legittimi, saturando le risorse del server fino a impedirgli di rispondere alle richieste reali.
 
 Un **attacco DDoS (Distributed Denial of Service)** è una versione più potente e distribuita di un attacco DoS. Invece di provenire da una singola macchina, il traffico malevolo arriva da centinaia o migliaia di computer infetti, chiamati bot, che fanno parte di una botnet. Questa rete distribuita rende gli attacchi DDoS molto più difficili da bloccare, perché le richieste sembrano provenire da molteplici sorgenti legittime.
 
-AWS include protezioni automatiche integrate contro attacchi di forza bruta e DDoS a livello di rete. La sua architettura globale, distribuita su più regioni, zone di disponibilità e posizioni edge, è progettata per resistere a grandi volumi di traffico. Inoltre, AWS può assorbire e distribuire il carico in modo efficiente, rendendo estremamente difficile per un aggressore sovraccaricare il sistema.
+AWS include protezioni automatiche integrate contro attacchi di forza bruta e DDoS a livello di rete. La sua [[Architettura|architettura]] globale, distribuita su più regioni, zone di disponibilità e posizioni edge, è progettata per resistere a grandi volumi di traffico. Inoltre, AWS può assorbire e distribuire il carico in modo efficiente, rendendo estremamente difficile per un aggressore sovraccaricare il sistema.
 
 I **gruppi di sicurezza** agiscono come firewall virtuali a livello di istanza o servizio. Consentono solo traffico in entrata considerato legittimo e bloccano tutte le richieste non autorizzate. Operando a livello di rete AWS, impediscono che attacchi di massa riescano a colpire direttamente le risorse interne, sfruttando la grande capacità della regione per neutralizzare il traffico malevolo.
 
 **Elastic Load Balancing (ELB)** distribuisce automaticamente il traffico in ingresso tra più server o istanze. Questo evita che un singolo server venga sovraccaricato da troppe richieste. Oltre a migliorare le prestazioni e l’affidabilità, ELB aiuta anche a mitigare attacchi DoS o DDoS, smistando il carico e riducendo i punti di vulnerabilità.
 
-Le **regioni AWS** possiedono un’enorme capacità di rete e infrastruttura, distribuita su più data center e zone di disponibilità. Questa ampiezza rende estremamente difficile e costoso per un aggressore generare abbastanza traffico da provocare un sovraccarico. La resilienza e la scalabilità intrinseche dell’architettura AWS rappresentano una prima linea di difesa contro gli attacchi DDoS su larga scala.
+Le **regioni AWS** possiedono un’enorme capacità di rete e infrastruttura, distribuita su più data center e zone di disponibilità. Questa ampiezza rende estremamente difficile e costoso per un aggressore generare abbastanza traffico da provocare un sovraccarico. La resilienza e la scalabilità intrinseche dell’[[Architettura|architettura]] AWS rappresentano una prima linea di difesa contro gli attacchi DDoS su larga scala.
 
 **AWS Shield** è un servizio gestito che protegge automaticamente le risorse AWS dagli attacchi DDoS. Avremo:
 
@@ -53,8 +57,8 @@ La crittografia funziona come un sistema di chiave e serratura. Quando si applic
 
 AWS distingue due categorie principali di crittografia:
 
-*   **Crittografia dei dati inattivi**: si applica ai dati fermi in un archivio, ad esempio in un database, in un bucket Amazon S3 o in un volume EBS. Serve a proteggere le informazioni da accessi non autorizzati o furti di supporti fisici. In AWS, questa crittografia può essere automatizzata e gestita tramite servizi come KMS o integrata direttamente nei sistemi di archiviazione.
-*   **Crittografia dei dati in transito**: protegge i dati mentre viaggiano tra sistemi diversi (es. tra un database e un’applicazione o tra un client e un server). Si basa su protocolli di rete sicuri come SSL/TLS, che stabiliscono connessioni crittografate, evitando che le informazioni vengano intercettate o modificate durante la trasmissione.
+*   **Crittografia dei dati inattivi**: si applica ai dati fermi in un archivio, ad esempio in un [[Database|database]], in un bucket Amazon S3 o in un volume EBS. Serve a proteggere le informazioni da accessi non autorizzati o furti di supporti fisici. In AWS, questa crittografia può essere automatizzata e gestita tramite servizi come KMS o integrata direttamente nei sistemi di archiviazione.
+*   **Crittografia dei dati in transito**: protegge i dati mentre viaggiano tra sistemi diversi (es. tra un [[Database|database]] e un’applicazione o tra un client e un server). Si basa su protocolli di rete sicuri come SSL/TLS, che stabiliscono connessioni crittografate, evitando che le informazioni vengano intercettate o modificate durante la trasmissione.
 
 Molti servizi AWS includono la crittografia integrata come impostazione standard o opzionale:
 
@@ -62,9 +66,9 @@ Molti servizi AWS includono la crittografia integrata come impostazione standard
 *   **Amazon EBS (Elastic Block Store)**: permette di cifrare i volumi di archiviazione a blocchi e gli snapshot, garantendo che i dati siano protetti sia a riposo sia durante il trasferimento tra istanze.
 *   **Amazon DynamoDB**: supporta la crittografia dei dati a riposo, proteggendo le tabelle e i backup senza necessità di configurazione manuale da parte dell’utente.
 
-Il **Servizio AWS di gestione delle chiavi (KMS)** consente di creare, gestire e controllare le chiavi crittografiche usate per proteggere i dati. Con KMS puoi generare chiavi uniche per i tuoi dati, definire chi (utenti o ruoli IAM) può utilizzarle e monitorare ogni utilizzo tramite AWS CloudTrail. Le chiavi create con KMS non lasciano mai il servizio: restano protette all’interno dell’infrastruttura AWS. È anche possibile disattivarle temporaneamente, ad esempio per sospendere l’accesso a determinati dati.
+Il **Servizio AWS di [[Gestione delle Chiavi|gestione delle chiavi]] (KMS)** consente di creare, gestire e controllare le chiavi crittografiche usate per proteggere i dati. Con KMS puoi generare chiavi uniche per i tuoi dati, definire chi (utenti o ruoli IAM) può utilizzarle e monitorare ogni utilizzo tramite AWS CloudTrail. Le chiavi create con KMS non lasciano mai il servizio: restano protette all’interno dell’infrastruttura AWS. È anche possibile disattivarle temporaneamente, ad esempio per sospendere l’accesso a determinati dati.
 
-**Amazon Macie** è un servizio che utilizza machine learning (ML) e analisi automatica per individuare e proteggere dati sensibili archiviati in Amazon S3. Macie può riconoscere automaticamente informazioni personali (PII), credenziali o dati finanziari, segnalare potenziali esposizioni o configurazioni rischiose e fornire report per la conformità e la sicurezza. È uno strumento particolarmente utile per le aziende che devono rispettare normative severe (come GDPR o PCI DSS) e vogliono valutare la propria postura di sicurezza in modo continuo e automatizzato.
+**Amazon Macie** è un servizio che utilizza [[Machine Learning|machine learning]] (ML) e analisi automatica per individuare e proteggere dati sensibili archiviati in Amazon S3. Macie può riconoscere automaticamente informazioni personali (PII), credenziali o dati finanziari, segnalare potenziali esposizioni o configurazioni rischiose e fornire report per la conformità e la sicurezza. È uno strumento particolarmente utile per le aziende che devono rispettare normative severe (come GDPR o PCI DSS) e vogliono valutare la propria postura di sicurezza in modo continuo e automatizzato.
 
 **AWS Certificate Manager (ACM)** gestisce i certificati SSL/TLS, che sono fondamentali per la crittografia dei dati in transito. Con ACM puoi richiedere, distribuire e rinnovare automaticamente certificati SSL/TLS, applicarli a servizi AWS come Elastic Load Balancing, CloudFront o API Gateway e utilizzarli anche per risorse on-premises collegate al cloud. I certificati SSL/TLS stabiliscono connessioni cifrate tra due sistemi (ad esempio, browser e server), garantendo che i dati trasmessi non possano essere intercettati o alterati. In questo modo ACM semplifica la gestione della sicurezza di rete e riduce gli errori di configurazione.
 

@@ -1,3 +1,7 @@
+---
+aliases: [EDDPD, Edit Distance DivCoins programmazione dinamica]
+tags: [algoritmi-e-strutture-dati]
+---
 ## Edit Distance
 
 La traccia del problema è la seguente:
@@ -99,7 +103,7 @@ I possibili approcci sono:
 - **BRUTEFORCE:** provare tutte le possibili divisioni. Il *punto positivo* è soluzione ottima assicurata, il *punto negativo* è complessità temporale enorme.
 - **GREEDY:** uno stage dell'algoritmo greedy sceglie se inserire o meno la monete corrente in una partizione e il criterio della scelta è *locale* (si basa solo sulle monete inserite fino a questo punto). Il *punto positivo* è complessità lineare, il *punto negativo* è soluzione ottima non assicurata.
 - **ALTRI APPROCCI?**
-  - Variazione del problema **subset sum** (dato un insieme I di numeri positivi e una soglia T, stabilire se esiste un sottoinsieme *I'* tale che sum(I') ≤ T e sia la più grande possibile);
+  - Variazione del problema **[[Subset sum|subset sum]]** (dato un insieme I di numeri positivi e una soglia T, stabilire se esiste un sottoinsieme *I'* tale che sum(I') ≤ T e sia la più grande possibile);
   - Variazione del problema **coin change** (dato un numero N e un insieme di monete M, in quanti modi possiamo ottenere N usando le monete di M?)
 
 Dobbiamo affrontare due fasi:

@@ -1,3 +1,7 @@
+---
+aliases: [javafx]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 JavaFx permette di realizzare delle applicazioni per pc, cellulari, web, TV e altri tipi di piattaforme.
 
 Una delle innovazioni alla base di JavaFX include la semplicità di realizzare interfacce grafiche. Infatti, JavaFX permette di definire l'aspetto e lo stile della applicazioni usando i fogli di stile (Cascading Style Sheets, CSS). L'interfaccia grafica può essere sviluppata attraverso un linguaggio chiamato **FXML**.
@@ -12,7 +16,7 @@ SceneBuilder permette di separare nettamente la grafica dalla logica applicativa
 - SceneBuilder crea in automatico i file FXML;
 - attraverso il codice si realizza la logica.
 
-## Architettura
+## [[Architettura]]
 
 In generale, un'applicazione JavaFX è composta da tre componenti principali:
 

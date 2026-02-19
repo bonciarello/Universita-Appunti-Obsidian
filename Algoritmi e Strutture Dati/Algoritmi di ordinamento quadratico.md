@@ -1,3 +1,7 @@
+---
+aliases: [AOQ, Algoritmi ordinamento quadratico]
+tags: [algoritmi-e-strutture-dati]
+---
 ## Problemi di ricerca
 
 - **Ricerca lineare** ⇒ no requisiti sul dato → O(n)
@@ -9,7 +13,7 @@
 
     → O(1) se funzione hash e fattore di carico sono scelti bene
 
-- **Alberi binari di ricerca** ⇒
+- **[[Alberi binari]] di ricerca** ⇒
     - costruzione dell'albero
     - bilanciamento albero
 
@@ -79,7 +83,7 @@ Ipotizzando un caso intermedio, l'esecuzione del ciclo *while* si interrompe pri
 
 Inoltre non vengono fatti scambi ma bensì uno shifting sinistro e infine il numero di operazioni di base è inferiore ai precedenti algoritmi.
 
-- **Merge Sort**: è una classica applicazione della tecnica *divide et impera*. Dato un vettore di *n* elementi si suddivide in due parti. A questo punto si ordinano ricorsivamente i due vettori e quindi il vettore complessivo viene ordinato per "fusione" dei due sotto-vettori.
+- **Merge Sort**: è una classica applicazione della tecnica *[[Divide et impera|divide et impera]]*. Dato un vettore di *n* elementi si suddivide in due parti. A questo punto si ordinano ricorsivamente i due vettori e quindi il vettore complessivo viene ordinato per "fusione" dei due sotto-vettori.
 ```cpp
 void mergeSort(Vettore<T>& v, int in, int fin) {
     if((fin-in) < 20) {

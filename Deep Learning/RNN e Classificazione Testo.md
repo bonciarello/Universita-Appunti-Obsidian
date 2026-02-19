@@ -1,4 +1,8 @@
-Le Reti Neurali Ricorrenti (RNN) sono l'architettura d'elezione per elaborare dati sequenziali come il testo. A differenza delle immagini (dove i pixel vicini sono correlati spazialmente), nel testo le parole hanno significato solo nel contesto della frase che le precede (e le segue).
+---
+aliases: [Classe]
+tags: [deep-learning]
+---
+Le [[Reti]] Neurali Ricorrenti (RNN) sono l'[[Architettura|architettura]] d'elezione per elaborare dati sequenziali come il testo. A differenza delle immagini (dove i pixel vicini sono correlati spazialmente), nel testo le parole hanno significato solo nel contesto della frase che le precede (e le segue).
 
 ## Tipologie di Architetture RNN
 A seconda del problema, le RNN possono essere configurate in modi diversi:
@@ -11,7 +15,7 @@ A seconda del problema, le RNN possono essere configurate in modi diversi:
     *   *Asincrona (Seq2Seq):* Traduzione automatica (leggo tutta la frase in inglese, poi genero quella in italiano).
 
 ## Preprocessing del Testo
-Le reti neurali non capiscono le stringhe. Dobbiamo convertire il testo in numeri.
+Le [[Reti|reti]] neurali non capiscono le stringhe. Dobbiamo convertire il testo in numeri.
 
 ### 1. Tokenizzazione e Indicizzazione
 Dividiamo il testo in parole (token) e assegniamo a ogni parola univoca un numero intero (indice).
@@ -19,7 +23,7 @@ Dividiamo il testo in parole (token) e assegniamo a ogni parola univoca un numer
 *   "Il cane mangia" $\to$ [1, 4, 3]
 
 ### 2. Padding
-Le reti neurali richiedono input di dimensione fissa (tensori rettangolari). Ma le frasi hanno lunghezze diverse.
+Le [[Reti|reti]] neurali richiedono input di dimensione fissa (tensori rettangolari). Ma le frasi hanno lunghezze diverse.
 Usiamo il **Padding**: aggiungiamo zeri alla fine (o all'inizio) delle frasi più corte per renderle tutte lunghe quanto la frase più lunga (o una lunghezza massima prefissata `maxlen`).
 
 ```python

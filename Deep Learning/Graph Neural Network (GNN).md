@@ -1,3 +1,7 @@
+---
+aliases: [Graph Neural Network, GNN]
+tags: [deep-learning]
+---
 Molti dati nel mondo reale non hanno una struttura a griglia (immagini) o a sequenza (testo), ma una struttura a **Grafo**:
 *   **Social Network:** Utenti (nodi) e amicizie (archi).
 *   **Chimica:** Atomi (nodi) e legami chimici (archi).
@@ -21,17 +25,17 @@ Dopo $K$ layer, ogni nodo "conosce" informazioni sui nodi distanti $K$ salti (il
 ## Architetture Principali
 
 ### 1. GCN (Graph Convolutional Networks)
-Kipf & Welling (2017). È l'analogo della convoluzione per i grafi.
+Kipf & Welling (2017). È l'analogo della convoluzione per i [[Grafi|grafi]].
 L'aggregazione è una **media pesata** dei vicini. I pesi sono fissi e dipendono dal grado dei nodi (normalizzazione laplaciana): i nodi molto connessi (hub) hanno meno influenza sul singolo vicino.
 $$ H^{(l+1)} = \sigma(\tilde{D}^{-1/2}\tilde{A}\tilde{D}^{-1/2}H^{(l)}W^{(l)}) $$
 
 ### 2. GraphSAGE (Graph Sample and Aggregate)
-Hamilton et al. (2017). Risolve il problema della scalabilità su grafi enormi.
+Hamilton et al. (2017). Risolve il problema della scalabilità su [[Grafi|grafi]] enormi.
 Invece di usare *tutti* i vicini (che potrebbero essere milioni), ne campiona un numero fisso in modo casuale.
 Inoltre, è un modello **Induttivo**: impara una funzione per generare embedding, quindi può gestire nodi mai visti prima (es. nuovi utenti iscritti al social network) senza riaddestrare tutto.
 
 ### 3. GAT (Graph Attention Networks)
-Veličković et al. (2018). Introduce l'**Attenzione** nei grafi.
+Veličković et al. (2018). Introduce l'**Attenzione** nei [[Grafi|grafi]].
 Nella GCN, tutti i vicini contribuiscono ugualmente (o in base al grado). Nella GAT, il modello impara dei **pesi di attenzione** $\alpha_{vu}$ per ogni arco.
 Il nodo $v$ può decidere di ascoltare molto il vicino $u_1$ e ignorare il vicino $u_2$, basandosi sulle loro caratteristiche.
 

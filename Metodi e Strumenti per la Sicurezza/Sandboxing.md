@@ -1,3 +1,7 @@
+---
+aliases: [sandboxing]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
 Il **sandboxing** è un meccanismo di isolamento progettato per eseguire applicazioni (potenzialmente non affidabili) in un ambiente protetto, garantendo che eventuali errori o comportamenti malevoli non danneggino il resto del sistema.
 
 ## 1. Ambiti di applicazione
@@ -18,11 +22,11 @@ Rappresentano l'isolamento più stringente. Ogni VM ha un proprio Sistema Operat
 
 ### Isolamento a livello di linguaggio e binario
 Offre una grana più fine:
-*   **JavaScript:** Isolamento logico all'interno del browser.
-*   **Strumentazione Binaria (NativeClient):** Modifica o verifica il codice eseguibile per garantirne la sicurezza.
+*   **[[JavaScript]]:** Isolamento logico all'interno del browser.
+*   **Strumentazione Binaria (NativeClient):** Modifica o verifica il codice eseguibile per garantirne la [[Sicurezza|sicurezza]].
 
 ## 3. Sandboxing x86 nei Browser
-L'obiettivo è eseguire codice nativo (C/C++) nel browser per ottenere alte prestazioni (giochi, editing video) o supportare app legacy, senza compromettere la sicurezza dell'host.
+L'obiettivo è eseguire codice nativo (C/C++) nel browser per ottenere alte prestazioni (giochi, editing video) o supportare app legacy, senza compromettere la [[Sicurezza|sicurezza]] dell'host.
 
 ### Approcci storici e moderni:
 1.  **Fiducia nello sviluppatore:** Chiedere all'utente di autorizzare codice firmato. *Limite:* L'utente spesso non è consapevole dei rischi.

@@ -1,3 +1,7 @@
+---
+aliases: [Grafo]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 ## UI vs UX Design
 
 UI allude alla vista e al design dell'interfaccia. L'UI è la cosa che l'utente vede sullo schermo: i simboli, i contenuti, colori, sfondi, componenti animati.
@@ -125,7 +129,7 @@ Ad esempio, il pulsante di login dovrebbe essere vicino ai campi usati per il lo
 
 ### Consistenza
 
-Le persone tendono a preferire le cose già viste in passato.
+Le persone tendono a preferire le cose già [[Viste|viste]] in passato.
 
 Ad esempio, il control di tipo radio è spesso associato ad una scelta singola, utilizzarlo per una scelta multipla potrebbe confondere le persone. Un altro esempio è sull'uso appropriato dei colori, il colore verde è associato al "go", mentre il colore rosso è associato a "stop".
 
@@ -191,13 +195,13 @@ Le informazioni possono essere raggruppate in 5 modi detti **Five Hat Racks**: *
 - **Tempo:** Organizzare le informazioni in un qualche ordine temporale. *Es.* per mese oppure cronologico;
 - **Posizione:** Organizzare le informazioni in base ad elementi geografici o spaziali. *Es.* una mappa con i negozi più vicini;
 - **Alfabeto:** Organizzare le informazioni in ordine alfabetico. *Es.* un dizionario;
-- **Gerarchico:** Organizzare le informazioni in ordine gerarchico, quando un pezzo di informazione è connesso ad un altro in ordine di importanza o valore. *Es.* la visualizzazione dei file in un file system
+- **Gerarchico:** Organizzare le informazioni in ordine gerarchico, quando un pezzo di informazione è connesso ad un altro in ordine di importanza o valore. *Es.* la visualizzazione dei file in un [[File System|file system]]
 
 ## Colori
 
 I colori aggiungono una dimensione extra all'interfaccia e possono aiutare un utente a capire alcune strutture informative complesse.
 
-I colori possono essere utilizzati per evidenziare eventi eccezionali.
+I colori possono essere utilizzati per evidenziare [[Eventi|eventi]] eccezionali.
 
 Evidenziate al massimo il 10% degli elementi visibili. Quando tutto è evidenziato significa che non è evidenziato niente!
 
@@ -243,13 +247,13 @@ I 5 criteri principali sono:
 
 ## Implementazione del codice
 
-Si utilizza il **pattern MVC**, architettura software che permette di separare le componenti principali di un'interfiia grafica: la rappresentazione dell'informazione e l'interazione con l'utente.
+Si utilizza il **pattern MVC**, [[Architettura|architettura]] software che permette di separare le componenti principali di un'interfiia grafica: la rappresentazione dell'informazione e l'interazione con l'utente.
 
 **MVC** è l'acronimo di **Model-View-Controller** e l'idea è di creare tre componenti diversi:
 
 - **1 Model:** rappresenta i dati di dominio, la logica applicativa e il meccanismo di persistenza;
 - **tante View:** l'interfaccia grafica vera e propria;
-- **tanti Controller:** fanno da intermediari tra il Model e View. Gestisce le azioni degli utenti e li mappa su azioni sul modello. Quindi, in generale è responsabile della gestione degli eventi.
+- **tanti Controller:** fanno da intermediari tra il Model e View. Gestisce le azioni degli utenti e li mappa su azioni sul modello. Quindi, in generale è responsabile della gestione degli [[Eventi|eventi]].
 
 ## Pattern MVC
 

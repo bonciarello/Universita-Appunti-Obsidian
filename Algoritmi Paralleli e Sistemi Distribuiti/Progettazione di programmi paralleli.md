@@ -1,3 +1,7 @@
+---
+aliases: [Progettazione programmi paralleli, PPP]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 Uno dei primi passi della progettazione di un programma parallelo consiste nel dividere il problema in "blocchi" di lavoro discreto che possono essere distribuiti a più attività. Questo si chiama **decomposizione** o **partizionamento**.
 
 Esistono due modi principali per suddividere il carico computazionale tra attività parallele: **scomposizione funzionale (attività/lavoro)** e **scomposizione dei dati**.
@@ -32,7 +36,7 @@ Questo problema **non è facilmente parallelizzabile** perché il calcolo della 
 
 Il calcolo del valore di *k+2* utilizza sia il valore *k+1* che *k*. Questi tre termini non possono essere calcolati indipendentemente e quindi, non in parallelo.
 
-In OpenMP è piuttosto fattibile grazie alla **ricorsione**.
+In [[OpenMP]] è piuttosto fattibile grazie alla **ricorsione**.
 
 ## Morale (1)
 
@@ -82,8 +86,8 @@ Il valore di *a[j-1]* deve essere calcolato prima del valore di *a[j]*, quindi *
 
 Come nell'esempio precedente, il parallelismo è inibito. Il valore corretto di *Y* dipende da:
 
-- **nell'architettura della memoria distribuita:** se o quando il valore di *X* viene comunicato tra le attività.
-- **nell'architettura della memoria condivisa:** quale attività memorizza il valore di *X* per ultimo.
+- **nell'[[Architettura|architettura]] della memoria distribuita:** se o quando il valore di *X* viene comunicato tra le attività.
+- **nell'[[Architettura|architettura]] della memoria condivisa:** quale attività memorizza il valore di *X* per ultimo.
 
 ## Principi di progettazione di algoritmi paralleli
 
@@ -105,7 +109,7 @@ Utilizzato quando la quantità di dati che una task deve calcolare è grande ris
 
 Le task sono associate staticamente, per ridurre al minimo lo scambio di dati tra le task.
 
-Funziona meglio se applicato a un'architettura di memoria condivisa.
+Funziona meglio se applicato a un'[[Architettura|architettura]] di memoria condivisa.
 
 *Esempio:* Quicksort parallelo.
 
@@ -115,7 +119,7 @@ Il grafico delle dipendenze viene utilizzato per esplicitare quali task richiedo
 
 *Qual è il grafico delle dipendenze dell'esempio precedente?* In questo caso, il grafico è scollegato (arco impostato = 0) poiché tutte le task sono indipendenti l'una dall'altra.
 
-### Esempio: query su database
+### Esempio: query su [[Database|database]]
 
 Consideriamo un DB relazionale per auto:
 
@@ -213,7 +217,7 @@ Le task sono più o meno i processi (non processore o core!). Durante la sua ese
 
 In generale, il numero di task di una scomposizione **supera** il numero di processi disponibili Per questo motivo, un algoritmo parallelo deve fornire anche una mappatura delle tasks sui processi.
 
-> **NOTA:** ricorda che ci riferiamo alla mappatura tra tasks e processi e non ai processori. Questo perché, d'altra parte, le API utilizzate tipiche (ad esempio OpenMP, MPI) non consentono un facile collegamento delle tasks ai processori fisici. Piuttosto, cercano di aggregare i tasks ai processi, **dando al sistema il compito di mappare i processi ai processori (per efficienza)**.
+> **NOTA:** ricorda che ci riferiamo alla mappatura tra tasks e processi e non ai processori. Questo perché, d'altra parte, le API utilizzate tipiche (ad esempio [[OpenMP]], MPI) non consentono un facile collegamento delle tasks ai processori fisici. Piuttosto, cercano di aggregare i tasks ai processi, **dando al sistema il compito di mappare i processi ai processori (per efficienza)**.
 
 Si parla di processi, non nel senso stretto di UNIX / LINUX, ma come raccolta di tasks e dati associati.
 
@@ -262,7 +266,7 @@ Stessa scomposizione dei dati, ma diversa scomposizione delle tasks.
 
 ## Decomposizione ricorsiva
 
-Adatto per algoritmi *divide et impera*.
+Adatto per algoritmi *[[Divide et impera|divide et impera]]*.
 
 Ogni problema secondario generato in ogni fase della divisione diventa una task.
 
@@ -276,7 +280,7 @@ Ecco l'algoritmo seriale:
 
 ![[quickSortAlbero.PNG]]
 
-La concorrenza aumenta con la profondità dell'albero. Inizialmente è necessario un solo processo per la prima partizione. A volte è meglio formulare l'algoritmo in termini di *divide et impera* anche se non è intrinsecamente di questo tipo.
+La concorrenza aumenta con la profondità dell'albero. Inizialmente è necessario un solo processo per la prima partizione. A volte è meglio formulare l'algoritmo in termini di *[[Divide et impera|divide et impera]]* anche se non è intrinsecamente di questo tipo.
 
 ### Esempio: minimo di una sequenza
 

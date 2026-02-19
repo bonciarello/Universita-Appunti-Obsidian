@@ -1,3 +1,7 @@
+---
+aliases: [PBPG, Problema bisaccia 0-1 programmazione golosa]
+tags: [algoritmi-e-strutture-dati]
+---
 Dato un insieme di oggetti di dimensione e valore diverso, si desidera scegliere un sottoinsieme di oggetti da inserire in una bisaccia in modo tale da massimizzare il valore trasportato.
 
 > **ALGORITMO EURISTICO:**

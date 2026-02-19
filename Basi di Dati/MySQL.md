@@ -1,3 +1,7 @@
+---
+aliases: [mysql]
+tags: [basi-di-dati]
+---
 ## Installare MySQL
 
 Dal link *http://dev.mysql.com/* e fare il download di diverse versioni di MySQL:
@@ -11,11 +15,11 @@ Il codice sorgente di MySQL era inizialmente di proprietà della società MySQL 
 
 Nel luglio 2007 la società svedese MySQL AB aveva 385 dipendenti in numerosi paesi. I suoi principali introiti provenivano dal supporto agli utilizzatori di MySQL tramite il pacchetto **Enterprise**, dalla vendita delle licenze commerciali e dall'utilizzo da parte di terzi del marchio MySQL.
 
-Il 16 gennaio 2008 **Sun Microsystems** ha acquistato la società per un miliardo di dollari, stimando il mercato del database in 15 miliardi di dollari.
+Il 16 gennaio 2008 **Sun Microsystems** ha acquistato la società per un miliardo di dollari, stimando il mercato del [[Database|database]] in 15 miliardi di dollari.
 
 Il 20 aprile 2009 alla stessa Sun Microsystems è stata proposta l'acquisizione da parte di **Oracle** per 7,4 miliardi di dollari.
 
-Il padre di MySQL, **Michael Widenius**, ha lanciato una petizione online per opporsi alla fusione. Nonostante ciò l'Unione europea ha dato parere favorevole, e l'acquisizione è stata completata il 27 gennaio 2010. Il software **MediaWiki**, che gestisce i siti del progetto **Wikipedia**, è basato su database MySQL.
+Il padre di MySQL, **Michael Widenius**, ha lanciato una petizione online per opporsi alla fusione. Nonostante ciò l'Unione europea ha dato parere favorevole, e l'acquisizione è stata completata il 27 gennaio 2010. Il software **MediaWiki**, che gestisce i siti del progetto **Wikipedia**, è basato su [[Database|database]] MySQL.
 
 Il ramo 5.5 è il primo a includere estensioni non Open Source, disponibili solo nella versione Enterprise (a pagamento).
 
@@ -27,7 +31,7 @@ Come molti altri DBMS, MySQL viene eseguito come servizio o, in altre parole, co
 
 Un servizio o demone è un programma in esecuzione continua nel sistema operativo, il cui compito è quello di rimanere in attesa di richieste finalizzate alla fruizione di determinate funzionalità.
 
-Nel caso dei DBMS, tutto lo scambio di dati con il demone avrà come scopo la gestione dei database.
+Nel caso dei DBMS, tutto lo scambio di dati con il demone avrà come scopo la gestione dei [[Database|database]].
 
 Il demone alla base del DBMS prende il nome di **mysqld**.
 

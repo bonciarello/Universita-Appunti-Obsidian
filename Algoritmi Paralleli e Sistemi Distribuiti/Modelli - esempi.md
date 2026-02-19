@@ -1,3 +1,7 @@
+---
+aliases: [ME]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## ESEMPI: elaborazione di array paralleli
 
 ![[parallelArrayProcessing.png]]
@@ -169,7 +173,7 @@ In questo caso posso adottare una sorta di *strategia parallela*, cioè spezza i
 
 Gli automi cellulari (CA) sono modelli computazionali paralleli discreti, ampiamente utilizzati per modellare e simulare sistemi complessi. Inventato da John von Neumann e Stanislaw Ulam al Los Alamos National Lab (primi anni '50). Basato sul lavoro di Alan Turing, la maggior parte delle ricerche di base sull'CA venne svolta negli anni '50 e '60.
 
-Tre eventi principali nella ricerca sulla CA:
+Tre [[Eventi|eventi]] principali nella ricerca sulla CA:
 
 - l'automa che si riproduce da solo di *John von Neumann*;
 - "The Game of Life" di *John Conway*;
@@ -257,7 +261,7 @@ Nel partizionamento bidimensionale, la cella che sta al centro può comunicare c
 
 *Partizionamento 2-D:* quando mi ritrovo sull'orlo, un core comunica le colonne e le righe che sono sull'orlo con gli altri core.
 
-In OpenMP è semplice sviluppare il concetto del bordo della regione: tutti i dati sono condivisi, non sono necessari halo/borders e si parallelizzano i loop. In MPI invece è più complicato sviluppare questo concetto: c'è il problema delle cellule fantasma, messaggi bloccanti e non bloccanti.
+In [[OpenMP]] è semplice sviluppare il concetto del bordo della regione: tutti i dati sono condivisi, non sono necessari halo/borders e si parallelizzano i loop. In MPI invece è più complicato sviluppare questo concetto: c'è il problema delle cellule fantasma, messaggi bloccanti e non bloccanti.
 
 ## Equazione del calore
 

@@ -1,3 +1,7 @@
+---
+aliases: [Pacman JavaFX, PJ]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Il percorso dei file è elencato di seguito:
 
 ![](percorsoFilePacmanFX.PNG)

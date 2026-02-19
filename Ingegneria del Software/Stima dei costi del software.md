@@ -1,3 +1,7 @@
+---
+aliases: [SCS, Stima costi software]
+tags: [ingegneria-del-software]
+---
 Se io non so quante risorse devo impiegare, non so che cifra devo chiedere al cliente. Il software è intangibile quindi non si sa quanto lavoro abbiamo realizzato. Non è possibile fare una stima precisa dei costi di produzione. Allora dobbiamo porci delle domande:
 
 - quanto impegno è richiesto per completare un'attività?
@@ -89,7 +93,7 @@ Il numero di object points in un programma è una stima ponderata di:
 
 - il numero di schermate separate visualizzate;
 - il numero di report prodotti dal sistema;
-- il numero di moduli di programma che devono essere sviluppati per integrare il codice del database.
+- il numero di moduli di programma che devono essere sviluppati per integrare il codice del [[Database|database]].
 
 Gli object points sono più facili da stimare da una specifica rispetto ai punti funzione: riguardano semplicemente schermate, report e moduli del linguaggio di programmazione.
 
@@ -101,10 +105,10 @@ In questa fase è molto difficile stimare il numero di righe di codice in un sis
 
 La produttività viene condizionata da altri fattori come per esempio:
 
-- **Esperienza nel dominio dell'applicazione:** la conoscenza del dominio dell'applicazione è essenziale per uno sviluppo software efficace. È probabile che gli ingegneri che già comprendono un dominio siano i più produttivi;
+- **Esperienza nel dominio dell'applicazione:** la conoscenza del dominio dell'applicazione è essenziale per uno [[Sviluppo software|sviluppo software]] efficace. È probabile che gli ingegneri che già comprendono un dominio siano i più produttivi;
 - **Qualità del processo:** il processo di sviluppo utilizzato può avere un effetto significativo sulla produttività;
 - **Dimensioni del progetto:** più grande è un progetto, maggiore è il tempo necessario per le comunicazioni del team. Meno tempo è disponibile per lo sviluppo, quindi la produttività individuale è ridotta;
-- **Supporto tecnologico:** una buona tecnologia di supporto come gli strumenti CASE, i sistemi di gestione della configurazione, ecc. può migliorare la produttività;
+- **Supporto tecnologico:** una buona tecnologia di supporto come gli strumenti CASE, i sistemi di [[Gestione della configurazione|gestione della configurazione]], ecc. può migliorare la produttività;
 - **Ambiente di lavoro:** un ambiente di lavoro tranquillo con aree di lavoro private contribuisce a migliorare la produttività.
 
 ## Qualità e produttività
@@ -122,7 +126,7 @@ Se i requisiti cambiano costantemente, un approccio basato sul conteggio delle r
 Per la stima del costo, ci sono diversi modi:
 
 - **Modellazione algoritmica dei costi:** viene utilizzato un modello basato su informazioni sui costi storici che mette in relazione alcune metriche del software (di solito la sua dimensione) al costo del progetto. Viene effettuata una stima di tale metrica e il modello prevede lo sforzo richiesto;
-- **Giudizio di esperti:** vengono consultati diversi esperti sulle tecniche di sviluppo software proposte e sul dominio applicativo. Ciascuno stima il costo del progetto. Queste stime vengono confrontate e discusse. Il processo di stima scorre fino al raggiungimento di una stima concordata;
+- **Giudizio di esperti:** vengono consultati diversi esperti sulle tecniche di [[Sviluppo software|sviluppo software]] proposte e sul dominio applicativo. Ciascuno stima il costo del progetto. Queste stime vengono confrontate e discusse. Il processo di stima scorre fino al raggiungimento di una stima concordata;
 - **Stima per analogia:** questa tecnica è applicabile quando sono stati completati altri progetti nello stesso dominio applicativo. Il costo di un nuovo progetto è stimato per analogia con questi progetti completati. Myers (Myers 1989) fornisce una descrizione molto chiara di questo approccio;
 - **Legge di Parkinson:** afferma che il lavoro si espande per riempire il tempo a disposizione. Il costo è determinato dalle risorse disponibili piuttosto che da una valutazione obiettiva. Se il software deve essere consegnato in 12 mesi e sono disponibili 5 persone, lo sforzo richiesto è stimato in 60 persone/mese;
 - **Pricing to win:** si stima che il costo del software sia quello che il cliente ha a disposizione da spendere per il progetto. Lo sforzo stimato dipende dal budget del cliente e non dalla funzionalità del software.
@@ -184,4 +188,4 @@ I sottomodelli in COCOMO 2 sono:
 - **Modello di composizione dell'applicazione:** utilizzato quando il software è composto da parti esistenti;
 - **Modello di progettazione iniziale:** utilizzato quando i requisiti sono disponibili ma la progettazione non è ancora iniziata;
 - **Modello di riutilizzo:** utilizzato per calcolare lo sforzo di integrazione di componenti riutilizzabili;
-- **Modello post-architettura:** utilizzato una volta che l'architettura del sistema è stata progettata e sono disponibili ulteriori informazioni sul sistema.
+- **Modello post-[[Architettura|architettura]]:** utilizzato una volta che l'[[Architettura|architettura]] del sistema è stata progettata e sono disponibili ulteriori informazioni sul sistema.

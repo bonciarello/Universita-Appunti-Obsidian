@@ -1,3 +1,7 @@
+---
+aliases: [Clustering, K-means]
+tags: [machine-learning]
+---
 ## Clustering
 L'**analisi dei cluster** o **clustering** è il compito di suddividere un insieme di oggetti in gruppi (chiamati *cluster*) in modo che gli oggetti nello stesso cluster siano più simili (secondo alcune metriche) tra loro rispetto a quelli in altri cluster.
 

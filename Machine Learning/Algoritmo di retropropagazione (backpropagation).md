@@ -1,4 +1,8 @@
-**Backpropagation** è un algoritmo per l'addestramento di reti neurali feedforward. È una procedura iterativa che utilizza la regola della catena per le derivate per modificare i pesi dall'output allo strato di input, al fine di ridurre l'errore.
+---
+aliases: [Algoritmo di retropropagazione, backpropagation]
+tags: [machine-learning]
+---
+**Backpropagation** è un algoritmo per l'addestramento di [[Reti|reti]] neurali feedforward. È una procedura iterativa che utilizza la regola della catena per le derivate per modificare i pesi dall'output allo strato di input, al fine di ridurre l'errore.
 
 ![](img/sezione19/multilayersNN1.png)
 
@@ -151,7 +155,7 @@ Più grande è l'NN, più piccolo è il *training set*, più l'NN si adatta ai d
 ### #epochs
 Se spingiamo troppo oltre il processo di apprendimento, molto probabilmente il modello risultante si adatterà eccessivamente ai dati di addestramento. Per limitare il problema dell'overfitting, una tecnica efficace è quella di utilizzare un set di validazione durante la fase di training.
 
-## Funzione di costo dell'entropia incrociata
+## Funzione di costo dell'[[Entropia|entropia]] incrociata
 La derivata della funzione di costo quadratica, scritta matematicamente come: 
 
 > $\varepsilon (W) = \frac{1}{2} \sum^p_{i=1} (y_i - t_i)^2$
@@ -174,7 +178,7 @@ Pertanto, il tasso del processo di apprendimento non diminuisce monoticamente me
 
 Il punto è che, con la funzione di costo quadratica, non è garantito che la velocità di ricerca sia proporzionale alla distanza dal minimo. Una funzione di costo $C$ il cui gradiente non è influenzato da $\sigma'(Z)$, ed è solo proporzionale all'errore, è quindi altamente desiderata.
 
-Tale funzione è l'**entropia incrociata**: 
+Tale funzione è l'**[[Entropia|entropia]] incrociata**: 
 
 > $C = -t* \ln y + (1-t) * \ln (1-y)$
 
@@ -182,7 +186,7 @@ la cui derivata è esattamente ciò che ci aspettavamo, cioè:
 
 > $\frac{\partial C}{\partial w} = -(t-y)*x_i$
 
-Le *proprietà della funzione di entropia* incrociata: 
+Le *proprietà della funzione di [[Entropia|entropia]]* incrociata: 
 - ha un minimo quando $t=y$, cioè, l'uscita è uguale al valore target;
 - la derivata è proporzionale al solo errore $(t-y)$, per un dato $x$.
 

@@ -1,6 +1,10 @@
-## Reti e sicurezza informatica
-La sicurezza informatica e le reti vanno di pari passo ed è illegale entrare in sistemi privati altrui come riportano i seguenti articoli del Codice Penale:
-- **art.615 ter del Codice Penale:** *chiunque abusivamente si introduce in un sistema informatico o telematico protetto da misure di sicurezza ovvero vi si mantiene contro la volontà espressa o tacita di chi ha il diritto di escluderlo, è punito con la reclusione sino a tre anni*;
+---
+aliases: [Rete]
+tags: [reti]
+---
+## [[Reti]] e [[Sicurezza|sicurezza]] informatica
+La [[Sicurezza|sicurezza]] informatica e le [[Reti|reti]] vanno di pari passo ed è illegale entrare in sistemi privati altrui come riportano i seguenti articoli del Codice Penale:
+- **art.615 ter del Codice Penale:** *chiunque abusivamente si introduce in un sistema informatico o telematico protetto da misure di [[Sicurezza|sicurezza]] ovvero vi si mantiene contro la volontà espressa o tacita di chi ha il diritto di escluderlo, è punito con la reclusione sino a tre anni*;
 - **art.617:** *chiunque, fraudolentemente, prende cognizione di una comunicazione o di una conversazione, telefoniche o telegrafiche, tra altre persone o comunque a lui non dirette, ovvero le interrompe o le impedisce è punito con la reclusione da sei mesi a quattro anni.* [...] *Qualora i fatti di cui ai commi primo e secondo riguardino sistemi informatici o telematici di interesse militare o relativi all’ordine pubblico o alla sicurezza pubblica o alla sanità o alla protezione civile o comunque di interesse pubblico, la pena è, rispettivamente, della reclusione da uno a cinque anni e da tre a otto anni.*
 
 ## Vista di base su Internet
@@ -30,7 +34,7 @@ Adesso analizziamo alcune principali differenze (aggiunto da me):
 
 *Come si accede ad una rete?* Un esempio è la rete domestica, abbiamo un modem (collegato all'esterno alla centrale più vicina), un router (intermediario tra interno ed esterno) e un access point (wireless) a cui si collegano tanti end point (PC, telefoni, televisori, ecc.). Tutti gli end point, collegati alla stessa rete, possono comunicare tra di loro (se possono, ovviamente).
 
-## Access networks: la rete delle reti
+## Access networks: la rete delle [[Reti|reti]]
 Fuori dall'ambiente domestico, abbiamo innumerevoli link, complessi da studiare, ma che permettono di far comunicare host diversi: un esempio di rete italiana viene chiamata **rete GARR**, molto grande e connette diversi enti accademici tra di loro. A Cosenza sono presente due nodi, uno per l'Unical e l'altro per alcune scuole tra cui il Monaco e il Pitagora.
 
 ![](img/reteGARR.png)

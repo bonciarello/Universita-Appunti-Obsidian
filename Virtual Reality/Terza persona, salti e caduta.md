@@ -1,3 +1,7 @@
+---
+aliases: ["Terza persona, salti caduta", TSC]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo alla fare in modo che la telecamera orbita attorno al suo obiettivo, alla modifica della rotazione in modo fluido utilizzando la funzione *Lerp* e alla gestione del rilevamento del terreno per il salto.
 
 ## Prepara la nuova scena

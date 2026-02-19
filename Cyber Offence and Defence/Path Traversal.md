@@ -1,3 +1,7 @@
+---
+aliases: [PT]
+tags: [cyber-offence-and-defence]
+---
 Il **Path Traversal** (o directory traversal) consente a un aggressore di leggere file arbitrari sul server che esegue un'applicazione.
 Ciò potrebbe includere:
 *   codice applicativo e dati;
@@ -8,7 +12,7 @@ In alcuni casi, un aggressore potrebbe riuscire a scrivere su file arbitrari sul
 
 ## Lettura di file arbitrari tramite Path Traversal
 
-Immagina un'applicazione di shopping che carica immagini tramite HTML:
+Immagina un'applicazione di shopping che carica immagini tramite [[HTML]]:
 `<img src="/loadImage?filename=218.png">`
 
 L'URL `loadImage` accetta un parametro `filename` e legge da `/var/www/images/`.
@@ -39,11 +43,11 @@ Molte applicazioni implementano difese che possono spesso essere aggirate.
 
 ## Come prevenire un attacco di Path Traversal
 
-Il modo più efficace è evitare del tutto di passare l'input fornito dall'utente alle API del file system.
+Il modo più efficace è evitare del tutto di passare l'input fornito dall'utente alle API del [[File System|file system]].
 
 Se non puoi evitarlo, usa due livelli di difesa:
 1.  **Convalida l'input:** Confrontalo con una whitelist di valori consentiti (es. solo alfanumerici).
-2.  **Canonizzazione:** Usa l'API del file system per canonizzare il percorso (risolvere i `../`) e verifica che inizi con la directory base prevista.
+2.  **Canonizzazione:** Usa l'API del [[File System|file system]] per canonizzare il percorso (risolvere i `../`) e verifica che inizi con la directory base prevista.
 
 Esempio Java:
 ```java

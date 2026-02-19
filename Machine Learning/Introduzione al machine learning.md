@@ -1,7 +1,11 @@
-## Cos'è il Machine Learning
+---
+aliases: [Apprendimento Automatico, ML]
+tags: [machine-learning]
+---
+## Cos'è il [[Machine Learning]]
 È molto difficile scrivere programmi che risolvano problemi come *riconoscere un'immagine*, *guidare una macchina* oppure *calcolare la probabilità che una transazione con carta di credito sia fraudolenta*. Potrebbero non esserci regole semplici e affidabili per risolvere tali problemi.
 
-Invece di scrivere un programma a mano per ogni compito specifico, raccogliamo molti esempi (**training set**) che specificano l'output atteso per un dato input: un **algoritmo di Machine Learning (ML)**, quindi, prende questi esempi e produce un *modello* (**target function**) che rappresenta la relazione input-output: può quindi essere utilizzato per generare i valori di output associati a nuovi valori di input. Se sono disponibili nuovi esempi, *il modello viene aggiornato addestrandolo sui nuovi dati*.
+Invece di scrivere un programma a mano per ogni compito specifico, raccogliamo molti esempi (**training set**) che specificano l'output atteso per un dato input: un **algoritmo di [[Machine Learning]] (ML)**, quindi, prende questi esempi e produce un *modello* (**target function**) che rappresenta la relazione [[Input-Output|input-output]]: può quindi essere utilizzato per generare i valori di output associati a nuovi valori di input. Se sono disponibili nuovi esempi, *il modello viene aggiornato addestrandolo sui nuovi dati*.
 
 Nella programmazione possiamo utilizzare due principali approcci:
 - **approccio deduttivo**;
@@ -15,7 +19,7 @@ In sintesi:
 - l'approccio ML viene generalmente utilizzato quando i problemi sono complessi e non è possibile creare manualmente un programma.
 
 ## Cos'è il Data Mining?
-Il **Data Mining (DM)** è il processo di identificazione e scoperta di informazioni (conoscenze) utili da grandi volumi di dati (*big data*) archiviati in data warehouse e database.
+Il **Data Mining (DM)** è il processo di identificazione e scoperta di informazioni (conoscenze) utili da grandi volumi di dati (*big data*) archiviati in data warehouse e [[Database|database]].
 
 DM ci permette di comprendere i fenomeni dall'analisi dei dati: viene fatto principalmente per il supporto decisionale nelle imprese. DM è anche indicato come *Knowledge Discovery from Databases (KDD)*.
 
@@ -32,19 +36,19 @@ Alcune delle sue proprietà sono che:
 - deve essere analizzato computazionalmente per rivelare modelli, tendenze e associazioni, in particolare in relazione al comportamento umano e alle interazioni;
 - BD e DM insieme ci permettono di imparare dall'esperienza.
 
-## Machine Learning contro Data Mining
+## [[Machine Learning]] contro Data Mining
 
-- *Machine Learning (ML)* fornisce tecniche per l'apprendimento di modelli (ad es. alberi decisionali, reti neurali, ecc.) dall'esperienza (dati): applicazioni tipiche: robot, giochi, auto a guida autonoma, riconoscimento vocale, ecc;
-- *Data Mining (DM)* sfrutta le tecniche ML (ad esempio, alberi decisionali, reti neurali, ecc.) per estrarre modelli da grandi set di dati per scopi aziendali. Le applicazioni tipiche sono la profilazione degli utenti, la previsione delle tendenze di mercato, la classificazione dei testi, l'analisi del sentiment, ecc.
+- *[[Machine Learning]] (ML)* fornisce tecniche per l'apprendimento di modelli (ad es. [[Alberi decisionali|alberi decisionali]], [[Reti|reti]] neurali, ecc.) dall'esperienza (dati): applicazioni tipiche: robot, giochi, auto a guida autonoma, riconoscimento vocale, ecc;
+- *Data Mining (DM)* sfrutta le tecniche ML (ad esempio, [[Alberi decisionali|alberi decisionali]], [[Reti|reti]] neurali, ecc.) per estrarre modelli da grandi set di dati per scopi aziendali. Le applicazioni tipiche sono la profilazione degli utenti, la previsione delle tendenze di mercato, la classificazione dei testi, l'analisi del sentiment, ecc.
 
 Spesso useremo ML e DM come sinonimi.
 
 ## Tecniche di apprendimento
 Avremo due categorie principali: apprendimento *supervisionato* e *senza supervisione*.
 
-Nell'*apprendimento supervisionato*, un *training set*, costituito da coppie *(input, output)* (chiamate *esempi*), viene utilizzato per apprendere la relazione input-output, chiamata anche **target function** o **modello**.
+Nell'*apprendimento supervisionato*, un *training set*, costituito da coppie *(input, output)* (chiamate *esempi*), viene utilizzato per apprendere la relazione [[Input-Output|input-output]], chiamata anche **target function** o **modello**.
 
-Nell'*apprendimento non supervisionato*, agli algoritmi di Machine Learning viene chiesto di scoprire modelli nei dati, ad esempio somiglianze che dividono i dati in categorie.
+Nell'*apprendimento non supervisionato*, agli algoritmi di [[Machine Learning]] viene chiesto di scoprire modelli nei dati, ad esempio somiglianze che dividono i dati in categorie.
 
 ## Principali compiti di apprendimento
 I principali compiti di apprendimento sono i seguenti:
@@ -52,7 +56,7 @@ I principali compiti di apprendimento sono i seguenti:
 - **classificazione:** classificare gli oggetti in uno di un insieme discreto di categorie ad esempio, classificare un richiedente di prestito come affidabile o inaffidabile (compito supervisionato);
 - **clustering:** l'analisi dei cluster si riferisce alla formazione di gruppi di oggetti che sono molto simili tra loro ma sono molto diversi dagli oggetti in altri cluster (compito non supervisionato);
 - **rilevamento di anomalie** finalizzato alla scoperta di oggetti diversi dalla maggior parte degli altri oggetti;
-- **analisi di associazione:** una regola di associazione è un'associazione frequente *if-then* che si verifica all'interno di un database (compito non supervisionato).
+- **analisi di associazione:** una regola di associazione è un'associazione frequente *if-then* che si verifica all'interno di un [[Database|database]] (compito non supervisionato).
 
 ## Compiti predittivi e descrittivi
 Un'attività ML può essere *predittiva* o *descrittiva* (o entrambe):
@@ -61,7 +65,7 @@ Un'attività ML può essere *predittiva* o *descrittiva* (o entrambe):
 
 L'apprendimento dei concetti e la classificazione possono essere utilizzati sia per scopi predittivi che descrittivi. Ad esempio, il *clustering* e l'*analisi di associazione* sono compiti descrittivi.
 
-## Machine Learning come compito induttivo
+## [[Machine Learning]] come compito induttivo
 L'*induzione* è un processo di creazione di teorie generali da dati osservati (osservazioni empiriche). **ML è un compito induttivo**, in quanto estrae teorie generali dai dati osservati (esempi). Ad esempio:
 
 ![](img/sezione1/exampleInduction.png)
@@ -82,28 +86,28 @@ Esempi di applicazioni di successo di ML sono le seguenti:
 
 ### Valutazione del rischio di credito
 
-*Ogni banca possiede un database che memorizza tutte le informazioni sulle operazioni di credito passate*, ad esempio, il signor Rossi ha ottenuto un prestito il 2002 di 100.000 €, ha pagato il prestito in 10 anni, il pagamento era regolare ed il signor Rossi guadagna 30.000 €/anno, ha un lavoro stabile, possiede l'appartamento in cui vive, è sposato, ecc.
+*Ogni banca possiede un [[Database|database]] che memorizza tutte le informazioni sulle operazioni di credito passate*, ad esempio, il signor Rossi ha ottenuto un prestito il 2002 di 100.000 €, ha pagato il prestito in 10 anni, il pagamento era regolare ed il signor Rossi guadagna 30.000 €/anno, ha un lavoro stabile, possiede l'appartamento in cui vive, è sposato, ecc.
 
 ![](img/sezione1/problemCreditRisk1.png)
 
 Possiamo usare SQL per interrogare un tale DB, ad esempio, per sapere se un determinato cliente è affidabile in quanto ha pagato regolarmente le rate di prestito.
-Tuttavia, SQL non è utilizzabile allo scopo di fornire una definizione generale di "cliente affidabile" dai dati dati. Ciò sarebbe utile come strumento per la concessione di prestiti a nuovi clienti, non ancora nel database.
+Tuttavia, SQL non è utilizzabile allo scopo di fornire una definizione generale di "cliente affidabile" dai dati dati. Ciò sarebbe utile come strumento per la concessione di prestiti a nuovi clienti, non ancora nel [[Database|database]].
 
 ![](img/sezione1/problemCreditRisk2.png)
 
-I clienti che hanno restituito regolarmente il prestito sono considerati "affidabili". Un algoritmo di apprendimento concettuale induce un modello M da dati storici nel database dei prestiti (*training set*). M esprime una relazione (*target function*) tra le variabili indipendenti (attributi) e la variabile dipendente "affidabile". La funzione target potrebbe essere espressa, ad esempio, in forma proposizionale come:
+I clienti che hanno restituito regolarmente il prestito sono considerati "affidabili". Un algoritmo di apprendimento concettuale induce un modello M da dati storici nel [[Database|database]] dei prestiti (*training set*). M esprime una relazione (*target function*) tra le variabili indipendenti (attributi) e la variabile dipendente "affidabile". La funzione target potrebbe essere espressa, ad esempio, in forma proposizionale come:
 
 > *Sex=male AND age >= 40 AND Income >= 40000 AND job type=stable -> Reliable=yes*
 
 Abbiamo due approcci per concedere un prestito a un nuovo cliente:
 - il direttore bancario utilizza la sua esperienza personale: soggettività, conoscenza limitata del dominio dell'applicazione, ecc;
-- il gestore bancario utilizza un modello: impara dai dati storici (il database del prestito) il concetto di "cliente affidabile", ovvero una descrizione delle proprietà che un cliente dovrebbe detenere per essere considerato affidabile. Quindi applicare il concetto appreso al nuovo cliente.
+- il gestore bancario utilizza un modello: impara dai dati storici (il [[Database|database]] del prestito) il concetto di "cliente affidabile", ovvero una descrizione delle proprietà che un cliente dovrebbe detenere per essere considerato affidabile. Quindi applicare il concetto appreso al nuovo cliente.
 
 Di seguito due applicazione di modelli che, **conoscendo il passato, predicono il futuro**:
 ![](img/sezione1/problemCreditRisk3.png)
 ![](img/sezione1/problemCreditRisk4.png)
 
-In conclusione, *un algoritmo di apprendimento è addestrato sui dati di formazione (database di prestiti) per apprendere il concetto di "cliente affidabile"*. Il concetto appreso (o modello, funzione target, ecc.) Viene quindi utilizzato per classificare nuove istanze sconosciute (previsione), ovvero nuovi clienti, consentendo così al direttore bancario di prendere decisioni informate. Il concetto appreso ha anche un valore descrittivo. Il concetto di "cliente affidabile" può essere visto come una rappresentazione intensiva del set di dati di prestito.
+In conclusione, *un algoritmo di apprendimento è addestrato sui dati di formazione ([[Database|database]] di prestiti) per apprendere il concetto di "cliente affidabile"*. Il concetto appreso (o modello, funzione target, ecc.) Viene quindi utilizzato per classificare nuove istanze sconosciute (previsione), ovvero nuovi clienti, consentendo così al direttore bancario di prendere decisioni informate. Il concetto appreso ha anche un valore descrittivo. Il concetto di "cliente affidabile" può essere visto come una rappresentazione intensiva del set di dati di prestito.
 
 ### Riconoscimento numeri scritti a mano
 

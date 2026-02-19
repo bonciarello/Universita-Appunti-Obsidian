@@ -1,3 +1,7 @@
+---
+aliases: ["Luci, ombre fotocamere scene", OFS]
+tags: [virtual-reality]
+---
 Con questo laboratorio, penseremo alle caratteristiche di illuminazione, all'utilizzo delle ombre e alle componenti della telecamere.
 
 ## Introduzione
@@ -133,7 +137,7 @@ Il primo passo è creare un nuovo livello, che possiamo quindi assegnare a un *G
 Ora puoi assegnare il livello a uno degli oggetti di gioco.
 
 ### Camera Depth
-È possibile creare più telecamere e assegnarle a una *profondità (Depth)* diversa. Le telecamere sono disegnate da bassa profondità a alta profondità. In altre parole, una telecamera con una profondità di 2 verrà disegnata sopra una telecamera con una profondità di 1. È possibile regolare i valori della proprietà *Normalized Viewport Rectangle* per ridimensionare e posizionare la vista della telecamera sullo schermo. Questo può creare più mini-viste come viste della mappa, specchietti retrovisori, ecc.
+È possibile creare più telecamere e assegnarle a una *profondità (Depth)* diversa. Le telecamere sono disegnate da bassa profondità a alta profondità. In altre parole, una telecamera con una profondità di 2 verrà disegnata sopra una telecamera con una profondità di 1. È possibile regolare i valori della proprietà *Normalized Viewport Rectangle* per ridimensionare e posizionare la vista della telecamera sullo schermo. Questo può creare più mini-[[Viste|viste]] come [[Viste|viste]] della mappa, specchietti retrovisori, ecc.
 
 ### Camera Viewport Rectangle
 *Normalized Viewport Rectangles* servono specificamente per definire una determinata porzione dello schermo su cui verrà disegnata la vista della telecamera corrente (esempio: puoi inserire una vista mappa nell'angolo inferiore destro dello schermo).

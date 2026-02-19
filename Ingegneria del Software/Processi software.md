@@ -1,3 +1,7 @@
+---
+aliases: [Processo]
+tags: [ingegneria-del-software]
+---
 È un insieme strutturato di attività necessarie per sviluppare un sistema software che riguardano *specifiche*, *design*, *validazione* ed *evoluzione*.
 
 Un **modello di processo software** è una rappresentazione astratta di un processo. Presenta una descrizione di un processo da una prospettiva particolare.
@@ -6,7 +10,7 @@ Un **modello di processo software** è una rappresentazione astratta di un proce
 
 - **Modello a cascata:** fasi separate e distinte di specifica e sviluppo;
 - **Sviluppo evolutivo:** le specifiche, lo sviluppo e la convalida sono intercalati;
-- **Ingegneria del Software basata sui componenti:** il sistema è assemblato da componenti esistenti.
+- **[[Ingegneria del Software]] basata sui componenti:** il sistema è assemblato da componenti esistenti.
 
 *Esistono molte varianti di questi modelli*, ad es. sviluppo formale in cui viene utilizzato un processo a cascata ma la specifica è una specifica formale che viene raffinata attraverso diverse fasi fino a un design implementabile.
 
@@ -47,10 +51,10 @@ I principali problemi di questo modello sono:
 Viene applicato per:
 
 - per sistemi interattivi di piccole o medie dimensioni;
-- per parti di sistemi di grandi dimensioni (es. l'interfaccia utente);
+- per parti di sistemi di grandi dimensioni (es. l'[[Interfaccia utente|interfaccia utente]]);
 - per sistemi di breve durata.
 
-### Ingegneria del Software basata sui componenti
+### [[Ingegneria del Software]] basata sui componenti
 
 Basato sul riutilizzo sistematico in cui i sistemi sono integrati da componenti esistenti o sistemi COTS (Commercial-off-the-shelf).
 
@@ -133,7 +137,7 @@ Implica il controllo e la revisione dei processi e dei test di sistema.
 
 Il test del sistema implica l'esecuzione del sistema con casi di test derivati dalla specifica dei dati reali che devono essere elaborati dal sistema.
 
-### Evoluzione del software
+### [[Evoluzione del software]]
 
 **Il software è intrinsecamente flessibile e può cambiare.**
 
@@ -162,11 +166,11 @@ I modelli possibili sono:
 
 ## Computer-aided software engineering (CASE)
 
-CASE è un software per supportare i processi di sviluppo e di evoluzione del software. Si occupa dell'automazione delle attività come:
+CASE è un software per supportare i processi di sviluppo e di [[Evoluzione del software|evoluzione del software]]. Si occupa dell'automazione delle attività come:
 
 - editor grafici per lo sviluppo di modelli di sistema;
 - dizionario dati per la gestione delle entità progettuali;
-- generatore di interfaccia utente grafica per la costruzione dell'interfaccia utente;
+- generatore di [[Interfaccia utente|interfaccia utente]] grafica per la costruzione dell'[[Interfaccia utente|interfaccia utente]];
 - debugger per supportare la ricerca dei guasti del programma;
 - traduttori automatici per generare nuove versioni di un programma.
 

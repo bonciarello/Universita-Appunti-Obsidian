@@ -1,3 +1,7 @@
+---
+aliases: [RB, Ripasso booleane]
+tags: [algoritmi-e-strutture-dati]
+---
 Andiamo ad analizzare l'uso di booleane per alcuni tipi di problemi. Ci troveremo ad affrontare tipi di problemi in cui dobbiamo determinare se si verifica una certa condizione. Le tipologie di richieste che ci ritroveremo ad affrontare sono:
 - almeno uno / tutti / nessuno soddisfano una certa condizione
 - espressioni generalizzate con esiste / per ogni / mai

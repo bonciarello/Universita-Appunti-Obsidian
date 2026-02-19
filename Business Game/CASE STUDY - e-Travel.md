@@ -1,3 +1,7 @@
+---
+aliases: [CS]
+tags: [business-game]
+---
 **e-Travel** vende guide turistiche (e-book) a 15$.
 *   **Modello:** Contratti con autori che ricevono **Royalties (12% dei ricavi)**.
 *   **Crescita prevista:** 10% mensile.

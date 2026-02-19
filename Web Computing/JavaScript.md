@@ -1,21 +1,25 @@
+---
+aliases: [javascript]
+tags: [web-computing]
+---
 **JavaScript** (JS) è il linguaggio di scripting fondamentale del Web. Nato nel 1996 in Netscape (chiamato inizialmente LiveScript), è oggi standardizzato come **ECMAScript** (ES).
 ## Introduzione e Utilizzo
-JavaScript è un linguaggio interpretato, dinamico e debolmente tipizzato. Sebbene sia nato per i browser (Client-Side), oggi gira ovunque (Server con Node.js, Database come CouchDB, App Desktop con Electron).
+JavaScript è un linguaggio interpretato, dinamico e debolmente tipizzato. Sebbene sia nato per i browser (Client-Side), oggi gira ovunque (Server con Node.js, [[Database]] come CouchDB, App Desktop con Electron).
 ### Vantaggi Lato Client
 *   **Performance:** Riduce il carico sul server eseguendo calcoli sul dispositivo dell'utente.
-*   **Interattività:** Risposta immediata agli eventi (click, input) senza ricaricare la pagina.
+*   **Interattività:** Risposta immediata agli [[Eventi|eventi]] (click, input) senza ricaricare la pagina.
 ### Inserimento nella Pagina
 1.  **Esterno (Best Practice):** File separato `.js`.
     ```html
     <script src="script.js"></script>
     ```
-2.  **Embedded:** Blocco script nell'HTML.
+2.  **Embedded:** Blocco script nell'[[HTML]].
     ```html
     <script>
       console.log("Ciao!");
     </script>
     ```
-3.  **Inline (Sconsigliato):** Negli attributi HTML.
+3.  **Inline (Sconsigliato):** Negli attributi [[HTML]].
     ```html
     <button onclick="alert('Click!')">Premi</button>
     ```

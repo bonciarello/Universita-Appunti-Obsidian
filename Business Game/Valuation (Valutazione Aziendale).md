@@ -1,3 +1,7 @@
+---
+aliases: [Valuation, Valutazione Aziendale]
+tags: [business-game]
+---
 ## 1. Valore di Mercato (MVE)
 **Market Value of Equity (MVE):** Valore totale delle azioni di una società.
 $$MVE = \text{Numero Azioni} \times \text{Prezzo Corrente}$$

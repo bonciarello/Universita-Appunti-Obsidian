@@ -1,3 +1,7 @@
+---
+aliases: [PC]
+tags: [basi-di-dati]
+---
 ## Modello concettuale
 
 Offre una serie di costrutti per descrivere la realtà di interesse in modo facile da comprendere (rappresentazione grafica: schema E-R) e indipendente dal DBMS.

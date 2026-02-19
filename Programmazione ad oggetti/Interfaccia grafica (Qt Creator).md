@@ -1,6 +1,10 @@
+---
+aliases: [Grafo, Interfaccia grafica, Qt Creator]
+tags: [programmazione-ad-oggetti]
+---
 Breve guida agli elementi fondamentali per creare GUI con Qt.
 - **Struttura File:** Headers, Sources e Forms (`.ui`) .
-- **Segnali e Slot:** Meccanismo per gestire gli eventi (es. click su un bottone -> `Go to slot`).
+- **Segnali e Slot:** Meccanismo per gestire gli [[Eventi|eventi]] (es. click su un bottone -> `Go to slot`).
 - **Widget Principali:**
     - `QLineEdit / QTextEdit`: Per input di testo. Metodi `toPlainText()` (lettura) e `setPlainText()` (scrittura) .
     - `QRadioButton`: Scelta singola.

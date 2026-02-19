@@ -1,3 +1,7 @@
+---
+aliases: [Multi-threading, Threads]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Tutti i file elencati si trovano in *src/main/java* nel package *application*.
 
 Per quanto riguarda il file *Main.java*:

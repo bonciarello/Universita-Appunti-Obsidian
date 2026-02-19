@@ -1,3 +1,7 @@
+---
+aliases: [valutazione, LABORATORIO - Evaluation]
+tags: [machine-learning]
+---
 Per valutare un modello possiamo: 
 - selezionare un *training set*;
 - creare un modello di data mining;
@@ -57,11 +61,11 @@ L'accuratezza per il problema in questione risulta essere dell'88%.  Come puoi v
 
 La classificazione multiclasse o classificazione multinomiale è il problema della classificazione delle istanze in una di tre o più classi (la classificazione delle istanze in una delle due classi è chiamata classificazione binaria).
 
-Sebbene molti algoritmi di classificazione (in particolare la regressione logistica multinomiale) consentano naturalmente l'uso di più di due classi, alcuni sono per natura algoritmi binari; questi possono, tuttavia, essere trasformati in classificatori multinomiali mediante una varietà di strategie.
+Sebbene molti algoritmi di classificazione (in particolare la [[Regressione|regressione]] logistica multinomiale) consentano naturalmente l'uso di più di due classi, alcuni sono per natura algoritmi binari; questi possono, tuttavia, essere trasformati in classificatori multinomiali mediante una varietà di strategie.
 
 La classificazione multiclasse non deve essere confusa con la classificazione multietichetta, in cui devono essere previste più etichette per ogni istanza.
 
 Le tecniche di classificazione multiclasse esistenti possono essere classificate in
 - **trasformazione in binario:** discute le strategie per ridurre il problema della classificazione multiclasse a più problemi di classificazione binaria. Può essere classificato in *one vs rest* e *one to one*. Le tecniche sviluppate sulla base della riduzione del problema multiclasse in più problemi binari possono anche essere chiamate tecniche di trasformazione del problema;
-- **estensione da binario:** discute le strategie per estendere i classificatori binari esistenti per risolvere problemi di classificazione multiclasse. Sono stati sviluppati diversi algoritmi basati su *reti neurali*, *alberi decisionali*, *k-nearest neighbors*, *naive Bayes*, *support vector machine* e *extreme learning machines* per affrontare problemi di classificazione multiclasse. Questi tipi di tecniche possono anche essere chiamati **tecniche di adattamento dell'algoritmo**.
+- **estensione da binario:** discute le strategie per estendere i classificatori binari esistenti per risolvere problemi di classificazione multiclasse. Sono stati sviluppati diversi algoritmi basati su *[[Reti|reti]] neurali*, *[[Alberi decisionali|alberi decisionali]]*, *k-nearest neighbors*, *naive Bayes*, *support vector machine* e *extreme learning machines* per affrontare problemi di classificazione multiclasse. Questi tipi di tecniche possono anche essere chiamati **tecniche di adattamento dell'algoritmo**.
 - **classificazione gerarchica:** affronta il problema della classificazione multiclasse dividendo lo spazio di output, ad esempio in un albero. Ogni nodo padre è diviso in più nodi figlio e il processo continua fino a quando ogni nodo figlio rappresenta solo una classe. Sono stati proposti diversi metodi basati sulla classificazione gerarchica.

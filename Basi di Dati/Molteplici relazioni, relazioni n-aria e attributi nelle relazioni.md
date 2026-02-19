@@ -1,3 +1,7 @@
+---
+aliases: [MRAR, "Molteplici relazioni, relazioni n-aria attributi relazioni"]
+tags: [basi-di-dati]
+---
 ## Molteplici relazioni
 Tra due identità è possibile definire più relazioni.
 
@@ -78,7 +82,7 @@ Anche le relazioni possono avere gli attributi. Facciamo un esempio:
 
 Esempi di istanze:
 - *Studente:* $<$252, Piero$>$
-- *Corso:* $<$B12, Basi di Dati$>$
+- *Corso:* $<$B12, [[Basi di Dati]]$>$
 - *Esame:* $<$252, B12, 23, 3/5/2019$>$
 
 **NOTA:** due esami dello stesso Studente per lo stesso Corso non sono ammessi, indipendentemente dai valori di voto e data.

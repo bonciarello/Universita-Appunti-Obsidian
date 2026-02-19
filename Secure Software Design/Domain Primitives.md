@@ -1,3 +1,7 @@
+---
+aliases: [DP]
+tags: [secure-software-design]
+---
 **È un value-object del dominio, in cui tutti i vincoli vengono verificati durante la creazione.** Il significato di un *domain primitive* è strettamente legato al contesto in cui si utilizza. Talvolta ha senso ridefinire un concetto, anche preesistente, per adattarlo meglio ai nostri obiettivi (per esempio, l'email vengono definite dagli RFC ma magari il nostro concetto di email ha ulteriori vincoli di cui tener conto).
 
 La **best practice** sarebbe l'ideale iniziare a sviluppare sin da subito primitive di dominio: questo permette di avere codice più sicuro.

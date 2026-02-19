@@ -1,3 +1,7 @@
+---
+aliases: [RS]
+tags: [ingegneria-del-software]
+---
 ## Ingegneria dei Requisiti
 
 È il processo di definizione dei servizi che il cliente richiede da un sistema e i vincoli in base ai quali opera e si sviluppa.
@@ -104,7 +108,7 @@ Facciamo degli esempi:
 | *Dimensione* | M byte<br>Numero di chip ROM |
 | *Facilità d'uso* | Tempo di allenamento<br>Numero di frame di aiuto |
 | *Affidabilità* | Tempo medio per il fallimento<br>Probabilità di indisponibilità<br>Tasso di occorrenza del guasto<br>Disponibilità |
-| *Robustezza* | È ora di riavviare dopo un errore<br>Percentuale di eventi che causano guasti<br>Probabilità di danneggiamento dei dati in caso di errore |
+| *Robustezza* | È ora di riavviare dopo un errore<br>Percentuale di [[Eventi|eventi]] che causano guasti<br>Probabilità di danneggiamento dei dati in caso di errore |
 | *Portabilità* | Percentuale di dichiarazioni dipendenti dall'obiettivo<br>Numero di sistemi target |
 
 ## Interazione dei requisiti
@@ -134,7 +138,7 @@ In linea di principio, i requisiti dovrebbero indicare cosa dovrebbe fare il sis
 
 In pratica, **requisiti e design sono inseparabili**:
 
-- un'architettura di sistema può essere progettata per strutturare i requisiti;
+- un'[[Architettura|architettura]] di sistema può essere progettata per strutturare i requisiti;
 - il sistema può interagire con altri sistemi che generano requisiti di progettazione;
 - l'uso di un design specifico può essere un requisito di dominio.
 
@@ -246,8 +250,8 @@ Questa analisi multi-prospettiva è importante: non esiste un unico modo corrett
 
 Abbiamo vari tipi di punti di vista:
 
-- *punti di vista dell'interattore:* persone o altri sistemi che interagiscono direttamente con il sistema (per esempio, in un bancomat, il database del cliente e del conto sono interagenti);
-- *punti di vista indiretti:* stakeholder che non utilizzano il sistema da soli ma che influenzano i requisiti (per esempio, in un ATM, il personale di gestione e di sicurezza sono punti di vista indiretti);
+- *punti di vista dell'interattore:* persone o altri sistemi che interagiscono direttamente con il sistema (per esempio, in un bancomat, il [[Database|database]] del cliente e del conto sono interagenti);
+- *punti di vista indiretti:* stakeholder che non utilizzano il sistema da soli ma che influenzano i requisiti (per esempio, in un ATM, il personale di gestione e di [[Sicurezza|sicurezza]] sono punti di vista indiretti);
 - *punti di vista del dominio:* caratteristiche del dominio e vincoli che influenzano i requisiti (per esempio, in un ATM, potrebbero essere gli standard per le comunicazioni interbancarie).
 
 ## Intervista
@@ -272,18 +276,18 @@ I buoni analisti devono essere sensibili a questi fattori, ma attualmente non es
 Gli scenari sono esempi reali di come un sistema può essere utilizzato. Dovrebbero includere:
 
 - una descrizione della situazione di partenza;
-- una descrizione del normale flusso degli eventi;
+- una descrizione del normale flusso degli [[Eventi|eventi]];
 - una descrizione di cosa può andare storto;
 - informazioni su altre attività concomitanti;
 - una descrizione dello stato al termine dello scenario.
 
-## Casi d'uso
+## [[Casi d'uso]]
 
-I casi d'uso sono una tecnica basata su scenari in UML che identifica gli attori in un'interazione e che descrivono l'interazione stessa.
+I [[Casi d'uso|casi d'uso]] sono una tecnica basata su scenari in UML che identifica gli attori in un'interazione e che descrivono l'interazione stessa.
 
-Una serie di casi d'uso dovrebbe descrivere tutte le possibili interazioni con il sistema.
+Una serie di [[Casi d'uso|casi d'uso]] dovrebbe descrivere tutte le possibili interazioni con il sistema.
 
-I diagrammi di sequenza possono essere utilizzati per aggiungere dettagli ai casi d'uso mostrando la sequenza di elaborazione degli eventi nel sistema.
+I diagrammi di sequenza possono essere utilizzati per aggiungere dettagli ai [[Casi d'uso|casi d'uso]] mostrando la sequenza di elaborazione degli [[Eventi|eventi]] nel sistema.
 
 ## Modellazione del sistema
 
@@ -293,7 +297,7 @@ Diversi modelli presentano il sistema da diverse prospettive:
 
 - *prospettiva esterna* che mostra il contesto o l'ambiente del sistema;
 - *prospettiva comportamentale* che mostra il comportamento del sistema; 
-- *prospettiva strutturale* che mostra il sistema o l'architettura dei dati.
+- *prospettiva strutturale* che mostra il sistema o l'[[Architettura|architettura]] dei dati.
 
 Abbiamo vari tipi di modello:
 
@@ -301,7 +305,7 @@ Abbiamo vari tipi di modello:
 - *modello di composizione* che mostra come le entità sono composte da altre entità;
 - *modello architettonico* che mostra i principali sottosistemi;
 - *modello di classificazione* che mostra come le entità hanno caratteristiche comuni;
-- *modello stimolo/risposta* che mostra la reazione del sistema agli eventi.
+- *modello stimolo/risposta* che mostra la reazione del sistema agli [[Eventi|eventi]].
 
 ## Modelli comportamentali
 
@@ -310,7 +314,7 @@ Abbiamo vari tipi di modello:
 Due tipi di modello comportamentale sono:
 
 - *modelli di elaborazione dei dati* che mostrano come i dati vengono elaborati mentre si spostano attraverso il sistema;
-- *modelli di macchine a stati* che mostrano la risposta dei sistemi agli eventi.
+- *modelli di macchine a stati* che mostrano la risposta dei sistemi agli [[Eventi|eventi]].
 
 Questi modelli mostrano prospettive diverse, quindi entrambi sono necessari per descrivere il comportamento del sistema.
 
@@ -324,11 +328,11 @@ Tracciare e documentare come i dati associati a un processo sono utili per svilu
 
 ## Modelli di macchine a stati
 
-**Questi modelli modellano il comportamento del sistema in risposta a eventi esterni e interni.**
+**Questi modelli modellano il comportamento del sistema in risposta a [[Eventi|eventi]] esterni e interni.**
 
 **Mostrano le risposte del sistema agli stimoli**, quindi sono spesso usati per modellare i sistemi in tempo reale.
 
-I modelli di macchine a stati mostrano gli stati del sistema come nodi e gli eventi come archi tra questi nodi. Quando si verifica un evento, il sistema si sposta da uno stato all'altro.
+I modelli di macchine a stati mostrano gli stati del sistema come nodi e gli [[Eventi|eventi]] come archi tra questi nodi. Quando si verifica un evento, il sistema si sposta da uno stato all'altro.
 
 ## Modelli di dati semantici
 
@@ -336,7 +340,7 @@ I modelli di macchine a stati mostrano gli stati del sistema come nodi e gli eve
 
 Un *modello entità-relazione-attributo* definisce le entità nel sistema, le relazioni tra queste entità e gli attributi dell'entità
 
-Ampiamente utilizzato nella progettazione di database. Può essere facilmente implementato utilizzando database relazionali.
+Ampiamente utilizzato nella progettazione di [[Database|database]]. Può essere facilmente implementato utilizzando [[Database|database]] relazionali.
 
 Nessuna notazione specifica fornita in UML ma è possibile utilizzare oggetti e associazioni.
 
@@ -437,7 +441,7 @@ Definisce una struttura generica per un documento dei requisiti che deve essere 
 - Introduzione
 - Glossario
 - Definizione dei requisiti utente
-- Architettura del sistema
+- [[Architettura]] del sistema
 - Specifica dei requisiti di sistema
 - Modelli di sistema
 - Evoluzione del sistema
@@ -448,7 +452,7 @@ Definisce una struttura generica per un documento dei requisiti che deve essere 
 
 **È basato sulla rappresentazione matematica e sull'analisi del software.** I metodi formali non sono stati ampiamente utilizzati perché:
 
-- altre tecniche di ingegneria del software hanno avuto successo;
+- altre tecniche di [[Ingegneria del Software|ingegneria del software]] hanno avuto successo;
 - cambiamenti di mercato;
 - non adatto a specificare e analizzare le interfacce utente e l'interazione dell'utente;
 - i metodi formali sono ancora difficili da scalare fino a sistemi di grandi dimensioni.

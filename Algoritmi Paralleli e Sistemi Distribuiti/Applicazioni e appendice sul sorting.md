@@ -1,3 +1,7 @@
+---
+aliases: [Applicazioni appendice sorting, AAS]
+tags: [algoritmi-paralleli-e-sistemi-distribuiti]
+---
 ## Bitonic Sort generale
 
 ### Fase 1
@@ -34,11 +38,11 @@ Dopo *log n* passaggi otteniamo la lista ordinata globalmente:
 
 ![[applicazioni8.PNG]]
 
-## Sorting in parallelo: esempio generale
+## [[Sorting]] in parallelo: esempio generale
 
 *Come possiamo implementare un algoritmo di ordinamento parallelo, a partire da un qualsiasi algoritmo **sequenziale**?* La strategia generale è divisa in 2 fasi:
 
-- **Fase 1 (sorting locale):** ogni processore ordina il proprio vettore con un algoritmo di ordinamento standard (ad esempio, quicksort);
+- **Fase 1 ([[Sorting|sorting]] locale):** ogni processore ordina il proprio vettore con un algoritmo di ordinamento standard (ad esempio, quicksort);
 - **Fase 2(merging):** i (sotto)vettori sono opportunamente combinati per ottenere un vettore globale ordinato
 
 ### Esempio
@@ -47,7 +51,7 @@ Partiamo con *p=4* e *n=20*:
 
 ![[applicazioni9.PNG]]
 
-Procediamo con la *fase 1 (sorting locale)* dove ogni processore ordina in modo **crescente** la propria **sottolista**.
+Procediamo con la *fase 1 ([[Sorting|sorting]] locale)* dove ogni processore ordina in modo **crescente** la propria **sottolista**.
 
 ![[applicazioni10.PNG]]
 

@@ -1,3 +1,7 @@
+---
+aliases: [GC, Gestione configurazione]
+tags: [ingegneria-del-software]
+---
 Le nuove versioni dei sistemi software vengono create man mano che cambiano:
 
 - per macchine/OS differenti;
@@ -28,7 +32,7 @@ Migliaia di documenti separati possono essere generati per un sistema software g
 - Definisce i criteri per il controllo delle modifiche e la gestione delle versioni.
 - Definisce i record CM che devono essere mantenuti. Descrive gli strumenti che dovrebbero essere utilizzati per assistere il processo di CM ed eventuali limitazioni al loro utilizzo.
 - Definisce il processo di utilizzo dello strumento.
-- Definisce il database CM utilizzato per registrare le informazioni di configurazione.
+- Definisce il [[Database|database]] CM utilizzato per registrare le informazioni di configurazione.
 - Può includere informazioni come il CM di software esterno, audit di processo, ecc.
 
 ## Identificazione dell'elemento di configurazione
@@ -41,7 +45,7 @@ Lo schema di denominazione dei documenti deve essere definito in modo che i docu
 
 Uno schema gerarchico con nomi a più livelli è probabilmente l'approccio più flessibile.
 
-Utilizzare un database di configurazione collegato a risorse.
+Utilizzare un [[Database|database]] di configurazione collegato a risorse.
 
 ## Storia delle derivazioni
 

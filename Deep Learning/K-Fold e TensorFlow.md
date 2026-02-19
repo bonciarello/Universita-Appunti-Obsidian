@@ -1,3 +1,7 @@
+---
+aliases: [K-Fold TensorFlow]
+tags: [deep-learning]
+---
 ## Convalida K-Fold (Approfondimento)
 
 Nei capitoli precedenti, per valutare i nostri modelli, abbiamo diviso i dati in un set di addestramento e un set di validazione.
@@ -56,9 +60,9 @@ def train_kfold(train_data, train_targets, k=4, num_epochs=100):
 
 ---
 
-## Reti Neurali con TensorFlow
+## [[Reti]] Neurali con TensorFlow
 
-**TensorFlow (TF)** è una piattaforma open-source end-to-end per il machine learning sviluppata da Google.
+**TensorFlow (TF)** è una piattaforma open-source end-to-end per il [[Machine Learning|machine learning]] sviluppata da Google.
 Offre un ecosistema flessibile di strumenti, librerie e risorse della community che consente ai ricercatori di spingere lo stato dell'arte nel ML e agli sviluppatori di creare e distribuire facilmente applicazioni basate su ML.
 
 ### Caratteristiche Principali
@@ -71,7 +75,7 @@ Offre un ecosistema flessibile di strumenti, librerie e risorse della community 
 Keras è l'API di alto livello ufficiale di TensorFlow. Il flusso di lavoro tipico per costruire una rete neurale prevede 5 passaggi:
 
 1.  **Definizione dei Dati:** Caricare e pre-processare i dati (normalizzazione, reshaping).
-2.  **Definizione del Modello:** Creare l'architettura della rete (es. usando `Sequential`).
+2.  **Definizione del Modello:** Creare l'[[Architettura|architettura]] della rete (es. usando `Sequential`).
 3.  **Compilazione:** Specificare come il modello deve imparare.
     *   *Loss Function:* Cosa stiamo cercando di minimizzare.
     *   *Optimizer:* Come aggiornare i pesi (es. SGD, Adam).

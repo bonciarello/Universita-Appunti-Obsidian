@@ -1,3 +1,7 @@
+---
+aliases: [QoS, Quality of Service]
+tags: [reti]
+---
 ## Esigenze di un protocollo applicativo
 Ogni protocollo necessità di alcune peculiarità:
 - **Affidabilità:** tolleranza alla perdita di informazioni, misurata in percentuale media di pacchetti persi;

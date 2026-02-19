@@ -1,6 +1,10 @@
+---
+aliases: [LA, Livelli Attenzione]
+tags: [deep-learning]
+---
 L'Attenzione può essere descritta come un sistema di recupero informazioni "fuzzy" (sfocato).
-Immaginiamo di avere un database di coppie (Chiave, Valore). Arriva una Query.
-*   In un database classico, cerchiamo la Chiave esatta e restituiamo il Valore.
+Immaginiamo di avere un [[Database|database]] di coppie (Chiave, Valore). Arriva una Query.
+*   In un [[Database|database]] classico, cerchiamo la Chiave esatta e restituiamo il Valore.
 *   Nell'Attenzione, calcoliamo quanto la Query è *simile* a ciascuna Chiave, e restituiamo una media ponderata dei Valori.
 
 ## 1. La Formula Matematica

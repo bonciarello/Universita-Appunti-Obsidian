@@ -1,6 +1,10 @@
+---
+aliases: [Introduziona]
+tags: [ingegneria-del-software]
+---
 ## Informazioni generali
 
-Lo scopo dell'Ingegneria del Software è quello di riuscire a progettare quello che desidera il cliente.
+Lo scopo dell'[[Ingegneria del Software]] è quello di riuscire a progettare quello che desidera il cliente.
 
 > Password PDF: *ingsw*
 
@@ -8,8 +12,8 @@ Lo scopo dell'Ingegneria del Software è quello di riuscire a progettare quello 
 
 Le fasi del corso sono:
 
-- *Concetti basilari d'Ingegneria del Software* (16 ore);
-- *Ingegneria del Software Orientata agli Oggetti* (32 ore);
+- *Concetti basilari d'[[Ingegneria del Software]]* (16 ore);
+- *[[Ingegneria del Software]] Orientata agli Oggetti* (32 ore);
 - *Esercitazioni* (48 ore);
 
 Ancor meglio, possiamo dividere il corso in due parti:
@@ -27,9 +31,9 @@ Ancor meglio, possiamo dividere il corso in due parti:
 
 I concetti di base del corso sono:
 
-- introduzione all'ingegneria del software;
+- [[Introduzione all'Ingegneria del Software|introduzione all'ingegneria del software]];
 - Unified Modeling Language;
-- i Processi Software;
+- i [[Processi software|Processi Software]];
 - analisi dei Requisiti;
 - progettazione;
 - sviluppo;

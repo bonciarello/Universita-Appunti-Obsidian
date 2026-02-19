@@ -1,3 +1,7 @@
+---
+aliases: [LRNPF, "LIVELLO RETE - DHCP, NAT Port Forwarding"]
+tags: [reti]
+---
 ## DHCP (Dynamic Host Configuration Protocol)
 Il protocollo **DHCP (Dynamic Host Configuration Protocol)** serve ad aiutare una scheda di rete vergine a trovare i parametri di configurazione adatti a parlare in una determinata rete, tramite un *server DHCP*. La configurazione degli IP delle macchine può avvenire in due modalità: 
 - **statico:** quindi è l'utente ad impostare manualmente il proprio indirizzo IP;
@@ -14,7 +18,7 @@ Generalmente è un "vicino" della rete (lo stesso router domestico può offrire 
 Gli indirizzi dinamici possono essere molto vantaggiosi in alcuni contesti ma in altri possono essere un problema. Per esempio, quando bisogna accedere a server importanti, è difficile che questi cambino indirizzo IP dinamicamente poiché potrebbero esserci problemi di reperibilità dello stesso. Infatti in questi casi si affianca al DHCP anche il DNS dinamico che aggiorna i FQDN parallelamente alla richiesta DHCP.
 
 ## NAT (Network Address Translation)
-Poiché esistono indirizzi IP di tipo privato, si vede necessario mettere in comunicazione, talvolta, due host che, pur appartenendo a reti diverse, posseggono lo stesso indirizzo IP. Questo a livello teorico sarebbe impossibile ma attraverso il meccanismo di **NAT (Network Address Translation)** è possibile:
+Poiché esistono indirizzi IP di tipo privato, si vede necessario mettere in comunicazione, talvolta, due host che, pur appartenendo a [[Reti|reti]] diverse, posseggono lo stesso indirizzo IP. Questo a livello teorico sarebbe impossibile ma attraverso il meccanismo di **NAT (Network Address Translation)** è possibile:
 - isolare gli indirizzi interni senza che il mondo esterna ne risenta;
 - posso cambiare ISP senza dover cambiare gli IP di tutte le macchine;
 - è una prima forma di *firewalling*: I dispositivi non sono direttamente raggiungibili 
@@ -28,10 +32,10 @@ I pacchetti vengono "riscritti" andando a cambiare l'indirizzo sorgente con l'in
 Naturalmente il NAT offre sia vantaggi che svantaggi in particolare: 
 - tutta la sottorete può usare al più 65534 porte simultaneamente;
 - si devono ricalcolare le *checkSum*;
-- la tecnologia odierna sfrutta *IPSec (+ firma digitale)* e non più IP e quindi risulta difficile cambiare i parametri;
-- alcuni protocolli potrebbero far non funzionare ICMP (non ha la porta) e anche GRE (oltre a *IPSec*);
+- la tecnologia odierna sfrutta *[[IPSec]] (+ firma digitale)* e non più IP e quindi risulta difficile cambiare i parametri;
+- alcuni protocolli potrebbero far non funzionare ICMP (non ha la porta) e anche GRE (oltre a *[[IPSec]]*);
 - risolve temporaneamente il problema dei pochi indirizzi;
-- i P2P sono difficili da realizzare. Può esserci un solo server su ogni porta. Quindi avere server all'interno di reti private risulta essere complesso. Si sfrutta quindi il processo di **Port Forwarding **.
+- i P2P sono difficili da realizzare. Può esserci un solo server su ogni porta. Quindi avere server all'interno di [[Reti|reti]] private risulta essere complesso. Si sfrutta quindi il processo di **Port Forwarding **.
 
 ## Port Forwarding
 Il router contiene un'ulteriore tabella detta **NAT Forwarding Table** che può essere a sua volta configurata *manualmente* o *dinamicamente* (viene compilata in maniera semiautomatica). Questa serve a mappare server all'interno di una rete in modo tale che siano accessibili dall'esterno. **Il server DEVE AVERE IP STATICO.**

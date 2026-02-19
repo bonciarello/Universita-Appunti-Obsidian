@@ -1,6 +1,10 @@
+---
+aliases: [Classe]
+tags: [deep-learning]
+---
 Fino ad ora abbiamo utilizzato quasi esclusivamente il modello `Sequential` di Keras. Sebbene sia semplice e potente, il modello sequenziale fa un'assunzione forte: che la rete sia una pila lineare di strati, dove ogni strato ha esattamente **un tensore di input** e **un tensore di output**.
 
-Tuttavia, molte architetture avanzate di Deep Learning non rispettano questa topologia lineare. In questo capitolo esploreremo due modi più flessibili per costruire modelli in Keras: l'**API Funzionale** e il **Model Subclassing**.
+Tuttavia, molte architetture avanzate di [[Deep Learning]] non rispettano questa topologia lineare. In questo capitolo esploreremo due modi più flessibili per costruire modelli in Keras: l'**API Funzionale** e il **Model Subclassing**.
 
 ## 1. I Limiti del Modello Sequenziale
 Il modello `Sequential` non è adatto quando:
@@ -45,8 +49,8 @@ model.summary()
 
 ### Esempio: Modello Multi-Output
 Immaginiamo di analizzare un post sui social media per prevedere:
-1.  L'età dell'autore (Regressione).
-2.  Il reddito dell'autore (Regressione).
+1.  L'età dell'autore ([[Regressione]]).
+2.  Il reddito dell'autore ([[Regressione]]).
 3.  Il genere dell'autore (Classificazione).
 
 ```python

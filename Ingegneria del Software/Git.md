@@ -1,3 +1,7 @@
+---
+aliases: [git]
+tags: [ingegneria-del-software]
+---
 Git è un software per il controllo della versione.
 Consente a gruppi di sviluppatori (client) di lavorare contemporaneamente su più file.
 I file vengono archiviati in un repository condiviso (in genere online) e le copie vengono archiviate localmente sui client.
@@ -22,7 +26,7 @@ Git è basato su un sistema di ramificazione:
 - le frecce che tornano a un *branch* più vecchio sono unioni;
 - *master* è il *branch* iniziale e predefinito in git.
 
-## Architettura
+## [[Architettura]]
 
 ![[architettura.png]]
 

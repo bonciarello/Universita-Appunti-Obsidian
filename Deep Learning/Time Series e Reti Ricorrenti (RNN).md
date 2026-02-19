@@ -1,5 +1,9 @@
-Le reti neurali viste finora (Dense, ConvNets) sono **Feedforward**: non hanno memoria. Elaborano ogni input indipendentemente dagli altri. Se mostriamo loro una scena di un film, non capiscono cosa è successo nella scena precedente.
-Le **Reti Neurali Ricorrenti (RNN)** affrontano questo limite: sono reti con un "loop", progettate per elaborare sequenze (testo, audio, serie temporali finanziarie, video).
+---
+aliases: [Rete, RNN, Time Series e Reti Ricorrenti]
+tags: [deep-learning]
+---
+Le [[Reti|reti]] neurali [[Viste|viste]] finora (Dense, ConvNets) sono **Feedforward**: non hanno memoria. Elaborano ogni input indipendentemente dagli altri. Se mostriamo loro una scena di un film, non capiscono cosa è successo nella scena precedente.
+Le **[[Reti]] Neurali Ricorrenti (RNN)** affrontano questo limite: sono [[Reti|reti]] con un "loop", progettate per elaborare sequenze (testo, audio, serie temporali finanziarie, video).
 
 ## 1. Funzionamento di una SimpleRNN
 Una RNN elabora la sequenza iterando sugli elementi e mantenendo uno **stato nascosto** (hidden state) che contiene informazioni su ciò che ha visto finora.
@@ -14,7 +18,7 @@ $$ y_t = \sigma(V \cdot h_t + c) $$
 In pratica, è come un ciclo `for` che riutilizza gli stessi pesi ad ogni iterazione.
 
 ## 2. Il Problema del Gradiente Scomparendo (Vanishing Gradient)
-Le SimpleRNN teoricamente possono ricordare informazioni viste molto tempo fa. In pratica, però, falliscono su sequenze lunghe. Perché?
+Le SimpleRNN teoricamente possono ricordare informazioni [[Viste|viste]] molto tempo fa. In pratica, però, falliscono su sequenze lunghe. Perché?
 
 Durante l'addestramento (Backpropagation Through Time), il gradiente dell'errore deve retro-propagarsi dal tempo $T$ fino al tempo $0$.
 Applicando la regola della catena, moltiplichiamo la matrice dei pesi $W$ per se stessa $T$ volte.
@@ -33,7 +37,7 @@ Una cella LSTM usa tre **Porte (Gates)** per regolare il flusso di informazioni 
     *   Combina una sigmoide (scelta) e una tanh (candidato valore).
 3.  **Output Gate ($o_t$):** Decide cosa emettere come stato nascosto ($h_t$) basandosi sul Cell State filtrato.
 
-Grazie a questa struttura, il gradiente può fluire inalterato per molti passi temporali, permettendo alla rete di ricordare eventi accaduti molto prima.
+Grazie a questa struttura, il gradiente può fluire inalterato per molti passi temporali, permettendo alla rete di ricordare [[Eventi|eventi]] accaduti molto prima.
 
 ```python
 from keras.layers import LSTM, Embedding, Dense

@@ -1,3 +1,7 @@
+---
+aliases: [PS]
+tags: [ingegneria-del-software]
+---
 È il processo di conversione delle specifiche di sistema in un sistema eseguibile.
 
 Con la progettazione software si progetta una struttura software che rilasci la specifica.
@@ -13,11 +17,11 @@ Le fasi della progettazione sono:
 - progettazione della struttura dei dati;
 - progettazione dell'algoritmo.
 
-## Architettura software
+## [[Architettura]] software
 
 La progettazione architettonica è l'identificazione dei sottosistemi e le specifiche dei quadri di controllo e comunicazione.
 
-Una descrizione dell'architettura software è l'output di questo processo di progettazione.
+Una descrizione dell'[[Architettura|architettura]] software è l'output di questo processo di progettazione.
 
 ## Strutturazione del sistema
 
@@ -33,25 +37,25 @@ Sono schemi molto astratti, non mostrano la natura delle relazioni tra i compone
 
 Utile per la comunicazione con gli stakeholder e per la pianificazione del progetto.
 
-## Vantaggi dell'architettura esplicita
+## Vantaggi dell'[[Architettura|architettura]] esplicita
 
-- **Comunicazione agli stakeholder:** l'architettura può essere utilizzata come fulcro di discussione da parte degli stakeholder del sistema;
+- **Comunicazione agli stakeholder:** l'[[Architettura|architettura]] può essere utilizzata come fulcro di discussione da parte degli stakeholder del sistema;
 - **Analisi del sistema:** significa che è possibile analizzare se il sistema può soddisfare i suoi requisiti non funzionali;
-- **Riutilizzo su larga scala:** l'architettura può essere riutilizzabile in una vasta gamma di sistemi.
+- **Riutilizzo su larga scala:** l'[[Architettura|architettura]] può essere riutilizzabile in una vasta gamma di sistemi.
 
-## Architettura e caratteristiche del sistema
+## [[Architettura]] e caratteristiche del sistema
 
-L'architettura consente di localizzare le operazioni critiche:
+L'[[Architettura|architettura]] consente di localizzare le operazioni critiche:
 
 - **Prestazione:** localizzare le operazioni critiche e ridurre al minimo le comunicazioni. Utilizzare componenti grandi anziché a grana fine;
-- **Protezione:** utilizzare un'architettura a più livelli con risorse critiche nei livelli interni;
-- **Sicurezza:** localizzare le funzioni critiche per la sicurezza in un numero limitato di sottosistemi;
+- **Protezione:** utilizzare un'[[Architettura|architettura]] a più livelli con risorse critiche nei livelli interni;
+- **[[Sicurezza]]:** localizzare le funzioni critiche per la [[Sicurezza|sicurezza]] in un numero limitato di sottosistemi;
 - **Disponibilità:** includere componenti e meccanismi ridondanti per la tolleranza agli errori;
 - **Manutenibilità:** utilizzare componenti intercambiabili a grana fine.
 
 ## Decisioni di progettazione architettonica
 
-Quando andiamo a fare la progettazione dell'architettura, dobbiamo porci diverse domande: come sarà distribuito il sistema? Quali stili architettonici sono appropriati? Quale strategia di controllo dovrebbe essere utilizzata? ecc.
+Quando andiamo a fare la progettazione dell'[[Architettura|architettura]], dobbiamo porci diverse domande: come sarà distribuito il sistema? Quali stili architettonici sono appropriati? Quale strategia di controllo dovrebbe essere utilizzata? ecc.
 
 ## Modelli architettonici
 
@@ -65,7 +69,7 @@ Utilizzato per documentare un progetto architettonico. Abbiamo vari modelli:
 
 Durante il processo di progettazione possono essere prodotti diversi modelli architettonici.
 
-Ogni modello presenta diverse prospettive sull'architettura.
+Ogni modello presenta diverse prospettive sull'[[Architettura|architettura]].
 
 ## Organizzazione del sistema
 
@@ -79,7 +83,7 @@ Ogni modello presenta diverse prospettive sull'architettura.
 
 È stata una delle prime architetture utilizzate per i mainframe.
 
-I sottosistemi devono scambiare dati: i dati condivisi sono conservati in un database o repository centrale e possono essere consultati da tutti i sottosistemi; ciascun sottosistema mantiene il proprio database e passa i dati esplicitamente ad altri sottosistemi.
+I sottosistemi devono scambiare dati: i dati condivisi sono conservati in un [[Database|database]] o repository centrale e possono essere consultati da tutti i sottosistemi; ciascun sottosistema mantiene il proprio [[Database|database]] e passa i dati esplicitamente ad altri sottosistemi.
 
 Quando devono essere condivise grandi quantità di dati, il modello di condivisione del repository è più comunemente utilizzato.
 
@@ -158,7 +162,7 @@ Non proprio adatto per i sistemi interattivi. I vantaggi sono:
 - facile aggiungere nuove trasformazioni;
 - relativamente semplice da implementare come sistema simultaneo o sequenziale.
 
-Tuttavia, richiede un formato comune per il trasferimento dei dati lungo la pipeline ed è difficile supportare l'interazione basata sugli eventi.
+Tuttavia, richiede un formato comune per il trasferimento dei dati lungo la pipeline ed è difficile supportare l'interazione basata sugli [[Eventi|eventi]].
 
 ## Stili di controllo
 
@@ -166,7 +170,7 @@ Tuttavia, richiede un formato comune per il trasferimento dei dati lungo la pipe
 
 Abbiamo un controllo centralizzato: un sottosistema ha la responsabilità generale del controllo e avvia e arresta altri sottosistemi.
 
-Abbiamo anche un controllo basato sugli eventi: ciascun sottosistema può rispondere a eventi generati esternamente da altri sottosistemi o dall'ambiente del sistema.
+Abbiamo anche un controllo basato sugli [[Eventi|eventi]]: ciascun sottosistema può rispondere a [[Eventi|eventi]] generati esternamente da altri sottosistemi o dall'ambiente del sistema.
 
 ## Controllo centralizzato
 
@@ -177,9 +181,9 @@ Abbiamo due modelli:
 - **Modello di risposta alla chiamata:** modello di subroutine top-down in cui il controllo inizia all'inizio di una gerarchia di subroutine e si sposta verso il basso. Applicabile a sistemi sequenziali;
 - **Modello manager:** applicabile a sistemi concorrenti. Un componente del sistema controlla l'arresto, l'avvio e il coordinamento di altri processi del sistema. Può essere implementato in sistemi sequenziali come case statement.
 
-## Sistemi basati su eventi
+## Sistemi basati su [[Eventi|eventi]]
 
-Guidato da eventi generati esternamente in cui la tempistica dell'evento è al di fuori del controllo dei sottosistemi che elaborano l'evento.
+Guidato da [[Eventi|eventi]] generati esternamente in cui la tempistica dell'evento è al di fuori del controllo dei sottosistemi che elaborano l'evento.
 
 Abbiamo due principali modelli event-driven:
 
@@ -190,9 +194,9 @@ Abbiamo due principali modelli event-driven:
 
 **Efficace nell'integrazione di sottosistemi su diversi computer in una rete.**
 
-I sottosistemi registrano un interesse per eventi specifici. Quando questi si verificano, il controllo viene trasferito al sottosistema che può gestire l'evento.
+I sottosistemi registrano un interesse per [[Eventi|eventi]] specifici. Quando questi si verificano, il controllo viene trasferito al sottosistema che può gestire l'evento.
 
-Il criterio di controllo non è incorporato nell'evento e nel gestore dei messaggi. I sottosistemi decidono sugli eventi di loro interesse.
+Il criterio di controllo non è incorporato nell'evento e nel gestore dei messaggi. I sottosistemi decidono sugli [[Eventi|eventi]] di loro interesse.
 
 Tuttavia, i sottosistemi non sanno se o quando verrà gestito un evento.
 

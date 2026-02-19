@@ -1,3 +1,7 @@
+---
+aliases: [RJ, "Colliders, Rigidbodies Joints"]
+tags: [virtual-reality]
+---
 Con questo laboratorio, pensiamo all'utilizzo di componenti coinvolti nella fisica cioè **Collider**, **Rigidbodies** (corpi rigidi) e **Joints** (giunti).
 
 ## Colliders
@@ -36,7 +40,7 @@ Le principali proprietà di un Physic Material sono:
 - **Static Friction**, utilizzato quando l'oggetto inizia a muoversi;
 - **Bounciness**, definire se l'oggetto rimbalzerà o meno (e l'intensità).
 
-## Triggers
+## [[Triggers]]
 Il sistema di scripting può rilevare quando si verificano collisioni e avviare azioni utilizzando la funzione *OnCollisionEnter*.
 
 Possiamo anche utilizzare il motore fisico semplicemente per rilevare quando un Collider entra nello spazio di un altro senza creare una Collider: quando il Collider è configurato come **Trigger** (usando la proprietà *Is Trigger*).

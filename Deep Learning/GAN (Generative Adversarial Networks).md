@@ -1,4 +1,8 @@
-Le **GAN** (Goodfellow et al., 2014) rappresentano un approccio radicalmente diverso alla modellazione generativa. Invece di modellare esplicitamente una distribuzione di probabilità (come i VAE), le GAN imparano a generare dati attraverso un **gioco competitivo** tra due reti neurali.
+---
+aliases: [Generative Adversarial Networks, GAN]
+tags: [deep-learning]
+---
+Le **GAN** (Goodfellow et al., 2014) rappresentano un approccio radicalmente diverso alla modellazione generativa. Invece di modellare esplicitamente una distribuzione di probabilità (come i VAE), le GAN imparano a generare dati attraverso un **gioco competitivo** tra due [[Reti|reti]] neurali.
 
 ## 1. I Giocatori
 Immaginiamo una sfida tra un falsario d'arte e un critico d'arte.
@@ -34,7 +38,7 @@ Se il discriminatore è troppo bravo (perfetto), non fornisce gradienti utili al
 ## 4. Varianti Famose
 
 ### DCGAN (Deep Convolutional GAN)
-La prima architettura stabile per generare immagini. Usa convoluzioni trasposte (Deconvolutions) nel generatore per up-campionare il rumore in un'immagine, e convoluzioni con stride nel discriminatore. Elimina i livelli di Pooling e Fully Connected.
+La prima [[Architettura|architettura]] stabile per generare immagini. Usa convoluzioni trasposte (Deconvolutions) nel generatore per up-campionare il rumore in un'immagine, e convoluzioni con stride nel discriminatore. Elimina i livelli di Pooling e Fully Connected.
 
 ### CycleGAN: Traduzione Image-to-Image senza Coppie
 Supponiamo di voler trasformare foto di **cavalli** in **zebre**.

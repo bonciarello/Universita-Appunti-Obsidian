@@ -1,3 +1,7 @@
+---
+aliases: [Oggetto, Accenni alla programmazione ad oggetti, Object Oriented, OOP]
+tags: [fondamenti-di-informatica]
+---
 ## Concetti Fondamentali
 La Programmazione a Oggetti è un paradigma di programmazione dove un programma è visto come un insieme di oggetti che interagiscono tra loro.
 
@@ -14,7 +18,7 @@ Attributi e comportamenti sono incapsulati in pacchetti di codice chiamati **Cla
 **I 3 Principi della OOP:**
 1. **Incapsulamento (Information Hiding):** I dettagli dell'implementazione sono nascosti. Si separa l'**Interfaccia** (metodi pubblici) dall'**Implementazione** (codice interno).
 2. **Ereditarietà:** Permette di definire nuove classi a partire da altre già definite (Specializzazione/Generalizzazione) favorendo il riutilizzo del codice.
-3. **Polimorfismo:** Permette di attivare a tempo di esecuzione comportamenti diversi su oggetti con un'interfaccia comune.
+3. **[[Polimorfismo]]:** Permette di attivare a tempo di esecuzione comportamenti diversi su oggetti con un'interfaccia comune.
 ## Definizione di una Classe (Codice)
 Le classi si definiscono usando la keyword `class`. Il corpo è racchiuso tra graffe e termina con `;`.
 
@@ -42,7 +46,7 @@ void A::setX(int val) {
     x = val;
 }
 ```
-## Gestione della Memoria nelle Classi (Esempio `VectorOfInt`)
+## [[Gestione della memoria|Gestione della Memoria]] nelle Classi (Esempio `VectorOfInt`)
 Quando una classe gestisce memoria dinamica (puntatori), il costruttore di default non basta. Bisogna gestire manualmente l'allocazione e la deallocazione (Regola del Tre).
 ### Costruttore
 Inizializza le variabili e alloca la memoria dinamica.

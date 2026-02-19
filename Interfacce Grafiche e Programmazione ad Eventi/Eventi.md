@@ -1,3 +1,7 @@
+---
+aliases: [Evento, Evente]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 La gestione degli eventi è quel meccanismo con cui un'applicazione Java può reagire ad un'azione compiuta da un utente quando interagisce con i controlli grafici, oppure ad un'azione compiuta da altri componenti software o dal sistema stesso.
 
 ## Gestione degli eventi

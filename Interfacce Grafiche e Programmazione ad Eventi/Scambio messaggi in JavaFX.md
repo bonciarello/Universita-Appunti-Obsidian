@@ -1,3 +1,7 @@
+---
+aliases: [Scambio messaggi JavaFX, SMJ]
+tags: [interfacce-grafiche-e-programmazione-ad-eventi]
+---
 Nella cartella *src/main/java* andremo ad elencare i *package* di seguito, mentre nel package application.view troveremo le interfacce grafiche in *.fxml*.
 
 ## PACKAGE application

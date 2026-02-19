@@ -1,3 +1,7 @@
+---
+aliases: [Vista]
+tags: [basi-di-dati]
+---
 Una **vista** è una relazione *derivata* a partire dalle relazioni di *base* o di altre viste per mezzo di interrogazioni. Essa consente di mettere a disposizione degli utenti rappresentazioni diverse degli stessi dati. Una vista è:
 
 - dotata di uno schema
@@ -102,5 +106,5 @@ GROUP BY regione
 
 - semplicità interrogazioni;
 - maggiore potere espressivo - viste ricorsive;
-- protezione dei dati: gruppi di utenti, per motivi di sicurezza/privacy, possono accedere alla BD attraverso opportune viste;
+- protezione dei dati: gruppi di utenti, per motivi di [[Sicurezza|sicurezza]]/privacy, possono accedere alla BD attraverso opportune viste;
 - indipendenze logica: se viene modificato lo schema logico della BD, si può definire un insieme di viste tali da mantenere inalterato lo schema iniziale – per gli utenti non cambia quindi la percezione della BD.

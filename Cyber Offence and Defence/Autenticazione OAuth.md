@@ -1,3 +1,7 @@
+---
+aliases: [AO]
+tags: [cyber-offence-and-defence]
+---
 OAuth è un framework di autorizzazione comunemente utilizzato che consente ai siti web e alle applicazioni web di richiedere un accesso limitato all'account di un utente su un'altra applicazione. Fondamentalmente, OAuth consente l'utente di concedere questo accesso senza esporre le proprie credenziali di accesso all'applicazione richiedente. Ciò significa che gli utenti possono definire con precisione quali dati desiderano condividere anziché dover cedere il controllo completo del proprio account a una terza parte.
 
 Il processo OAuth di base è ampiamente utilizzato per integrare funzionalità di terze parti che richiedono l'accesso a determinati dati dall'account di un utente. Ad esempio, un'applicazione potrebbe utilizzare OAuth per richiedere l'accesso all'elenco dei contatti e-mail in modo da poter suggerire persone con cui connettersi. Tuttavia, lo stesso meccanismo viene utilizzato anche per fornire servizi di autenticazione di terze parti, consentendo agli utenti di accedere con un account che hanno con un sito web diverso.
@@ -17,7 +21,7 @@ OAuth, originariamente progettato per l’autorizzazione, si è evoluto anche co
 ### Come nascono le vulnerabilità dell'autenticazione OAuth?
 Le vulnerabilità dell'autenticazione OAuth sorgono in parte perché la specifica OAuth è relativamente vaga e flessibile per progettazione. Sebbene vi siano una manciata di componenti obbligatori richiesti per la funzionalità di base di ogni tipo di concessione, la stragrande maggioranza dell'implementazione è completamente facoltativa. Ciò include molte impostazioni di configurazione necessarie per mantenere al sicuro i dati degli utenti. In breve, ci sono molte opportunità per le cattive pratiche di insinuarsi.
 
-Uno degli altri problemi chiave con OAuth è la generale mancanza di funzionalità di sicurezza integrate. La sicurezza si basa quasi interamente sugli sviluppatori che utilizzano la giusta combinazione di opzioni di configurazione e implementano le proprie misure di sicurezza aggiuntive in aggiunta, come una convalida di input robusta.
+Uno degli altri problemi chiave con OAuth è la generale mancanza di funzionalità di [[Sicurezza|sicurezza]] integrate. La [[Sicurezza|sicurezza]] si basa quasi interamente sugli sviluppatori che utilizzano la giusta combinazione di opzioni di configurazione e implementano le proprie misure di [[Sicurezza|sicurezza]] aggiuntive in aggiunta, come una convalida di input robusta.
 
 A seconda del tipo di concessione, i dati altamente sensibili vengono inviati anche tramite il browser, il che presenta varie opportunità per un aggressore di intercettarli.
 ## Tipi di concessione OAuth
@@ -35,7 +39,7 @@ Il flusso per il tipo di concessione del codice di autorizzazione di OAuth è il
 7. **concessione delle risorse:** il server restituisce i dati richiesti, che il client usa per autenticare l’utente.
 ### Tipo di concessione implicita (implicit)
 Il tipo di concessione implicita è più semplice e diretto: l’applicazione client riceve il token di accesso immediatamente dopo il consenso dell’utente, senza dover scambiare un codice di autorizzazione.
-Tuttavia, questa semplicità ha un costo in termini di sicurezza. Poiché tutte le comunicazioni avvengono tramite reindirizzamenti del browser e manca un back-channel sicuro, il token di accesso è più vulnerabile a eventuali attacchi. Questo tipo di concessione è più indicato per applicazioni a pagina singola e applicazioni desktop native, dove la gestione di un `client_secret` sul back-end è complessa o impossibile.
+Tuttavia, questa semplicità ha un costo in termini di [[Sicurezza|sicurezza]]. Poiché tutte le comunicazioni avvengono tramite reindirizzamenti del browser e manca un back-channel sicuro, il token di accesso è più vulnerabile a eventuali attacchi. Questo tipo di concessione è più indicato per applicazioni a pagina singola e applicazioni desktop native, dove la gestione di un `client_secret` sul back-end è complessa o impossibile.
 
 Il flusso per il tipo di concessione implicita di OAuth è il seguente:
 1. **richiesta di autorizzazione:** il client invia una richiesta all’endpoint `/authorization`, ma con il parametro `response_type` impostato su token, indicando che desidera ricevere direttamente un token di accesso;
@@ -68,7 +72,7 @@ Nota che l'utilizzo della protezione `state` o `nonce` non impedisce necessariam
 
 Anche i server di autorizzazione più sicuri richiederanno l'invio di un parametro `redirect_uri` quando si scambia il codice. Il server può quindi verificare se questo corrisponde a quello ricevuto nella richiesta di autorizzazione iniziale e rifiutare lo scambio in caso contrario. Poiché ciò avviene nelle richieste server-to-server tramite un back-channel sicuro, l'attaccante non è in grado di controllare questo secondo parametro `redirect_uri`.
 ## Come prevenire le vulnerabilità di autenticazione OAuth
-Per prevenire vulnerabilità OAuth, sia i provider che le app client devono implementare controlli robusti, specialmente sul parametro `redirect_uri`. L’OAuth offre poca protezione integrata, quindi la sicurezza dipende dagli sviluppatori.
+Per prevenire vulnerabilità OAuth, sia i provider che le app client devono implementare controlli robusti, specialmente sul parametro `redirect_uri`. L’OAuth offre poca protezione integrata, quindi la [[Sicurezza|sicurezza]] dipende dagli sviluppatori.
 
 **Per i provider OAuth:**
 - richiedere la registrazione di un whitelist di `redirect_uri` e validare con confronto esatto, byte per byte;

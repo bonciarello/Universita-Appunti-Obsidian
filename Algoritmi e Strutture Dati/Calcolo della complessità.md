@@ -1,3 +1,7 @@
+---
+aliases: [CC, Calcolo complessità]
+tags: [algoritmi-e-strutture-dati]
+---
 ## Notazioni asintotiche
 
 Usiamo le notazioni asintotiche per caratterizzare il *running time* di un algoritmo: ci interessiamo solo del comportamento asintotico e, per quanto riguarda il running time, generalmente ci interessa il *caso migliore* e il *caso peggiore*.

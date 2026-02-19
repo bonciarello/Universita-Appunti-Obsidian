@@ -1,3 +1,7 @@
+---
+aliases: [Classe]
+tags: [metodi-e-strumenti-per-la-sicurezza]
+---
 Gli schemi di autenticazione vengono valutati secondo tre metriche principali.
 
 ## 1. Metriche di Valutazione
@@ -13,8 +17,8 @@ Gli schemi di autenticazione vengono valutati secondo tre metriche principali.
 *   **Server-compatible:** compatibilità con i sistemi lato verificatore.
 *   **Browser-compatible:** supporto nei browser standard senza plugin.
 
-### Sicurezza (Security)
-*   **Resilient-to-throttled-guessing:** resistenza a tentativi limitati (Password: NO, causa bassa entropia).
+### [[Sicurezza]] (Security)
+*   **Resilient-to-throttled-guessing:** resistenza a tentativi limitati (Password: NO, causa bassa [[Entropia|entropia]]).
 *   **Resilient-to-unthrottled-guessing:** resistenza a tentativi illimitati (Password: NO).
 *   **Resilient-to-internal-observation:** resistenza allo sniffing locale (Password: NO).
 *   **Resilient-to-phishing:** resistenza a siti falsi (Password: NO).
@@ -24,7 +28,7 @@ Gli schemi di autenticazione vengono valutati secondo tre metriche principali.
 ## 2. Analisi Biometriche
 Sfruttano caratteristiche fisiche o comportamentali.
 *   **Problema:** Possibilità di falsi positivi (accettazione illegittima) e falsi negativi (rifiuto legittimo).
-*   **Entropia stimata (2003):** Impronte (13.3 bit), Iride (19 bit), Voce (11.7 bit).
+*   **[[Entropia]] stimata (2003):** Impronte (13.3 bit), Iride (19 bit), Voce (11.7 bit).
 
 ## 3. CAP Readers (Chip Authentication Program)
 Sistemi composti da una smart card e un lettore fisico. L'utente inserisce la carta e un PIN (immune da keylogger software) per generare un codice di risposta.

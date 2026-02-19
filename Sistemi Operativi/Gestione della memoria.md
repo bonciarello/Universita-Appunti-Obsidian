@@ -1,3 +1,7 @@
+---
+aliases: [Gestione memoria, GM]
+tags: [sistemi-operativi]
+---
 ## Gestione della memoria virtuale
 
 Ogni processo come abbiamo già detto non può andare ad intaccare la porzione di memoria di un altro processo pertanto avviene un processo di virtualizzazione della RAM che permette di isolare i vari processi. Per comprendere meglio la gestione di quest'ultima facciamo riferimento, con un linguaggio simil *C++*, alle seguenti supposizioni:
@@ -104,7 +108,7 @@ Generalmente i processi hanno due porzioni di RAM: **User Space** e **System Spa
 
 ## Mobile OSes
 
-Nei sistemi operativi dei dispositivi mobili viene utilizzato Linux per diverse ragioni:
+Nei [[Sistemi Operativi|sistemi operativi]] dei dispositivi mobili viene utilizzato Linux per diverse ragioni:
 - scheduler efficiente;
 - kernel semplice ed intuitivo;
 - non offre meccanismi di swap out ma viene usato il modulo OOM Manager (Out of Memory Manager) attraverso cui un processo viene killato per poter liberare memoria indipendentemente se questa si stia utilizzando o meno.

@@ -1,5 +1,9 @@
-## Primo esempio di progettazione concettuale
-Facciamo un esempio di progettazione concettuale, una sorta di esercizio:
+---
+aliases: [CPCRR, Cenni progettazione concettuale relazione ricorsiva]
+tags: [basi-di-dati]
+---
+## Primo esempio di [[Progettazione concettuale|progettazione concettuale]]
+Facciamo un esempio di [[Progettazione concettuale|progettazione concettuale]], una sorta di esercizio:
 - una azienda è organizzata in dipartimenti (Dip);
 - ogni Dip ha un codice (chiave primaria) e un nome;
 - ad ogni Dip afferiscono più impiegati (Imp), mentre un Imp afferisce ad un unico Dip;

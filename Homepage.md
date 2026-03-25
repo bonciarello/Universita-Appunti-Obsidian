@@ -26,3 +26,5 @@ Questo vault raccoglie i miei appunti universitari, sia del **corso di laurea tr
 - [[Business Game]]
 ## 📜 Certificazioni
 - [[AWS CLF-002 Cloud Practitioner Essentials]]
+## 📜 Corsi informativi
+- [[Claude Code]]

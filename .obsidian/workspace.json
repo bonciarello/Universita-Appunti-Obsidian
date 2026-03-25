@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Computing/Layout della pagina.md",
+                "file": "Virtual Reality/Virtual Reality.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Layout della pagina"
+              "title": "Virtual Reality"
             }
           }
         ]
@@ -178,8 +178,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c2a9d600a5f4d851",
+  "active": "9219eb39769c9826",
   "lastOpenFiles": [
+    "Claude Code/Claude Code in azione.md",
+    "Virtual Reality/Caricamento immagini da Internet e invio di dati su un server web.md",
+    "Basi di Dati/Notazioni per la rappresentazione delle cardinalità.md",
+    "Claude Code",
+    "Basi di Dati/MySQL.md",
+    "Basi di Dati/Linguaggio di interrogazione SQL.md",
+    "Web Computing/Layout della pagina.md",
     "Web Computing/jQuery.md",
     "Web Computing/JavaScript.md",
     "Web Computing/CSS.md",
@@ -200,12 +207,6 @@
     "AWS CLF-002 Cloud Practitioner Essentials/AWS Cloud Practitioner Cheat Sheet.md",
     "Business Game/CASE STUDY - Private Equity (Smart Home).md",
     "Business Game/CASE STUDY - Marketing (SparkPlace).md",
-    "Business Game/CASE STUDY - Entrepreneurial Strategy (Cenabal).md",
-    "Business Game/CASE STUDY - e-Travel.md",
-    "Business Game/CASE STUDY - Business Model (EcoWash).md",
-    "AWS CLF-002 Cloud Practitioner Essentials/AWS CLF-002 Cloud Practitioner Essentials.md",
-    "Virtual Reality/Animazioni.md",
-    "Homepage.md",
     "Programmazione ad oggetti",
     "Fondamenti di Informatica",
     "Business Game/remove_title_and_create_index.py",
@@ -215,7 +216,6 @@
     "Business Game/Capitolo_11.pdf",
     "Business Game/Capitolo_10.pdf",
     "Business Game/Capitolo_09.pdf",
-    "Business Game/Capitolo_08.pdf",
     "Machine Learning/img/sezione18/2LayerNN1.jpeg.jpeg",
     "Machine Learning/img/sezione9/bank4.png",
     "Machine Learning/img/sezione9/bank3.png",

@@ -1,7 +1,0 @@
-## Programma del corso
-Il programma della certificazione copre i fondamenti di Claude.
-
-## Indice
-
-### 1. Fondamenti
-- 1.1 [[Claude Code in azione]]

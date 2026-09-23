@@ -65,7 +65,7 @@ bool bilanciato(Albero<T> A, int& prof) {
 
 Possiamo individuare quattro tipi di algoritmi di visita:
 
-![[ img/sezione9/visitaAlberiBinari.PNG]]
+![[img/sezione9/visitaAlberiBinari.PNG]]
 
 1. ***visita in preordine***, valuto il contenuto della radice e poi visito tutto il sotto-albero sinistro e poi il destro → A L E R B O
 2. ***visita simmetrica***, visito tutto l'albero sinistro, valuto la radice e poi tutto il sotto-albero destro → E L R A B O

@@ -5,10 +5,10 @@ tags: [algoritmi-e-strutture-dati]
 Un **grafo** è costituito da una coppia *(N, A)* dove *N* è l'insieme dei nodi e *A* è l'insieme di coppie di nodi.
 
 - **Grafo orientato** è un grafo in cui gli archi sono coppie di nodi ordinati:
-    ![[ img/sezione12/grafoOrientato.PNG]]
+    ![[img/sezione12/grafoOrientato.PNG]]
 
 - **Grafo non orientato** è un grafo in cui gli archi non sono rappresentati da coppie ordinate:
-    ![[ img/sezione12/grafoNonOrientato.PNG]]
+    ![[img/sezione12/grafoNonOrientato.PNG]]
 
 Il numero di archi possibili in un grafo sono:
 

@@ -20,13 +20,19 @@ Gli **obiettivi** del corso sono:
 - sfruttare il [[Polimorfismo|polimorfismo]] e l'ereditarietà per scrivere codice estensibile e manutenibile;
 - creare applicazioni desktop interattive con interfaccia grafica.
 ## Indice
-- [[Programmazione ad oggetti/Gestione della memoria|Gestione della memoria]]
-- [[Algoritmi di ordinamento]]
-- [[Programmazione ad oggetti]]
-- [[Strutture dati (vector)]]
-- [[Stringhe e template]]
-- [[Liste (Linked Lists)]]
-- [[Code e pile]]
-- [[Ereditarietà e composizione]]
-- [[Polimorfismo]]
-- [[Interfaccia grafica (Qt Creator)]]
+
+### 1. Fondamenti e strutture dati
+- 1.1 [[Programmazione orientata agli oggetti (OOP)]]
+- 1.2 [[Programmazione ad oggetti/Gestione della memoria|Gestione della memoria]]
+- 1.3 [[Strutture dati (vector)]]
+- 1.4 [[Stringhe e template]]
+- 1.5 [[Liste (Linked Lists)]]
+- 1.6 [[Code e pile]]
+- 1.7 [[Algoritmi di ordinamento]]
+
+### 2. Programmazione orientata agli oggetti
+- 2.1 [[Ereditarietà e composizione]]
+- 2.2 [[Polimorfismo]]
+
+### 3. Interfacce grafiche
+- 3.1 [[Interfaccia grafica (Qt Creator)]]

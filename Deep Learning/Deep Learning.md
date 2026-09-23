@@ -19,27 +19,41 @@ Gli **obiettivi** del corso sono:
 - comprendere e implementare modelli generativi complessi e architetture basate sull'attenzione.
 
 ## Indice
-- [[Introduzione al Deep Learning]]
-- [[Introduzione alle Reti Neurali (NN)]]
-- [[Classificazione con Keras]]
-- [[Creare Rete Neurale da Zero]]
-- [[Regressione]]
-- [[Overfitting e Regolarizzazione]]
-- [[K-Fold e TensorFlow]]
-- [[ConvNets (Reti Neurali Convoluzionali)]]
-- [[Classificazione Immagini (Fiori)]]
-- [[ConvNet Pre-addestrate (Transfer Learning)]]
-- [[API Funzionali e Sottoclassi]]
-- [[Ottimizzazione degli Iperparametri]]
-- [[Time Series e Reti Ricorrenti (RNN)]]
-- [[Autocodificatori (Autoencoders)]]
-- [[GAN (Generative Adversarial Networks)]]
-- [[Implementazione Autocodificatore]]
-- [[Ottimizzazione VAE]]
-- [[RNN e Classificazione Testo]]
-- [[Seq2Seq (Sequence-to-Sequence)]]
-- [[Classificazione Testo Avanzata (IMDb)]]
-- [[Trasformatori ed Explainability]]
-- [[Livelli di Attenzione]]
-- [[Transformer per Traduzione]]
-- [[Graph Neural Network (GNN)]]
+
+### 1. Fondamenti di Deep Learning
+- 1.1 [[Introduzione al Deep Learning]]
+- 1.2 [[Introduzione alle Reti Neurali (NN)]]
+- 1.3 [[Creare Rete Neurale da Zero]]
+
+### 2. Addestramento, regolarizzazione e API
+- 2.1 [[Classificazione con Keras]]
+- 2.2 [[Regressione]]
+- 2.3 [[Overfitting e Regolarizzazione]]
+- 2.4 [[K-Fold e TensorFlow]]
+- 2.5 [[Ottimizzazione degli Iperparametri]]
+- 2.6 [[API Funzionali e Sottoclassi]]
+
+### 3. Computer Vision (CNN)
+- 3.1 [[ConvNets (Reti Neurali Convoluzionali)]]
+- 3.2 [[Classificazione Immagini (Fiori)]]
+- 3.3 [[ConvNet Pre-addestrate (Transfer Learning)]]
+
+### 4. Sequenze e NLP (RNN)
+- 4.1 [[Time Series e Reti Ricorrenti (RNN)]]
+- 4.2 [[RNN e Classificazione Testo]]
+- 4.3 [[Classificazione Testo Avanzata (IMDb)]]
+- 4.4 [[Seq2Seq (Sequence-to-Sequence)]]
+
+### 5. Attenzione e Transformer
+- 5.1 [[Livelli di Attenzione]]
+- 5.2 [[Trasformatori ed Explainability]]
+- 5.3 [[Transformer per Traduzione]]
+
+### 6. Modelli generativi
+- 6.1 [[Autocodificatori (Autoencoders)]]
+- 6.2 [[Implementazione Autocodificatore]]
+- 6.3 [[Ottimizzazione VAE]]
+- 6.4 [[GAN (Generative Adversarial Networks)]]
+
+### 7. Architetture su grafi
+- 7.1 [[Graph Neural Network (GNN)]]

@@ -18,14 +18,26 @@ Gli **obiettivi** del corso sono:
 - acquisire capacità pratiche nella simulazione di reti complesse (GNS3).
 
 ## Indice
-- [[Introduzione a Reti]]
-- [[ISO-OSI]]
-- [[Quality of Service (QoS)]]
-- [[LIVELLO APPLICATIVO - SMTP (Simple Mail Transfer Protocol) e DNS (Domain Name System)]]
-- [[LIVELLO APPLICATIVO - HTTP (Hypertext Transfer Protocol) e LTS (Transport Layer Security)]]
-- [[LIVELLO TRASPORTO - TCP, UDP e ICMP]]
-- [[LIVELLO RETE - Subnetting e Routing]]
-- [[LIVELLO RETE - DHCP, NAT e Port Forwarding]]
-- [[LIVELLO DATALINK - Datagrammi, livello 2 e CSMA-CD]]
-- [[LIVELLO FISICO - Frequency Division Multiplexing e fibra ottica]]
-- [[LIVELLO RETE - Firewall e IPTables]]
+
+### 1. Introduzione alle reti
+- 1.1 [[Introduzione a Reti]]
+- 1.2 [[ISO-OSI]]
+- 1.3 [[Quality of Service (QoS)]]
+
+### 2. Livello applicativo
+- 2.1 [[LIVELLO APPLICATIVO - SMTP (Simple Mail Transfer Protocol) e DNS (Domain Name System)]]
+- 2.2 [[LIVELLO APPLICATIVO - HTTP (Hypertext Transfer Protocol) e LTS (Transport Layer Security)]]
+
+### 3. Livello di trasporto
+- 3.1 [[LIVELLO TRASPORTO - TCP, UDP e ICMP]]
+
+### 4. Livello di rete
+- 4.1 [[LIVELLO RETE - Subnetting e Routing]]
+- 4.2 [[LIVELLO RETE - DHCP, NAT e Port Forwarding]]
+- 4.3 [[LIVELLO RETE - Firewall e IPTables]]
+
+### 5. Livello datalink
+- 5.1 [[LIVELLO DATALINK - Datagrammi, livello 2 e CSMA-CD]]
+
+### 6. Livello fisico
+- 6.1 [[LIVELLO FISICO - Frequency Division Multiplexing e fibra ottica]]

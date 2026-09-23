@@ -17,8 +17,12 @@ Gli **obiettivi** del corso sono:
 - gestire manualmente la memoria e comprendere l'aritmetica dei puntatori per evitare memory leak;
 - implementare strutture dati dinamiche e applicare i principi della programmazione a oggetti per creare codice modulare e riutilizzabile.
 ## Indice
-- [[Rappresentazione dell'informazione, aritmetica binaria e logica]]
-- [[Algoritmi e introduzione al C++]]
-- [[Strutture dati, ricorsione e stringhe]]
-- [[Fondamenti di Informatica/Gestione della memoria|Gestione della memoria]]
-- [[Accenni alla programmazione ad oggetti (OOP)]]
+
+### 1. Rappresentazione e basi
+- 1.1 [[Rappresentazione dell'informazione, aritmetica binaria e logica]]
+- 1.2 [[Algoritmi e introduzione al C++]]
+
+### 2. Strutture dati e programmazione
+- 2.1 [[Strutture dati, ricorsione e stringhe]]
+- 2.2 [[Fondamenti di Informatica/Gestione della memoria|Gestione della memoria]]
+- 2.3 [[Accenni alla programmazione ad oggetti (OOP)]]

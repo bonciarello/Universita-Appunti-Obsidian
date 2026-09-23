@@ -25,21 +25,27 @@ Gli **obiettivi** del corso sono:
 - capacità di analizzare le vulnerabilità comuni dei sistemi informativi;
 - capacità di applicare tecniche di base di attacchi informatici.
 ## Indice
-- [[SQL Injection (SQLi)]]
-- [[Vulnerabilità dell’autenticazione]]
-- [[Vulnerabilità della logica aziendale]]
-- [[Fuga di informazioni]]
-- [[Path Traversal]]
-- [[Command Injection]]
-- [[Vulnerabilità di caricamento file]]
-- [[Vulnerabilità del controllo degli accessi ed escalation dei privilegi]]
-- [[Server-side request forgery (SSRF)]]
-- [[XML external entity (XXE) injection]]
-- [[Cross-site scripting (XSS)]]
-- [[Cross-site request forgery (CSRF)]]
-- [[Cross-origin resource sharing (CORS)]]
-- [[Clickjacking]]
-- [[Deserializzazione non sicura]]
-- [[Server-side template injection (SSTI)]]
-- [[Autenticazione OAuth]]
-- [[Attacco JWT]]
+
+### 1. Vulnerabilità server-side
+- 1.1 [[SQL Injection (SQLi)]]
+- 1.2 [[Vulnerabilità dell’autenticazione]]
+- 1.3 [[Path Traversal]]
+- 1.4 [[Command Injection]]
+- 1.5 [[Vulnerabilità della logica aziendale]]
+- 1.6 [[Fuga di informazioni]]
+- 1.7 [[Vulnerabilità del controllo degli accessi ed escalation dei privilegi]]
+- 1.8 [[Vulnerabilità di caricamento file]]
+- 1.9 [[Server-side request forgery (SSRF)]]
+- 1.10 [[XML external entity (XXE) injection]]
+
+### 2. Vulnerabilità client-side
+- 2.1 [[Cross-site scripting (XSS)]]
+- 2.2 [[Cross-site request forgery (CSRF)]]
+- 2.3 [[Cross-origin resource sharing (CORS)]]
+- 2.4 [[Clickjacking]]
+
+### 3. Vulnerabilità avanzate
+- 3.1 [[Deserializzazione non sicura]]
+- 3.2 [[Server-side template injection (SSTI)]]
+- 3.3 [[Autenticazione OAuth]]
+- 3.4 [[Attacco JWT]]

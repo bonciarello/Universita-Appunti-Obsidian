@@ -82,7 +82,7 @@ ed è valida se:
 
 Significa che vogliamo identificare una funzione *y(n)* tale per cui, a partire da un punto, n₀ vada a limitare superiormente la nostra funzione di potenza cioè:
 
-![[ img/sezione4new/delimitazioneSuperiore.PNG]]
+![[img/sezione4new/delimitazioneSuperiore.PNG]]
 
 dove:
 

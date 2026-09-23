@@ -26,17 +26,25 @@ Gli **obiettivi** del corso sono:
 - Progettare architetture di sistema seguendo i principi di security-by-design.
 
 ## Indice
-- [[Introduzione alla Sicurezza Informatica]]
-- [[Control Hijacking]]
-- [[Symbolic Execution (Esecuzione Simbolica)]]
-- [[Separazione dei Privilegi (Privilege Separation)]]
-- [[Sandboxing]]
-- [[Network Security]]
-- [[Web Security]]
-- [[Sicurezza delle comunicazioni - HTTPS]]
-- [[OWASP Top-10]]
-- [[User Authentication]]
-- [[Classificazione dei meccanismi di autenticazione]]
-- [[Protocollo Universal Second Factor (U2F)]]
-- [[Kerberos]]
-- [[Design e architetture di sicurezza]]
+
+### 1. Introduzione alla sicurezza informatica
+- 1.1 [[Introduzione alla Sicurezza Informatica]]
+
+### 2. Sicurezza del software
+- 2.1 [[Control Hijacking]]
+- 2.2 [[Symbolic Execution (Esecuzione Simbolica)]]
+- 2.3 [[Design e architetture di sicurezza]]
+- 2.4 [[Separazione dei Privilegi (Privilege Separation)]]
+- 2.5 [[Sandboxing]]
+
+### 3. Sicurezza di rete e web
+- 3.1 [[Metodi e Strumenti per la Sicurezza/Network Security|Network Security]]
+- 3.2 [[Web Security]]
+- 3.3 [[OWASP Top-10]]
+- 3.4 [[Sicurezza delle comunicazioni - HTTPS]]
+
+### 4. Autenticazione
+- 4.1 [[User Authentication]]
+- 4.2 [[Classificazione dei meccanismi di autenticazione]]
+- 4.3 [[Kerberos]]
+- 4.4 [[Protocollo Universal Second Factor (U2F)]]

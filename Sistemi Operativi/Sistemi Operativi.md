@@ -36,18 +36,17 @@ Gli **obiettivi** del corso sono:
 
 ## Indice
 
-### Introduzione
-- [[Introduzione al Deep Learning]]
-- [[Introduzione a Sistemi Operativi (SO)]]
+### 1. Introduzione
+- 1.1 [[Introduzione a Sistemi Operativi (SO)]]
 
-### Gestione dei Processi e Concorrenza
-- [[Gestione dei processi e multi-threading]]
+### 2. Gestione dei processi e concorrenza
+- 2.1 [[Gestione dei processi e multi-threading]]
 
-### [[Gestione della memoria|Gestione della Memoria]] e [[File System]]
-- [[Sistemi Operativi/Gestione della memoria]]
-- [[File System]]
+### 3. Gestione della memoria e file system
+- 3.1 [[Sistemi Operativi/Gestione della memoria|Gestione della memoria]]
+- 3.2 [[File System]]
 
-### Laboratorio e Programmazione di Sistema
-- [[Introduzione a Python]]
-- [[Shell Linux]]
-- [[Introduzione a Perl]]
+### 4. Laboratorio e programmazione di sistema
+- 4.1 [[Introduzione a Python]]
+- 4.2 [[Shell Linux]]
+- 4.3 [[Introduzione a Perl]]

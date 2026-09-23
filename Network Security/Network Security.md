@@ -26,23 +26,39 @@ Gli **obiettivi** del corso sono:
 - Conoscere le principali minacce alla [[Sicurezza|sicurezza]] delle comunicazioni e le relative contromisure.
 
 ## Indice
-- [[Introduzione alla sicurezza]]
-- [[Comunicazione Crittografata]]
-- [[Crittografia Simmetrica]]
-- [[Block Cipher]]
-- [[Stream Cipher]]
-- [[Generazione Casuale di Bit]]
-- [[Funzione Hash Crittografica]]
-- [[Crittografia Asimmetrica]]
-- [[Gestione delle Chiavi]]
-- [[PKI, PGP e HSM]]
-- [[TLS (Transport Layer Security)]]
-- [[Attacchi al Livello 2]]
-- [[Attacchi alla Tecnologia Ethernet]]
-- [[Reti Wi-Fi]]
-- [[Versioni del Wi-Fi]]
-- [[VPN (Virtual Private Network)]]
-- [[IPSec]]
-- [[Gestione dell’identità]]
-- [[NAT e Firewall Traversal]]
-- [[Rete TOR]]
+
+### 1. Introduzione alla sicurezza
+- 1.1 [[Introduzione alla sicurezza]]
+- 1.2 [[Comunicazione Crittografata]]
+
+### 2. Crittografia simmetrica
+- 2.1 [[Crittografia Simmetrica]]
+- 2.2 [[Block Cipher]]
+- 2.3 [[Stream Cipher]]
+
+### 3. Integrità e funzioni hash
+- 3.1 [[Funzione Hash Crittografica]]
+- 3.2 [[Generazione Casuale di Bit]]
+
+### 4. Crittografia asimmetrica e gestione delle chiavi
+- 4.1 [[Crittografia Asimmetrica]]
+- 4.2 [[Gestione delle Chiavi]]
+- 4.3 [[PKI, PGP e HSM]]
+
+### 5. Protocolli sicuri
+- 5.1 [[TLS (Transport Layer Security)]]
+
+### 6. Sicurezza delle reti
+- 6.1 [[Attacchi al Livello 2]]
+- 6.2 [[Attacchi alla Tecnologia Ethernet]]
+- 6.3 [[Reti Wi-Fi]]
+- 6.4 [[Versioni del Wi-Fi]]
+
+### 7. VPN e sicurezza IP
+- 7.1 [[VPN (Virtual Private Network)]]
+- 7.2 [[IPSec]]
+- 7.3 [[NAT e Firewall Traversal]]
+
+### 8. Identità e anonimato
+- 8.1 [[Gestione dell’identità]]
+- 8.2 [[Rete TOR]]

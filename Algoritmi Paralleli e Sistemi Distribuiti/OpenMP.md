@@ -851,7 +851,7 @@ printf ("%6.2f\n", epsilon(x,y));
 
 Può eseguire alpha, beta e delta in parallelo.
 
-![[parallelismoFunzionale.PNG]]
+![[parallelismoFunzionale.png]]
 
 ## Pragma parallel sections
 
@@ -887,7 +887,7 @@ x = gamma(v, w);
 printf("%6.2f\n", epsilon(x,y));
 ```
 
-![[parallelismoFunzionale.PNG]]
+![[parallelismoFunzionale.png]]
 
 Esegui alpha e beta in parallelo. Esegui gamma e delta in parallelo. Il pragma *section* appare all'interno di un blocco parallelo di codice. Ha lo stesso significato del pragma delle sezioni parallele. Se ci sono più pragma *sections* all'interno di un blocco parallelo, si possono ridurre i costi di fork/join.
 
@@ -913,7 +913,7 @@ printf ("%6.2f\n", epsilon(x,y));
 
 ![[clausolaSection1.png]]
 
-![[clausolaSection2.PNG]]
+![[clausolaSection2.png]]
 
 ## Pragma single
 

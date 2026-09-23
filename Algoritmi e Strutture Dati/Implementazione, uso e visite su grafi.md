@@ -9,7 +9,7 @@ Ci sono due modalità fondamentali:
 1. **Visita a ventaglio/ampiezza (BFS):** vengono visitati inizialmente tutti i nodi adiacenti al nodo di partenza e, successivamente, sono visitati gli adiacenti al nodo che è stato visitato per prima (visita per livelli)
 2. **Visita a scandaglio/profondità (DFS):** in cui è visitato un nodo alla volta scegliendo tra gli adiacenti al nodo visitato per ultimo (visita anticipata)
 
-![[ img/sezione13/visiteGrafi.PNG]]
+![[img/sezione13/visiteGrafi.PNG]]
 
 ## Algoritmo di visita in profondità
 

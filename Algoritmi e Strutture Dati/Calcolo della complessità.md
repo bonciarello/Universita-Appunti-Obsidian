@@ -10,13 +10,13 @@ Esistono tre diverse notazioni asintotiche:
 
 > Θ, O, Ω
 
-![[ img/sezione4/notazioniAsintotiche1.PNG]]
+![[img/sezione4/notazioniAsintotiche1.PNG]]
 
 ## Notazioni O
 
 Useremo la notazione *O* ("o grande", "big-o"): solitamente interessa dare un limite superiore (più comodo nelle analisi) ed è molto informativa nel caso peggiore.
 
-![[ img/sezione4/notazioniAsintotiche2.PNG]]
+![[img/sezione4/notazioniAsintotiche2.PNG]]
 
 ### Esempio
 

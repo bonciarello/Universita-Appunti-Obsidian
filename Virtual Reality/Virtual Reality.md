@@ -26,27 +26,39 @@ Le abilità specifiche saranno i fondamenti di VR e lo sviluppo di applicazioni 
 L'approccio che utilizzeremo è il **"learning by doing"**, utilizzando un progetto di esempio per ispezionare le funzionalità di programmazione 3D più rilevanti.
 
 ## Indice
-- [[Virtual Reality (VR) e videogiochi]]
-- [[Progettazione di un gioco]]
-- [[Industria dei videogiochi e motori grafici]]
-- [[Unity3D]]
-- [[Inizializzazione di un progetto Unity3D e MouseLook]]
-- [[FPSInput, RayShooter e ReactiveTarget]]
-- [[WanderingAI, sistemi prefabbricati e SceneController]]
-- [[Art Assets, modelli 3D, texture e Skybox]]
-- [[Palle di fuoco, sparare un proiettile, OnTriggerEnter() e mirino specifico]]
-- [[Colliders, Rigidbodies e Joints]]
-- [[Luci, ombre e fotocamere nelle scene]]
-- [[Interfaccia grafica e componenti visuali]]
-- [[Auto Layout, FPS counter e barra della salute]]
-- [[Posizionamento e interazione con l'interfaccia utente]]
-- [[Broadcasting (trasmissione) e invio messaggi dal gioco 3D all'interfaccia 2D]]
-- [[Creazione di un gioco 2D]]
-- [[Terza persona, salti e caduta]]
-- [[Animazioni]]
-- [[Porte interattive e cambiamento di stato di un GameObject]]
-- [[Gestione dell'inventario]]
-- [[Approfondimento su Skybox e UnityWebRequest]]
-- [[Caricamento immagini da Internet e invio di dati su un server web]]
-- [[Gestione dell'audio]]
-- [[Unity Navigation System e Terrain Engine]]
+
+### 1. Introduzione alla realtà virtuale e ai videogiochi
+- 1.1 [[Virtual Reality (VR) e videogiochi]]
+- 1.2 [[Progettazione di un gioco]]
+- 1.3 [[Industria dei videogiochi e motori grafici]]
+
+### 2. Fondamenti di Unity3D
+- 2.1 [[Unity3D]]
+- 2.2 [[Inizializzazione di un progetto Unity3D e MouseLook]]
+- 2.3 [[FPSInput, RayShooter e ReactiveTarget]]
+- 2.4 [[WanderingAI, sistemi prefabbricati e SceneController]]
+- 2.5 [[Art Assets, modelli 3D, texture e Skybox]]
+- 2.6 [[Luci, ombre e fotocamere nelle scene]]
+
+### 3. Fisica e interazione
+- 3.1 [[Colliders, Rigidbodies e Joints]]
+- 3.2 [[Palle di fuoco, sparare un proiettile, OnTriggerEnter() e mirino specifico]]
+- 3.3 [[Porte interattive e cambiamento di stato di un GameObject]]
+- 3.4 [[Gestione dell'inventario]]
+
+### 4. Interfaccia utente
+- 4.1 [[Interfaccia grafica e componenti visuali]]
+- 4.2 [[Auto Layout, FPS counter e barra della salute]]
+- 4.3 [[Posizionamento e interazione con l'interfaccia utente]]
+- 4.4 [[Broadcasting (trasmissione) e invio messaggi dal gioco 3D all'interfaccia 2D]]
+
+### 5. Personaggi, animazioni e 2D
+- 5.1 [[Creazione di un gioco 2D]]
+- 5.2 [[Terza persona, salti e caduta]]
+- 5.3 [[Animazioni]]
+
+### 6. Audio, rete e navigazione
+- 6.1 [[Gestione dell'audio]]
+- 6.2 [[Approfondimento su Skybox e UnityWebRequest]]
+- 6.3 [[Caricamento immagini da Internet e invio di dati su un server web]]
+- 6.4 [[Unity Navigation System e Terrain Engine]]

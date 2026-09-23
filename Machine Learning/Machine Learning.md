@@ -28,26 +28,42 @@ Gli **obiettivi** del corso sono:
 - capacità di valutare criticamente le performance dei modelli prodotti.
 
 ## Indice
-- [[Introduzione al machine learning]]
-- [[Concetti base su Data Mining (DM) e metodologia CRISP]]
-- [[Concept Learning]]
-- [[Overfitting (sovradattamento)]]
-- [[Metodologia CRISP-DM]]
-- [[Entropia]]
-- [[Alberi decisionali]]
-- [[Data Understanding (comprensione dei dati)]]
-- [[Esercizio del dataset della banca]]
-- [[Data Preparation (preparazione dei dati)]]
-- [[Classificatori basati su regole]]
-- [[LABORATORIO - Evaluation (valutazione)]]
-- [[Concetti di base della teoria della probabilità]]
-- [[Naive Bayes (NB) dell'apprendimento probabilistico]]
-- [[Classificazione del testo di Naive Bayes]]
-- [[Attività di classificazione]]
-- [[Introduzione alle reti neurali (NN)]]
-- [[Reti neurali multistrato]]
-- [[Algoritmo di retropropagazione (backpropagation)]]
-- [[Metodi d'insieme (AdaBoost e foreste casuali)]]
-- [[Expectation Massimization (EM)]]
-- [[Classificatori basati su istanze]]
-- [[Clustering (K-means)]]
+
+### 1. Introduzione e metodologia
+- 1.1 [[Introduzione al machine learning]]
+- 1.2 [[Concetti base su Data Mining (DM) e metodologia CRISP]]
+- 1.3 [[Metodologia CRISP-DM]]
+
+### 2. Comprensione e preparazione dei dati
+- 2.1 [[Data Understanding (comprensione dei dati)]]
+- 2.2 [[Data Preparation (preparazione dei dati)]]
+- 2.3 [[Esercizio del dataset della banca]]
+
+### 3. Apprendimento supervisionato: concetti e alberi
+- 3.1 [[Concept Learning]]
+- 3.2 [[Overfitting (sovradattamento)]]
+- 3.3 [[Entropia]]
+- 3.4 [[Alberi decisionali]]
+- 3.5 [[Classificatori basati su regole]]
+
+### 4. Valutazione dei modelli
+- 4.1 [[Attività di classificazione]]
+- 4.2 [[LABORATORIO - Evaluation (valutazione)]]
+
+### 5. Apprendimento probabilistico
+- 5.1 [[Concetti di base della teoria della probabilità]]
+- 5.2 [[Naive Bayes (NB) dell'apprendimento probabilistico]]
+- 5.3 [[Classificazione del testo di Naive Bayes]]
+
+### 6. Reti neurali
+- 6.1 [[Introduzione alle reti neurali (NN)]]
+- 6.2 [[Reti neurali multistrato]]
+- 6.3 [[Algoritmo di retropropagazione (backpropagation)]]
+
+### 7. Metodi d'insieme e basati su istanze
+- 7.1 [[Metodi d'insieme (AdaBoost e foreste casuali)]]
+- 7.2 [[Classificatori basati su istanze]]
+
+### 8. Apprendimento non supervisionato
+- 8.1 [[Clustering (K-means)]]
+- 8.2 [[Expectation Massimization (EM)]]

@@ -21,7 +21,7 @@ Con il **bottom-up** risolviamo prima i sottoproblemi semplici (la edit distance
 
 *Come definiamo le relazioni tra i sottoproblemi (come uso la soluzione di un sottoproblema per un altro?)?* Siano i (risp. j) una posizione nelle stringhe x (risp. y), allora:
 
-![[ img/sezione20/editDistance.PNG]]
+![[img/sezione20/editDistance.PNG]]
 
 ```cpp
 #include <iostream>

@@ -16,24 +16,34 @@ Gli **obiettivi** del corso sono:
 - Saper analizzare e ottimizzare le prestazioni di una base di dati.
 
 ## Indice
-- [[Aggiornamenti in SQL]]
-- [[Algebra relazionale]]
-- [[Asserzioni]]
-- [[Cenni alla progettazione concettuale e relazione ricorsiva]]
-- [[Chiavi composte (o esterne), reificazione di relazioni e generalizzazione]]
-- [[Gestione della concorrenza]]
-- [[Gestione delle transazioni]]
-- [[Guida alla progettazione di un DB]]
-- [[MySQL]]
-- [[MySQL Scheduler]]
-- [[Notazioni per la rappresentazione delle cardinalità]]
-- [[Progettazione concettuale]]
-- [[Triggers]]
-- [[Limiti espressivi del modello ER]]
-- [[Linguaggio di interrogazione SQL]]
-- [[Modello dei dati relazionale]]
-- [[Modello ER concetti generali]]
-- [[Molteplici relazioni, relazioni n-aria e attributi nelle relazioni]]
-- [[Progettazione fisica]]
-- [[Progettazione logica da schemi ER a schemi relazionali]]
-- [[Viste]]
+
+### 1. Fondamenti e modelli di dati
+- 1.1 [[Modello dei dati relazionale]]
+- 1.2 [[Modello ER concetti generali]]
+- 1.3 [[Notazioni per la rappresentazione delle cardinalità]]
+- 1.4 [[Molteplici relazioni, relazioni n-aria e attributi nelle relazioni]]
+- 1.5 [[Chiavi composte (o esterne), reificazione di relazioni e generalizzazione]]
+- 1.6 [[Limiti espressivi del modello ER]]
+
+### 2. Progettazione di una base di dati
+- 2.1 [[Progettazione concettuale]]
+- 2.2 [[Cenni alla progettazione concettuale e relazione ricorsiva]]
+- 2.3 [[Progettazione logica da schemi ER a schemi relazionali]]
+- 2.4 [[Progettazione fisica]]
+- 2.5 [[Guida alla progettazione di un DB]]
+
+### 3. Algebra e interrogazioni
+- 3.1 [[Algebra relazionale]]
+- 3.2 [[Linguaggio di interrogazione SQL]]
+- 3.3 [[Aggiornamenti in SQL]]
+- 3.4 [[Viste]]
+
+### 4. Oggetti e vincoli del database
+- 4.1 [[Asserzioni]]
+- 4.2 [[Triggers]]
+- 4.3 [[MySQL]]
+- 4.4 [[MySQL Scheduler]]
+
+### 5. Transazioni e concorrenza
+- 5.1 [[Gestione delle transazioni]]
+- 5.2 [[Gestione della concorrenza]]

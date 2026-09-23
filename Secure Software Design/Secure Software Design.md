@@ -17,14 +17,20 @@ Gli **obiettivi** del corso sono:
 - capacità di scoprire le vulnerabilità nel codice legacy.
 
 ## Indice
-- [[Perché il design è importante per la sicurezza]]
-- [[Deep Modeling]]
-- [[Concetti fondamentali del Domain-Driven Design]]
-- [[Code Construct Security]]
-- [[Domain Primitives]]
-- [[Integrità del sistema]]
-- [[Ridurre la complessità]]
-- [[Gestione dei failure]]
-- [[Introduzione allo sviluppo test-driven (Test-Driven Development, TDD)]]
-- [[Test avanzati per Python]]
-- [[Django REST Framework]]
+
+### 1. Design e sicurezza
+- 1.1 [[Perché il design è importante per la sicurezza]]
+- 1.2 [[Deep Modeling]]
+- 1.3 [[Concetti fondamentali del Domain-Driven Design]]
+- 1.4 [[Code Construct Security]]
+
+### 2. Domain primitive e gestione dello stato
+- 2.1 [[Domain Primitives]]
+- 2.2 [[Integrità del sistema]]
+- 2.3 [[Ridurre la complessità]]
+- 2.4 [[Gestione dei failure]]
+
+### 3. Test e sviluppo
+- 3.1 [[Introduzione allo sviluppo test-driven (Test-Driven Development, TDD)]]
+- 3.2 [[Test avanzati per Python]]
+- 3.3 [[Django REST Framework]]

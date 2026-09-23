@@ -29,17 +29,26 @@ Gli **obiettivi** del corso sono:
 - fornire esperienza pratica attraverso attività di laboratorio e progetti.
 
 ## Indice
-- [[Introduzione al Deep Learning]]
-- [[Dal calcolo sequenziale al calcolo parallelo]]
-- [[Introduzione al Calcolo Parallelo]]
-- [[Modelli e Architetture]]
-- [[Modelli - esempi]]
-- [[OpenMP]]
-- [[Progettazione di programmi paralleli]]
-- [[MPI]]
-- [[MPI - esempi]]
-- [[Performance (parte 1)]]
-- [[Reti di calcolatori]]
-- [[Sorting]]
-- [[Applicazioni e appendice sul sorting]]
-- [[Performance (parte 2)]]
+
+### 1. Fondamenti del calcolo parallelo
+- 1.1 [[Dal calcolo sequenziale al calcolo parallelo]]
+- 1.2 [[Introduzione al Calcolo Parallelo]]
+- 1.3 [[Modelli e Architetture]]
+- 1.4 [[Reti di calcolatori]]
+- 1.5 [[Modelli - esempi]]
+
+### 2. Principi di progettazione
+- 2.1 [[Progettazione di programmi paralleli]]
+
+### 3. Programmazione parallela
+- 3.1 [[OpenMP]]
+- 3.2 [[MPI]]
+- 3.3 [[MPI - esempi]]
+
+### 4. Analisi delle prestazioni
+- 4.1 [[Performance (parte 1)]]
+- 4.2 [[Performance (parte 2)]]
+
+### 5. Algoritmi paralleli
+- 5.1 [[Sorting]]
+- 5.2 [[Applicazioni e appendice sul sorting]]

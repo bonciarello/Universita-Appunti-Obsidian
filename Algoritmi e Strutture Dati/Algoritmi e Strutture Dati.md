@@ -40,31 +40,31 @@ Gli **obiettivi** del corso sono:
 
 ## Indice
 
-### Fondamenti e Complessità
-- [[Introduzione alla complessità]]
-- [[Calcolo della complessità]]
-- [[Ripasso sulla ricorsione]]
-- [[Ripasso sulle booleane]]
+### 1. Fondamenti e complessità
+- 1.1 [[Introduzione alla complessità]]
+- 1.2 [[Calcolo della complessità]]
+- 1.3 [[Ripasso sulla ricorsione]]
+- 1.4 [[Ripasso sulle booleane]]
 
-### Algoritmi di Ricerca e Ordinamento
-- [[Ricerca uniforme e binaria]]
-- [[Algoritmi di ordinamento quadratico]]
-- [[Divide et impera]]
+### 2. Algoritmi di ricerca e ordinamento
+- 2.1 [[Ricerca uniforme e binaria]]
+- 2.2 [[Algoritmi di ordinamento quadratico]]
+- 2.3 [[Divide et impera]]
 
-### Strutture Dati
-- [[Alberi binari]]
-- [[Implementazione, uso e visite degli alberi]]
-- [[Grafi]]
-- [[Implementazione, uso e visite su grafi]]
+### 3. Strutture dati
+- 3.1 [[Alberi binari]]
+- 3.2 [[Implementazione, uso e visite degli alberi]]
+- 3.3 [[Grafi]]
+- 3.4 [[Implementazione, uso e visite su grafi]]
 
-### Tecniche Algoritmiche Avanzate
-- [[Programmazione dinamica]]
-- [[Programmazione golosa]]
-- [[Programmazione backtracking]]
+### 4. Tecniche algoritmiche avanzate
+- 4.1 [[Programmazione dinamica]]
+- 4.2 [[Programmazione golosa]]
+- 4.3 [[Programmazione backtracking]]
 
-### Problemi Classici
-- [[Problema della bisaccia 0-1 con la programmazione dinamica]]
-- [[Problema della bisaccia 0-1 con la programmazione golosa]]
-- [[Edit Distance e DivCoins con la programmazione dinamica]]
-- [[Subset sum]]
-- [[Algoritmo di Dijkstra]]
+### 5. Problemi classici
+- 5.1 [[Problema della bisaccia 0-1 con la programmazione dinamica]]
+- 5.2 [[Problema della bisaccia 0-1 con la programmazione golosa]]
+- 5.3 [[Edit Distance e DivCoins con la programmazione dinamica]]
+- 5.4 [[Subset sum]]
+- 5.5 [[Algoritmo di Dijkstra]]

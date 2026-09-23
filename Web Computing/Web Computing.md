@@ -26,21 +26,31 @@ Gli **obiettivi** del corso sono:
 - capacità di integrare [[Basi di Dati|basi di dati]] in applicazioni web seguendo pattern architetturali standard.
 
 ## Indice
-- [[Anatomia di un sistema informativo sul Web]]
-- [[Protocollo HTTP]]
-- [[HTML]]
-- [[CSS]]
-- [[Layout della pagina]]
-- [[Bootstrap]]
-- [[JavaScript]]
-- [[Eventi in JavaScript]]
-- [[DOM (Document Object Model)]]
-- [[jQuery]]
-- [[Ajax]]
-- [[JSONP e le richieste cross-domain]]
-- [[Java Servlet]]
-- [[JSP]]
-- [[JSTL (Java Standard Tag Library)]]
-- [[Expression Language]]
-- [[MVC]]
-- [[Persistenza e JDBC]]
+
+### 1. Fondamenti del Web
+- 1.1 [[Anatomia di un sistema informativo sul Web]]
+- 1.2 [[Protocollo HTTP]]
+
+### 2. Front-end: HTML e CSS
+- 2.1 [[HTML]]
+- 2.2 [[CSS]]
+- 2.3 [[Layout della pagina]]
+- 2.4 [[Bootstrap]]
+
+### 3. Front-end: JavaScript
+- 3.1 [[JavaScript]]
+- 3.2 [[Eventi in JavaScript]]
+- 3.3 [[DOM (Document Object Model)]]
+- 3.4 [[jQuery]]
+- 3.5 [[Ajax]]
+- 3.6 [[JSONP e le richieste cross-domain]]
+
+### 4. Back-end: Java EE
+- 4.1 [[Java Servlet]]
+- 4.2 [[JSP]]
+- 4.3 [[JSTL (Java Standard Tag Library)]]
+- 4.4 [[Expression Language]]
+
+### 5. Architettura e persistenza
+- 5.1 [[MVC]]
+- 5.2 [[Persistenza e JDBC]]

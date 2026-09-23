@@ -97,7 +97,7 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di B
   - aggiorno *pi* degli adiacenti di B
 
-  ![[ img/sezione15/ris4.PNG]]
+  ![[img/sezione15/ris4.PNG]]
 
 - iterazione:
   - nodo con *d* minimo in Q: D
@@ -105,7 +105,7 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di D
   - aggiorno *pi* degli adiacenti di D
 
-  ![[ img/sezione15/ris5.PNG]]
+  ![[img/sezione15/ris5.PNG]]
 
 - iterazione:
   - nodo con *d* minimo in Q: C
@@ -113,7 +113,7 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di C
   - aggiorno *pi* degli adiacenti di C
 
-  ![[ img/sezione15/ris6.PNG]]
+  ![[img/sezione15/ris6.PNG]]
 
 - iterazione:
   - nodo con *d* minimo in Q: E
@@ -121,7 +121,7 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di E
   - aggiorno *pi* degli adiacenti di E
 
-  ![[ img/sezione15/ris7.PNG]]
+  ![[img/sezione15/ris7.PNG]]
 
 - iterazione:
   - nodo con *d* minimo in Q: F
@@ -129,7 +129,7 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di F
   - aggiorno *pi* degli adiacenti di F
 
-  ![[ img/sezione15/ris8.PNG]]
+  ![[img/sezione15/ris8.PNG]]
 
 - iterazione:
   - nodo con *d* minimo in Q: G
@@ -137,7 +137,7 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di G
   - aggiorno *pi* degli adiacenti di G
 
-  ![[ img/sezione15/ris9.PNG]]
+  ![[img/sezione15/ris9.PNG]]
 
 - iterazione:
   - nodo con *d* minimo in Q: Y
@@ -145,10 +145,10 @@ Nel grafo non sono presenti archi con peso negativo: possiamo usare Dijkstra.
   - aggiorno *d* degli adiacenti di Y
   - aggiorno *pi* degli adiacenti di Y
 
-  ![[ img/sezione15/ris10.PNG]]
+  ![[img/sezione15/ris10.PNG]]
 
 - **STOP!**
   - Q è adesso vuota
   - Il costo del cammino minimo da X a Y è pari a 6.
 
-  ![[ img/sezione15/ris11.PNG]]
+  ![[img/sezione15/ris11.PNG]]
